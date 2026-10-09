@@ -1,5 +1,15 @@
 [
   {
+    "path": "assets/NotoSansDevanagari.ttf",
+    "bytes": 641944,
+    "sha256": "14ec4af41f27482216d1c2229f417ff9b1425e1babb014e57d1d40d03229853e"
+  },
+  {
+    "path": "assets/OFL-Noto.txt",
+    "bytes": 4386,
+    "sha256": "a216f6f8d85c7228093e0ee5e258d9d377e6671f68acb4db1930b29583d0f331"
+  },
+  {
     "path": "assets/character-A.jpg",
     "bytes": 27163,
     "sha256": "bbcd9473f234803da0e6e638fd8d73ce48b63d9d04d0b937f807cb077134cfe9"
@@ -75,9 +85,24 @@
     "sha256": "fa72af4f02f1d78f57e3e75d0a5b8be2d3676888b95d047510016daf5f7132af"
   },
   {
+    "path": "assets/common-reactions-A3-Nepali-SAMPLE.pdf",
+    "bytes": 4738883,
+    "sha256": "4e4ce375517b50353176d00985e00eeeb532e4d8e05967eef45f3ab52f90b4ab"
+  },
+  {
+    "path": "assets/common-reactions-ne-preview.jpg",
+    "bytes": 449960,
+    "sha256": "f420408833668f5f6cc5efdd7cefc8d93101055c9eb56b335e84eb17677b6fe9"
+  },
+  {
     "path": "assets/common-reactions-preview.jpg",
     "bytes": 582880,
     "sha256": "c4e2774201f1ecd2cb6529fb0c38c0e3ae15f8098433fdcb990f2d1609ef47d8"
+  },
+  {
+    "path": "assets/expression-E-ne.jpg",
+    "bytes": 184936,
+    "sha256": "ec915b4fcd91b52392f8d89d948fefe85d85c55d267f9761b4d592e6e58b2586"
   },
   {
     "path": "assets/expression-E.jpg",
@@ -85,14 +110,29 @@
     "sha256": "ad774e93cdf4c1b79571067d9fe274908b5c5a9663c0a00017c5c807224efdbd"
   },
   {
+    "path": "assets/expression-F-ne.jpg",
+    "bytes": 192642,
+    "sha256": "8d1bb3057f525128df8a3b95fdcfca5ee29a3c05071580d85059bfaee79268c4"
+  },
+  {
     "path": "assets/expression-F.jpg",
     "bytes": 208603,
     "sha256": "cf2e511ac8b21de050ed16abe663b1ee835b5ca819fc1780946d42831885c7c6"
   },
   {
+    "path": "assets/expression-Q-ne.jpg",
+    "bytes": 212105,
+    "sha256": "aeb7fb161d886a01c7eea82646bebc84a72d48f5205061fccf5147d7b16f7df8"
+  },
+  {
     "path": "assets/expression-Q.jpg",
     "bytes": 212149,
     "sha256": "423f2454946e306c405047ce8a1b7d98332f26e26dcf62fd5a59c2d3c4e85786"
+  },
+  {
+    "path": "assets/expression-R-ne.jpg",
+    "bytes": 201248,
+    "sha256": "0058bed133ffcf623e3db54af7b581fdcc79d154ba9056f6849539db81f9c563"
   },
   {
     "path": "assets/expression-R.jpg",
