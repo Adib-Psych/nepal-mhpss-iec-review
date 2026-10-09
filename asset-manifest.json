@@ -1,0 +1,72 @@
+[
+  {
+    "path": "assets/character-A.jpg",
+    "bytes": 27163,
+    "sha256": "bbcd9473f234803da0e6e638fd8d73ce48b63d9d04d0b937f807cb077134cfe9"
+  },
+  {
+    "path": "assets/character-B.jpg",
+    "bytes": 26924,
+    "sha256": "4edc92808deb4089079705209a38126e2762ddeff34052cfcf9ae9c910f6ed83"
+  },
+  {
+    "path": "assets/character-C.jpg",
+    "bytes": 29216,
+    "sha256": "122fcabd3a95bc5e4092f88891bd06e2cb11a4bf465f9ddaaa2becb8e2f4b586"
+  },
+  {
+    "path": "assets/character-D.jpg",
+    "bytes": 28075,
+    "sha256": "632133ee5a0bbf0330cf330914b816673b9f7f491d6a9afbdbd1f9faa16f8728"
+  },
+  {
+    "path": "assets/character-E.jpg",
+    "bytes": 28710,
+    "sha256": "3b53907dd220ebe1c61b93ff0b7669b0d3e8a0e0d36a3a970d6ce8820bc34ba5"
+  },
+  {
+    "path": "assets/character-F.jpg",
+    "bytes": 30114,
+    "sha256": "46b35d48c56ec0fa76dca44392e9767529ee17574bbab37a8e22df1747d6d783"
+  },
+  {
+    "path": "assets/character-G.jpg",
+    "bytes": 30600,
+    "sha256": "32fd54afa398bb53a84e0f035ec34b64e9bfd5c0725d38a5ff4fbacae47abcb2"
+  },
+  {
+    "path": "assets/character-H.jpg",
+    "bytes": 32746,
+    "sha256": "69d70e04f26822c9841515d5f4387145a2925a97dd40e93b1cc4548e5397d6cd"
+  },
+  {
+    "path": "assets/character-K.jpg",
+    "bytes": 27774,
+    "sha256": "27086cf0e6f3859c3006cb89fa6c9044c7846cdd57ae246c6fcb4b70aa889c30"
+  },
+  {
+    "path": "assets/character-L.jpg",
+    "bytes": 25569,
+    "sha256": "1baa7970b6d04cb9bdfd5a1db501fc680c8565af13354e246a463d4c774767d1"
+  },
+  {
+    "path": "assets/character-O.jpg",
+    "bytes": 27204,
+    "sha256": "3cd6c6c16d65b60752d5d1bcc1d49d7aa123daff70118bbe85289bb0bd9c51df"
+  },
+  {
+    "path": "assets/character-S.jpg",
+    "bytes": 27380,
+    "sha256": "8698240de8315d434b1e42e6c6219ade0716739cb986e8d7de70ff7c31bd77b2"
+  },
+  {
+    "path": "assets/common-reactions-A3-English-review.pdf",
+    "bytes": 6081051,
+    "sha256": "bec4c8ab904ce7394a2ded83c6d24a789e8c43b73d9157e95e334fd430c8a2a1"
+  },
+  {
+    "path": "assets/common-reactions-preview.jpg",
+    "bytes": 494507,
+    "sha256": "2c178b99cb8b2940d5da7d38be0ada7317fcbd08b22c80267503b9fc3f606615"
+  }
+]

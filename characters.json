@@ -1,0 +1,98 @@
+[
+  {
+    "id": "A",
+    "name": "Tara",
+    "role": "Child girl",
+    "group": "community",
+    "status": "Starting cast; cultural review pending",
+    "image": "assets/character-A.jpg"
+  },
+  {
+    "id": "B",
+    "name": "Milan",
+    "role": "Child boy",
+    "group": "community",
+    "status": "Starting cast; cultural review pending",
+    "image": "assets/character-B.jpg"
+  },
+  {
+    "id": "C",
+    "name": "Pasang",
+    "role": "Adolescent girl",
+    "group": "community",
+    "status": "Starting cast; cultural review pending",
+    "image": "assets/character-C.jpg"
+  },
+  {
+    "id": "D",
+    "name": "Arun",
+    "role": "Adolescent boy",
+    "group": "community",
+    "status": "Starting cast; cultural review pending",
+    "image": "assets/character-D.jpg"
+  },
+  {
+    "id": "E",
+    "name": "Karuna",
+    "role": "Adult woman",
+    "group": "community",
+    "status": "Starting cast; cultural review pending",
+    "image": "assets/character-E.jpg"
+  },
+  {
+    "id": "F",
+    "name": "Prakash",
+    "role": "Adult man",
+    "group": "community",
+    "status": "Starting cast; cultural review pending",
+    "image": "assets/character-F.jpg"
+  },
+  {
+    "id": "G",
+    "name": "Asha",
+    "role": "Elderly woman",
+    "group": "community",
+    "status": "Starting cast; cultural review pending",
+    "image": "assets/character-G.jpg"
+  },
+  {
+    "id": "H",
+    "name": "Satya",
+    "role": "Elderly man",
+    "group": "community",
+    "status": "Starting cast; cultural review pending",
+    "image": "assets/character-H.jpg"
+  },
+  {
+    "id": "L",
+    "name": "Sneha",
+    "role": "Nurse / staff nurse",
+    "group": "pairs",
+    "status": "Single-view candidate; review pending",
+    "image": "assets/character-L.jpg"
+  },
+  {
+    "id": "O",
+    "name": "Name pending",
+    "role": "Nurse · male",
+    "group": "pairs",
+    "status": "Single-view candidate; name and cultural review pending",
+    "image": "assets/character-O.jpg"
+  },
+  {
+    "id": "K",
+    "name": "Maitri",
+    "role": "Trained psychosocial counsellor",
+    "group": "pairs",
+    "status": "Single-view candidate; review pending",
+    "image": "assets/character-K.jpg"
+  },
+  {
+    "id": "S",
+    "name": "Name pending",
+    "role": "PSS counsellor · male",
+    "group": "pairs",
+    "status": "Single-view candidate; name and cultural review pending",
+    "image": "assets/character-S.jpg"
+  }
+]
