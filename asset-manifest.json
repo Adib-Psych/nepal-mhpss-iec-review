@@ -108,5 +108,25 @@
     "path": "assets/expression-R.jpg",
     "bytes": 201952,
     "sha256": "8e2e7dfdd1d2634462fb32004b79b1f78c33ac002917d307fbf64cec04395012"
+  },
+  {
+    "path": "assets/grief-worker-A3-English-SAMPLE-v2.pdf",
+    "bytes": 2456384,
+    "sha256": "8191cae8c1c269fdc1e6e30952a7840cca4e679c62453535733c547a7eed722c"
+  },
+  {
+    "path": "assets/grief-worker-A3-Nepali-MACHINE-DRAFT-SAMPLE-v2.pdf",
+    "bytes": 2188424,
+    "sha256": "ee430dadacebdc118e208ab2f3c36fe93c9f0069ef26e13b53717ee8571ab911"
+  },
+  {
+    "path": "assets/grief-worker-en-preview.jpg",
+    "bytes": 552000,
+    "sha256": "1b2dd31cd1bf9c40b0366a59e9b62d85877ff3cb1087c9cc3ccea45b28d77940"
+  },
+  {
+    "path": "assets/grief-worker-ne-preview.jpg",
+    "bytes": 487415,
+    "sha256": "df301c10f8e22d4ce2e5880f57150bc5cb85ed4335aeae23068b63cf7804169a"
   }
 ]
