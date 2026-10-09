@@ -55,18 +55,48 @@
     "sha256": "3cd6c6c16d65b60752d5d1bcc1d49d7aa123daff70118bbe85289bb0bd9c51df"
   },
   {
+    "path": "assets/character-Q.jpg",
+    "bytes": 38169,
+    "sha256": "c50b644801b9fdb1718fdab5cd9b3b9ef48f1486fe9832dea1f8d279dc774a44"
+  },
+  {
+    "path": "assets/character-R.jpg",
+    "bytes": 35550,
+    "sha256": "9729b19b02edda0bd1e5840a16f4a9272f7670a7608fadbed0897344524bad02"
+  },
+  {
     "path": "assets/character-S.jpg",
     "bytes": 27380,
     "sha256": "8698240de8315d434b1e42e6c6219ade0716739cb986e8d7de70ff7c31bd77b2"
   },
   {
     "path": "assets/common-reactions-A3-English-review.pdf",
-    "bytes": 6081051,
-    "sha256": "bec4c8ab904ce7394a2ded83c6d24a789e8c43b73d9157e95e334fd430c8a2a1"
+    "bytes": 6085178,
+    "sha256": "fa72af4f02f1d78f57e3e75d0a5b8be2d3676888b95d047510016daf5f7132af"
   },
   {
     "path": "assets/common-reactions-preview.jpg",
-    "bytes": 494507,
-    "sha256": "2c178b99cb8b2940d5da7d38be0ada7317fcbd08b22c80267503b9fc3f606615"
+    "bytes": 582880,
+    "sha256": "c4e2774201f1ecd2cb6529fb0c38c0e3ae15f8098433fdcb990f2d1609ef47d8"
+  },
+  {
+    "path": "assets/expression-E.jpg",
+    "bytes": 196373,
+    "sha256": "ad774e93cdf4c1b79571067d9fe274908b5c5a9663c0a00017c5c807224efdbd"
+  },
+  {
+    "path": "assets/expression-F.jpg",
+    "bytes": 208603,
+    "sha256": "cf2e511ac8b21de050ed16abe663b1ee835b5ca819fc1780946d42831885c7c6"
+  },
+  {
+    "path": "assets/expression-Q.jpg",
+    "bytes": 212149,
+    "sha256": "423f2454946e306c405047ce8a1b7d98332f26e26dcf62fd5a59c2d3c4e85786"
+  },
+  {
+    "path": "assets/expression-R.jpg",
+    "bytes": 201952,
+    "sha256": "8e2e7dfdd1d2634462fb32004b79b1f78c33ac002917d307fbf64cec04395012"
   }
 ]

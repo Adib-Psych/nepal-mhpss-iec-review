@@ -6,7 +6,7 @@ Draft samples for communications and technical consultation. Not approved for pu
 
 Audience: adults and caregivers affected by floods in Rasuwa, Nuwakot and surrounding communities. Proposed communication outcome: recognize that reactions can vary, choose a feasible support action, and know when additional or urgent help is needed. This is a proposed outcome, not a tested effect.
 
-Included: one English A3 common-reactions poster, eight fictional community character candidates and four professional-character candidates (female/male nurse and psychosocial-counsellor pairs). Excluded: working archives, source code/ZIPs, previous poster iterations, clinical/client data, and original Myanmar/Syria/EDCD reference files. Fictional cast is not a claim to represent every Nepal community; role/gender examples are non-exhaustive.
+Included: one English A3 common-reactions poster, eight fictional community character candidates and six professional-character candidates (female/male nurse, psychosocial-counsellor and psychologist pairs), plus four selected expression profiles. Excluded: working archives, source code/ZIPs, previous poster iterations, clinical/client data, and original Myanmar/Syria/EDCD reference files. Fictional cast is not a claim to represent every Nepal community; role/gender examples are non-exhaustive.
 
 ## Production transparency
 

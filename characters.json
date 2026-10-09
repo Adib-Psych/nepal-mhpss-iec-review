@@ -73,10 +73,10 @@
   },
   {
     "id": "O",
-    "name": "Name pending",
+    "name": "Suman",
     "role": "Nurse · male",
     "group": "pairs",
-    "status": "Single-view candidate; name and cultural review pending",
+    "status": "Proposed name; native/cultural and visual review pending",
     "image": "assets/character-O.jpg"
   },
   {
@@ -89,10 +89,26 @@
   },
   {
     "id": "S",
-    "name": "Name pending",
+    "name": "Vinay",
     "role": "PSS counsellor · male",
     "group": "pairs",
-    "status": "Single-view candidate; name and cultural review pending",
+    "status": "Proposed name; native/cultural and visual review pending",
     "image": "assets/character-S.jpg"
+  },
+  {
+    "id": "Q",
+    "name": "Smriti",
+    "role": "Psychologist · female",
+    "group": "pairs",
+    "status": "Warmer expression revision v0.2; identity/cultural review pending",
+    "image": "assets/character-Q.jpg"
+  },
+  {
+    "id": "R",
+    "name": "Vivek",
+    "role": "Psychologist · male",
+    "group": "pairs",
+    "status": "Warmer expression revision v0.2; identity/cultural review pending",
+    "image": "assets/character-R.jpg"
   }
 ]
