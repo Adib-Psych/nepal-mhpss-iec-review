@@ -70,6 +70,26 @@
     "sha256": "8698240de8315d434b1e42e6c6219ade0716739cb986e8d7de70ff7c31bd77b2"
   },
   {
+    "path": "assets/common-en-SAMPLE-style-r4.pdf",
+    "bytes": 6102535,
+    "sha256": "9758ba9e4dbe05b95d88e59b97a2540d0c434403a404da9e326f7b381cdf8522"
+  },
+  {
+    "path": "assets/common-en-page-1-r4.jpg",
+    "bytes": 510420,
+    "sha256": "ea5ee94a4fbd76d189b103980614c8a40a8234dc4c28d38037ab68be4614973f"
+  },
+  {
+    "path": "assets/common-ne-SAMPLE-style-r4.pdf",
+    "bytes": 4733517,
+    "sha256": "3bd70367ae67f19649c5e9ec8b58d21aede7abd6a4cf7b355ca5934703dd8879"
+  },
+  {
+    "path": "assets/common-ne-page-1-r4.jpg",
+    "bytes": 404819,
+    "sha256": "ab605112e615e6158a7bb2e044c55ca7ebc407e30701984da22d094a19a25b46"
+  },
+  {
     "path": "assets/common-reactions-A3-English-review.pdf",
     "bytes": 6085178,
     "sha256": "fa72af4f02f1d78f57e3e75d0a5b8be2d3676888b95d047510016daf5f7132af"
@@ -90,6 +110,16 @@
     "sha256": "c4e2774201f1ecd2cb6529fb0c38c0e3ae15f8098433fdcb990f2d1609ef47d8"
   },
   {
+    "path": "assets/concept-02-photo-and-companionship-r4.jpg",
+    "bytes": 463540,
+    "sha256": "a0ba5034f2c364985d86fdab4798df890b901488f0e468f20b92577c4ded06f0"
+  },
+  {
+    "path": "assets/concept-03-chosen-community-gathering-r4.jpg",
+    "bytes": 398179,
+    "sha256": "0a1ddc00d79b3eba83517785355099eec41cced816b0f2a1577688d67b35efeb"
+  },
+  {
     "path": "assets/expression-E.jpg",
     "bytes": 196373,
     "sha256": "ad774e93cdf4c1b79571067d9fe274908b5c5a9663c0a00017c5c807224efdbd"
@@ -108,6 +138,41 @@
     "path": "assets/expression-R.jpg",
     "bytes": 201952,
     "sha256": "8e2e7dfdd1d2634462fb32004b79b1f78c33ac002917d307fbf64cec04395012"
+  },
+  {
+    "path": "assets/grief-a3-en-SAMPLE-style-r4.pdf",
+    "bytes": 2477584,
+    "sha256": "aa3b1822dc0af3303e450ebdedb33c1255656ffc9b2de4d7be5c933034a984f8"
+  },
+  {
+    "path": "assets/grief-a3-en-page-1-r4.jpg",
+    "bytes": 576813,
+    "sha256": "1eb9d71023995eef6086b1cd09ae93e94a29e5b9d85004adb2c85708025a7a3a"
+  },
+  {
+    "path": "assets/grief-a3-ne-SAMPLE-style-r4.pdf",
+    "bytes": 2184510,
+    "sha256": "1d124d6f931c43c80deae1a20673463fc5050a8b7616706d4cec3b64eca27932"
+  },
+  {
+    "path": "assets/grief-a3-ne-page-1-r4.jpg",
+    "bytes": 514514,
+    "sha256": "d45cc0280c0f42a5ff5afc7197b463d503f835c53edd685861797041003784b2"
+  },
+  {
+    "path": "assets/grief-a4-en-SAMPLE-style-r4.pdf",
+    "bytes": 15255736,
+    "sha256": "78e768b68fb18528b531c446d0035a1e376e2bfb0b39216fd1a06a0b51105a11"
+  },
+  {
+    "path": "assets/grief-a4-en-page-1-r4.jpg",
+    "bytes": 294987,
+    "sha256": "5ac045ae81153a6ba22f20cff1af15b79fc08f86a76d24f689253c718dffdc68"
+  },
+  {
+    "path": "assets/grief-a4-en-page-2-r4.jpg",
+    "bytes": 329434,
+    "sha256": "ab966ebf262de512b4cf55944ab7cc3a484c54157f595b48003513145083ae20"
   },
   {
     "path": "assets/grief-worker-A3-English-SAMPLE-v2.pdf",
