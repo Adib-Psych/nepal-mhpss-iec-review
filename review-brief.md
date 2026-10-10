@@ -49,3 +49,8 @@ Completed: one-page A3 geometry, minimum 15 mm margins, digital text checks, ren
 [4] https://www.who.int/about/communications/understandable/audiences-language
 [5] https://www.who.int/about/policies/publishing/copyright
 [6] https://www.who.int/docs/default-source/documents/communicating-for-health/communication-framework.pdf
+
+
+## Current curated set r4
+
+Review set r4: common-reactions A3 retained; Grief A4 front/back v3 is the primary worker option, with earlier A3 EN/NE for comparison and two separately labelled community visual concepts. Dialogue is italic; parent blue and grief violet accents are coordinated. Content is unchanged in the style derivatives; concepts are not finished health instructions. All technical, language/cultural, audience, referral, rights and release gates remain pending.
