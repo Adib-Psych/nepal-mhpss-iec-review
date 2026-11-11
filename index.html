@@ -123,6 +123,39 @@ dialog button{float:right;min-height:40px;padding:6px 14px;border:1px solid var(
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 @media(max-width:1100px){.product,.product.wide{grid-template-columns:1fr}.arc{grid-template-columns:repeat(3,1fr)}.ov-hero{grid-template-columns:1fr}}
 @media(max-width:820px){.shell{grid-template-columns:1fr;padding:14px 16px}.side{position:static;max-height:none;flex-direction:row;flex-wrap:wrap}.side .label,.side .grow{display:none}.nav-item .t small{display:none}.top-in{padding:12px 16px}.pill{margin-left:0}.flow{grid-template-columns:1fr}.flow .arrow{transform:rotate(90deg);height:28px}.two,.pipe{grid-template-columns:1fr}.arc{grid-template-columns:1fr 1fr}.viewer .pair{grid-template-columns:1fr}table.tr,table.tr tbody,table.tr tr,table.tr td{display:block;width:100%}table.tr thead{display:none}table.tr td{border-bottom:0}table.tr tr{border-bottom:1px solid var(--line);padding:6px 0}}
+
+/* mobile chip navigation (hidden on desktop) */
+.mnav{display:none}
+@media(max-width:820px){
+  .top-in{padding:10px 16px;gap:6px 12px}
+  .brand .eyebrow{font-size:10px;letter-spacing:.1em}
+  .brand h1{font-size:19px}
+  .pill{font-size:11.5px;padding:3px 9px;margin-left:0}
+  .side{display:none}
+  .mnav{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;position:sticky;top:0;z-index:20;background:var(--bg);padding:10px 16px;margin:0 -16px;border-bottom:1px solid var(--line);scrollbar-width:none}
+  .mnav::-webkit-scrollbar{display:none}
+  .chip{flex:0 0 auto;scroll-snap-align:start;display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:5px 12px 5px 5px;border-radius:999px;border:1px solid var(--line2);background:#fff;color:var(--ink);text-decoration:none;font-size:14px;font-weight:600;white-space:nowrap}
+  .chip .num{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:13px;font-weight:700}
+  .chip .ico{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line2);font-size:14px}
+  .chip.active{border-color:transparent;color:#fff}
+  .chip.active .ico{border-color:#ffffff88}
+  .shell{display:block;padding:0 16px 30px}
+  .chapter-head{margin-top:14px;padding:14px 16px;border-radius:12px}
+  .chapter-head h2{font-size:22px}
+  .chapter-head p{font-size:14px}
+  .chapter-head .status{font-size:12px}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:12px -16px 14px;padding:0 16px;-webkit-overflow-scrolling:touch}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;min-height:40px;font-size:14px;padding:7px 12px;white-space:nowrap}
+  .sep{flex:0 0 1px}
+  .card{padding:14px;border-radius:12px}
+  .viewer{padding:8px}
+  .opts{flex-wrap:nowrap;overflow-x:auto}
+  .opts .btn{flex:0 0 auto}
+  .ov-grid{margin-top:14px}
+  .ov-hero h2{font-size:24px}
+  main>.card:first-child{margin-top:14px}
+}
 </style>
 </head>
 <body>
@@ -131,6 +164,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   <span class="pill">Review draft · Not for field distribution</span>
 </div></div>
 <div class="shell">
+  <nav class="mnav" id="mnav" aria-label="Series"></nav>
   <nav class="side" id="side" aria-label="Series"></nav>
   <main id="main"><div class="placeholder">Loading…</div></main>
 </div>
@@ -155,6 +189,11 @@ function side(route){
   }
   h+=`<div class="grow"></div><div class="label">THE CAST</div><a class="nav-item ${a==='characters'?'active':''}" href="#characters"><span class="ico">☺</span><span class="t"><b>Characters</b><small>Who appears in the series</small></span></a>`;
   document.getElementById('side').innerHTML=h;
+  let m=`<a class="chip ${a==='overview'?'active':''}" href="#overview" style="${a==='overview'?'background:var(--blue)':''}"><span class="ico">◎</span>Overview</a>`;
+  for(const c of S.chapters){const on=a===c.key;m+=`<a class="chip ${on?'active':''}" href="#${c.key}/poster" style="${on?`background:${c.colour[0]}`:''}"><span class="num" style="background:${on?'#ffffff33':c.colour[0]}">${c.n}</span>${esc(c.short||c.title)}</a>`;}
+  m+=`<a class="chip ${a==='characters'?'active':''}" href="#characters" style="${a==='characters'?'background:var(--blue)':''}"><span class="ico">☺</span>Characters</a>`;
+  const mn=document.getElementById('mnav');mn.innerHTML=m;
+  const act=mn.querySelector('.chip.active');if(act)mn.scrollLeft=Math.max(0,act.offsetLeft-(mn.clientWidth-act.offsetWidth)/2);
 }
 
 function productView(c,tab,opt){
