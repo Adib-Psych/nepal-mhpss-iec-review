@@ -50,7 +50,8 @@
      "pdf": "assets/series/ch1/guide-v6.pdf",
      "format": "A4 · facilitator guide"
     }
-   ]
+   ],
+   "short": "Not alone"
   },
   {
    "n": 2,
@@ -90,7 +91,8 @@
     }
    ],
    "leaflet": [],
-   "guide": []
+   "guide": [],
+   "short": "Nights"
   },
   {
    "n": 3,
@@ -105,7 +107,8 @@
    "moment": "Late afternoon on the shelter veranda. Asha and Satya miss someone; neighbours stay near them in quiet, practical ways.",
    "poster": [],
    "leaflet": [],
-   "guide": []
+   "guide": [],
+   "short": "Grief"
   },
   {
    "n": 4,
@@ -120,7 +123,8 @@
    "moment": "A morning in the shelter courtyard. Karuna keeps the routine going; Pasang leads a game; Milan starts drawing his home.",
    "poster": [],
    "leaflet": [],
-   "guide": []
+   "guide": [],
+   "short": "Children"
   },
   {
    "n": 5,
@@ -144,7 +148,8 @@
     }
    ],
    "leaflet": [],
-   "guide": []
+   "guide": [],
+   "short": "Next steps"
   },
   {
    "n": 6,
@@ -159,7 +164,8 @@
    "moment": "After weeks of helping at the shelter, Karuna is tired. Her team leader checks in; the team takes a break together.",
    "poster": [],
    "leaflet": [],
-   "guide": []
+   "guide": [],
+   "short": "Helpers"
   }
  ]
 }
