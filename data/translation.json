@@ -1,0 +1,809 @@
+{
+ "file": "IEC Series Translation EN-NE - Posters and Leaflets 11Nov2026.docx",
+ "date": "2026-11-11",
+ "status": "Nepali drafts, not yet reviewed by a native speaker. Safety rows are written by a human translator.",
+ "shared": {
+  "id": "F",
+  "title": "Shared blocks (same text on every product that uses them)",
+  "source": "Series bible, Section 6 (fixed blocks); wording as on the locked Chapter 1 and Chapter 2 posters",
+  "shared": "",
+  "rows": [
+   {
+    "id": "F-01",
+    "part": "Kicker (Ch1, Ch4, Ch5)",
+    "en": "AFTER THE FLOOD",
+    "ne": "बाढीपछि",
+    "type": "general",
+    "note": "Not used in Chapter 2 (poster and leaflet); Chapter 3 and Chapter 6 have their own kicker.",
+    "changed": false
+   },
+   {
+    "id": "F-02",
+    "part": "Help heading, green wash",
+    "en": "Ask for help early",
+    "ne": "",
+    "type": "safety",
+    "note": "Seek help before things become severe; there is no need to wait. Must be identical on every product.",
+    "changed": false
+   },
+   {
+    "id": "F-03",
+    "part": "Help text, green wash (Ch1, Ch2, Ch5)",
+    "en": "Feelings getting worse, not going away, or making daily life hard? Talk to a health worker. You do not have to wait.",
+    "ne": "",
+    "type": "safety",
+    "note": "Three triggers joined by \"or\"; health worker = स्वास्थ्यकर्मी. Chapters 3, 4 and 6 use their own text (in their tables).",
+    "changed": false
+   },
+   {
+    "id": "F-04",
+    "part": "Urgent heading, coral wash",
+    "en": "Get help now",
+    "ne": "",
+    "type": "safety",
+    "note": "Urgent and direct; do not soften.",
+    "changed": false
+   },
+   {
+    "id": "F-05",
+    "part": "Urgent text, coral wash",
+    "en": "In danger, or thinking of harming yourself? Get help now. Ask a health worker or responder, and ask someone you trust to stay with you.",
+    "ne": "",
+    "type": "safety",
+    "note": "Self-harm stated plainly; responder = a person from the emergency response (proposed उद्धारकर्मी, translator to confirm).",
+    "changed": false
+   },
+   {
+    "id": "F-06",
+    "part": "Local line (Ch1 to Ch5)",
+    "en": "Help near you: ____________ (filled in and checked locally)",
+    "ne": "",
+    "type": "safety",
+    "note": "Label for a verified local contact; keep the blank line.",
+    "changed": false
+   },
+   {
+    "id": "F-07",
+    "part": "Closing slogan",
+    "en": "Look after yourself. Look after each other.",
+    "ne": "आफ्नो ख्याल राख्नुहोस् । एकअर्काको ख्याल राख्नुहोस् ।",
+    "type": "general",
+    "note": "",
+    "changed": false
+   },
+   {
+    "id": "F-08",
+    "part": "Inclusion line",
+    "en": "Support is for everyone, including people with disabilities and older people. Ask for large print, sign language or more time.",
+    "ne": "सहयोग सबैका लागि हो, अपाङ्गता भएका व्यक्ति र ज्येष्ठ नागरिकका लागि पनि । ठूला अक्षर, साङ्केतिक भाषा वा थप समय माग्न सक्नुहुन्छ ।",
+    "type": "general",
+    "note": "अपाङ्गता भएका व्यक्ति follows CMC-Nepal usage.",
+    "changed": false
+   },
+   {
+    "id": "F-09",
+    "part": "Poster footer (N = chapter number)",
+    "en": "Community wall poster · A3 · Chapter N of 6 · English review draft · Not for field distribution.",
+    "ne": "सामुदायिक भित्ते पोस्टर · A3 · अध्याय ६ मध्ये N · नेपाली समीक्षा मस्यौदा · क्षेत्रमा वितरणका लागि होइन ।",
+    "type": "general",
+    "note": "Write N in Devanagari digits (१ to ६). \"English review draft\" becomes \"Nepali review draft\". Chapter 6 uses its own footer.",
+    "changed": false
+   },
+   {
+    "id": "F-10",
+    "part": "Leaflet footer (N = chapter number)",
+    "en": "Take-home leaflet · A4 · Chapter N of 6 · English review draft · Not for field distribution.",
+    "ne": "घर लैजाने पर्चा · A4 · अध्याय ६ मध्ये N · नेपाली समीक्षा मस्यौदा · क्षेत्रमा वितरणका लागि होइन ।",
+    "type": "general",
+    "note": "Chapter 6 uses its own footer.",
+    "changed": false
+   },
+   {
+    "id": "F-11",
+    "part": "Disclosure line",
+    "en": "Fictional illustrations, AI-assisted and developed under human direction.",
+    "ne": "काल्पनिक चित्रहरू, मानवीय निर्देशनमा AI को सहायताले तयार गरिएका ।",
+    "type": "general",
+    "note": "",
+    "changed": false
+   },
+   {
+    "id": "F-12",
+    "part": "Safety line (Ch1 and Ch2 leaflets)",
+    "en": "Keep safe: follow local warnings. Do not enter floodwater or damaged buildings.",
+    "ne": "",
+    "type": "safety",
+    "note": "Physical safety instruction.",
+    "changed": false
+   },
+   {
+    "id": "F-13",
+    "part": "Medicine line (Ch1 and Ch2 leaflets)",
+    "en": "If you take medicine from a doctor, do not stop it without asking a health worker.",
+    "ne": "",
+    "type": "safety",
+    "note": "Medication continuity.",
+    "changed": false
+   },
+   {
+    "id": "F-14",
+    "part": "Heading (Ch1 and Ch6 leaflets)",
+    "en": "Ways of coping that can make things worse",
+    "ne": "अवस्था झन् बिगार्न सक्ने सामना गर्ने तरिकाहरू",
+    "type": "general",
+    "note": "सामना गर्ने तरिका as in CMC-Nepal.",
+    "changed": false
+   },
+   {
+    "id": "F-15",
+    "part": "Heading (Ch1 and Ch3 leaflets)",
+    "en": "You may notice",
+    "ne": "तपाईंमा यस्ता कुरा देखिन सक्छन्",
+    "type": "general",
+    "note": "",
+    "changed": false
+   }
+  ]
+ },
+ "chapters": {
+  "ch1": [
+   {
+    "id": "C1P",
+    "title": "Chapter 1 · You are not alone · Poster A3",
+    "source": "Approved: poster ABC-r3, option C (exact text from the print file)",
+    "shared": "F-01 kicker · F-02–F-06 help washes and local line · F-07 slogan · F-08 inclusion · F-09 footer (N = १) · F-11 disclosure",
+    "rows": [
+     {
+      "id": "C1P-01",
+      "part": "Title",
+      "en": "You are not alone",
+      "ne": "तपाईं एक्लो हुनुहुन्न",
+      "type": "general",
+      "note": "Echoes the CMC-Nepal leaflet \"म एक्लो छैन\".",
+      "changed": false
+     },
+     {
+      "id": "C1P-02",
+      "part": "Strip",
+      "en": "Many people feel this way after the flood.",
+      "ne": "बाढीपछि धेरै मानिसलाई यस्तै महसुस हुन्छ ।",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1P-03",
+      "part": "Feel heading",
+      "en": "You may feel…",
+      "ne": "तपाईंलाई यस्तो महसुस हुन सक्छ…",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1P-04",
+      "part": "Feeling word",
+      "en": "Sad",
+      "ne": "दुःखी",
+      "type": "general",
+      "note": "Alternative उदास; choose the word readers use most.",
+      "changed": false
+     },
+     {
+      "id": "C1P-05",
+      "part": "Feeling word",
+      "en": "Worried or afraid",
+      "ne": "चिन्तित वा डराएको",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1P-06",
+      "part": "Feeling word",
+      "en": "Angry",
+      "ne": "रिसाएको",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1P-07",
+      "part": "Feeling word",
+      "en": "Unable to sleep",
+      "ne": "निद्रा नलाग्ने",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1P-08",
+      "part": "Help heading",
+      "en": "Small things that can help",
+      "ne": "सहयोग गर्न सक्ने साना कुराहरू",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1P-09",
+      "part": "Label",
+      "en": "Be with someone you trust",
+      "ne": "विश्वासिलो मानिससँग बस्नुहोस्",
+      "type": "general",
+      "note": "Longer option: आफूले विश्वास गर्ने मानिससँग बस्नुहोस्.",
+      "changed": false
+     },
+     {
+      "id": "C1P-10",
+      "part": "Label",
+      "en": "Rest, eat and drink safe water",
+      "ne": "आराम, खाना र सुरक्षित पानी",
+      "type": "general",
+      "note": "Short label form to fit the poster.",
+      "changed": false
+     },
+     {
+      "id": "C1P-11",
+      "part": "Label",
+      "en": "Breathe slowly",
+      "ne": "बिस्तारै सास फेर्नुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1P-12",
+      "part": "Label",
+      "en": "Do one small task",
+      "ne": "एउटा सानो काम गर्नुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1P-13",
+      "part": "Label",
+      "en": "Keep routines for children",
+      "ne": "बालबालिकाको दिनचर्या कायम राख्नुहोस्",
+      "type": "general",
+      "note": "दिनचर्या as in CMC-Nepal.",
+      "changed": false
+     }
+    ]
+   },
+   {
+    "id": "C1L",
+    "title": "Chapter 1 · You are not alone · Leaflet A4 tri-fold",
+    "source": "Approved: Leaflet A tri-fold r3 (exact text from the print file), except the intro C1L-03, updated on 11 Nov 2026 for the text-only revision r3.1",
+    "shared": "F-01 kicker · F-02–F-06 · F-07 · F-08 · F-10 footer (N = १) · F-11 · F-12 safety line · F-13 medicine line · F-14 coping heading · F-15 \"You may notice\"",
+    "rows": [
+     {
+      "id": "C1L-01",
+      "part": "Title",
+      "en": "You are not alone",
+      "ne": "तपाईं एक्लो हुनुहुन्न",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-02",
+      "part": "Strip",
+      "en": "Many people feel this way after the flood.",
+      "ne": "बाढीपछि धेरै मानिसलाई यस्तै महसुस हुन्छ ।",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-03",
+      "part": "Intro",
+      "en": "A distressing experience can change how we feel, think, sleep and get along with others. These are common reactions. People react in different ways, and there is no right or wrong way to feel. Support can help, and you do not have to wait to ask for it.",
+      "ne": "पीडादायी अनुभवले हामी कस्तो महसुस गर्छौं, कसरी सोच्छौं, कसरी सुत्छौं र अरूसँग कसरी व्यवहार गर्छौं भन्ने कुरामा परिवर्तन ल्याउन सक्छ । यी सामान्य प्रतिक्रियाहरू हुन् । मानिसहरूको प्रतिक्रिया फरक-फरक हुन्छ, र महसुस गर्ने कुनै सही वा गलत तरिका हुँदैन । सहयोगले मद्दत गर्न सक्छ, र सहयोग माग्न तपाईंले पर्खिनु पर्दैन ।",
+      "type": "general",
+      "note": "Updated 11 Nov 2026: replaces \"A frightening experience … Many reactions ease with time and support.\" Last sentence identical to the Chapter 2 leaflet intro.",
+      "changed": true
+     },
+     {
+      "id": "C1L-04",
+      "part": "Row label",
+      "en": "Feelings",
+      "ne": "भावना",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-05",
+      "part": "Row text",
+      "en": "Sadness, worry, fear, anger, or feeling numb",
+      "ne": "दुःख, चिन्ता, डर, रिस, वा केही पनि महसुस नहुने",
+      "type": "general",
+      "note": "\"feeling numb\": check for a more natural local phrase.",
+      "changed": false
+     },
+     {
+      "id": "C1L-06",
+      "part": "Row label",
+      "en": "Body",
+      "ne": "शरीर",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-07",
+      "part": "Row text",
+      "en": "Feeling very tired, aches and pains, headaches. If pain, fever or another body problem worries you, see a health worker.",
+      "ne": "",
+      "type": "safety",
+      "note": "Medical warning: body problems may need a health worker; do not imply they are only emotional.",
+      "changed": false
+     },
+     {
+      "id": "C1L-08",
+      "part": "Row label",
+      "en": "Sleep",
+      "ne": "निद्रा",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-09",
+      "part": "Row text",
+      "en": "Trouble falling asleep, or bad dreams",
+      "ne": "निदाउन गाह्रो हुने, वा नराम्रा सपना देख्ने",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-10",
+      "part": "Row label",
+      "en": "Thoughts",
+      "ne": "विचार",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-11",
+      "part": "Row text",
+      "en": "Upsetting memories that come back, or trouble concentrating",
+      "ne": "नरमाइला सम्झनाहरू फेरि-फेरि आउने, वा ध्यान केन्द्रित गर्न गाह्रो हुने",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-12",
+      "part": "Row label",
+      "en": "With others",
+      "ne": "अरूसँग",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-13",
+      "part": "Row text",
+      "en": "Feeling irritable, or wanting to be alone",
+      "ne": "झर्को लाग्ने, वा एक्लै बस्न मन लाग्ने",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-14",
+      "part": "Heading",
+      "en": "Children react too",
+      "ne": "बालबालिकामा पनि प्रतिक्रिया देखिन्छ",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-15",
+      "part": "Text",
+      "en": "They may cling to you, cry more, or become very quiet. Stay close, explain simply what is happening, and keep familiar routines.",
+      "ne": "उनीहरू तपाईंसँग टाँसिइरहन सक्छन्, धेरै रुन सक्छन्, वा एकदमै चुपचाप हुन सक्छन् । उनीहरूको नजिकै रहनुहोस्, के भइरहेको छ भनेर सरल रूपमा बुझाउनुहोस्, र परिचित दिनचर्या कायम राख्नुहोस् ।",
+      "type": "general",
+      "note": "टाँसिइरहने as in the NHEICC children poster.",
+      "changed": false
+     },
+     {
+      "id": "C1L-16",
+      "part": "Heading",
+      "en": "Small things that can help",
+      "ne": "सहयोग गर्न सक्ने साना कुराहरू",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-17",
+      "part": "Tip heading",
+      "en": "Be with someone you trust",
+      "ne": "विश्वासिलो मानिससँग बस्नुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-18",
+      "part": "Tip text",
+      "en": "Talk, or simply sit together quietly. You do not have to tell your story.",
+      "ne": "कुरा गर्नुहोस्, वा चुपचाप सँगै बस्नुहोस् । तपाईंले आफ्नो कथा सुनाउनै पर्छ भन्ने छैन ।",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-19",
+      "part": "Tip heading",
+      "en": "Rest, eat and drink safe water",
+      "ne": "आराम, खाना र सुरक्षित पानी",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-20",
+      "part": "Tip text",
+      "en": "Rest when you can. Eat regular meals if you can, and drink safe water.",
+      "ne": "सकेसम्म आराम गर्नुहोस् । सम्भव भए नियमित रूपमा खाना खानुहोस्, र सुरक्षित पानी पिउनुहोस् ।",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-21",
+      "part": "Tip heading",
+      "en": "Breathe slowly",
+      "ne": "बिस्तारै सास फेर्नुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-22",
+      "part": "Tip text",
+      "en": "Breathe in slowly, then breathe out slowly. Notice three things you can see and hear around you. Stop if it makes you feel worse.",
+      "ne": "बिस्तारै सास भित्र लिनुहोस्, अनि बिस्तारै बाहिर फाल्नुहोस् । वरिपरि देख्न र सुन्न सकिने तीनवटा कुरामा ध्यान दिनुहोस् । यसले झन् नराम्रो महसुस गराएमा रोक्नुहोस् ।",
+      "type": "general",
+      "note": "Keep \"stop if it makes you feel worse\" clearly visible.",
+      "changed": false
+     },
+     {
+      "id": "C1L-23",
+      "part": "Tip heading",
+      "en": "Do one small task",
+      "ne": "एउटा सानो काम गर्नुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-24",
+      "part": "Tip text",
+      "en": "Choose one thing you can manage today. Take breaks; you do not have to do everything at once.",
+      "ne": "आज गर्न सक्ने एउटा काम छान्नुहोस् । बीच-बीचमा आराम गर्नुहोस्; सबै काम एकैपटक गर्नुपर्दैन ।",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-25",
+      "part": "Tip heading",
+      "en": "Keep daily routines",
+      "ne": "दैनिक दिनचर्या कायम राख्नुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-26",
+      "part": "Tip text",
+      "en": "Regular times for meals, sleep and play help children and adults feel safer.",
+      "ne": "खाना, निद्रा र खेलका लागि नियमित समय हुँदा बालबालिका र वयस्क दुवैलाई बढी सुरक्षित महसुस हुन्छ ।",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-27",
+      "part": "Coping lead",
+      "en": "Your feelings are not wrong. But some ways of coping can harm you or the people around you:",
+      "ne": "तपाईंका भावनाहरू गलत होइनन् । तर सामना गर्ने केही तरिकाले तपाईं वा तपाईंका वरिपरिका मानिसलाई हानि पुर्‍याउन सक्छन्:",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C1L-28",
+      "part": "Coping item",
+      "en": "Drinking alcohol or using drugs to forget or to sleep",
+      "ne": "",
+      "type": "safety",
+      "note": "Harm-related; describe without blame.",
+      "changed": false
+     },
+     {
+      "id": "C1L-29",
+      "part": "Coping item",
+      "en": "Staying away from everyone for a long time",
+      "ne": "",
+      "type": "safety",
+      "note": "Harm-related; describe without blame.",
+      "changed": false
+     },
+     {
+      "id": "C1L-30",
+      "part": "Coping item",
+      "en": "Taking anger out on others, especially children",
+      "ne": "",
+      "type": "safety",
+      "note": "Harm-related; describe without blame.",
+      "changed": false
+     },
+     {
+      "id": "C1L-31",
+      "part": "Coping item",
+      "en": "Working all day without any rest",
+      "ne": "",
+      "type": "safety",
+      "note": "Harm-related; describe without blame.",
+      "changed": false
+     },
+     {
+      "id": "C1L-32",
+      "part": "Coping close",
+      "en": "If you notice these in yourself or someone close to you, talk to someone you trust or a health worker.",
+      "ne": "",
+      "type": "safety",
+      "note": "Help-seeking route.",
+      "changed": false
+     },
+     {
+      "id": "C1L-33",
+      "part": "Read more",
+      "en": "Want to read more? WHO's illustrated guide Doing What Matters in Times of Stress is available in Nepali.",
+      "ne": "थप पढ्न चाहनुहुन्छ? विश्व स्वास्थ्य संगठन (WHO) को चित्रसहितको पुस्तिका Doing What Matters in Times of Stress नेपालीमा उपलब्ध छ ।",
+      "type": "general",
+      "note": "Replace the English title with the official Nepali title of the WHO guide (not yet confirmed).",
+      "changed": false
+     },
+     {
+      "id": "C1L-34",
+      "part": "Sources",
+      "en": "Sources: WHO, Psychological First Aid: Guide for Field Workers (2011); WHO, Doing What Matters in Times of Stress (2020); IASC, Guidelines on MHPSS in Emergency Settings (2007); WHO/UNHCR, mhGAP Humanitarian Intervention Guide (2015). This material draws on these publications; it was not created by WHO or IASC, which are not responsible for its content.",
+      "ne": "स्रोतहरू: WHO, Psychological First Aid: Guide for Field Workers (2011); WHO, Doing What Matters in Times of Stress (2020); IASC, Guidelines on MHPSS in Emergency Settings (2007); WHO/UNHCR, mhGAP Humanitarian Intervention Guide (2015) । यो सामग्री यी प्रकाशनहरूमा आधारित छ; यसलाई WHO वा IASC ले तयार पारेको होइन, र यसको विषयवस्तुप्रति उनीहरू जिम्मेवार छैनन् ।",
+      "type": "check",
+      "note": "Publication titles stay in English. The disclaimer has legal weight: check against WHO adaptation wording.",
+      "changed": false
+     }
+    ]
+   }
+  ],
+  "ch2": [
+   {
+    "id": "C2P",
+    "title": "Chapter 2 · Difficult nights · Poster A3",
+    "source": "Approved: poster options A r10, B r4 and C r4 (same text; checked against the print files)",
+    "shared": "No kicker · F-02–F-06 · F-07 · F-08 · F-09 footer (N = २) · F-11",
+    "rows": [
+     {
+      "id": "C2P-01",
+      "part": "Title",
+      "en": "It can be hard to sleep after a distressing experience",
+      "ne": "पीडादायी अनुभवपछि निदाउन गाह्रो हुन सक्छ",
+      "type": "general",
+      "note": "Series term \"distressing experience\" = पीडादायी अनुभव (see Terms). No full stop in titles.",
+      "changed": false
+     },
+     {
+      "id": "C2P-02",
+      "part": "Strip",
+      "en": "After a flood, an earthquake or another distressing experience, many people sleep badly or wake up afraid. You are not alone.",
+      "ne": "बाढी, भूकम्प वा अरू कुनै पीडादायी अनुभवपछि धेरै मानिसलाई राम्रोसँग निद्रा लाग्दैन, वा उनीहरू डराएर ब्यूँझन्छन् । तपाईं एक्लो हुनुहुन्न ।",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C2P-03",
+      "part": "Heading",
+      "en": "Before night",
+      "ne": "राति सुत्नुअघि",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C2P-04",
+      "part": "Label",
+      "en": "If there is still a risk, check local warnings.",
+      "ne": "",
+      "type": "safety",
+      "note": "Condition first: यदि … भने. Same meaning as the safety line.",
+      "changed": false
+     },
+     {
+      "id": "C2P-05",
+      "part": "Label",
+      "en": "Keep a torch nearby",
+      "ne": "टर्च नजिकै राख्नुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C2P-06",
+      "part": "Heading",
+      "en": "If you wake up afraid",
+      "ne": "डराएर ब्यूँझनुभयो भने",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C2P-07",
+      "part": "Label",
+      "en": "Notice the safe things around you",
+      "ne": "आफ्नो वरिपरिका सुरक्षित कुराहरूमा ध्यान दिनुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C2P-08",
+      "part": "Label",
+      "en": "Breathe slowly",
+      "ne": "बिस्तारै सास फेर्नुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C2P-09",
+      "part": "Label",
+      "en": "Go to someone you trust",
+      "ne": "विश्वासिलो मानिसकहाँ जानुहोस्",
+      "type": "general",
+      "note": "Short label form, as C1P-09. Longer option: आफूले विश्वास गर्ने मानिसकहाँ जानुहोस्.",
+      "changed": false
+     }
+    ]
+   }
+  ],
+  "ch5": [
+   {
+    "id": "C5P",
+    "title": "Chapter 5 · Every family's next step is different · Poster A3",
+    "source": "Approved: poster option A r7 (text checked against the print file)",
+    "shared": "F-01 kicker · F-02–F-06 · F-07 · F-08 · F-09 footer (N = ५) · F-11",
+    "rows": [
+     {
+      "id": "C5P-01",
+      "part": "Title",
+      "en": "Every family's next step is different",
+      "ne": "हरेक परिवारको अर्को कदम फरक हुन्छ",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C5P-02",
+      "part": "Strip",
+      "en": "Home is more than a house. Adjusting can take time.",
+      "ne": "घर भनेको भवन मात्र होइन । नयाँ अवस्थामा बानी पर्न समय लाग्न सक्छ ।",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C5P-03",
+      "part": "Path label",
+      "en": "Going home",
+      "ne": "घर फर्कंदै",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C5P-04",
+      "part": "Path line",
+      "en": "Return only when it is safe.",
+      "ne": "",
+      "type": "safety",
+      "note": "Physical safety instruction.",
+      "changed": false
+     },
+     {
+      "id": "C5P-05",
+      "part": "Path label",
+      "en": "Moving somewhere new",
+      "ne": "नयाँ ठाउँमा सर्दै",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C5P-06",
+      "part": "Path line",
+      "en": "Give yourself time to settle.",
+      "ne": "नयाँ ठाउँमा भिज्न आफूलाई समय दिनुहोस् ।",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C5P-07",
+      "part": "Path label",
+      "en": "Still waiting",
+      "ne": "अझै पर्खिँदै",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C5P-08",
+      "part": "Path line",
+      "en": "Ask for updates.",
+      "ne": "पछिल्लो जानकारी सोध्नुहोस् ।",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C5P-09",
+      "part": "Help heading",
+      "en": "What can help",
+      "ne": "केले सहयोग गर्न सक्छ",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C5P-10",
+      "part": "Label",
+      "en": "Stay close to people you trust",
+      "ne": "आफूले विश्वास गर्ने मानिसको नजिक रहनुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C5P-11",
+      "part": "Label",
+      "en": "Keep routines for children",
+      "ne": "बालबालिकाको दिनचर्या कायम राख्नुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C5P-12",
+      "part": "Label",
+      "en": "Ask for checked information",
+      "ne": "पुष्टि भएको जानकारी सोध्नुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false
+     },
+     {
+      "id": "C5P-13",
+      "part": "Label",
+      "en": "Know a safer place. Act on warnings straight away.",
+      "ne": "",
+      "type": "safety",
+      "note": "Warning and evacuation instruction.",
+      "changed": false
+     }
+    ]
+   }
+  ]
+ }
+}
