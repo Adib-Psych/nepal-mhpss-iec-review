@@ -148,6 +148,29 @@ dialog button{float:right;min-height:40px;padding:6px 14px;border:1px solid var(
 dialog.full .dlgbody img{max-height:none;width:100%;cursor:zoom-out}
 @media(max-width:1100px){.galrow{grid-template-columns:1fr}.galinfo{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:16px}}
 @media(max-width:820px){.gal{gap:8px;grid-template-columns:repeat(3,minmax(0,1fr))}.gal.n1{grid-template-columns:minmax(0,220px)}.gal.wide.n1{grid-template-columns:1fr}.gal.n2{grid-template-columns:1fr 1fr}.tcard{padding:6px;gap:6px}.tcard .tl b{font-size:13.5px}.tcard .tl span{font-size:11.5px}.tcard .ta .btn{font-size:12px;padding:6px 4px;min-height:36px;flex:1 1 100%}.dlgbar b{flex:1 1 100%}dialog{padding:10px}}
+/* feedback: reviewer details, poster poll, comments (stored privately, never shown here) */
+.fb{margin-top:18px}
+.fb h3{font-size:19px;margin:0 0 4px;color:var(--blue)}
+.fb .cap{margin:0 0 12px;display:block}
+.fbgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:start}
+.fbbox{border:1px solid var(--line);border-radius:10px;padding:16px;background:#fafaf7;min-width:0}
+.fbbox h4{margin:0 0 4px;font-size:16px}
+.fbbox p{margin:0 0 10px;font-size:14px;color:var(--muted)}
+.who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.who label,.fbbox label.f{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted);min-width:0}
+.fb input[type=text],.fb input[type=email],.fb textarea,.fb select{font:inherit;font-size:15px;padding:9px 10px;border:1px solid var(--line2);border-radius:7px;background:#fff;color:inherit;width:100%;min-width:0}
+.fb textarea{min-height:104px;resize:vertical}
+.whoas{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font-size:14px;margin-bottom:14px;padding:10px 12px;background:var(--okt);border-radius:8px}
+.whoas button{font:inherit;font-size:13px;border:0;background:none;color:var(--blue);text-decoration:underline;cursor:pointer;padding:0}
+.pollopts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 12px}
+.pollopts label{display:flex;align-items:center;gap:6px;white-space:nowrap;border:1px solid var(--line2);border-radius:8px;padding:10px 8px;font-size:14.5px;background:#fff;cursor:pointer;font-weight:600;min-height:44px}
+.pollopts label:has(input:checked){border-color:var(--blue);box-shadow:0 0 0 2px var(--blue) inset}
+.fbmsg{font-size:14px;margin:10px 0 0;min-height:20px}
+.fbmsg.ok{color:var(--ok);font-weight:600}.fbmsg.err{color:#9a3a22;font-weight:600}
+.fb button.btn{cursor:pointer;font:inherit}
+.fb button.btn[disabled]{opacity:.5;cursor:default}
+@media(max-width:900px){.fbgrid{grid-template-columns:1fr}.who{grid-template-columns:1fr}}
+@media(max-width:430px){.pollopts label{padding:9px 8px;font-size:14px}}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 @media(max-width:1100px){.product,.product.wide{grid-template-columns:1fr}.arc{grid-template-columns:repeat(3,1fr)}.ov-hero{grid-template-columns:1fr}}
 @media(max-width:820px){.shell{grid-template-columns:1fr;padding:14px 16px}.side{position:static;max-height:none;flex-direction:row;flex-wrap:wrap}.side .label,.side .grow{display:none}.nav-item .t small{display:none}.top-in{padding:12px 16px}.pill{margin-left:0}.flow{grid-template-columns:1fr}.flow .arrow{transform:rotate(90deg);height:28px}.two,.pipe{grid-template-columns:1fr}.arc{grid-template-columns:1fr 1fr}.viewer .pair{grid-template-columns:1fr}table.tr,table.tr tbody,table.tr tr,table.tr td{display:block;width:100%}table.tr thead{display:none}table.tr td{border-bottom:0}table.tr tr{border-bottom:1px solid var(--line);padding:6px 0}}
@@ -237,7 +260,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 <dialog id="dlg" aria-label="Preview"><div class="dlgbar"><b id="dlgt"></b><button id="dlgp" aria-label="Previous">‹ Previous</button><button id="dlgn" aria-label="Next">Next ›</button><a id="dlgpdf" download>English PDF</a><button id="dlgx">Close</button></div><div class="dlgbody"><img id="dlgimg" alt="" title="Select to enlarge or fit"></div></dialog>
 <script>
 const TABS=[['poster','Poster'],['leaflet','Leaflet'],['guide','Health Talk Guide']];
-const UTIL=[['translation','Translation & proofreading'],['feedback','Feedback form']];
+const UTIL=[['translation','Translation & proofreading']];
 const CAST=[['A','Tara','Girl, about 7'],['B','Milan','Boy, about 9'],['C','Pasang','Adolescent girl, about 14'],['D','Arun','Adolescent boy, about 16'],['E','Karuna','Adult woman'],['F','Prakash',"Adult man, Milan's father"],['G','Asha','Older woman'],['H','Satya','Older man']];
 const PROS=[['L','Sneha','Nurse · female'],['O','Suman','Nurse · male'],['K','Maitri','Psychosocial counsellor · female'],['S','Vinay','Psychosocial counsellor · male'],['Q','Smriti','Psychologist · female'],['R','Vivek','Psychologist · male']];
 let S=null,T=null;
@@ -279,7 +302,7 @@ function productView(c,tab,opt){
     <div class="galrow"><div class="gal n${Math.min(list.length,3)} ${p0.images?'wide':''}">${cards}</div>
     <div class="galinfo"><dl class="meta"><dt>Format</dt><dd>${esc(p0.format)}</dd><dt>Language</dt><dd>English review copy · Nepali in preparation</dd></dl>
       <div><div class="btns"><span class="btn soon">Nepali PDF · after proofreading</span></div>
-      <div class="btns"><a class="btn" href="#${c.key}/translation">See the translation</a><a class="btn" href="#${c.key}/feedback">Give feedback</a></div></div></div></div></div>`;
+      <div class="btns"><a class="btn" href="#${c.key}/translation">See the translation</a><button class="btn" type="button" data-tofb>Give feedback</button></div></div></div>${fbBlock(c,tab,list)}</div>`;
 }
 function trTable(sec,colour){
   const rows=sec.rows.map(r=>{
@@ -301,19 +324,67 @@ function translation(c){
   if(!secs.length) return `<div class="card">${head}<div class="placeholder" style="margin-top:16px"><h3>No approved product yet</h3><p>The translation appears here once a product of this chapter is approved.</p></div></div>`;
   return `<div class="card">${head}${secs.map(s=>trTable(s,c.colour[0])).join('')}
     <details class="shared"><summary>Shared blocks used across the series (F-01 to F-15)</summary>${trTable(T.shared,c.colour[1])}</details>
-    <p class="small">Proofreaders: please send corrections through the feedback form, citing the row ID. The full reference file (Word) is shared by the coordination team.</p></div>`;
+    <p class="small">Proofreaders: please send corrections through the comment box on the product's page, citing the row ID. The full reference file (Word) is shared by the coordination team.</p></div>`;
 }
 
-function feedback(c){
-  return `<div class="card"><span class="status wait">Form to be added</span><h3 style="font-size:22px;margin:12px 0 6px">Feedback form · Chapter ${c.n}</h3>
-   <p>The feedback form for this chapter will be placed here, so participants can review the products and respond on the same page.</p>
-   <div class="placeholder" style="margin-top:12px"><h3>Form area</h3><p>Questions are being prepared.</p></div></div>`;
+const FB={pid:'mhpss-nepal-iec-review',key:'AIzaSyBN-sh64hOZeQClPi8Z8k-fXcVfBs2pxFQ'};
+const LS={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+let WHO=LS.get('iec-reviewer');
+const letter=x=>(x.label.match(/Option ([A-C])$/)||[])[1];
+function whoHtml(){
+  return WHO?`<div class="whoas"><span>Reviewing as <b>${esc(WHO.name)}</b> · ${esc(WHO.org)} · ${esc(WHO.email)}</span><button type="button" data-whoedit>Change</button></div>`
+   :`<div class="who"><label>Your name<input type="text" id="w-name" maxlength="120" autocomplete="name" required></label><label>Organisation<input type="text" id="w-org" maxlength="160" autocomplete="organization" required></label><label>Email<input type="email" id="w-email" maxlength="200" autocomplete="email" required></label></div>`;
 }
+function fbBlock(c,tab,list){
+  const name=TABS.find(x=>x[0]===tab)[1], opts=list.filter(letter), poll=tab==='poster'&&opts.length>1;
+  const voted=LS.get(`iec-vote-${c.key}-${tab}`);
+  const pollBox=poll?`<div class="fbbox"><h4>Which poster option do you prefer?</h4><p>One choice per reviewer. You can change it by voting again.</p>
+     <div class="pollopts" role="radiogroup" aria-label="Preferred option">${opts.map(x=>`<label><input type="radio" name="poll" value="${letter(x)}" data-v="${esc(x.version)}" ${voted===letter(x)?'checked':''}>${esc(x.label)}</label>`).join('')}</div>
+     <button class="btn primary" type="button" data-send="vote">Submit my choice</button><div class="fbmsg ${voted?'ok':''}" id="m-vote" role="status">${voted?`Your current choice: Option ${voted}.`:''}</div></div>`:'';
+  const about=opts.length>1?`<label class="f" style="margin-bottom:10px">About<select id="c-about"><option value="all">All options / general</option>${opts.map(x=>`<option value="${letter(x)}">${esc(x.label)}</option>`).join('')}</select></label>`:'';
+  return `<section class="fb" id="fb" data-ch="${c.key}" data-tab="${tab}" data-ver="${esc(list.map(x=>x.version).join(' / '))}"><div style="border-top:1px solid var(--line);padding-top:18px">
+    <h3>Your feedback · ${esc(name)}, Chapter ${c.n}</h3>
+    <span class="cap">Your details and feedback go only to the review team. They are not shown on this page.</span>
+    <div id="whoslot">${whoHtml()}</div>
+    <div class="fbgrid" style="${poll?'':'grid-template-columns:1fr'}">${pollBox}
+     <div class="fbbox"><h4>Comments</h4><p>What works, what should change, and anything that may be unclear or unsuitable for communities.</p>${about}
+      <label class="f">Your comment<textarea id="c-text" maxlength="3000"></textarea></label>
+      <div style="margin-top:10px"><button class="btn primary" type="button" data-send="comment">Send comment</button></div><div class="fbmsg" id="m-comment" role="status"></div></div>
+    </div></div></section>`;
+}
+function readWho(){
+  if(WHO) return WHO;
+  const g=id=>(document.getElementById(id)?.value||'').trim(), w={name:g('w-name'),org:g('w-org'),email:g('w-email')};
+  if(!w.name||!w.org||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(w.email)) return null;
+  WHO=w;LS.set('iec-reviewer',w);document.getElementById('whoslot').innerHTML=whoHtml();return w;
+}
+async function sendFb(kind,btn){
+  const sec=document.getElementById('fb'),msg=document.getElementById('m-'+kind),say=(t,c)=>{msg.textContent=t;msg.className='fbmsg '+c};
+  const w=readWho(); if(!w) return say('Please enter your name, organisation and a valid email first.','err');
+  const d={kind,chapter:sec.dataset.ch,product:sec.dataset.tab,name:w.name,org:w.org,email:w.email,clientTime:new Date().toISOString()};
+  if(kind==='vote'){const r=sec.querySelector('input[name=poll]:checked'); if(!r) return say('Please choose one option.','err'); d.option=r.value; d.version=r.dataset.v;}
+  else{const t=document.getElementById('c-text').value.trim(); if(!t) return say('Please write your comment first.','err'); d.text=t; d.option=document.getElementById('c-about')?.value||'all'; d.version=sec.dataset.ver;}
+  const fields={}; for(const k in d) fields[k]={stringValue:String(d[k])};
+  btn.disabled=true; say('Sending…','');
+  try{
+    const r=await fetch(`https://firestore.googleapis.com/v1/projects/${FB.pid}/databases/(default)/documents/feedback?key=${FB.key}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields})});
+    if(!r.ok) throw new Error(r.status);
+    if(kind==='vote'){LS.set(`iec-vote-${d.chapter}-${d.product}`,d.option);say(`Thank you. Your choice is recorded: Option ${d.option}.`,'ok')}
+    else{document.getElementById('c-text').value='';say('Thank you. Your comment has been sent to the review team.','ok')}
+  }catch(e){say('Sorry, this could not be sent. Please check your connection and try again.','err')}
+  btn.disabled=false;
+}
+document.addEventListener('click',e=>{
+  const s=e.target.closest('[data-send]'); if(s) return sendFb(s.dataset.send,s);
+  if(e.target.closest('[data-whoedit]')){WHO=null;LS.set('iec-reviewer',null);document.getElementById('whoslot').innerHTML=whoHtml();return}
+  if(e.target.closest('[data-tofb]')) document.getElementById('fb')?.scrollIntoView({behavior:'smooth',block:'start'});
+});
 
 function chapter(c,tab,opt){
   const tabs=TABS.map(([k,l])=>`<a class="tab ${tab===k?'active':''}" href="#${c.key}/${k}" style="${tab===k?`background:${c.colour[0]}`:''}"><span class="st ${c[k].length?'on':''}"></span>${l}</a>`).join('')
    +'<span class="sep"></span>'+UTIL.map(([k,l])=>`<a class="tab util ${tab===k?'active':''}" href="#${c.key}/${k}" style="${tab===k?`background:${c.colour[1]}`:''}">${l}</a>`).join('');
-  const body=tab==='translation'?translation(c):tab==='feedback'?feedback(c):productView(c,tab,opt);
+  if(tab==='feedback')tab='poster';
+  const body=tab==='translation'?translation(c):productView(c,tab,opt);
   return `<div class="chapter-head" style="background:linear-gradient(120deg,${c.colour[0]},${c.colour[1]})"><div><div class="k">CHAPTER ${c.n} OF 6 · ${esc(c.theme).toUpperCase()}</div><h2>${esc(c.title)}</h2><p>${esc(c.moment)}</p></div><span class="status" style="background:#ffffff26;color:#fff">${count(c)} of 3 products approved</span></div>
    <nav class="tabs" aria-label="Products">${tabs}</nav>${body}`;
 }

@@ -1,0 +1,28 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Public review page: reviewers may add one feedback entry at a time.
+    // Nobody can read, change or delete entries from the page.
+    match /feedback/{id} {
+      allow create: if
+        request.resource.data.keys().hasOnly(['kind','chapter','product','option','version','text','name','org','email','clientTime'])
+        && request.resource.data.keys().hasAll(['kind','chapter','product','option','name','org','email'])
+        && request.resource.data.kind in ['vote','comment']
+        && request.resource.data.chapter in ['ch1','ch2','ch3','ch4','ch5','ch6']
+        && request.resource.data.product in ['poster','leaflet','guide']
+        && request.resource.data.option in ['A','B','C','all']
+        && request.resource.data.name is string && request.resource.data.name.size() > 0 && request.resource.data.name.size() <= 120
+        && request.resource.data.org is string && request.resource.data.org.size() > 0 && request.resource.data.org.size() <= 160
+        && request.resource.data.email is string && request.resource.data.email.size() <= 200
+        && request.resource.data.email.matches('.+@.+[.].+')
+        && (!('version' in request.resource.data) || (request.resource.data.version is string && request.resource.data.version.size() <= 120))
+        && (!('clientTime' in request.resource.data) || (request.resource.data.clientTime is string && request.resource.data.clientTime.size() <= 40))
+        && (request.resource.data.kind != 'vote' || (request.resource.data.option in ['A','B','C'] && request.resource.data.product == 'poster' && !('text' in request.resource.data)))
+        && (request.resource.data.kind != 'comment' || (request.resource.data.text is string && request.resource.data.text.size() > 0 && request.resource.data.text.size() <= 3000));
+      allow read, update, delete: if false;
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

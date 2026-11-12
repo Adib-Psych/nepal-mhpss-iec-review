@@ -44,4 +44,10 @@ On 12 November 2026, after viewing the comparison, Adib approved all three Chapt
 - Translation rows come from the single translation file (`02 Key Messages and Translation/Translation and Proofreading/IEC Series Translation EN-NE - Posters and Leaflets`), exported to `data/translation.json` only for approved products. Safety rows stay blank until a human translator fills them.
 - Keep the disclosure: fictional illustrations, AI-assisted and developed under human direction; not a WHO website.
 
+## Reviewer feedback
+
+- Every product page has a feedback section: reviewers enter their name, organisation and email once, then send comments. Poster pages with more than one approved option also carry a poll (one preferred option per reviewer; the latest choice counts).
+- Entries are stored in the review team's database (collection `feedback`). The page can only add entries; it cannot read, change or delete them, so votes and comments are never shown to other reviewers. The rules in force are kept in `backend/firestore.rules`.
+- The poll and the comment box appear automatically from `data/series.json`; adding an approved product needs no extra step.
+
 The previous consultation page (9 October 2026) is kept at `archive-2026-10-09.html`.
