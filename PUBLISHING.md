@@ -2,9 +2,9 @@
 
 This site is the shared review space for partners. It shows **only products Adib has approved**. Working drafts, proofs and alternatives that are not approved stay in the working folders (Luna and the cloud workspace) and are never uploaded here.
 
-## Scoped owner-authorised comparison exception · Chapter 1
+## Chapter 1 owner approval and option mapping
 
-On 12 November 2026, Adib explicitly authorised displaying the existing Chapter 1 poster alternatives here before final approval. Option A r3 and Option B r3 may therefore be listed for comparison with **Pending approval** in their version labels and a note distinguishing permission to display from final product approval. The catalogue's `approved` date records the owner's permission to display these two copies for review only, not final acceptance or field-distribution clearance. Keep their Luna front copies marked PROOF, not `(locked)`. Preserve the already accepted Option C r3.2 unchanged, and retain the production option identifiers. This exception does not authorise any other draft or product. Use the existing catalogue and viewer; do not change the page structure.
+On 12 November 2026, after viewing the comparison, Adib approved all three Chapter 1 posters and explicitly exchanged the B/C identities: **A = panorama r3 (unchanged); B = bench companionship r3.2 (previously C); C = structured composition r3 (previously B)**. All three catalogue entries now carry approval, not pending comparison status. Chapter-front locked copies on Luna use this current mapping; historical source directories and old web asset URLs retain their original identities for traceability. Use versioned current-label assets and the existing catalogue/viewer without changing page structure. This approval does not itself certify clinical, Nepali, rights or print clearance. The earlier pre-approval display exception for these two posters is superseded by this explicit approval; it never applied to other drafts.
 
 ## Who does what
 
