@@ -131,7 +131,24 @@
     "#f2eef8"
    ],
    "moment": "Late afternoon on the shelter veranda. Asha and Satya miss someone; neighbours stay near them in quiet, practical ways.",
-   "poster": [],
+   "poster": [
+    {
+     "label": "Option A",
+     "version": "r10",
+     "approved": "2026-11-12",
+     "image": "assets/series/ch3/poster-A-r10.jpg",
+     "pdf": "assets/series/ch3/poster-A-r10.pdf",
+     "format": "A3 portrait · community wall poster"
+    },
+    {
+     "label": "Option C",
+     "version": "r7",
+     "approved": "2026-11-12",
+     "image": "assets/series/ch3/poster-C-r7.jpg",
+     "pdf": "assets/series/ch3/poster-C-r7.pdf",
+     "format": "A3 portrait · community wall poster"
+    }
+   ],
    "leaflet": [],
    "guide": [],
    "short": "Grief",
@@ -181,6 +198,22 @@
      "approved": "2026-11-11",
      "image": "assets/series/ch5/poster-A-r7.jpg",
      "pdf": "assets/series/ch5/poster-A-r7.pdf",
+     "format": "A3 portrait · community wall poster"
+    },
+    {
+     "label": "Option B",
+     "version": "r9",
+     "approved": "2026-11-12",
+     "image": "assets/series/ch5/poster-B-r9.jpg",
+     "pdf": "assets/series/ch5/poster-B-r9.pdf",
+     "format": "A3 portrait · community wall poster"
+    },
+    {
+     "label": "Option C",
+     "version": "r9",
+     "approved": "2026-11-12",
+     "image": "assets/series/ch5/poster-C-r9.jpg",
+     "pdf": "assets/series/ch5/poster-C-r9.pdf",
      "format": "A3 portrait · community wall poster"
     }
    ],
