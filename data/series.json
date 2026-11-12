@@ -51,7 +51,12 @@
      "format": "A4 · facilitator guide"
     }
    ],
-   "short": "Not alone"
+   "short": "Not alone",
+   "stage": "First days",
+   "leads": [
+    "E",
+    "G"
+   ]
   },
   {
    "n": 2,
@@ -92,7 +97,12 @@
    ],
    "leaflet": [],
    "guide": [],
-   "short": "Nights"
+   "short": "Nights",
+   "stage": "Nights",
+   "leads": [
+    "B",
+    "F"
+   ]
   },
   {
    "n": 3,
@@ -108,7 +118,12 @@
    "poster": [],
    "leaflet": [],
    "guide": [],
-   "short": "Grief"
+   "short": "Grief",
+   "stage": "Loss",
+   "leads": [
+    "G",
+    "H"
+   ]
   },
   {
    "n": 4,
@@ -124,7 +139,13 @@
    "poster": [],
    "leaflet": [],
    "guide": [],
-   "short": "Children"
+   "short": "Children",
+   "stage": "Children",
+   "leads": [
+    "E",
+    "B",
+    "C"
+   ]
   },
   {
    "n": 5,
@@ -149,7 +170,12 @@
    ],
    "leaflet": [],
    "guide": [],
-   "short": "Next steps"
+   "short": "Next steps",
+   "stage": "Next steps",
+   "leads": [
+    "F",
+    "A"
+   ]
   },
   {
    "n": 6,
@@ -193,7 +219,13 @@
    ],
    "leaflet": [],
    "guide": [],
-   "short": "Helpers"
+   "short": "Helpers",
+   "stage": "Helpers",
+   "leads": [
+    "E",
+    "F",
+    "I"
+   ]
   }
  ]
 }
