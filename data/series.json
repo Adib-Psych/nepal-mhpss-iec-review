@@ -162,7 +162,35 @@
     "#fbf3e1"
    ],
    "moment": "After weeks of helping at the shelter, Karuna is tired. Her team leader checks in; the team takes a break together.",
-   "poster": [],
+   "poster": [
+    {
+     "label": "Option A",
+     "version": "r7",
+     "approved": "2026-11-12",
+     "image": "assets/series/ch6/poster-A-r7.jpg",
+     "pdf": "assets/series/ch6/poster-A-r7.pdf",
+     "format": "A3 portrait · staff-area poster",
+     "note": "Owner-approved design for online review. Not for field distribution."
+    },
+    {
+     "label": "Option B",
+     "version": "B2",
+     "approved": "2026-11-12",
+     "image": "assets/series/ch6/poster-B-B2.jpg",
+     "pdf": "assets/series/ch6/poster-B-B2.pdf",
+     "format": "A3 portrait · staff-area poster",
+     "note": "Owner-approved design for online review. Not for field distribution."
+    },
+    {
+     "label": "Option C",
+     "version": "C5",
+     "approved": "2026-11-12",
+     "image": "assets/series/ch6/poster-C-C5.jpg",
+     "pdf": "assets/series/ch6/poster-C-C5.pdf",
+     "format": "A3 portrait · staff-area poster",
+     "note": "Owner-approved design for online review. Not for field distribution."
+    }
+   ],
    "leaflet": [],
    "guide": [],
    "short": "Helpers"
