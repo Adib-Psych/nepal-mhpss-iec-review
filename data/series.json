@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12",
+ "updated": "2026-11-13",
  "rule": "Only approved products are listed. Drafts stay in the team's working folders.",
  "chapters": [
   {
@@ -169,7 +169,16 @@
     "#eaf5ec"
    ],
    "moment": "A morning in the shelter courtyard. Karuna keeps the routine going; Pasang leads a game; Milan starts drawing his home.",
-   "poster": [],
+   "poster": [
+    {
+     "label": "Option B",
+     "version": "r11",
+     "approved": "2026-11-13",
+     "image": "assets/series/ch4/poster-B-r11.jpg",
+     "pdf": "assets/series/ch4/poster-B-r11.pdf",
+     "format": "A3 portrait · community wall poster"
+    }
+   ],
    "leaflet": [],
    "guide": [],
    "short": "Children",
