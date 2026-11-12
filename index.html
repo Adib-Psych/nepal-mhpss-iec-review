@@ -120,6 +120,34 @@ dialog{max-width:min(1200px,96vw);width:96vw;max-height:94vh;border:1px solid va
 dialog::backdrop{background:#182e37cc}
 dialog img{max-width:100%;max-height:84vh;display:block;margin:auto}
 dialog button{float:right;min-height:40px;padding:6px 14px;border:1px solid var(--line2);background:#fff;border-radius:7px;font:inherit;cursor:pointer}
+/* thumbnail gallery: approved options side by side, preview on demand */
+.galrow{display:grid;grid-template-columns:auto minmax(260px,1fr);gap:26px;align-items:start}
+.gal{display:grid;grid-template-columns:repeat(3,minmax(0,260px));gap:16px;align-items:start}
+.gal.n1{grid-template-columns:minmax(0,260px)}
+.gal.n2{grid-template-columns:repeat(2,minmax(0,260px))}
+.gal.wide.n1{grid-template-columns:minmax(0,640px)}
+.tcard{margin:0;background:#f3f3ef;border:1px solid var(--line);border-radius:10px;padding:10px;display:flex;flex-direction:column;gap:9px;min-width:0}
+.tcard .th{display:block;padding:0;border:1px solid var(--line);background:#fff;cursor:zoom-in;border-radius:4px;overflow:hidden;position:relative;width:100%}
+.tcard .th img{width:100%;height:auto;display:block}
+.tcard .th:hover{border-color:var(--blue)}
+.tcard .tpair{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tcard .tl{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px}
+.tcard .tl b{font-size:16px}
+.tcard .tl span{font-size:13px;color:var(--muted);flex:1 1 100%}
+.tcard .ta{display:flex;flex-wrap:wrap;gap:6px}
+.tcard .ta .btn{flex:1 1 auto;text-align:center;justify-content:center;padding:7px 8px;font-size:13.5px;min-height:38px}
+.galinfo{border-left:1px solid var(--line);padding-left:24px;min-width:0}
+.galinfo .meta{margin:0 0 16px}
+.galinfo .btns{margin:0 0 8px}
+.dlgbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.dlgbar b{font-size:15px;margin-right:auto}
+.dlgbar a,.dlgbar button{float:none;min-height:40px;padding:6px 12px;border:1px solid var(--line2);background:#fff;border-radius:7px;font:inherit;font-size:14px;cursor:pointer;text-decoration:none;color:inherit}
+.dlgbar button[disabled]{opacity:.35;cursor:default}
+.dlgbody{overflow:auto;max-height:80vh}
+.dlgbody img{cursor:zoom-in;max-height:76vh}
+dialog.full .dlgbody img{max-height:none;width:100%;cursor:zoom-out}
+@media(max-width:1100px){.galrow{grid-template-columns:1fr}.galinfo{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:16px}}
+@media(max-width:820px){.gal{gap:8px;grid-template-columns:repeat(3,minmax(0,1fr))}.gal.n1{grid-template-columns:minmax(0,220px)}.gal.wide.n1{grid-template-columns:1fr}.gal.n2{grid-template-columns:1fr 1fr}.tcard{padding:6px;gap:6px}.tcard .tl b{font-size:13.5px}.tcard .tl span{font-size:11.5px}.tcard .ta .btn{font-size:12px;padding:6px 4px;min-height:36px;flex:1 1 100%}.dlgbar b{flex:1 1 100%}dialog{padding:10px}}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 @media(max-width:1100px){.product,.product.wide{grid-template-columns:1fr}.arc{grid-template-columns:repeat(3,1fr)}.ov-hero{grid-template-columns:1fr}}
 @media(max-width:820px){.shell{grid-template-columns:1fr;padding:14px 16px}.side{position:static;max-height:none;flex-direction:row;flex-wrap:wrap}.side .label,.side .grow{display:none}.nav-item .t small{display:none}.top-in{padding:12px 16px}.pill{margin-left:0}.flow{grid-template-columns:1fr}.flow .arrow{transform:rotate(90deg);height:28px}.two,.pipe{grid-template-columns:1fr}.arc{grid-template-columns:1fr 1fr}.viewer .pair{grid-template-columns:1fr}table.tr,table.tr tbody,table.tr tr,table.tr td{display:block;width:100%}table.tr thead{display:none}table.tr td{border-bottom:0}table.tr tr{border-bottom:1px solid var(--line);padding:6px 0}}
@@ -206,7 +234,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   <main id="main"><div class="placeholder">Loading…</div></main>
 </div>
 <footer>Shared review space for partners. Only approved products are posted here; working drafts stay in the team's working folders. Fictional illustrations, AI-assisted and developed under human direction. Not a WHO website and not an endorsed WHO product. Earlier consultation set (9 October 2026): <a href="archive-2026-10-09.html">archive</a>.</footer>
-<dialog id="dlg"><button id="dlgx">Close</button><img id="dlgimg" alt=""></dialog>
+<dialog id="dlg" aria-label="Preview"><div class="dlgbar"><b id="dlgt"></b><button id="dlgp" aria-label="Previous">‹ Previous</button><button id="dlgn" aria-label="Next">Next ›</button><a id="dlgpdf" download>English PDF</a><button id="dlgx">Close</button></div><div class="dlgbody"><img id="dlgimg" alt="" title="Select to enlarge or fit"></div></dialog>
 <script>
 const TABS=[['poster','Poster'],['leaflet','Leaflet'],['guide','Health Talk Guide']];
 const UTIL=[['translation','Translation & proofreading'],['feedback','Feedback form']];
@@ -236,20 +264,23 @@ function side(route){
 function productView(c,tab,opt){
   const list=c[tab], name=TABS.find(x=>x[0]===tab)[1];
   if(!list.length) return `<div class="placeholder"><span class="status wait">Not yet approved</span><h3>${name} · Chapter ${c.n}</h3><p>This product is still in production. It appears here once it is approved.</p></div>`;
-  const i=Math.min(Math.max(+opt||0,0),list.length-1), p=list[i];
-  const opts=list.length>1?`<div class="opts" role="group" aria-label="Approved options">${list.map((x,j)=>`<a class="btn" href="#${c.key}/${tab}/${j}" aria-pressed="${j===i}" style="${j===i?`background:${c.colour[0]}`:''}">${esc(x.label)} · ${esc(x.version)}</a>`).join('')}</div>`:'';
-  const imgs=p.images?`<div class="pair">${p.images.map((s,j)=>`<figure style="margin:0"><img src="${s}" alt="${esc(name)}, Chapter ${c.n}: ${esc(p.captions[j])}" data-zoom loading="lazy"><figcaption class="cap">${esc(p.captions[j])}</figcaption></figure>`).join('')}</div>`:`<img src="${p.image}" alt="${esc(name)}, Chapter ${c.n}, ${esc(p.label)}" data-zoom>`;
-  return `<div class="card">${opts}<div class="product ${tab==='poster'?'':'wide'}">
-    <div class="viewer">${imgs}<span class="cap">Select the image to enlarge.</span></div>
-    <div><span class="status ok">● Approved for review · ${fmtDate(p.approved)}</span>
-      <h3 style="margin:12px 0 0;font-size:22px">${esc(name)} · ${esc(p.label)}</h3>
-      <dl class="meta"><dt>Version</dt><dd>${esc(p.version)}</dd><dt>Format</dt><dd>${esc(p.format)}</dd><dt>Language</dt><dd>English review copy · Nepali in preparation</dd></dl>
-      ${p.note?`<div class="note">${esc(p.note)}</div>`:''}
-      <div class="btns"><a class="btn primary" href="${p.pdf}" download>English PDF</a><span class="btn soon">Nepali PDF · after proofreading</span></div>
-      <div class="btns"><a class="btn" href="#${c.key}/translation">See the translation</a><a class="btn" href="#${c.key}/feedback">Give feedback</a></div>
-    </div></div></div>`;
+  const th=(src,title,pdf,alt)=>`<button class="th" type="button" data-zoom data-src="${src}" data-title="${esc(title)}" data-pdf="${pdf}" aria-label="Preview: ${esc(title)}"><img src="${src}" alt="${esc(alt)}" loading="lazy"></button>`;
+  const cards=list.map(p=>{
+    const t=`Chapter ${c.n} · ${name==='Poster'?'Poster · ':''}${p.label} · ${p.version}`;
+    const pics=p.images?`<div class="tpair">${p.images.map((s,j)=>`<div>${th(s,t+' · '+p.captions[j],p.pdf,`${name}, Chapter ${c.n}: ${p.captions[j]}`)}<span class="cap">${esc(p.captions[j])}</span></div>`).join('')}</div>`:th(p.image,t,p.pdf,`${name}, Chapter ${c.n}, ${p.label}`);
+    return `<figure class="tcard">${pics}
+      <figcaption class="tl"><b>${esc(p.label)}</b><span>${esc(p.version)} · approved ${fmtDate(p.approved)}</span></figcaption>
+      ${p.note?`<div class="note" style="margin:0">${esc(p.note)}</div>`:''}
+      <div class="ta"><button class="btn" type="button" data-open>Preview</button><a class="btn primary" href="${p.pdf}" download>English PDF</a></div></figure>`}).join('');
+  const many=list.length>1, p0=list[0];
+  return `<div class="card"><span class="status ok">● Approved for review</span>
+    <h3 style="margin:12px 0 4px;font-size:22px">${esc(name)} · Chapter ${c.n}${many?` · ${list.length} approved options`:''}</h3>
+    <p class="cap" style="margin:0 0 14px">${many?'The options are shown side by side for comparison. ':''}Select a picture or Preview to see it larger.</p>
+    <div class="galrow"><div class="gal n${Math.min(list.length,3)} ${p0.images?'wide':''}">${cards}</div>
+    <div class="galinfo"><dl class="meta"><dt>Format</dt><dd>${esc(p0.format)}</dd><dt>Language</dt><dd>English review copy · Nepali in preparation</dd></dl>
+      <div><div class="btns"><span class="btn soon">Nepali PDF · after proofreading</span></div>
+      <div class="btns"><a class="btn" href="#${c.key}/translation">See the translation</a><a class="btn" href="#${c.key}/feedback">Give feedback</a></div></div></div></div></div>`;
 }
-
 function trTable(sec,colour){
   const rows=sec.rows.map(r=>{
     const kind=r.type==='safety'?'<span class="kind safety">SAFETY</span>':r.type==='check'?'<span class="kind check">CHECK</span>':'';
@@ -351,9 +382,20 @@ function render(){
 Promise.all([fetch('data/series.json').then(r=>r.json()),fetch('data/translation.json').then(r=>r.json()).catch(()=>null)])
  .then(([s,t])=>{S=s;T=t;addEventListener('hashchange',render);render();})
  .catch(()=>{document.getElementById('main').innerHTML='<div class="placeholder"><h3>The page could not load its content.</h3><p>Please refresh, or open it from the published address.</p></div>'});
-const dlg=document.getElementById('dlg');
-document.addEventListener('click',e=>{const i=e.target.closest('[data-zoom]');if(!i)return;document.getElementById('dlgimg').src=i.src;document.getElementById('dlgimg').alt=i.alt;dlg.showModal()});
-document.getElementById('dlgx').onclick=()=>dlg.close();dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+const dlg=document.getElementById('dlg'),$=id=>document.getElementById(id);
+let G=[],gi=0;
+function show(i){gi=i;const g=G[i];$('dlgimg').src=g.src;$('dlgimg').alt=g.title;$('dlgt').textContent=g.title+(G.length>1?`  (${i+1} of ${G.length})`:'');
+  $('dlgp').hidden=$('dlgn').hidden=G.length<2;$('dlgp').disabled=i===0;$('dlgn').disabled=i===G.length-1;
+  $('dlgpdf').hidden=!g.pdf;if(g.pdf)$('dlgpdf').href=g.pdf;dlg.classList.remove('full');document.querySelector('.dlgbody').scrollTop=0}
+document.addEventListener('click',e=>{
+  const o=e.target.closest('[data-open]');const z=o?o.closest('.tcard').querySelector('[data-zoom]'):e.target.closest('[data-zoom]');if(!z)return;
+  const all=[...document.querySelectorAll('#main [data-zoom]')];
+  G=all.map(x=>({src:x.dataset.src||x.src,title:x.dataset.title||x.alt,pdf:x.dataset.pdf||''}));
+  show(Math.max(all.indexOf(z),0));if(!dlg.open)dlg.showModal()});
+$('dlgx').onclick=()=>dlg.close();$('dlgp').onclick=()=>gi>0&&show(gi-1);$('dlgn').onclick=()=>gi<G.length-1&&show(gi+1);
+$('dlgimg').onclick=()=>dlg.classList.toggle('full');
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+dlg.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'&&gi>0)show(gi-1);if(e.key==='ArrowRight'&&gi<G.length-1)show(gi+1)});
 </script>
 </body>
 </html>
