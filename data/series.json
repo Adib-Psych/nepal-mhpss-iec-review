@@ -15,6 +15,24 @@
    "moment": "First days in the shared shelter. Everyone feels something different; Karuna sits with Asha and offers her tea.",
    "poster": [
     {
+     "label": "Option A",
+     "version": "r3 · Pending approval",
+     "approved": "2026-11-12",
+     "image": "assets/series/ch1/poster-A-r3.jpg",
+     "pdf": "assets/series/ch1/poster-A-r3.pdf",
+     "format": "A3 portrait · community wall poster",
+     "note": "Pending final approval. Display authorised for comparison and feedback only; not selected or approved for field distribution."
+    },
+    {
+     "label": "Option B",
+     "version": "r3 · Pending approval",
+     "approved": "2026-11-12",
+     "image": "assets/series/ch1/poster-B-r3.jpg",
+     "pdf": "assets/series/ch1/poster-B-r3.pdf",
+     "format": "A3 portrait · community wall poster",
+     "note": "Pending final approval. Display authorised for comparison and feedback only; not selected or approved for field distribution."
+    },
+    {
      "label": "Option C",
      "version": "r3.2 · option C",
      "approved": "2026-11-12",

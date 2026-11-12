@@ -2,6 +2,10 @@
 
 This site is the shared review space for partners. It shows **only products Adib has approved**. Working drafts, proofs and alternatives that are not approved stay in the working folders (Luna and the cloud workspace) and are never uploaded here.
 
+## Scoped owner-authorised comparison exception · Chapter 1
+
+On 12 November 2026, Adib explicitly authorised displaying the existing Chapter 1 poster alternatives here before final approval. Option A r3 and Option B r3 may therefore be listed for comparison with **Pending approval** in their version labels and a note distinguishing permission to display from final product approval. The catalogue's `approved` date records the owner's permission to display these two copies for review only, not final acceptance or field-distribution clearance. Keep their Luna front copies marked PROOF, not `(locked)`. Preserve the already accepted Option C r3.2 unchanged, and retain the production option identifiers. This exception does not authorise any other draft or product. Use the existing catalogue and viewer; do not change the page structure.
+
 ## Who does what
 
 | Who | Does |
