@@ -131,7 +131,7 @@ dialog button{float:right;min-height:40px;padding:6px 14px;border:1px solid var(
 .tcard .th img{width:100%;height:auto;display:block}
 .tcard .th:hover{border-color:var(--blue)}
 .tcard .tpair{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.tcard .ne{border-top:1px dashed var(--line,#d4e0e6);padding-top:8px;display:grid;gap:6px}.tcard .netag{font-size:12.5px;color:#7a4b00;background:#fff3d6;border-radius:6px;padding:3px 8px;justify-self:start}
+.tcard .entag{font-size:12.5px;color:#1c5b3a;background:#e2f0e9;border-radius:6px;padding:3px 8px;justify-self:start;align-self:start}.tcard .mid{border-top:1px dashed #d4e0e6;border-bottom:1px dashed #d4e0e6;padding:10px 0;margin:2px 0}.tcard .netag{font-size:12.5px;color:#7a4b00;background:#fff3d6;border-radius:6px;padding:3px 8px;justify-self:start}
 .tcard .tl{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px}
 .tcard .tl b{font-size:16px}
 .tcard .tl span{font-size:13px;color:var(--muted);flex:1 1 100%}
@@ -292,17 +292,24 @@ function productView(c,tab,opt){
   const cards=list.map(p=>{
     const t=`Chapter ${c.n} · ${name==='Poster'?'Poster · ':''}${p.label} · ${p.version}`;
     const pics=p.images?`<div class="tpair">${p.images.map((s,j)=>`<div>${th(s,t+' · '+p.captions[j],p.pdf,`${name}, Chapter ${c.n}: ${p.captions[j]}`)}<span class="cap">${esc(p.captions[j])}</span></div>`).join('')}</div>`:th(p.image,t,p.pdf,`${name}, Chapter ${c.n}, ${p.label}`);
-    return `<figure class="tcard">${pics}
-      <figcaption class="tl"><b>${esc(p.label)}</b><span>${esc(p.version)} · approved ${fmtDate(p.approved)}</span></figcaption>
-      ${p.note?`<div class="note" style="margin:0">${esc(p.note)}</div>`:''}
-      <div class="ta"><button class="btn" type="button" data-open>Preview</button><a class="btn primary" href="${p.pdf}" download>English PDF</a>${p.print?`<a class="btn" href="${p.print}" download title="Higher resolution, for printing">Print version</a>`:''}</div>${p.ne?`<div class="ne"><span class="netag">Nepali · machine draft for language review${p.ne.note?` · ${esc(p.ne.note)}`:''}</span><div class="ta"><button class="btn" type="button" data-zoom data-src="${p.ne.image}" data-title="${esc(t)} · Nepali draft ${esc(p.ne.version)}" data-pdf="${p.ne.pdf}">Nepali preview</button><a class="btn" href="${p.ne.pdf}" download>Nepali PDF (draft)</a></div></div>`:''}</figure>`}).join('');
+    const printBtn=p.print?`<a class="btn" href="${p.print}" download title="Higher resolution, for printing">Print version</a>`:'';
+    const cap=`<figcaption class="tl"><b>${esc(p.label)}</b><span>${esc(p.version)} · approved ${fmtDate(p.approved)}</span></figcaption>`;
+    const note=p.note?`<div class="note" style="margin:0">${esc(p.note)}</div>`:'';
+    if(p.ne) return `<figure class="tcard two">
+      <span class="netag">Nepali · machine draft${p.ne.note?` · ${esc(p.ne.note)}`:''}</span>
+      ${th(p.ne.image,t+' · Nepali draft '+p.ne.version,p.ne.pdf,`${name}, Chapter ${c.n}, ${p.label}, Nepali draft`)}
+      <div class="ta mid"><a class="btn" href="${p.ne.pdf}" download>Nepali PDF (draft)</a><a class="btn primary" href="${p.pdf}" download>English PDF</a>${printBtn}</div>
+      <span class="entag">English · approved</span>
+      ${pics}${cap}${note}</figure>`;
+    return `<figure class="tcard">${pics}${cap}${note}
+      <div class="ta"><button class="btn" type="button" data-open>Preview</button><a class="btn primary" href="${p.pdf}" download>English PDF</a>${printBtn}</div></figure>`}).join('');
   const many=list.length>1, p0=list[0];
   return `<div class="card"><span class="status ok">● Approved for review</span>
     <h3 style="margin:12px 0 4px;font-size:22px">${esc(name)} · Chapter ${c.n}${many?` · ${list.length} approved options`:''}</h3>
     <p class="cap" style="margin:0 0 14px">${many?'The options are shown side by side for comparison. ':''}Select a picture or Preview to see it larger.</p>
     <div class="galrow"><div class="gal n${Math.min(list.length,3)} ${p0.images?'wide':''}">${cards}</div>
-    <div class="galinfo"><dl class="meta"><dt>Format</dt><dd>${esc(p0.format)}</dd><dt>Language</dt><dd>English review copy · Nepali in preparation</dd></dl>
-      <div><div class="btns"><span class="btn soon">Nepali PDF · after proofreading</span></div>
+    <div class="galinfo"><dl class="meta"><dt>Format</dt><dd>${esc(p0.format)}</dd><dt>Language</dt><dd>English review copy · Nepali machine draft for language review</dd></dl>
+      <div><div class="btns"><span class="btn soon">Final Nepali PDF · after proofreading</span></div>
       <div class="btns"><a class="btn" href="#${c.key}/translation">See the translation</a><button class="btn" type="button" data-tofb>Give feedback</button></div></div></div>${fbBlock(c,tab,list)}</div>`;
 }
 function trTable(sec,colour){
