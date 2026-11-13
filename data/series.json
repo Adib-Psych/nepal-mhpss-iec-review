@@ -141,11 +141,19 @@
      "format": "A3 portrait · community wall poster"
     },
     {
-     "label": "Option C",
+     "label": "Option B",
      "version": "r7",
      "approved": "2026-11-12",
-     "image": "assets/series/ch3/poster-C-r7.jpg",
-     "pdf": "assets/series/ch3/poster-C-r7.pdf",
+     "image": "assets/series/ch3/poster-B-r7.jpg",
+     "pdf": "assets/series/ch3/poster-B-r7.pdf",
+     "format": "A3 portrait · community wall poster"
+    },
+    {
+     "label": "Option C",
+     "version": "r9",
+     "approved": "2026-11-13",
+     "image": "assets/series/ch3/poster-C-r9.jpg",
+     "pdf": "assets/series/ch3/poster-C-r9.pdf",
      "format": "A3 portrait · community wall poster"
     }
    ],
