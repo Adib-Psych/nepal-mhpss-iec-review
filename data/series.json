@@ -288,12 +288,13 @@
    "poster": [
     {
      "label": "Option A",
-     "version": "r7",
-     "approved": "2026-11-12",
-     "image": "assets/series/ch6/poster-A-r7.jpg",
-     "pdf": "assets/series/ch6/poster-A-r7.pdf",
+     "version": "r9",
+     "approved": "2026-11-13",
+     "image": "assets/series/ch6/poster-A-r9.jpg",
+     "pdf": "assets/series/ch6/poster-A-r9.pdf",
      "format": "A3 portrait · staff-area poster",
-     "note": "Owner-approved design for online review. Not for field distribution."
+     "note": "Owner-approved design for online review. Not for field distribution.",
+     "print": "assets/series/ch6/poster-A-r9-print.pdf"
     },
     {
      "label": "Option B",
