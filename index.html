@@ -260,7 +260,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   <nav class="side" id="side" aria-label="Series"></nav>
   <main id="main"><div class="placeholder">Loading…</div></main>
 </div>
-<footer>Shared review space for partners. Only approved products are posted here; working drafts stay in the team's working folders. Fictional illustrations, AI-assisted and developed under human direction. Not a WHO website and not an endorsed WHO product. Earlier consultation set (9 October 2026): <a href="archive-2026-10-09.html">archive</a>.</footer>
+<footer>Shared review space for partners. Products are posted here for partner review; each is marked approved or draft. Fictional illustrations, AI-assisted and developed under human direction. Not a WHO website and not an endorsed WHO product. Earlier consultation set (9 October 2026): <a href="archive-2026-10-09.html">archive</a>.</footer>
 <dialog id="dlg" aria-label="Preview"><div class="dlgbar"><b id="dlgt"></b><button id="dlgp" aria-label="Previous">‹ Previous</button><button id="dlgn" aria-label="Next">Next ›</button><span class="seg" role="group" aria-label="Preview size"><button id="dlgfit" type="button" aria-pressed="true">Fit to screen</button><button id="dlgfull" type="button" aria-pressed="false">Actual size</button></span><a id="dlgpdf" class="dl" download>English PDF</a><button id="dlgx">Close</button></div><div class="dlgbody"><img id="dlgimg" alt="" title="Select to enlarge or fit"></div></dialog>
 <script>
 const TABS=[['poster','Poster'],['leaflet','Leaflet'],['guide','Health Talk Guide']];
@@ -270,7 +270,7 @@ const PROS=[['L','Sneha','Nurse · female'],['O','Suman','Nurse · male'],['K','
 let S=null,T=null;
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const fmtDate=d=>{try{return new Date(d+'T00:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})}catch(e){return d}};
-const count=c=>['poster','leaflet','guide'].filter(k=>c[k].length).length;
+const count=c=>['poster','leaflet','guide'].filter(k=>c[k].length&&!c[k].some(x=>x.draft)).length;
 
 function side(route){
   const a=route.split('/')[0];
@@ -288,7 +288,7 @@ function side(route){
   const act=mn.querySelector('.chip.active');if(act)mn.scrollLeft=Math.max(0,act.offsetLeft-(mn.clientWidth-act.offsetWidth)/2);
 }
 
-const DL='<span aria-hidden="true">\u2B07</span>';
+const DL='<span aria-hidden="true">\u2B07\u00A0</span>';
 function productView(c,tab,opt){
   const list=c[tab], name=TABS.find(x=>x[0]===tab)[1];
   if(!list.length) return `<div class="placeholder"><span class="status wait">Not yet approved</span><h3>${name} · Chapter ${c.n}</h3><p>This product is still in production. It appears here once it is approved.</p></div>`;
@@ -297,10 +297,10 @@ function productView(c,tab,opt){
     const t=`Chapter ${c.n} · ${name==='Poster'?'Poster · ':''}${p.label} · ${p.version}`;
     const pics=p.images?`<div class="tpair">${p.images.map((s,j)=>`<div>${th(s,t+' · '+p.captions[j],p.pdf,`${name}, Chapter ${c.n}: ${p.captions[j]}`)}<span class="cap">${esc(p.captions[j])}</span></div>`).join('')}</div>`:th(p.image,t,p.pdf,`${name}, Chapter ${c.n}, ${p.label}`);
     const printBtn=p.print?`<a class="btn" href="${p.print}" download title="Higher resolution, for printing">${DL} Print version (larger file)</a>`:'';
-    const cap=`<figcaption class="tl"><b>${esc(p.label)}</b><span>${esc(p.version)} · approved ${fmtDate(p.approved)}</span></figcaption>`;
-    const note=p.note?`<div class="note" style="margin:0">${esc(p.note)}</div>`:'';
+    const cap=`<figcaption class="tl"><b>${esc(p.label)}</b><span>${esc(p.version)} · ${p.draft?'draft for review':'approved '+fmtDate(p.approved)}</span></figcaption>`;
+    const note=(p.draft?`<span class="netag">Draft · ${esc(p.draft)}</span>`:'')+(p.note?`<div class="note" style="margin:0">${esc(p.note)}</div>`:'');
     if(p.ne) return `<figure class="tcard two">
-      <span class="netag">Nepali · machine draft${p.ne.note?` · ${esc(p.ne.note)}`:''}</span>
+      <span class="netag">Nepali · draft translation, language review pending${p.ne.note?` · ${esc(p.ne.note)}`:''}</span>
       ${th(p.ne.image,t+' · Nepali draft '+p.ne.version,p.ne.pdf,`${name}, Chapter ${c.n}, ${p.label}, Nepali draft`,'ne')}
       <div class="ta mid"><button class="btn primary big" type="button" data-open="ne">Preview Nepali</button><button class="btn primary big" type="button" data-open="en">Preview English</button></div>
       <span class="entag">English · approved</span>
@@ -310,11 +310,11 @@ function productView(c,tab,opt){
       <div class="ta mid"><button class="btn primary big" type="button" data-open>Preview</button></div>
       <div class="dlbox"><span class="dlh">Download</span><div class="ta dl"><a class="btn" href="${p.pdf}" download>${DL} English PDF</a>${printBtn}</div></div></figure>`}).join('');
   const many=list.length>1, p0=list[0];
-  return `<div class="card"><span class="status ok">● Approved for review</span>
+  return `<div class="card">${list.some(x=>x.draft)?'<span class="status wait">● Draft for review</span>':'<span class="status ok">● Approved for review</span>'}
     <h3 style="margin:12px 0 4px;font-size:22px">${esc(name)} · Chapter ${c.n}${many?` · ${list.length} approved options`:''}</h3>
     <p class="cap" style="margin:0 0 14px">${many?'The options are shown side by side for comparison. ':''}Select a picture or Preview to see it larger.</p>
     <div class="galrow"><div class="gal n${Math.min(list.length,3)} ${p0.images?'wide':''}">${cards}</div>
-    <div class="galinfo"><dl class="meta"><dt>Format</dt><dd>${esc(p0.format)}</dd><dt>Language</dt><dd>English review copy · Nepali machine draft for language review</dd></dl>
+    <div class="galinfo"><dl class="meta"><dt>Format</dt><dd>${esc(p0.format)}</dd><dt>Language</dt><dd>English review copy${list.some(x=>x.ne)?' · Nepali draft translation, language review pending':''}</dd></dl>
       <div><div class="btns"><span class="btn soon">Final Nepali PDF · after proofreading</span></div>
       <div class="btns"><a class="btn" href="#${c.key}/translation">See the translation</a><button class="btn" type="button" data-tofb>Give feedback</button></div></div></div>${fbBlock(c,tab,list)}</div>`;
 }
