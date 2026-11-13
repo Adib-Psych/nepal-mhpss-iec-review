@@ -1,6 +1,6 @@
 {
  "updated": "2026-11-13",
- "rule": "Only approved products are listed. Drafts stay in the team's working folders.",
+ "rule": "Approved products and drafts for review are listed; each is marked.",
  "chapters": [
   {
    "n": 1,
@@ -60,19 +60,20 @@
    "leaflet": [
     {
      "label": "Leaflet A",
-     "version": "Tri-fold r9",
+     "version": "Tri-fold r10",
      "approved": "2026-11-13",
      "images": [
-      "assets/series/ch1/leaflet-r9-outside.jpg",
-      "assets/series/ch1/leaflet-r9-inside.jpg"
+      "assets/series/ch1/leaflet-r10-outside.jpg",
+      "assets/series/ch1/leaflet-r10-inside.jpg"
      ],
      "captions": [
       "Outside: reactions, help panel and cover",
       "Inside: small things, breathing, coping"
      ],
-     "pdf": "assets/series/ch1/leaflet-r9.pdf",
+     "pdf": "assets/series/ch1/leaflet-r10.pdf",
      "format": "A4 tri-fold · take-home leaflet · online and print versions",
-     "print": "assets/series/ch1/leaflet-r9-print.pdf"
+     "print": "assets/series/ch1/leaflet-r10-print.pdf",
+     "draft": "Sharper pictures; same design and wording as the approved r9"
     }
    ],
    "guide": [
@@ -147,7 +148,25 @@
      }
     }
    ],
-   "leaflet": [],
+   "leaflet": [
+    {
+     "label": "Leaflet A",
+     "version": "Tri-fold r3",
+     "approved": "",
+     "draft": "Awaiting approval",
+     "images": [
+      "assets/series/ch2/leaflet-r3-outside.jpg",
+      "assets/series/ch2/leaflet-r3-inside.jpg"
+     ],
+     "captions": [
+      "Outside: panels 5 and 6, and the cover",
+      "Inside: panels 2, 3 and 4"
+     ],
+     "pdf": "assets/series/ch2/leaflet-r3.pdf",
+     "format": "A4 tri-fold · take-home leaflet · online and print versions",
+     "print": "assets/series/ch2/leaflet-r3-print.pdf"
+    }
+   ],
    "guide": [],
    "short": "Nights",
    "stage": "Nights",
