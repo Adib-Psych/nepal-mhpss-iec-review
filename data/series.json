@@ -1,6 +1,6 @@
 {
  "updated": "2026-11-13",
- "rule": "Approved products and drafts for review are listed; each is marked.",
+ "rule": "Only approved products are listed.",
  "chapters": [
   {
    "n": 1,
@@ -21,12 +21,7 @@
      "image": "assets/series/ch1/poster-A-r5.jpg",
      "pdf": "assets/series/ch1/poster-A-r5.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch1/poster-A-r5-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch1/poster-A-ne-r1.jpg",
-      "pdf": "assets/series/ch1/poster-A-ne-r1.pdf"
-     }
+     "print": "assets/series/ch1/poster-A-r5-print.pdf"
     },
     {
      "label": "Option B",
@@ -35,12 +30,7 @@
      "image": "assets/series/ch1/poster-B-r5.jpg",
      "pdf": "assets/series/ch1/poster-B-r5.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch1/poster-B-r5-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch1/poster-B-ne-r1.jpg",
-      "pdf": "assets/series/ch1/poster-B-ne-r1.pdf"
-     }
+     "print": "assets/series/ch1/poster-B-r5-print.pdf"
     },
     {
      "label": "Option C",
@@ -49,23 +39,17 @@
      "image": "assets/series/ch1/poster-C-r5.jpg",
      "pdf": "assets/series/ch1/poster-C-r5.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch1/poster-C-r5-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch1/poster-C-ne-r1.jpg",
-      "pdf": "assets/series/ch1/poster-C-ne-r1.pdf"
-     }
+     "print": "assets/series/ch1/poster-C-r5-print.pdf"
     }
    ],
    "leaflet": [
     {
      "label": "Leaflet A",
      "version": "Tri-fold r10",
-     "approved": "2026-11-13",
+     "approved": "2026-11-14",
      "pdf": "assets/series/ch1/leaflet-r10.pdf",
      "format": "A4 tri-fold · take-home leaflet · online and print versions",
      "print": "assets/series/ch1/leaflet-r10-print.pdf",
-     "draft": "Sharper pictures; same design and wording as the approved r9",
      "online_image": "assets/series/ch1/leaflet-r10-online.jpg",
      "print_image": "assets/series/ch1/leaflet-r10-print.jpg",
      "image": "assets/series/ch1/leaflet-r10-online.jpg"
@@ -74,11 +58,12 @@
    "guide": [
     {
      "label": "Health Talk Guide",
-     "version": "v6",
-     "approved": "2026-11-11",
-     "image": "assets/series/ch1/guide-v6.jpg",
-     "pdf": "assets/series/ch1/guide-v6.pdf",
-     "format": "A4 · facilitator guide"
+     "version": "v11",
+     "approved": "2026-11-14",
+     "image": "assets/series/ch1/guide-v11.jpg",
+     "pdf": "assets/series/ch1/guide-v11.pdf",
+     "print": "assets/series/ch1/guide-v11-print.pdf",
+     "format": "A4 · facilitator guide · 5 pages"
     }
    ],
    "short": "Not alone",
@@ -107,12 +92,7 @@
      "image": "assets/series/ch2/poster-A-r12.jpg",
      "pdf": "assets/series/ch2/poster-A-r12.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch2/poster-A-r12-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch2/poster-A-ne-r1.jpg",
-      "pdf": "assets/series/ch2/poster-A-ne-r1.pdf"
-     }
+     "print": "assets/series/ch2/poster-A-r12-print.pdf"
     },
     {
      "label": "Option B",
@@ -121,12 +101,7 @@
      "image": "assets/series/ch2/poster-B-r6.jpg",
      "pdf": "assets/series/ch2/poster-B-r6.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch2/poster-B-r6-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch2/poster-B-ne-r1.jpg",
-      "pdf": "assets/series/ch2/poster-B-ne-r1.pdf"
-     }
+     "print": "assets/series/ch2/poster-B-r6-print.pdf"
     },
     {
      "label": "Option C",
@@ -135,29 +110,21 @@
      "image": "assets/series/ch2/poster-C-r6.jpg",
      "pdf": "assets/series/ch2/poster-C-r6.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch2/poster-C-r6-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch2/poster-C-ne-r1.jpg",
-      "pdf": "assets/series/ch2/poster-C-ne-r1.pdf"
-     }
+     "print": "assets/series/ch2/poster-C-r6-print.pdf"
     }
    ],
-   "leaflet": [
+   "leaflet": [],
+   "guide": [
     {
-     "label": "Leaflet A",
-     "version": "Tri-fold r3",
-     "approved": "",
-     "draft": "Awaiting approval",
-     "pdf": "assets/series/ch2/leaflet-r3.pdf",
-     "format": "A4 tri-fold · take-home leaflet · online and print versions",
-     "print": "assets/series/ch2/leaflet-r3-print.pdf",
-     "online_image": "assets/series/ch2/leaflet-r3-online.jpg",
-     "print_image": "assets/series/ch2/leaflet-r3-print.jpg",
-     "image": "assets/series/ch2/leaflet-r3-online.jpg"
+     "label": "Health Talk Guide",
+     "version": "v3",
+     "approved": "2026-11-13",
+     "image": "assets/series/ch2/guide-v3.jpg",
+     "pdf": "assets/series/ch2/guide-v3.pdf",
+     "print": "assets/series/ch2/guide-v3-print.pdf",
+     "format": "A4 · facilitator guide · 5 pages"
     }
    ],
-   "guide": [],
    "short": "Nights",
    "stage": "Nights",
    "leads": [
@@ -184,12 +151,7 @@
      "image": "assets/series/ch3/poster-A-r12.jpg",
      "pdf": "assets/series/ch3/poster-A-r12.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch3/poster-A-r12-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch3/poster-A-ne-r1.jpg",
-      "pdf": "assets/series/ch3/poster-A-ne-r1.pdf"
-     }
+     "print": "assets/series/ch3/poster-A-r12-print.pdf"
     },
     {
      "label": "Option B",
@@ -198,12 +160,7 @@
      "image": "assets/series/ch3/poster-B-r9.jpg",
      "pdf": "assets/series/ch3/poster-B-r9.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch3/poster-B-r9-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch3/poster-B-ne-r1.jpg",
-      "pdf": "assets/series/ch3/poster-B-ne-r1.pdf"
-     }
+     "print": "assets/series/ch3/poster-B-r9-print.pdf"
     },
     {
      "label": "Option C",
@@ -212,29 +169,21 @@
      "image": "assets/series/ch3/poster-C-r11.jpg",
      "pdf": "assets/series/ch3/poster-C-r11.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch3/poster-C-r11-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch3/poster-C-ne-r1.jpg",
-      "pdf": "assets/series/ch3/poster-C-ne-r1.pdf"
-     }
+     "print": "assets/series/ch3/poster-C-r11-print.pdf"
     }
    ],
-   "leaflet": [
+   "leaflet": [],
+   "guide": [
     {
-     "label": "Leaflet A",
-     "version": "Tri-fold r4",
-     "approved": "",
-     "draft": "Awaiting approval; cover picture to be finalised",
-     "image": "assets/series/ch3/leaflet-r4-online.jpg",
-     "online_image": "assets/series/ch3/leaflet-r4-online.jpg",
-     "print_image": "assets/series/ch3/leaflet-r4-print.jpg",
-     "pdf": "assets/series/ch3/leaflet-r4.pdf",
-     "print": "assets/series/ch3/leaflet-r4-print.pdf",
-     "format": "A4 tri-fold · take-home leaflet · online and print versions"
+     "label": "Health Talk Guide",
+     "version": "v3",
+     "approved": "2026-11-13",
+     "image": "assets/series/ch3/guide-v3.jpg",
+     "pdf": "assets/series/ch3/guide-v3.pdf",
+     "print": "assets/series/ch3/guide-v3-print.pdf",
+     "format": "A4 · facilitator guide · 5 pages"
     }
    ],
-   "guide": [],
    "short": "Grief",
    "stage": "Loss",
    "leads": [
@@ -261,12 +210,7 @@
      "image": "assets/series/ch4/poster-A-r8.jpg",
      "pdf": "assets/series/ch4/poster-A-r8.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch4/poster-A-r8-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch4/poster-A-ne-r1.jpg",
-      "pdf": "assets/series/ch4/poster-A-ne-r1.pdf"
-     }
+     "print": "assets/series/ch4/poster-A-r8-print.pdf"
     },
     {
      "label": "Option B",
@@ -275,12 +219,7 @@
      "image": "assets/series/ch4/poster-B-r13.jpg",
      "pdf": "assets/series/ch4/poster-B-r13.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch4/poster-B-r13-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch4/poster-B-ne-r1.jpg",
-      "pdf": "assets/series/ch4/poster-B-ne-r1.pdf"
-     }
+     "print": "assets/series/ch4/poster-B-r13-print.pdf"
     },
     {
      "label": "Option C",
@@ -289,13 +228,7 @@
      "image": "assets/series/ch4/poster-C-r16.jpg",
      "pdf": "assets/series/ch4/poster-C-r16.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch4/poster-C-r16-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch4/poster-C-ne-r1.jpg",
-      "pdf": "assets/series/ch4/poster-C-ne-r1.pdf",
-      "note": "Layout fix pending"
-     }
+     "print": "assets/series/ch4/poster-C-r16-print.pdf"
     }
    ],
    "leaflet": [],
@@ -327,13 +260,7 @@
      "image": "assets/series/ch5/poster-A-r8.jpg",
      "pdf": "assets/series/ch5/poster-A-r8.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch5/poster-A-r8-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch5/poster-A-ne-r1.jpg",
-      "pdf": "assets/series/ch5/poster-A-ne-r1.pdf",
-      "note": "Layout fix pending"
-     }
+     "print": "assets/series/ch5/poster-A-r8-print.pdf"
     },
     {
      "label": "Option B",
@@ -342,13 +269,7 @@
      "image": "assets/series/ch5/poster-B-r10.jpg",
      "pdf": "assets/series/ch5/poster-B-r10.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch5/poster-B-r10-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch5/poster-B-ne-r1.jpg",
-      "pdf": "assets/series/ch5/poster-B-ne-r1.pdf",
-      "note": "Layout fix pending"
-     }
+     "print": "assets/series/ch5/poster-B-r10-print.pdf"
     },
     {
      "label": "Option C",
@@ -357,12 +278,7 @@
      "image": "assets/series/ch5/poster-C-r10.jpg",
      "pdf": "assets/series/ch5/poster-C-r10.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch5/poster-C-r10-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch5/poster-C-ne-r1.jpg",
-      "pdf": "assets/series/ch5/poster-C-ne-r1.pdf"
-     }
+     "print": "assets/series/ch5/poster-C-r10-print.pdf"
     }
    ],
    "leaflet": [],
@@ -394,12 +310,7 @@
      "pdf": "assets/series/ch6/poster-A-r9.pdf",
      "format": "A3 portrait · staff-area poster",
      "note": "Owner-approved design for online review. Not for field distribution.",
-     "print": "assets/series/ch6/poster-A-r9-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch6/poster-A-ne-r1.jpg",
-      "pdf": "assets/series/ch6/poster-A-ne-r1.pdf"
-     }
+     "print": "assets/series/ch6/poster-A-r9-print.pdf"
     },
     {
      "label": "Option B",
@@ -409,12 +320,7 @@
      "pdf": "assets/series/ch6/poster-B-r4.pdf",
      "format": "A3 portrait · staff-area poster",
      "note": "Owner-approved design for online review. Not for field distribution.",
-     "print": "assets/series/ch6/poster-B-r4-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch6/poster-B-ne-r1.jpg",
-      "pdf": "assets/series/ch6/poster-B-ne-r1.pdf"
-     }
+     "print": "assets/series/ch6/poster-B-r4-print.pdf"
     },
     {
      "label": "Option C",
@@ -424,12 +330,7 @@
      "pdf": "assets/series/ch6/poster-C-r7.pdf",
      "format": "A3 portrait · staff-area poster",
      "note": "Owner-approved design for online review. Not for field distribution.",
-     "print": "assets/series/ch6/poster-C-r7-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch6/poster-C-ne-r1.jpg",
-      "pdf": "assets/series/ch6/poster-C-ne-r1.pdf"
-     }
+     "print": "assets/series/ch6/poster-C-r7-print.pdf"
     }
    ],
    "leaflet": [],
