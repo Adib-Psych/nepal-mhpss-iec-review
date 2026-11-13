@@ -136,6 +136,7 @@ dialog button{float:right;min-height:40px;padding:6px 14px;border:1px solid var(
 .tcard .tl b{font-size:16px}
 .tcard .tl span{font-size:13px;color:var(--muted);flex:1 1 100%}
 .tcard .ta{display:flex;flex-wrap:wrap;gap:6px}
+.tcard .ta .btn.big{font-size:15px;font-weight:700;min-height:46px;flex:1 1 0}.tcard .ta.dl .btn{font-size:12.5px;min-height:32px;padding:5px 6px}
 .tcard .ta .btn{flex:1 1 auto;text-align:center;justify-content:center;padding:7px 8px;font-size:13.5px;min-height:38px}
 .galinfo{border-left:1px solid var(--line);padding-left:24px;min-width:0}
 .galinfo .meta{margin:0 0 16px}
@@ -288,7 +289,7 @@ function side(route){
 function productView(c,tab,opt){
   const list=c[tab], name=TABS.find(x=>x[0]===tab)[1];
   if(!list.length) return `<div class="placeholder"><span class="status wait">Not yet approved</span><h3>${name} · Chapter ${c.n}</h3><p>This product is still in production. It appears here once it is approved.</p></div>`;
-  const th=(src,title,pdf,alt)=>`<button class="th" type="button" data-zoom data-src="${src}" data-title="${esc(title)}" data-pdf="${pdf}" aria-label="Preview: ${esc(title)}"><img src="${src}" alt="${esc(alt)}" loading="lazy"></button>`;
+  const th=(src,title,pdf,alt,lang='en')=>`<button class="th" type="button" data-zoom data-lang="${lang}" data-src="${src}" data-title="${esc(title)}" data-pdf="${pdf}" data-pdflabel="${lang==='ne'?'Nepali PDF (draft)':'English PDF'}" aria-label="Preview: ${esc(title)}"><img src="${src}" alt="${esc(alt)}" loading="lazy"></button>`;
   const cards=list.map(p=>{
     const t=`Chapter ${c.n} · ${name==='Poster'?'Poster · ':''}${p.label} · ${p.version}`;
     const pics=p.images?`<div class="tpair">${p.images.map((s,j)=>`<div>${th(s,t+' · '+p.captions[j],p.pdf,`${name}, Chapter ${c.n}: ${p.captions[j]}`)}<span class="cap">${esc(p.captions[j])}</span></div>`).join('')}</div>`:th(p.image,t,p.pdf,`${name}, Chapter ${c.n}, ${p.label}`);
@@ -297,10 +298,11 @@ function productView(c,tab,opt){
     const note=p.note?`<div class="note" style="margin:0">${esc(p.note)}</div>`:'';
     if(p.ne) return `<figure class="tcard two">
       <span class="netag">Nepali · machine draft${p.ne.note?` · ${esc(p.ne.note)}`:''}</span>
-      ${th(p.ne.image,t+' · Nepali draft '+p.ne.version,p.ne.pdf,`${name}, Chapter ${c.n}, ${p.label}, Nepali draft`)}
-      <div class="ta mid"><a class="btn" href="${p.ne.pdf}" download>Nepali PDF (draft)</a><a class="btn primary" href="${p.pdf}" download>English PDF</a>${printBtn}</div>
+      ${th(p.ne.image,t+' · Nepali draft '+p.ne.version,p.ne.pdf,`${name}, Chapter ${c.n}, ${p.label}, Nepali draft`,'ne')}
+      <div class="ta mid"><button class="btn primary big" type="button" data-open="ne">Preview Nepali</button><button class="btn primary big" type="button" data-open="en">Preview English</button></div>
       <span class="entag">English · approved</span>
-      ${pics}${cap}${note}</figure>`;
+      ${pics}${cap}${note}
+      <div class="ta dl"><a class="btn" href="${p.ne.pdf}" download>Nepali PDF (draft)</a><a class="btn" href="${p.pdf}" download>English PDF</a>${printBtn}</div></figure>`;
     return `<figure class="tcard">${pics}${cap}${note}
       <div class="ta"><button class="btn" type="button" data-open>Preview</button><a class="btn primary" href="${p.pdf}" download>English PDF</a>${printBtn}</div></figure>`}).join('');
   const many=list.length>1, p0=list[0];
@@ -465,11 +467,11 @@ const dlg=document.getElementById('dlg'),$=id=>document.getElementById(id);
 let G=[],gi=0;
 function show(i){gi=i;const g=G[i];$('dlgimg').src=g.src;$('dlgimg').alt=g.title;$('dlgt').textContent=g.title+(G.length>1?`  (${i+1} of ${G.length})`:'');
   $('dlgp').hidden=$('dlgn').hidden=G.length<2;$('dlgp').disabled=i===0;$('dlgn').disabled=i===G.length-1;
-  $('dlgpdf').hidden=!g.pdf;if(g.pdf)$('dlgpdf').href=g.pdf;dlg.classList.remove('full');document.querySelector('.dlgbody').scrollTop=0}
+  $('dlgpdf').hidden=!g.pdf;if(g.pdf){$('dlgpdf').href=g.pdf;$('dlgpdf').textContent=g.pl}dlg.classList.remove('full');document.querySelector('.dlgbody').scrollTop=0}
 document.addEventListener('click',e=>{
-  const o=e.target.closest('[data-open]');const z=o?o.closest('.tcard').querySelector('[data-zoom]'):e.target.closest('[data-zoom]');if(!z)return;
+  const o=e.target.closest('[data-open]');const z=o?(o.closest('.tcard').querySelector(`[data-zoom][data-lang="${o.dataset.open||'en'}"]`)||o.closest('.tcard').querySelector('[data-zoom]')):e.target.closest('[data-zoom]');if(!z)return;
   const all=[...document.querySelectorAll('#main [data-zoom]')];
-  G=all.map(x=>({src:x.dataset.src||x.src,title:x.dataset.title||x.alt,pdf:x.dataset.pdf||''}));
+  G=all.map(x=>({src:x.dataset.src||x.src,title:x.dataset.title||x.alt,pdf:x.dataset.pdf||'',pl:x.dataset.pdflabel||'PDF'}));
   show(Math.max(all.indexOf(z),0));if(!dlg.open)dlg.showModal()});
 $('dlgx').onclick=()=>dlg.close();$('dlgp').onclick=()=>gi>0&&show(gi-1);$('dlgn').onclick=()=>gi<G.length-1&&show(gi+1);
 $('dlgimg').onclick=()=>dlg.classList.toggle('full');
