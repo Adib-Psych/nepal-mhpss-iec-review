@@ -223,14 +223,14 @@
    "leaflet": [
     {
      "label": "Leaflet A",
-     "version": "Tri-fold r2",
+     "version": "Tri-fold r3",
      "approved": "",
-     "draft": "Awaiting approval; a new cover picture is in preparation",
-     "image": "assets/series/ch3/leaflet-r2-online.jpg",
-     "online_image": "assets/series/ch3/leaflet-r2-online.jpg",
-     "print_image": "assets/series/ch3/leaflet-r2-print.jpg",
-     "pdf": "assets/series/ch3/leaflet-r2.pdf",
-     "print": "assets/series/ch3/leaflet-r2-print.pdf",
+     "draft": "Awaiting approval",
+     "image": "assets/series/ch3/leaflet-r3-online.jpg",
+     "online_image": "assets/series/ch3/leaflet-r3-online.jpg",
+     "print_image": "assets/series/ch3/leaflet-r3-print.jpg",
+     "pdf": "assets/series/ch3/leaflet-r3.pdf",
+     "print": "assets/series/ch3/leaflet-r3-print.pdf",
      "format": "A4 tri-fold · take-home leaflet · online and print versions"
     }
    ],
