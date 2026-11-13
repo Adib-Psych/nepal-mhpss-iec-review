@@ -45,19 +45,19 @@
    "leaflet": [
     {
      "label": "Leaflet A",
-     "version": "Tri-fold r8",
+     "version": "Tri-fold r9",
      "approved": "2026-11-13",
      "images": [
-      "assets/series/ch1/leaflet-r8-outside.jpg",
-      "assets/series/ch1/leaflet-r8-inside.jpg"
+      "assets/series/ch1/leaflet-r9-outside.jpg",
+      "assets/series/ch1/leaflet-r9-inside.jpg"
      ],
      "captions": [
       "Outside: reactions, help panel and cover",
       "Inside: small things, breathing, coping"
      ],
-     "pdf": "assets/series/ch1/leaflet-r8.pdf",
+     "pdf": "assets/series/ch1/leaflet-r9.pdf",
      "format": "A4 tri-fold · take-home leaflet · online and print versions",
-     "print": "assets/series/ch1/leaflet-r8-print.pdf"
+     "print": "assets/series/ch1/leaflet-r9-print.pdf"
     }
    ],
    "guide": [
