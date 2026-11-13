@@ -45,19 +45,19 @@
    "leaflet": [
     {
      "label": "Leaflet A",
-     "version": "Tri-fold r3",
-     "approved": "2026-11-11",
+     "version": "Tri-fold r8",
+     "approved": "2026-11-13",
      "images": [
-      "assets/series/ch1/leaflet-r3-outside.jpg",
-      "assets/series/ch1/leaflet-r3-inside.jpg"
+      "assets/series/ch1/leaflet-r8-outside.jpg",
+      "assets/series/ch1/leaflet-r8-inside.jpg"
      ],
      "captions": [
-      "Outside: cover, back and help panel",
-      "Inside: reactions, small things, coping"
+      "Outside: reactions, help panel and cover",
+      "Inside: small things, breathing, coping"
      ],
-     "pdf": "assets/series/ch1/leaflet-r3.pdf",
-     "note": "Intro text update approved 11 Nov (r3.1, in production): \"A distressing experience can change how we feel… Support can help, and you do not have to wait to ask for it.\"",
-     "format": "A4 tri-fold · take-home leaflet"
+     "pdf": "assets/series/ch1/leaflet-r8.pdf",
+     "format": "A4 tri-fold · take-home leaflet · online and print versions",
+     "print": "assets/series/ch1/leaflet-r8-print.pdf"
     }
    ],
    "guide": [
