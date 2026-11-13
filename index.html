@@ -149,7 +149,7 @@ dialog button{float:right;min-height:40px;padding:6px 14px;border:1px solid var(
 .dlgbar button[disabled]{opacity:.35;cursor:default}
 .dlgbody{overflow:auto;max-height:80vh}
 .dlgbody img{cursor:zoom-in;max-height:76vh}
-dialog.full .dlgbody img{max-height:none;max-width:none;width:auto;cursor:zoom-out}
+dialog.full .dlgbody img{max-height:none;max-width:max(100%,900px);width:auto;cursor:zoom-out}
 @media(max-width:1100px){.galrow{grid-template-columns:1fr}.galinfo{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:16px}}
 @media(max-width:820px){.gal{gap:8px;grid-template-columns:repeat(3,minmax(0,1fr))}.gal.n1{grid-template-columns:minmax(0,220px)}.gal.wide.n1{grid-template-columns:1fr}.gal.n2{grid-template-columns:1fr 1fr}.tcard{padding:6px;gap:6px}.tcard .tl b{font-size:13.5px}.tcard .tl span{font-size:11.5px}.tcard .ta .btn{font-size:12px;padding:6px 4px;min-height:36px;flex:1 1 100%}.dlgbar b{flex:1 1 100%}dialog{padding:10px}}
 /* feedback: reviewer details, poster poll, comments (stored privately, never shown here) */
@@ -296,8 +296,8 @@ function productView(c,tab,opt){
   const cards=list.map(p=>{
     const t=`Chapter ${c.n} · ${name==='Poster'?'Poster · ':''}${p.label} · ${p.version}`;
     const sheets=(pdf,pl)=>p.images.map((s,j)=>`<div>${th(s,t+' · Print version · '+p.captions[j],pdf,`${name}, Chapter ${c.n}, print version: ${p.captions[j]}`,'en',pl)}<span class="cap">${esc(p.captions[j])}</span></div>`).join('');
-    const pics=p.online_image?`<div class="tpair lf"><div><span class="vh">Online version</span><span class="cap">One page, panels in reading order 1 to 6. For phones, screens and sharing.</span>${th(p.online_image,t+' · Online version',p.pdf,`${name}, Chapter ${c.n}, online version`,'en','online version (PDF)')}</div><div class="stack"><span class="vh">Print version</span><span class="cap">Two sides of one A4 sheet, folded in three along the dashed lines.</span>${sheets(p.print,'print version (PDF)')}</div></div>`:p.images?`<div class="tpair">${sheets(p.pdf,'')}</div>`:th(p.image,t,p.pdf,`${name}, Chapter ${c.n}, ${p.label}`);
-    const printBtn=p.print?`<a class="btn" href="${p.print}" download title="Higher resolution, for printing">${DL} Print version (larger file)</a>`:'';
+    const pics=p.online_image?`<div class="tpair lf"><div><span class="vh">Online version</span><span class="cap">One page, panels in reading order 1 to 6. For phones, screens and sharing.</span>${th(p.online_image,t+' · Online version',p.pdf,`${name}, Chapter ${c.n}, online version`,'en','online version (PDF)')}</div><div class="stack"><span class="vh">Print version</span><span class="cap">One PDF with two pages: the two sides of one A4 sheet, folded in three along the dashed lines.</span>${p.print_image?th(p.print_image,t+' · Print version · both sides',p.print,`${name}, Chapter ${c.n}, print version, both sides`,'en','print version (PDF, 2 pages)')+`<span class="cap">Page 1, outside: panels 5 and 6, and the cover. Page 2, inside: panels 2, 3 and 4.</span>`:sheets(p.print,'print version (PDF)')}</div></div>`:p.images?`<div class="tpair">${sheets(p.pdf,'')}</div>`:th(p.image,t,p.pdf,`${name}, Chapter ${c.n}, ${p.label}`);
+    const printBtn=p.print?`<a class="btn" href="${p.print}" download title="Higher resolution, for printing">${DL} Print version (${p.print_image?'one PDF, 2 pages':'larger file'})</a>`:'';
     const cap=`<figcaption class="tl"><b>${esc(p.label)}</b><span>${esc(p.version)} · ${p.draft?'draft for review':'approved '+fmtDate(p.approved)}</span></figcaption>`;
     const note=(p.draft?`<span class="netag">Draft · ${esc(p.draft)}</span>`:'')+(p.note?`<div class="note" style="margin:0">${esc(p.note)}</div>`:'');
     if(p.ne) return `<figure class="tcard two">
@@ -314,7 +314,7 @@ function productView(c,tab,opt){
   return `<div class="card">${list.some(x=>x.draft)?'<span class="status wait">● Draft for review</span>':'<span class="status ok">● Approved for review</span>'}
     <h3 style="margin:12px 0 4px;font-size:22px">${esc(name)} · Chapter ${c.n}${many?` · ${list.length} approved options`:''}</h3>
     <p class="cap" style="margin:0 0 14px">${many?'The options are shown side by side for comparison. ':''}Select a picture or Preview to see it larger.</p>
-    <div class="galrow"><div class="gal n${Math.min(list.length,3)} ${p0.images?'wide':''}">${cards}</div>
+    <div class="galrow"><div class="gal n${Math.min(list.length,3)} ${(p0.images||p0.online_image)?'wide':''}">${cards}</div>
     <div class="galinfo"><dl class="meta"><dt>Format</dt><dd>${esc(p0.format)}</dd><dt>Language</dt><dd>English review copy${list.some(x=>x.ne)?' · Nepali draft translation, language review pending':''}</dd></dl>
       <div><div class="btns"><span class="btn soon">Final Nepali PDF · after proofreading</span></div>
       <div class="btns"><a class="btn" href="#${c.key}/translation">See the translation</a><button class="btn" type="button" data-tofb>Give feedback</button></div></div></div>${fbBlock(c,tab,list)}</div>`;
