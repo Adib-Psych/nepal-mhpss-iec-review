@@ -131,6 +131,7 @@ dialog button{float:right;min-height:40px;padding:6px 14px;border:1px solid var(
 .tcard .th img{width:100%;height:auto;display:block}
 .tcard .th:hover{border-color:var(--blue)}
 .tcard .tpair{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tcard .ne{border-top:1px dashed var(--line,#d4e0e6);padding-top:8px;display:grid;gap:6px}.tcard .netag{font-size:12.5px;color:#7a4b00;background:#fff3d6;border-radius:6px;padding:3px 8px;justify-self:start}
 .tcard .tl{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px}
 .tcard .tl b{font-size:16px}
 .tcard .tl span{font-size:13px;color:var(--muted);flex:1 1 100%}
@@ -294,7 +295,7 @@ function productView(c,tab,opt){
     return `<figure class="tcard">${pics}
       <figcaption class="tl"><b>${esc(p.label)}</b><span>${esc(p.version)} · approved ${fmtDate(p.approved)}</span></figcaption>
       ${p.note?`<div class="note" style="margin:0">${esc(p.note)}</div>`:''}
-      <div class="ta"><button class="btn" type="button" data-open>Preview</button><a class="btn primary" href="${p.pdf}" download>English PDF</a>${p.print?`<a class="btn" href="${p.print}" download title="Higher resolution, for printing">Print version</a>`:''}</div></figure>`}).join('');
+      <div class="ta"><button class="btn" type="button" data-open>Preview</button><a class="btn primary" href="${p.pdf}" download>English PDF</a>${p.print?`<a class="btn" href="${p.print}" download title="Higher resolution, for printing">Print version</a>`:''}</div>${p.ne?`<div class="ne"><span class="netag">Nepali · machine draft for language review</span><div class="ta"><button class="btn" type="button" data-zoom data-src="${p.ne.image}" data-title="${esc(t)} · Nepali draft ${esc(p.ne.version)}" data-pdf="${p.ne.pdf}">Nepali preview</button><a class="btn" href="${p.ne.pdf}" download>Nepali PDF (draft)</a></div></div>`:''}</figure>`}).join('');
   const many=list.length>1, p0=list[0];
   return `<div class="card"><span class="status ok">● Approved for review</span>
     <h3 style="margin:12px 0 4px;font-size:22px">${esc(name)} · Chapter ${c.n}${many?` · ${list.length} approved options`:''}</h3>
