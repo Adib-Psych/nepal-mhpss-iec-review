@@ -220,7 +220,20 @@
      }
     }
    ],
-   "leaflet": [],
+   "leaflet": [
+    {
+     "label": "Leaflet A",
+     "version": "Tri-fold r1",
+     "approved": "",
+     "draft": "Awaiting approval",
+     "image": "assets/series/ch3/leaflet-r1-online.jpg",
+     "online_image": "assets/series/ch3/leaflet-r1-online.jpg",
+     "print_image": "assets/series/ch3/leaflet-r1-print.jpg",
+     "pdf": "assets/series/ch3/leaflet-r1.pdf",
+     "print": "assets/series/ch3/leaflet-r1-print.pdf",
+     "format": "A4 tri-fold · take-home leaflet · online and print versions"
+    }
+   ],
    "guide": [],
    "short": "Grief",
    "stage": "Loss",
