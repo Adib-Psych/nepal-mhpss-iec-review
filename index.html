@@ -397,7 +397,7 @@ function overview(){
     return `<a class="sc" href="#${c.key}/poster" style="--d:${c.colour[0]};--m:${c.colour[1]};--t:${c.colour[2]}">
       <span class="sc-n">${c.n}</span><span class="sc-k">${esc(c.stage||'').toUpperCase()}</span>
       <b class="sc-title">${esc(c.title)}</b>
-      <span class="faces">${(c.leads||[]).map(face).join('')}</span>
+      <span class="faces">${(c.leads||[]).filter(id=>NAMES[id]).map(face).join('')}</span>
       <span class="sc-moment">${esc(c.moment)}</span>
       <span class="sc-foot"><span class="dots">${dots}</span>${count(c)} of 3 approved</span></a>`}).join('');
   const sw=S.chapters.map(c=>`<div class="sw"><span style="background:${c.colour[0]}"></span><span style="background:${c.colour[1]}"></span><span style="background:${c.colour[2]}"></span><small>${c.n} · ${esc(c.stage)}</small></div>`).join('');
