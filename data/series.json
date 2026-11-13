@@ -171,11 +171,27 @@
    "moment": "A morning in the shelter courtyard. Karuna keeps the routine going; Pasang leads a game; Milan starts drawing his home.",
    "poster": [
     {
+     "label": "Option A",
+     "version": "r6",
+     "approved": "2026-11-13",
+     "image": "assets/series/ch4/poster-A-r6.jpg",
+     "pdf": "assets/series/ch4/poster-A-r6.pdf",
+     "format": "A3 portrait · community wall poster"
+    },
+    {
      "label": "Option B",
      "version": "r11",
      "approved": "2026-11-13",
      "image": "assets/series/ch4/poster-B-r11.jpg",
      "pdf": "assets/series/ch4/poster-B-r11.pdf",
+     "format": "A3 portrait · community wall poster"
+    },
+    {
+     "label": "Option C",
+     "version": "r14",
+     "approved": "2026-11-13",
+     "image": "assets/series/ch4/poster-C-r14.jpg",
+     "pdf": "assets/series/ch4/poster-C-r14.pdf",
      "format": "A3 portrait · community wall poster"
     }
    ],
