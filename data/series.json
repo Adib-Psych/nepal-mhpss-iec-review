@@ -267,7 +267,13 @@
      "image": "assets/series/ch4/poster-C-r16.jpg",
      "pdf": "assets/series/ch4/poster-C-r16.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch4/poster-C-r16-print.pdf"
+     "print": "assets/series/ch4/poster-C-r16-print.pdf",
+     "ne": {
+      "version": "r1",
+      "image": "assets/series/ch4/poster-C-ne-r1.jpg",
+      "pdf": "assets/series/ch4/poster-C-ne-r1.pdf",
+      "note": "Layout fix pending"
+     }
     }
    ],
    "leaflet": [],
@@ -299,7 +305,13 @@
      "image": "assets/series/ch5/poster-A-r8.jpg",
      "pdf": "assets/series/ch5/poster-A-r8.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch5/poster-A-r8-print.pdf"
+     "print": "assets/series/ch5/poster-A-r8-print.pdf",
+     "ne": {
+      "version": "r1",
+      "image": "assets/series/ch5/poster-A-ne-r1.jpg",
+      "pdf": "assets/series/ch5/poster-A-ne-r1.pdf",
+      "note": "Layout fix pending"
+     }
     },
     {
      "label": "Option B",
@@ -308,7 +320,13 @@
      "image": "assets/series/ch5/poster-B-r10.jpg",
      "pdf": "assets/series/ch5/poster-B-r10.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch5/poster-B-r10-print.pdf"
+     "print": "assets/series/ch5/poster-B-r10-print.pdf",
+     "ne": {
+      "version": "r1",
+      "image": "assets/series/ch5/poster-B-ne-r1.jpg",
+      "pdf": "assets/series/ch5/poster-B-ne-r1.pdf",
+      "note": "Layout fix pending"
+     }
     },
     {
      "label": "Option C",
