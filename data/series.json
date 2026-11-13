@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13",
+ "updated": "2026-11-14",
  "rule": "Only approved products are listed.",
  "chapters": [
   {
@@ -58,11 +58,11 @@
    "guide": [
     {
      "label": "Health Talk Guide",
-     "version": "v11",
+     "version": "v14",
      "approved": "2026-11-14",
-     "image": "assets/series/ch1/guide-v11.jpg",
-     "pdf": "assets/series/ch1/guide-v11.pdf",
-     "print": "assets/series/ch1/guide-v11-print.pdf",
+     "image": "assets/series/ch1/guide-v14.jpg",
+     "pdf": "assets/series/ch1/guide-v14.pdf",
+     "print": "assets/series/ch1/guide-v14-print.pdf",
      "format": "A4 · facilitator guide · 5 pages"
     }
    ],
@@ -117,11 +117,11 @@
    "guide": [
     {
      "label": "Health Talk Guide",
-     "version": "v3",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch2/guide-v3.jpg",
-     "pdf": "assets/series/ch2/guide-v3.pdf",
-     "print": "assets/series/ch2/guide-v3-print.pdf",
+     "version": "v7",
+     "approved": "2026-11-14",
+     "image": "assets/series/ch2/guide-v7.jpg",
+     "pdf": "assets/series/ch2/guide-v7.pdf",
+     "print": "assets/series/ch2/guide-v7-print.pdf",
      "format": "A4 · facilitator guide · 5 pages"
     }
    ],
@@ -176,11 +176,11 @@
    "guide": [
     {
      "label": "Health Talk Guide",
-     "version": "v3",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch3/guide-v3.jpg",
-     "pdf": "assets/series/ch3/guide-v3.pdf",
-     "print": "assets/series/ch3/guide-v3-print.pdf",
+     "version": "v7",
+     "approved": "2026-11-14",
+     "image": "assets/series/ch3/guide-v7.jpg",
+     "pdf": "assets/series/ch3/guide-v7.pdf",
+     "print": "assets/series/ch3/guide-v7-print.pdf",
      "format": "A4 · facilitator guide · 5 pages"
     }
    ],
