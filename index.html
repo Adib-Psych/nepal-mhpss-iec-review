@@ -344,11 +344,10 @@ function translation(c){
   const secs=(T&&T.chapters[c.key])||[];
   const head=`<div class="tr-head"><div><span class="status wait">Nepali drafts · proofreading pending</span><h3 style="font-size:22px;margin:12px 0 4px">Translation & proofreading · Chapter ${c.n}</h3>
     <p style="margin:0;max-width:900px">One reference text for every approved poster and leaflet: English (source), Nepali (draft) and the proofreading status. ${esc(T?T.status:'')}</p></div>
-    <div class="legend"><span style="--c:var(--coralt)">Safety row: human translator</span><span style="--c:#fbf3e1">Check: clinical or legal wording</span><span style="--c:var(--ok)">Updated text</span></div></div>`;
+    <div class="legend"><span style="--c:var(--coralt)">SAFETY row: review first</span><span style="--c:#fbf3e1">Check: clinical or legal wording</span><span style="--c:var(--ok)">Updated text</span></div></div>`;
   if(!secs.length) return `<div class="card">${head}<div class="placeholder" style="margin-top:16px"><h3>No approved product yet</h3><p>The translation appears here once a product of this chapter is approved.</p></div></div>`;
   return `<div class="card">${head}${secs.map(s=>trTable(s,c.colour[0])).join('')}
-    <details class="shared"><summary>Shared blocks used across the series (F-01 to F-15)</summary>${trTable(T.shared,c.colour[1])}</details>
-    <p class="small">Proofreaders: please send corrections through the comment box on the product's page, citing the row ID. The full reference file (Word) is shared by the coordination team.</p></div>`;
+    <p class="small">Proofreaders: please send corrections through the comment box on the product's page, citing the row ID (for example C1L-04). Every Nepali row is a machine draft until a native Nepali and MHPSS reviewer has checked it.</p></div>`;
 }
 
 const FB={pid:'mhpss-nepal-iec-review',key:'AIzaSyBN-sh64hOZeQClPi8Z8k-fXcVfBs2pxFQ'};

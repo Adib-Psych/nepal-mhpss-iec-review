@@ -1,7 +1,7 @@
 {
  "file": "IEC Series Translation EN-NE - Posters and Leaflets 11Nov2026.docx",
- "date": "2026-11-11",
- "status": "Nepali drafts, not yet reviewed by a native speaker. Safety rows are written by a human translator. Leaflet rows (14 Nov 2026) are all machine drafts, including SAFETY rows; each shows a machine back-translation.",
+ "date": "2026-11-14",
+ "status": "Nepali machine drafts for language review: posters (13 Nov 2026) and leaflets (14 Nov 2026). No row is reviewed by a native speaker yet, including SAFETY rows; review those first. Back-translations are machine-made, as a meaning aid only.",
  "shared": {
   "id": "F",
   "title": "Shared blocks (same text on every product that uses them)",
@@ -150,125 +150,238 @@
    {
     "id": "C1P",
     "title": "Chapter 1 · You are not alone · Poster A3",
-    "source": "Approved: poster ABC-r3, option C (exact text from the print file)",
-    "shared": "F-01 kicker · F-02–F-06 help washes and local line · F-07 slogan · F-08 inclusion · F-09 footer (N = १) · F-11 disclosure",
+    "source": "Approved English posters (options A, B and C as shown on this site) · Nepali machine draft r1 of 13 Nov 2026 (poster message bank), language and MHPSS review pending; every row needs a native reviewer",
+    "shared": "",
     "rows": [
      {
       "id": "C1P-01",
-      "part": "Title",
-      "en": "You are not alone",
-      "ne": "तपाईं एक्लो हुनुहुन्न",
+      "part": "Poster options A, B, C",
+      "en": "AFTER A DISTRESSING EXPERIENCE",
+      "ne": "पीडादायी अनुभवपछि",
       "type": "general",
-      "note": "Echoes the CMC-Nepal leaflet \"म एक्लो छैन\".",
-      "changed": false
+      "note": "Back-translation (machine): After a distressing/painful experience.",
+      "changed": false,
+      "message_id": "IEC-MSG-B22329E0FFB8"
      },
      {
       "id": "C1P-02",
-      "part": "Strip",
-      "en": "Many people feel this way after the flood.",
-      "ne": "बाढीपछि धेरै मानिसलाई यस्तै महसुस हुन्छ ।",
+      "part": "Poster options A, B, C",
+      "en": "You are not alone",
+      "ne": "तपाईं एक्लो हुनुहुन्न",
       "type": "general",
       "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-07235A70B737"
      },
      {
       "id": "C1P-03",
-      "part": "Feel heading",
+      "part": "Poster options A, B, C",
+      "en": "Many people feel this way after a distressing experience.",
+      "ne": "पीडादायी अनुभवपछि धेरै मानिसलाई यस्तै महसुस हुन्छ ।",
+      "type": "general",
+      "note": "Back-translation (machine): After a distressing experience, many people feel like this.",
+      "changed": false,
+      "message_id": "IEC-MSG-29CC516A5AF4"
+     },
+     {
+      "id": "C1P-04",
+      "part": "Poster options A, B, C",
       "en": "You may feel…",
       "ne": "तपाईंलाई यस्तो महसुस हुन सक्छ…",
       "type": "general",
       "note": "",
-      "changed": false
-     },
-     {
-      "id": "C1P-04",
-      "part": "Feeling word",
-      "en": "Sad",
-      "ne": "दुःखी",
-      "type": "general",
-      "note": "Alternative उदास; choose the word readers use most.",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-6A5546CEFBB8"
      },
      {
       "id": "C1P-05",
-      "part": "Feeling word",
+      "part": "Poster options A, B, C",
+      "en": "Sad",
+      "ne": "दुःखी",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-3BA6F1AEEDE1"
+     },
+     {
+      "id": "C1P-06",
+      "part": "Poster options A, B, C",
       "en": "Worried or afraid",
       "ne": "चिन्तित वा डराएको",
       "type": "general",
       "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-9EC85A02974D"
      },
      {
-      "id": "C1P-06",
-      "part": "Feeling word",
+      "id": "C1P-07",
+      "part": "Poster options A, B, C",
       "en": "Angry",
       "ne": "रिसाएको",
       "type": "general",
       "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-C553665085D3"
      },
      {
-      "id": "C1P-07",
-      "part": "Feeling word",
+      "id": "C1P-08",
+      "part": "Poster options A, B, C",
       "en": "Unable to sleep",
       "ne": "निद्रा नलाग्ने",
       "type": "general",
       "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-2EC93030BEB3"
      },
      {
-      "id": "C1P-08",
-      "part": "Help heading",
+      "id": "C1P-09",
+      "part": "Poster options A, B, C",
       "en": "Small things that can help",
       "ne": "सहयोग गर्न सक्ने साना कुराहरू",
       "type": "general",
       "note": "",
-      "changed": false
-     },
-     {
-      "id": "C1P-09",
-      "part": "Label",
-      "en": "Be with someone you trust",
-      "ne": "विश्वासिलो मानिससँग बस्नुहोस्",
-      "type": "general",
-      "note": "Longer option: आफूले विश्वास गर्ने मानिससँग बस्नुहोस्.",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-E355FB4B040F"
      },
      {
       "id": "C1P-10",
-      "part": "Label",
-      "en": "Rest, eat and drink safe water",
-      "ne": "आराम, खाना र सुरक्षित पानी",
+      "part": "Poster options A, B, C",
+      "en": "Be with someone you trust",
+      "ne": "विश्वासिलो मानिससँग बस्नुहोस्",
       "type": "general",
-      "note": "Short label form to fit the poster.",
-      "changed": false
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-C02CA2604B62"
      },
      {
       "id": "C1P-11",
-      "part": "Label",
+      "part": "Poster options A, B, C",
+      "en": "Rest, eat and drink safe water",
+      "ne": "आराम, खाना र सुरक्षित पानी",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-EB41452CBC60"
+     },
+     {
+      "id": "C1P-12",
+      "part": "Poster options A, B, C",
       "en": "Breathe slowly",
       "ne": "बिस्तारै सास फेर्नुहोस्",
       "type": "general",
       "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-9B4E2315BD0F"
      },
      {
-      "id": "C1P-12",
-      "part": "Label",
+      "id": "C1P-13",
+      "part": "Poster options A, B, C",
       "en": "Do one small task",
       "ne": "एउटा सानो काम गर्नुहोस्",
       "type": "general",
       "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-124B1277B023"
      },
      {
-      "id": "C1P-13",
-      "part": "Label",
+      "id": "C1P-14",
+      "part": "Poster options A, B, C",
       "en": "Keep routines for children",
       "ne": "बालबालिकाको दिनचर्या कायम राख्नुहोस्",
       "type": "general",
-      "note": "दिनचर्या as in CMC-Nepal.",
-      "changed": false
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-09B1557B28F0"
+     },
+     {
+      "id": "C1P-15",
+      "part": "Poster options A, B, C",
+      "en": "Ask for help early",
+      "ne": "समयमै सहयोग माग्नुहोस्",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Ask for help in time.",
+      "changed": false,
+      "message_id": "IEC-MSG-AE33531D9FF3"
+     },
+     {
+      "id": "C1P-16",
+      "part": "Poster options A, B, C",
+      "en": "Feelings getting worse, not going away, or making daily life hard? Talk to a health worker. You do not have to wait.",
+      "ne": "के तपाईंका भावना झन् गाह्रा हुँदैछन्, हटिरहेका छैनन्, वा दैनिक जीवन कठिन बनाइरहेका छन्? स्वास्थ्यकर्मीसँग कुरा गर्नुहोस् । तपाईंले पर्खनुपर्दैन ।",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Are your feelings becoming more difficult, not going away, or making daily life difficult? Talk to a health worker. You do not have to wait.",
+      "changed": false,
+      "message_id": "IEC-MSG-C1A3BC1B3672"
+     },
+     {
+      "id": "C1P-17",
+      "part": "Poster options A, B, C",
+      "en": "Get help now",
+      "ne": "अहिले नै सहयोग लिनुहोस्",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Get help right now.",
+      "changed": false,
+      "message_id": "IEC-MSG-704B7BE9E3FC"
+     },
+     {
+      "id": "C1P-18",
+      "part": "Poster options A, B, C",
+      "en": "In danger, or thinking of harming yourself? Get help now. Ask a health worker or responder, and ask someone you trust to stay with you.",
+      "ne": "के तपाईं खतरामा हुनुहुन्छ, वा आफूलाई हानि पुर्‍याउने सोच आइरहेको छ? अहिले नै सहयोग लिनुहोस् । स्वास्थ्यकर्मी वा उद्धारकर्मीलाई सहयोग माग्नुहोस्, र आफूले विश्वास गर्ने मानिसलाई तपाईंसँगै बस्न भन्नुहोस् ।",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Are you in danger, or having thoughts of harming yourself? Get help right now. Ask a health worker or rescue worker for help, and ask someone you trust to stay with you.",
+      "changed": false,
+      "message_id": "IEC-MSG-41928BD13C8E"
+     },
+     {
+      "id": "C1P-19",
+      "part": "Poster options A, B, C",
+      "en": "Help near you: ____________ (filled in and checked locally)",
+      "ne": "तपाईं नजिकैको सहयोग: ____________ (स्थानीय रूपमा भरेर जाँच गरिएको)",
+      "type": "general",
+      "note": "Back-translation (machine): Help near you: ____________ (filled and checked locally).",
+      "changed": false,
+      "message_id": "IEC-MSG-48BB414B59F9"
+     },
+     {
+      "id": "C1P-20",
+      "part": "Poster options A, B, C",
+      "en": "Look after yourself. Look after each other.",
+      "ne": "आफ्नो ख्याल राख्नुहोस् । एकअर्काको ख्याल राख्नुहोस् ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-7443AE54D475"
+     },
+     {
+      "id": "C1P-21",
+      "part": "Poster options A, B, C",
+      "en": "Support is for everyone, including people with disabilities and older people. Ask for large print or more time.",
+      "ne": "सहयोग सबैका लागि हो, अपाङ्गता भएका व्यक्ति र ज्येष्ठ नागरिकका लागि पनि । ठूला अक्षर वा थप समय माग्न सक्नुहुन्छ ।",
+      "type": "general",
+      "note": "Back-translation (machine): Support is for everyone, including persons with disabilities and older citizens. You may ask for large letters or more time.",
+      "changed": false,
+      "message_id": "IEC-MSG-42F10B37667C"
+     },
+     {
+      "id": "C1P-22",
+      "part": "Poster options A, B, C",
+      "en": "Community wall poster · A3 · Chapter 1 of 6 · English review draft · Not for field distribution.",
+      "ne": "सामुदायिक भित्ते पोस्टर · A3 · अध्याय ६ मध्ये १ · नेपाली समीक्षा मस्यौदा · क्षेत्रमा वितरणका लागि होइन ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-F6E404D87C86"
+     },
+     {
+      "id": "C1P-23",
+      "part": "Poster options A, B, C",
+      "en": "Fictional illustrations, AI-assisted and developed under human direction.",
+      "ne": "काल्पनिक चित्रहरू, मानवीय निर्देशनमा AI को सहायताले तयार गरिएका ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-746B547F380C"
      }
     ]
    },
@@ -735,89 +848,188 @@
    {
     "id": "C2P",
     "title": "Chapter 2 · Difficult nights · Poster A3",
-    "source": "Approved: poster options A r10, B r4 and C r4 (same text; checked against the print files)",
-    "shared": "No kicker · F-02–F-06 · F-07 · F-08 · F-09 footer (N = २) · F-11",
+    "source": "Approved English posters (options A, B and C as shown on this site) · Nepali machine draft r1 of 13 Nov 2026 (poster message bank), language and MHPSS review pending; every row needs a native reviewer",
+    "shared": "",
     "rows": [
      {
       "id": "C2P-01",
-      "part": "Title",
+      "part": "Poster options A, B, C",
       "en": "It can be hard to sleep after a distressing experience",
       "ne": "पीडादायी अनुभवपछि निदाउन गाह्रो हुन सक्छ",
       "type": "general",
-      "note": "Series term \"distressing experience\" = पीडादायी अनुभव (see Terms). No full stop in titles.",
-      "changed": false
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-029C5EF526A3"
      },
      {
       "id": "C2P-02",
-      "part": "Strip",
-      "en": "After a flood, an earthquake or another distressing experience, many people sleep badly or wake up afraid. You are not alone.",
-      "ne": "बाढी, भूकम्प वा अरू कुनै पीडादायी अनुभवपछि धेरै मानिसलाई राम्रोसँग निद्रा लाग्दैन, वा उनीहरू डराएर ब्यूँझन्छन् । तपाईं एक्लो हुनुहुन्न ।",
+      "part": "Poster options A, B, C",
+      "en": "After a distressing experience, many people sleep badly or wake up afraid. You are not alone.",
+      "ne": "पीडादायी अनुभवपछि धेरै मानिस राम्रोसँग सुत्न सक्दैनन् वा डराएर ब्यूँझन्छन् । तपाईं एक्लो हुनुहुन्न ।",
       "type": "general",
-      "note": "",
-      "changed": false
+      "note": "Back-translation (machine): After a distressing experience many people cannot sleep well or wake frightened. You are not alone.",
+      "changed": false,
+      "message_id": "IEC-MSG-83DF062D4D67"
      },
      {
       "id": "C2P-03",
-      "part": "Heading",
+      "part": "Poster options A, B, C",
       "en": "Before night",
       "ne": "राति सुत्नुअघि",
       "type": "general",
       "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-48CE5188B9E5"
      },
      {
       "id": "C2P-04",
-      "part": "Label",
-      "en": "If there is still a risk, check local warnings.",
-      "ne": "",
-      "type": "safety",
-      "note": "Condition first: यदि … भने. Same meaning as the safety line.",
-      "changed": false
-     },
-     {
-      "id": "C2P-05",
-      "part": "Label",
-      "en": "Keep a torch nearby",
-      "ne": "टर्च नजिकै राख्नुहोस्",
-      "type": "general",
-      "note": "",
-      "changed": false
-     },
-     {
-      "id": "C2P-06",
-      "part": "Heading",
+      "part": "Poster options A, B, C",
       "en": "If you wake up afraid",
       "ne": "डराएर ब्यूँझनुभयो भने",
       "type": "general",
       "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-305F0570D538"
      },
      {
-      "id": "C2P-07",
-      "part": "Label",
+      "id": "C2P-05",
+      "part": "Poster options A, B, C",
+      "en": "If there is still a risk, check local warnings.",
+      "ne": "अझै जोखिम छ भने स्थानीय चेतावनी हेर्नुहोस् ।",
+      "type": "general",
+      "note": "Back-translation (machine): If risk still remains, check local warnings.",
+      "changed": false,
+      "message_id": "IEC-MSG-3B6DE78727F1"
+     },
+     {
+      "id": "C2P-06",
+      "part": "Poster options A, B, C",
       "en": "Notice the safe things around you",
       "ne": "आफ्नो वरिपरिका सुरक्षित कुराहरूमा ध्यान दिनुहोस्",
       "type": "general",
       "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-9B670AB120CE"
      },
      {
-      "id": "C2P-08",
-      "part": "Label",
+      "id": "C2P-07",
+      "part": "Poster options A, B, C",
       "en": "Breathe slowly",
       "ne": "बिस्तारै सास फेर्नुहोस्",
       "type": "general",
       "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-9B4E2315BD0F"
+     },
+     {
+      "id": "C2P-08",
+      "part": "Poster options A, B, C",
+      "en": "Keep a torch nearby",
+      "ne": "टर्च नजिकै राख्नुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-F9C995AC621C"
      },
      {
       "id": "C2P-09",
-      "part": "Label",
+      "part": "Poster options A, B, C",
       "en": "Go to someone you trust",
       "ne": "विश्वासिलो मानिसकहाँ जानुहोस्",
       "type": "general",
-      "note": "Short label form, as C1P-09. Longer option: आफूले विश्वास गर्ने मानिसकहाँ जानुहोस्.",
-      "changed": false
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-22D9DBECDE8B"
+     },
+     {
+      "id": "C2P-10",
+      "part": "Poster options A, B, C",
+      "en": "Ask for help early",
+      "ne": "समयमै सहयोग माग्नुहोस्",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Ask for help in time.",
+      "changed": false,
+      "message_id": "IEC-MSG-AE33531D9FF3"
+     },
+     {
+      "id": "C2P-11",
+      "part": "Poster options A, B, C",
+      "en": "Feelings getting worse, not going away, or making daily life hard? Talk to a health worker. You do not have to wait.",
+      "ne": "के तपाईंका भावना झन् गाह्रा हुँदैछन्, हटिरहेका छैनन्, वा दैनिक जीवन कठिन बनाइरहेका छन्? स्वास्थ्यकर्मीसँग कुरा गर्नुहोस् । तपाईंले पर्खनुपर्दैन ।",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Are your feelings becoming more difficult, not going away, or making daily life difficult? Talk to a health worker. You do not have to wait.",
+      "changed": false,
+      "message_id": "IEC-MSG-C1A3BC1B3672"
+     },
+     {
+      "id": "C2P-12",
+      "part": "Poster options A, B, C",
+      "en": "Get help now",
+      "ne": "अहिले नै सहयोग लिनुहोस्",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Get help right now.",
+      "changed": false,
+      "message_id": "IEC-MSG-704B7BE9E3FC"
+     },
+     {
+      "id": "C2P-13",
+      "part": "Poster options A, B, C",
+      "en": "In danger, or thinking of harming yourself? Get help now. Ask a health worker or responder, and ask someone you trust to stay with you.",
+      "ne": "के तपाईं खतरामा हुनुहुन्छ, वा आफूलाई हानि पुर्‍याउने सोच आइरहेको छ? अहिले नै सहयोग लिनुहोस् । स्वास्थ्यकर्मी वा उद्धारकर्मीलाई सहयोग माग्नुहोस्, र आफूले विश्वास गर्ने मानिसलाई तपाईंसँगै बस्न भन्नुहोस् ।",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Are you in danger, or having thoughts of harming yourself? Get help right now. Ask a health worker or rescue worker for help, and ask someone you trust to stay with you.",
+      "changed": false,
+      "message_id": "IEC-MSG-41928BD13C8E"
+     },
+     {
+      "id": "C2P-14",
+      "part": "Poster options A, B, C",
+      "en": "Help near you: ____________ (filled in and checked locally)",
+      "ne": "तपाईं नजिकैको सहयोग: ____________ (स्थानीय रूपमा भरेर जाँच गरिएको)",
+      "type": "general",
+      "note": "Back-translation (machine): Help near you: ____________ (filled and checked locally).",
+      "changed": false,
+      "message_id": "IEC-MSG-48BB414B59F9"
+     },
+     {
+      "id": "C2P-15",
+      "part": "Poster options A, B, C",
+      "en": "Look after yourself. Look after each other.",
+      "ne": "आफ्नो ख्याल राख्नुहोस् । एकअर्काको ख्याल राख्नुहोस् ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-7443AE54D475"
+     },
+     {
+      "id": "C2P-16",
+      "part": "Poster options A, B, C",
+      "en": "Support is for everyone, including people with disabilities and older people. Ask for large print or more time.",
+      "ne": "सहयोग सबैका लागि हो, अपाङ्गता भएका व्यक्ति र ज्येष्ठ नागरिकका लागि पनि । ठूला अक्षर वा थप समय माग्न सक्नुहुन्छ ।",
+      "type": "general",
+      "note": "Back-translation (machine): Support is for everyone, including persons with disabilities and older citizens. You may ask for large letters or more time.",
+      "changed": false,
+      "message_id": "IEC-MSG-42F10B37667C"
+     },
+     {
+      "id": "C2P-17",
+      "part": "Poster options A, B, C",
+      "en": "Community wall poster · A3 · Chapter 2 of 6 · English review draft · Not for field distribution.",
+      "ne": "सामुदायिक भित्ते पोस्टर · A3 · अध्याय ६ मध्ये २ · नेपाली समीक्षा मस्यौदा · क्षेत्रमा वितरणका लागि होइन ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-0DBF49A46EAF"
+     },
+     {
+      "id": "C2P-18",
+      "part": "Poster options A, B, C",
+      "en": "Fictional illustrations, AI-assisted and developed under human direction.",
+      "ne": "काल्पनिक चित्रहरू, मानवीय निर्देशनमा AI को सहायताले तयार गरिएका ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-746B547F380C"
      }
     ]
    },
@@ -1272,8 +1484,276 @@
   ],
   "ch3": [
    {
+    "id": "C3P",
+    "title": "Chapter 3 · There is no right way to grieve · Poster A3",
+    "source": "Approved English posters (options A, B and C as shown on this site) · Nepali machine draft r1 of 13 Nov 2026 (poster message bank), language and MHPSS review pending; every row needs a native reviewer",
+    "shared": "",
+    "rows": [
+     {
+      "id": "C3P-01",
+      "part": "Poster options A, B, C",
+      "en": "WHEN SOMEONE WE LOVE HAS DIED OR IS MISSING",
+      "ne": "आफूले माया गर्ने कसैको मृत्यु भएको वा उहाँ बेपत्ता भएको बेला",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): When someone we love has died or is missing.",
+      "changed": false,
+      "message_id": "IEC-MSG-C2C975E2837E"
+     },
+     {
+      "id": "C3P-02",
+      "part": "Poster options A, B, C",
+      "en": "There is no right way to grieve",
+      "ne": "शोक गर्ने कुनै एउटै सही तरिका हुँदैन",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-FE15CF65B595"
+     },
+     {
+      "id": "C3P-03",
+      "part": "Poster options A, B, C",
+      "en": "Grief is a normal response to loss.",
+      "ne": "गुमाउँदा शोक लाग्नु स्वाभाविक हो ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-F2B0527D08F7"
+     },
+     {
+      "id": "C3P-04",
+      "part": "Poster options A, B, C",
+      "en": "Grief can look like…",
+      "ne": "शोकमा यस्तो हुन सक्छ…",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-AF5CB2D21789"
+     },
+     {
+      "id": "C3P-05",
+      "part": "Poster options A, B, C",
+      "en": "Stay close",
+      "ne": "नजिकै रहनुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-701ABE5DE212"
+     },
+     {
+      "id": "C3P-06",
+      "part": "Poster options A, B, C",
+      "en": "Listen, or sit quietly",
+      "ne": "सुन्नुहोस्, वा चुपचाप बस्नुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-B2F43EC68E13"
+     },
+     {
+      "id": "C3P-07",
+      "part": "Poster options A, B",
+      "en": "Crying · Missing them · Feeling empty · Feeling angry · Not sleeping",
+      "ne": "रुनु · उहाँको याद आइरहनु · मन खाली-खाली लाग्नु · रिस उठ्नु · निद्रा नलाग्नु",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-1369F98EE475"
+     },
+     {
+      "id": "C3P-08",
+      "part": "Poster options A, B, C",
+      "en": "Help with daily tasks",
+      "ne": "दैनिक काममा सघाउनुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-C031D0CC1207"
+     },
+     {
+      "id": "C3P-09",
+      "part": "Poster options A, B, C",
+      "en": "When a loved one is missing, hope and grief can be felt at the same time.",
+      "ne": "प्रिय व्यक्ति बेपत्ता हुँदा एकै समयमा आशा र शोक दुवै महसुस हुन सक्छ ।",
+      "type": "general",
+      "note": "Back-translation (machine): When a loved person is missing, both hope and grief may be felt at the same time.",
+      "changed": false,
+      "message_id": "IEC-MSG-D79564AC215B"
+     },
+     {
+      "id": "C3P-10",
+      "part": "Poster option A",
+      "en": "Being there for someone who is grieving",
+      "ne": "शोकमा परेका व्यक्तिको साथमा रहनु",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-5EC5FEA4D0EF"
+     },
+     {
+      "id": "C3P-11",
+      "part": "Poster options B, C",
+      "en": "How to help someone who is grieving",
+      "ne": "शोकमा परेका व्यक्तिलाई कसरी सहयोग गर्ने",
+      "type": "general",
+      "note": "Back-translation (machine): How to help a person who is grieving.",
+      "changed": false,
+      "message_id": "IEC-MSG-D0E262B0883F"
+     },
+     {
+      "id": "C3P-12",
+      "part": "Poster options A, B, C",
+      "en": "Let them grieve in their own way",
+      "ne": "उहाँलाई आफ्नै तरिकाले शोक गर्न दिनुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-4662AD3ADEE8"
+     },
+     {
+      "id": "C3P-13",
+      "part": "Poster option C",
+      "en": "Crying",
+      "ne": "रुनु",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-4D21BEAD5362"
+     },
+     {
+      "id": "C3P-14",
+      "part": "Poster option C",
+      "en": "Missing them",
+      "ne": "उहाँको याद आइरहनु",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-E768B6AC8321"
+     },
+     {
+      "id": "C3P-15",
+      "part": "Poster option C",
+      "en": "Feeling empty",
+      "ne": "मन खाली-खाली लाग्नु",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-0AA9A6AF84BC"
+     },
+     {
+      "id": "C3P-16",
+      "part": "Poster option C",
+      "en": "Feeling angry",
+      "ne": "रिस उठ्नु",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-D4EC7A1CAC26"
+     },
+     {
+      "id": "C3P-17",
+      "part": "Poster option C",
+      "en": "Not sleeping",
+      "ne": "निद्रा नलाग्नु",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-95541C798790"
+     },
+     {
+      "id": "C3P-18",
+      "part": "Poster options A, B, C",
+      "en": "Ask for help early",
+      "ne": "समयमै सहयोग माग्नुहोस्",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Ask for help in time.",
+      "changed": false,
+      "message_id": "IEC-MSG-AE33531D9FF3"
+     },
+     {
+      "id": "C3P-19",
+      "part": "Poster options A, B, C",
+      "en": "Grief has no fixed end date. If you want support, or grief is making daily life hard, talk to a health worker. You do not have to wait.",
+      "ne": "शोक कहिले सकिनुपर्छ भन्ने निश्चित समय हुँदैन । तपाईं सहयोग चाहनुहुन्छ वा शोकले दैनिक जीवन कठिन बनाइरहेको छ भने स्वास्थ्यकर्मीसँग कुरा गर्नुहोस् । तपाईंले पर्खनुपर्दैन ।",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): There is no fixed time by which grief must end. If you want support or grief makes daily life difficult, talk to a health worker. You do not have to wait.",
+      "changed": false,
+      "message_id": "IEC-MSG-793A5A358B10"
+     },
+     {
+      "id": "C3P-20",
+      "part": "Poster options A, B, C",
+      "en": "Get help now",
+      "ne": "अहिले नै सहयोग लिनुहोस्",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Get help right now.",
+      "changed": false,
+      "message_id": "IEC-MSG-704B7BE9E3FC"
+     },
+     {
+      "id": "C3P-21",
+      "part": "Poster options A, B, C",
+      "en": "In danger, or thinking of harming yourself? Get help now. Ask a health worker or responder, and ask someone you trust to stay with you.",
+      "ne": "के तपाईं खतरामा हुनुहुन्छ, वा आफूलाई हानि पुर्‍याउने सोच आइरहेको छ? अहिले नै सहयोग लिनुहोस् । स्वास्थ्यकर्मी वा उद्धारकर्मीलाई सहयोग माग्नुहोस्, र आफूले विश्वास गर्ने मानिसलाई तपाईंसँगै बस्न भन्नुहोस् ।",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Are you in danger, or having thoughts of harming yourself? Get help right now. Ask a health worker or rescue worker for help, and ask someone you trust to stay with you.",
+      "changed": false,
+      "message_id": "IEC-MSG-41928BD13C8E"
+     },
+     {
+      "id": "C3P-22",
+      "part": "Poster options A, B, C",
+      "en": "Help near you: ____________ (filled in and checked locally)",
+      "ne": "तपाईं नजिकैको सहयोग: ____________ (स्थानीय रूपमा भरेर जाँच गरिएको)",
+      "type": "general",
+      "note": "Back-translation (machine): Help near you: ____________ (filled and checked locally).",
+      "changed": false,
+      "message_id": "IEC-MSG-48BB414B59F9"
+     },
+     {
+      "id": "C3P-23",
+      "part": "Poster options A, B, C",
+      "en": "Look after yourself. Look after each other.",
+      "ne": "आफ्नो ख्याल राख्नुहोस् । एकअर्काको ख्याल राख्नुहोस् ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-7443AE54D475"
+     },
+     {
+      "id": "C3P-24",
+      "part": "Poster options A, B, C",
+      "en": "Support is for everyone, including people with disabilities and older people. Ask for large print or more time.",
+      "ne": "सहयोग सबैका लागि हो, अपाङ्गता भएका व्यक्ति र ज्येष्ठ नागरिकका लागि पनि । ठूला अक्षर वा थप समय माग्न सक्नुहुन्छ ।",
+      "type": "general",
+      "note": "Back-translation (machine): Support is for everyone, including persons with disabilities and older citizens. You may ask for large letters or more time.",
+      "changed": false,
+      "message_id": "IEC-MSG-42F10B37667C"
+     },
+     {
+      "id": "C3P-25",
+      "part": "Poster options A, B, C",
+      "en": "Community wall poster · A3 · Chapter 3 of 6 · English review draft · Not for field distribution.",
+      "ne": "सामुदायिक भित्ते पोस्टर · A3 · अध्याय ६ मध्ये ३ · नेपाली समीक्षा मस्यौदा · क्षेत्रमा वितरणका लागि होइन ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-49D24B9E867A"
+     },
+     {
+      "id": "C3P-26",
+      "part": "Poster options A, B, C",
+      "en": "Fictional illustrations, AI-assisted and developed under human direction.",
+      "ne": "काल्पनिक चित्रहरू, मानवीय निर्देशनमा AI को सहायताले तयार गरिएका ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-746B547F380C"
+     }
+    ]
+   },
+   {
     "id": "C3L",
-    "title": "Chapter 3 · Grief · Leaflet A4 tri-fold",
+    "title": "Chapter 3 · There is no right way to grieve · Leaflet A4 tri-fold",
     "source": "Approved English leaflet r6 (exact text of the online and print versions) · Nepali machine draft r1, 14 Nov 2026, language and MHPSS review pending; every row needs a native reviewer",
     "shared": "",
     "rows": [
@@ -1682,8 +2162,256 @@
   ],
   "ch4": [
    {
+    "id": "C4P",
+    "title": "Chapter 4 · Children react too · Poster A3",
+    "source": "Approved English posters (options A, B and C as shown on this site) · Nepali machine draft r1 of 13 Nov 2026 (poster message bank), language and MHPSS review pending; every row needs a native reviewer",
+    "shared": "",
+    "rows": [
+     {
+      "id": "C4P-01",
+      "part": "Poster options A, B, C",
+      "en": "AFTER A DISTRESSING EXPERIENCE",
+      "ne": "पीडादायी अनुभवपछि",
+      "type": "general",
+      "note": "Back-translation (machine): After a distressing/painful experience.",
+      "changed": false,
+      "message_id": "IEC-MSG-B22329E0FFB8"
+     },
+     {
+      "id": "C4P-02",
+      "part": "Poster options A, B, C",
+      "en": "Children react too and families can help them feel safe",
+      "ne": "बालबालिकामा पनि प्रतिक्रिया देखिन्छ र परिवारले उनीहरूलाई सुरक्षित महसुस गराउन सक्छ",
+      "type": "general",
+      "note": "Back-translation (machine): Children also show reactions and families can help them feel safe.",
+      "changed": false,
+      "message_id": "IEC-MSG-DF35A18D3EE4"
+     },
+     {
+      "id": "C4P-03",
+      "part": "Poster options A, B, C",
+      "en": "Changes in children are common after a distressing experience.",
+      "ne": "पीडादायी अनुभवपछि बालबालिकामा परिवर्तन देखिनु सामान्य हो ।",
+      "type": "general",
+      "note": "Back-translation (machine): After a distressing experience it is common to see changes in children.",
+      "changed": false,
+      "message_id": "IEC-MSG-FC07F3D627FA"
+     },
+     {
+      "id": "C4P-04",
+      "part": "Poster options A, B, C",
+      "en": "Children may…",
+      "ne": "बालबालिकामा यस्तो देखिन सक्छ…",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-327027CAE564"
+     },
+     {
+      "id": "C4P-05",
+      "part": "Poster options A, B",
+      "en": "Cling to you · Sleep badly · Cry or get angry more · Become very quiet",
+      "ne": "तपाईंसँग टाँसिइरहने · राम्रोसँग नसुत्ने · धेरै रुने वा रिसाउने · एकदमै चुपचाप हुने",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-36EECAE79442"
+     },
+     {
+      "id": "C4P-06",
+      "part": "Poster option C",
+      "en": "Cling to you",
+      "ne": "तपाईंसँग टाँसिइरहने",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-2E8DCBDFD175"
+     },
+     {
+      "id": "C4P-07",
+      "part": "Poster option C",
+      "en": "Sleep badly",
+      "ne": "राम्रोसँग नसुत्ने",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-E6CDE017DD24"
+     },
+     {
+      "id": "C4P-08",
+      "part": "Poster option C",
+      "en": "Cry or get angry more",
+      "ne": "धेरै रुने वा रिसाउने",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-B138068C4F6A"
+     },
+     {
+      "id": "C4P-09",
+      "part": "Poster option C",
+      "en": "Become very quiet",
+      "ne": "एकदमै चुपचाप हुने",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-F2A268E4E3FB"
+     },
+     {
+      "id": "C4P-10",
+      "part": "Poster options A, B, C",
+      "en": "Do not punish a child for being afraid or upset.",
+      "ne": "डराएकोमा वा दुःखी भएकोमा बच्चालाई सजाय नदिनुहोस् ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-7041C3546BAB"
+     },
+     {
+      "id": "C4P-11",
+      "part": "Poster options A, B, C",
+      "en": "What helps",
+      "ne": "केले सहयोग गर्छ",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-11B44F28510B"
+     },
+     {
+      "id": "C4P-12",
+      "part": "Poster options A, B, C",
+      "en": "Stay close",
+      "ne": "नजिकै रहनुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-701ABE5DE212"
+     },
+     {
+      "id": "C4P-13",
+      "part": "Poster options A, B, C",
+      "en": "Keep daily routines",
+      "ne": "दैनिक दिनचर्या कायम राख्नुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-2F3412A3163D"
+     },
+     {
+      "id": "C4P-14",
+      "part": "Poster options A, B, C",
+      "en": "Answer questions honestly, in simple words",
+      "ne": "प्रश्नको इमानदारीपूर्वक, सरल शब्दमा जवाफ दिनुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-D32CB2ACE474"
+     },
+     {
+      "id": "C4P-15",
+      "part": "Poster options A, B, C",
+      "en": "Make time for safe play",
+      "ne": "सुरक्षित खेलका लागि समय दिनुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-8E2E8D3AAAC9"
+     },
+     {
+      "id": "C4P-16",
+      "part": "Poster options A, B, C",
+      "en": "Ask for help early",
+      "ne": "समयमै सहयोग माग्नुहोस्",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Ask for help in time.",
+      "changed": false,
+      "message_id": "IEC-MSG-AE33531D9FF3"
+     },
+     {
+      "id": "C4P-17",
+      "part": "Poster options A, B, C",
+      "en": "Get help now",
+      "ne": "अहिले नै सहयोग लिनुहोस्",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Get help right now.",
+      "changed": false,
+      "message_id": "IEC-MSG-704B7BE9E3FC"
+     },
+     {
+      "id": "C4P-18",
+      "part": "Poster options A, B, C",
+      "en": "Changes in your child getting worse, not going away, or making daily life hard? Talk to a health worker. You do not have to wait.",
+      "ne": "के तपाईंको बच्चामा देखिएका परिवर्तन झन् बढ्दैछन्, हटिरहेका छैनन्, वा दैनिक जीवन कठिन बनाइरहेका छन्? स्वास्थ्यकर्मीसँग कुरा गर्नुहोस् । तपाईंले पर्खनुपर्दैन ।",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Are changes seen in your child increasing, not going away, or making daily life difficult? Talk to a health worker. You do not have to wait.",
+      "changed": false,
+      "message_id": "IEC-MSG-E872AFAF7292"
+     },
+     {
+      "id": "C4P-19",
+      "part": "Poster options A, B, C",
+      "en": "In danger, or thinking of harming yourself? Get help now. Ask a health worker or responder, and ask someone you trust to stay with you.",
+      "ne": "के तपाईं खतरामा हुनुहुन्छ, वा आफूलाई हानि पुर्‍याउने सोच आइरहेको छ? अहिले नै सहयोग लिनुहोस् । स्वास्थ्यकर्मी वा उद्धारकर्मीलाई सहयोग माग्नुहोस्, र आफूले विश्वास गर्ने मानिसलाई तपाईंसँगै बस्न भन्नुहोस् ।",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Are you in danger, or having thoughts of harming yourself? Get help right now. Ask a health worker or rescue worker for help, and ask someone you trust to stay with you.",
+      "changed": false,
+      "message_id": "IEC-MSG-41928BD13C8E"
+     },
+     {
+      "id": "C4P-20",
+      "part": "Poster options A, B, C",
+      "en": "Help near you: ____________ (filled in and checked locally)",
+      "ne": "तपाईं नजिकैको सहयोग: ____________ (स्थानीय रूपमा भरेर जाँच गरिएको)",
+      "type": "general",
+      "note": "Back-translation (machine): Help near you: ____________ (filled and checked locally).",
+      "changed": false,
+      "message_id": "IEC-MSG-48BB414B59F9"
+     },
+     {
+      "id": "C4P-21",
+      "part": "Poster options A, B, C",
+      "en": "Look after yourself. Look after each other.",
+      "ne": "आफ्नो ख्याल राख्नुहोस् । एकअर्काको ख्याल राख्नुहोस् ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-7443AE54D475"
+     },
+     {
+      "id": "C4P-22",
+      "part": "Poster options A, B, C",
+      "en": "Support is for everyone, including people with disabilities and older people. Ask for large print or more time.",
+      "ne": "सहयोग सबैका लागि हो, अपाङ्गता भएका व्यक्ति र ज्येष्ठ नागरिकका लागि पनि । ठूला अक्षर वा थप समय माग्न सक्नुहुन्छ ।",
+      "type": "general",
+      "note": "Back-translation (machine): Support is for everyone, including persons with disabilities and older citizens. You may ask for large letters or more time.",
+      "changed": false,
+      "message_id": "IEC-MSG-42F10B37667C"
+     },
+     {
+      "id": "C4P-23",
+      "part": "Poster options A, B, C",
+      "en": "Community wall poster · A3 · Chapter 4 of 6 · English review draft · Not for field distribution.",
+      "ne": "सामुदायिक भित्ते पोस्टर · A3 · अध्याय ६ मध्ये ४ · नेपाली समीक्षा मस्यौदा · क्षेत्रमा वितरणका लागि होइन ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-D053B8BF2924"
+     },
+     {
+      "id": "C4P-24",
+      "part": "Poster options A, B, C",
+      "en": "Fictional illustrations, AI-assisted and developed under human direction.",
+      "ne": "काल्पनिक चित्रहरू, मानवीय निर्देशनमा AI को सहायताले तयार गरिएका ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-746B547F380C"
+     }
+    ]
+   },
+   {
     "id": "C4L",
-    "title": "Chapter 4 · Children and families · Leaflet A4 tri-fold",
+    "title": "Chapter 4 · Children react too · Leaflet A4 tri-fold",
     "source": "Approved English leaflet r4 (exact text of the online and print versions) · Nepali machine draft r2, 14 Nov 2026, language and MHPSS review pending; every row needs a native reviewer",
     "shared": "",
     "rows": [
@@ -2114,125 +2842,238 @@
    {
     "id": "C5P",
     "title": "Chapter 5 · Every family's next step is different · Poster A3",
-    "source": "Approved: poster option A r7 (text checked against the print file)",
-    "shared": "F-01 kicker · F-02–F-06 · F-07 · F-08 · F-09 footer (N = ५) · F-11",
+    "source": "Approved English posters (options A, B and C as shown on this site) · Nepali machine draft r1 of 13 Nov 2026 (poster message bank), language and MHPSS review pending; every row needs a native reviewer",
+    "shared": "",
     "rows": [
      {
       "id": "C5P-01",
-      "part": "Title",
+      "part": "Poster options A, B, C",
+      "en": "AFTER A DISTRESSING EXPERIENCE",
+      "ne": "पीडादायी अनुभवपछि",
+      "type": "general",
+      "note": "Back-translation (machine): After a distressing/painful experience.",
+      "changed": false,
+      "message_id": "IEC-MSG-B22329E0FFB8"
+     },
+     {
+      "id": "C5P-02",
+      "part": "Poster options A, B, C",
       "en": "Every family's next step is different",
       "ne": "हरेक परिवारको अर्को कदम फरक हुन्छ",
       "type": "general",
       "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-11A6590B3A96"
      },
      {
-      "id": "C5P-02",
-      "part": "Strip",
+      "id": "C5P-03",
+      "part": "Poster options A, B, C",
       "en": "Home is more than a house. Adjusting can take time.",
       "ne": "घर भनेको भवन मात्र होइन । नयाँ अवस्थामा बानी पर्न समय लाग्न सक्छ ।",
       "type": "general",
       "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-59151750477B"
      },
      {
-      "id": "C5P-03",
-      "part": "Path label",
+      "id": "C5P-04",
+      "part": "Poster options A, B, C",
       "en": "Going home",
       "ne": "घर फर्कंदै",
       "type": "general",
       "note": "",
-      "changed": false
-     },
-     {
-      "id": "C5P-04",
-      "part": "Path line",
-      "en": "Return only when it is safe.",
-      "ne": "",
-      "type": "safety",
-      "note": "Physical safety instruction.",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-591908529F52"
      },
      {
       "id": "C5P-05",
-      "part": "Path label",
+      "part": "Poster options A, B, C",
       "en": "Moving somewhere new",
       "ne": "नयाँ ठाउँमा सर्दै",
       "type": "general",
       "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-2B1EE74C26E3"
      },
      {
       "id": "C5P-06",
-      "part": "Path line",
+      "part": "Poster options A, B, C",
+      "en": "Return only when it is safe.",
+      "ne": "सुरक्षित भएपछि मात्र फर्कनुहोस् ।",
+      "type": "general",
+      "note": "Back-translation (machine): Return only after it is safe.",
+      "changed": false,
+      "message_id": "IEC-MSG-5772FF30ADB9"
+     },
+     {
+      "id": "C5P-07",
+      "part": "Poster options A, B, C",
       "en": "Give yourself time to settle.",
       "ne": "नयाँ ठाउँमा भिज्न आफूलाई समय दिनुहोस् ।",
       "type": "general",
       "note": "",
-      "changed": false
-     },
-     {
-      "id": "C5P-07",
-      "part": "Path label",
-      "en": "Still waiting",
-      "ne": "अझै पर्खिँदै",
-      "type": "general",
-      "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-8F0F54A763BC"
      },
      {
       "id": "C5P-08",
-      "part": "Path line",
-      "en": "Ask for updates.",
-      "ne": "पछिल्लो जानकारी सोध्नुहोस् ।",
-      "type": "general",
-      "note": "",
-      "changed": false
-     },
-     {
-      "id": "C5P-09",
-      "part": "Help heading",
+      "part": "Poster options A, B, C",
       "en": "What can help",
       "ne": "केले सहयोग गर्न सक्छ",
       "type": "general",
       "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-AE25EDF64E45"
+     },
+     {
+      "id": "C5P-09",
+      "part": "Poster options A, B, C",
+      "en": "Still waiting",
+      "ne": "अझै पर्खिँदै",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-BC4AED1859E1"
      },
      {
       "id": "C5P-10",
-      "part": "Label",
+      "part": "Poster options A, B, C",
       "en": "Stay close to people you trust",
       "ne": "आफूले विश्वास गर्ने मानिसको नजिक रहनुहोस्",
       "type": "general",
       "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-402D40FD9744"
      },
      {
       "id": "C5P-11",
-      "part": "Label",
+      "part": "Poster options A, B, C",
+      "en": "Ask for updates.",
+      "ne": "पछिल्लो जानकारी सोध्नुहोस् ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-74DCD7FCF232"
+     },
+     {
+      "id": "C5P-12",
+      "part": "Poster options A, B, C",
       "en": "Keep routines for children",
       "ne": "बालबालिकाको दिनचर्या कायम राख्नुहोस्",
       "type": "general",
       "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-09B1557B28F0"
      },
      {
-      "id": "C5P-12",
-      "part": "Label",
+      "id": "C5P-13",
+      "part": "Poster options A, B, C",
       "en": "Ask for checked information",
       "ne": "पुष्टि भएको जानकारी सोध्नुहोस्",
       "type": "general",
       "note": "",
-      "changed": false
+      "changed": false,
+      "message_id": "IEC-MSG-50C4FEB11E2C"
      },
      {
-      "id": "C5P-13",
-      "part": "Label",
+      "id": "C5P-14",
+      "part": "Poster options A, B, C",
       "en": "Know a safer place. Act on warnings straight away.",
-      "ne": "",
+      "ne": "अझ सुरक्षित ठाउँ थाहा पाउनुहोस् । चेतावनी आएमा तुरुन्तै त्यसअनुसार कदम चाल्नुहोस् ।",
+      "type": "general",
+      "note": "Back-translation (machine): Know a safer place. If a warning comes, act accordingly immediately.",
+      "changed": false,
+      "message_id": "IEC-MSG-D8F78CDEE3A0"
+     },
+     {
+      "id": "C5P-15",
+      "part": "Poster options A, B, C",
+      "en": "Ask for help early",
+      "ne": "समयमै सहयोग माग्नुहोस्",
       "type": "safety",
-      "note": "Warning and evacuation instruction.",
-      "changed": false
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Ask for help in time.",
+      "changed": false,
+      "message_id": "IEC-MSG-AE33531D9FF3"
+     },
+     {
+      "id": "C5P-16",
+      "part": "Poster options A, B, C",
+      "en": "Feelings getting worse, not going away, or making daily life hard? Talk to a health worker. You do not have to wait.",
+      "ne": "के तपाईंका भावना झन् गाह्रा हुँदैछन्, हटिरहेका छैनन्, वा दैनिक जीवन कठिन बनाइरहेका छन्? स्वास्थ्यकर्मीसँग कुरा गर्नुहोस् । तपाईंले पर्खनुपर्दैन ।",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Are your feelings becoming more difficult, not going away, or making daily life difficult? Talk to a health worker. You do not have to wait.",
+      "changed": false,
+      "message_id": "IEC-MSG-C1A3BC1B3672"
+     },
+     {
+      "id": "C5P-17",
+      "part": "Poster options A, B, C",
+      "en": "Get help now",
+      "ne": "अहिले नै सहयोग लिनुहोस्",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Get help right now.",
+      "changed": false,
+      "message_id": "IEC-MSG-704B7BE9E3FC"
+     },
+     {
+      "id": "C5P-18",
+      "part": "Poster options A, B, C",
+      "en": "In danger, or thinking of harming yourself? Get help now. Ask a health worker or responder, and ask someone you trust to stay with you.",
+      "ne": "के तपाईं खतरामा हुनुहुन्छ, वा आफूलाई हानि पुर्‍याउने सोच आइरहेको छ? अहिले नै सहयोग लिनुहोस् । स्वास्थ्यकर्मी वा उद्धारकर्मीलाई सहयोग माग्नुहोस्, र आफूले विश्वास गर्ने मानिसलाई तपाईंसँगै बस्न भन्नुहोस् ।",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Are you in danger, or having thoughts of harming yourself? Get help right now. Ask a health worker or rescue worker for help, and ask someone you trust to stay with you.",
+      "changed": false,
+      "message_id": "IEC-MSG-41928BD13C8E"
+     },
+     {
+      "id": "C5P-19",
+      "part": "Poster options A, B, C",
+      "en": "Help near you: ____________ (filled in and checked locally)",
+      "ne": "तपाईं नजिकैको सहयोग: ____________ (स्थानीय रूपमा भरेर जाँच गरिएको)",
+      "type": "general",
+      "note": "Back-translation (machine): Help near you: ____________ (filled and checked locally).",
+      "changed": false,
+      "message_id": "IEC-MSG-48BB414B59F9"
+     },
+     {
+      "id": "C5P-20",
+      "part": "Poster options A, B, C",
+      "en": "Support is for everyone, including people with disabilities and older people. Ask for large print or more time.",
+      "ne": "सहयोग सबैका लागि हो, अपाङ्गता भएका व्यक्ति र ज्येष्ठ नागरिकका लागि पनि । ठूला अक्षर वा थप समय माग्न सक्नुहुन्छ ।",
+      "type": "general",
+      "note": "Back-translation (machine): Support is for everyone, including persons with disabilities and older citizens. You may ask for large letters or more time.",
+      "changed": false,
+      "message_id": "IEC-MSG-42F10B37667C"
+     },
+     {
+      "id": "C5P-21",
+      "part": "Poster options A, B, C",
+      "en": "Look after yourself. Look after each other.",
+      "ne": "आफ्नो ख्याल राख्नुहोस् । एकअर्काको ख्याल राख्नुहोस् ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-7443AE54D475"
+     },
+     {
+      "id": "C5P-22",
+      "part": "Poster options A, B, C",
+      "en": "Fictional illustrations, AI-assisted and developed under human direction.",
+      "ne": "काल्पनिक चित्रहरू, मानवीय निर्देशनमा AI को सहायताले तयार गरिएका ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-746B547F380C"
+     },
+     {
+      "id": "C5P-23",
+      "part": "Poster options A, B, C",
+      "en": "Community wall poster · A3 · Chapter 5 of 6 · English review draft · Not for field distribution.",
+      "ne": "सामुदायिक भित्ते पोस्टर · A3 · अध्याय ६ मध्ये ५ · नेपाली समीक्षा मस्यौदा · क्षेत्रमा वितरणका लागि होइन ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-710BF4740555"
      }
     ]
    },
@@ -2597,8 +3438,216 @@
   ],
   "ch6": [
    {
+    "id": "C6P",
+    "title": "Chapter 6 · Looking after yourself is part of looking after others · Poster A3",
+    "source": "Approved English posters (options A, B and C as shown on this site) · Nepali machine draft r1 of 13 Nov 2026 (poster message bank), language and MHPSS review pending; every row needs a native reviewer",
+    "shared": "",
+    "rows": [
+     {
+      "id": "C6P-01",
+      "part": "Poster options A, B, C",
+      "en": "FOR PEOPLE WHO HELP OTHERS",
+      "ne": "अरूलाई सहयोग गर्नेहरूका लागि",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-92490581A61F"
+     },
+     {
+      "id": "C6P-02",
+      "part": "Poster options A, B, C",
+      "en": "Looking after yourself is part of looking after others",
+      "ne": "आफ्नो ख्याल राख्नु पनि अरूको ख्याल राख्ने कामकै एउटा हिस्सा हो",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-E1B9389BF77A"
+     },
+     {
+      "id": "C6P-03",
+      "part": "Poster options A, B, C",
+      "en": "Stress is common among helpers. You are not alone.",
+      "ne": "सहयोग गर्नेहरूमा तनाव हुनु सामान्य हो । तपाईं एक्लो हुनुहुन्न ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-65737753FD7F"
+     },
+     {
+      "id": "C6P-04",
+      "part": "Poster options A, B, C",
+      "en": "You may notice…",
+      "ne": "तपाईंमा यस्तो देखिन सक्छ…",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-37BADA2A52C7"
+     },
+     {
+      "id": "C6P-05",
+      "part": "Poster options A, B, C",
+      "en": "Feeling tired all the time · Getting angry easily · Trouble sleeping · Wanting to be alone",
+      "ne": "सधैँ थकाइ लाग्ने · सजिलै रिस उठ्ने · निदाउन गाह्रो हुने · एक्लै बस्न मन लाग्ने",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-A5461802E464"
+     },
+     {
+      "id": "C6P-06",
+      "part": "Poster options A, B, C",
+      "en": "What helps",
+      "ne": "केले सहयोग गर्छ",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-11B44F28510B"
+     },
+     {
+      "id": "C6P-07",
+      "part": "Poster options A, B, C",
+      "en": "Take short breaks",
+      "ne": "छोटो विश्राम लिनुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-7398DDE25BE4"
+     },
+     {
+      "id": "C6P-08",
+      "part": "Poster options A, B, C",
+      "en": "Eat, drink and rest",
+      "ne": "खानुहोस्, पिउनुहोस् र आराम गर्नुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-735082A7F9E2"
+     },
+     {
+      "id": "C6P-09",
+      "part": "Poster options A, B, C",
+      "en": "Stay connected",
+      "ne": "अरूसँग सम्पर्कमा रहनुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-208E29928A02"
+     },
+     {
+      "id": "C6P-10",
+      "part": "Poster options A, B, C",
+      "en": "Look out for each other",
+      "ne": "एकअर्काको अवस्थामा ध्यान दिनुहोस्",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-BBBE94A42F0F"
+     },
+     {
+      "id": "C6P-11",
+      "part": "Poster options A, B, C",
+      "en": "Ask for support: it is good practice",
+      "ne": "सहयोग माग्नुहोस्: यो राम्रो अभ्यास हो",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-8ADF41FC3B36"
+     },
+     {
+      "id": "C6P-12",
+      "part": "Poster options A, B, C",
+      "en": "Ask for help early",
+      "ne": "समयमै सहयोग माग्नुहोस्",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Ask for help in time.",
+      "changed": false,
+      "message_id": "IEC-MSG-AE33531D9FF3"
+     },
+     {
+      "id": "C6P-13",
+      "part": "Poster options A, B, C",
+      "en": "Stress getting worse, not going away, or making work and daily life hard? Talk to your supervisor or a health worker. Asking early is good practice.",
+      "ne": "के तनाव बढ्दैछ, कम भइरहेको छैन, वा काम र दैनिक जीवन कठिन बनाइरहेको छ? आफ्ना सुपरिवेक्षक वा स्वास्थ्यकर्मीसँग कुरा गर्नुहोस् । समयमै सहयोग माग्नु राम्रो अभ्यास हो ।",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Is stress increasing, not decreasing, or making work and daily life difficult? Talk to your supervisor or a health worker. Asking for help in time is good practice.",
+      "changed": false,
+      "message_id": "IEC-MSG-98A0B60C13E6"
+     },
+     {
+      "id": "C6P-14",
+      "part": "Poster options A, B, C",
+      "en": "Get help now",
+      "ne": "अहिले नै सहयोग लिनुहोस्",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Get help right now.",
+      "changed": false,
+      "message_id": "IEC-MSG-704B7BE9E3FC"
+     },
+     {
+      "id": "C6P-15",
+      "part": "Poster options A, B, C",
+      "en": "In danger, or thinking of harming yourself? Get help now. Ask a health worker or responder, and ask someone you trust to stay with you.",
+      "ne": "के तपाईं खतरामा हुनुहुन्छ, वा आफूलाई हानि पुर्‍याउने सोच आइरहेको छ? अहिले नै सहयोग लिनुहोस् । स्वास्थ्यकर्मी वा उद्धारकर्मीलाई सहयोग माग्नुहोस्, र आफूले विश्वास गर्ने मानिसलाई तपाईंसँगै बस्न भन्नुहोस् ।",
+      "type": "safety",
+      "note": "SAFETY row, machine draft: review first. Back-translation (machine): Are you in danger, or having thoughts of harming yourself? Get help right now. Ask a health worker or rescue worker for help, and ask someone you trust to stay with you.",
+      "changed": false,
+      "message_id": "IEC-MSG-41928BD13C8E"
+     },
+     {
+      "id": "C6P-16",
+      "part": "Poster options A, B, C",
+      "en": "Support for staff and volunteers: ____________ (filled in and checked locally)",
+      "ne": "कर्मचारी र स्वयंसेवकहरूका लागि सहयोग: ____________ (स्थानीय रूपमा भरेर जाँच गरिएको)",
+      "type": "general",
+      "note": "Back-translation (machine): Support for staff and volunteers: ____________ (filled and checked locally).",
+      "changed": false,
+      "message_id": "IEC-MSG-4DEE1594047D"
+     },
+     {
+      "id": "C6P-17",
+      "part": "Poster options A, B, C",
+      "en": "Look after yourself. Look after each other.",
+      "ne": "आफ्नो ख्याल राख्नुहोस् । एकअर्काको ख्याल राख्नुहोस् ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-7443AE54D475"
+     },
+     {
+      "id": "C6P-18",
+      "part": "Poster options A, B, C",
+      "en": "Support is for everyone, including people with disabilities and older people. Ask for large print or more time.",
+      "ne": "सहयोग सबैका लागि हो, अपाङ्गता भएका व्यक्ति र ज्येष्ठ नागरिकका लागि पनि । ठूला अक्षर वा थप समय माग्न सक्नुहुन्छ ।",
+      "type": "general",
+      "note": "Back-translation (machine): Support is for everyone, including persons with disabilities and older citizens. You may ask for large letters or more time.",
+      "changed": false,
+      "message_id": "IEC-MSG-42F10B37667C"
+     },
+     {
+      "id": "C6P-19",
+      "part": "Poster options A, B, C",
+      "en": "Staff area poster · A3 · Chapter 6 of 6 · English review draft · Not for field distribution.",
+      "ne": "कर्मचारी क्षेत्रको पोस्टर · A3 · अध्याय ६ मध्ये ६ · नेपाली समीक्षा मस्यौदा · क्षेत्रमा वितरणका लागि होइन ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-E53C6D72810B"
+     },
+     {
+      "id": "C6P-20",
+      "part": "Poster options A, B, C",
+      "en": "Fictional illustrations, AI-assisted and developed under human direction.",
+      "ne": "काल्पनिक चित्रहरू, मानवीय निर्देशनमा AI को सहायताले तयार गरिएका ।",
+      "type": "general",
+      "note": "",
+      "changed": false,
+      "message_id": "IEC-MSG-746B547F380C"
+     }
+    ]
+   },
+   {
     "id": "C6L",
-    "title": "Chapter 6 · Care for helpers · Leaflet A4 tri-fold",
+    "title": "Chapter 6 · Looking after yourself is part of looking after others · Leaflet A4 tri-fold",
     "source": "Approved English leaflet r3 (exact text of the online and print versions) · Nepali machine draft r1, 14 Nov 2026, language and MHPSS review pending; every row needs a native reviewer",
     "shared": "",
     "rows": [
