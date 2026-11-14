@@ -590,7 +590,6 @@ function characters(){
     <div class="cinfo"><h4>${c.id} · ${esc(c.name)} <span>${esc(c.who)}</span></h4>
     <dl><dt>Look</dt><dd>${esc(c.look)}</dd><dt>Personality</dt><dd>${esc(c.personality)}</dd><dt>Name meaning</dt><dd>${esc(c.meaning)}</dd><dt>Value</dt><dd>${esc(c.value)}</dd><dt>Story</dt><dd>${esc(c.arc)}</dd><dt>Appears in</dt><dd class="chips">${chips(c.id)}</dd></dl>
     <h5>Expressions</h5>${ex(c.name,c.expressions)}</div></article>`).join('');
-  const pend=`<article class="char pend"><div class="por pendpor">I</div><div class="cinfo"><h4>I · name pending</h4><p>${esc(D.pending.text)}</p><dl><dt>Appears in</dt><dd class="chips">${chips('I')}</dd></dl></div></article>`;
   const pros=D.professionals.map(c=>`<article class="pro"><div class="prohead"><img src="${c.portrait}" alt="Fictional character ${esc(c.name)}" data-zoom data-title="${c.id} · ${esc(c.name)}" loading="lazy"><div><h4>${c.id} · ${esc(c.name)}</h4><span>${esc(c.role)}</span></div></div>
     <p><b>Role:</b> ${esc(c.scope)}</p><p><b>Also human:</b> ${esc(c.detail)}</p>${ex(c.name,c.expressions)}</article>`).join('');
   const scenes=D.scenes.map(x=>`<figure class="scene"><img src="${x.img}" alt="${esc(x.title)}" data-zoom data-title="${esc(x.title)}" loading="lazy"><figcaption><b>${esc(x.title)}</b>${esc(x.note)}</figcaption></figure>`).join('');
@@ -602,7 +601,7 @@ function characters(){
    <li><b>Helpers within their role.</b> Professionals act within their training: psychological first aid is not therapy, and a counsellor is not a psychologist or psychiatrist by default.</li>
    <li><b>Expressions for real moments.</b> Worry, tiredness at night, sadness, relief and listening, the moments the materials describe.</li></ul></div>
    <figure class="sheet"><img src="${D.sheet}" alt="Cast sheet, English" data-zoom data-title="Cast sheet (English)" loading="lazy"><figcaption>Cast sheet (English) · click to enlarge</figcaption></figure></div>
-  <h3 class="section">Community</h3><div class="chars">${comm}${pend}</div>
+  <h3 class="section">Community</h3><div class="chars">${comm}</div>
   <h3 class="section">Professionals and support roles</h3><div class="pros">${pros}</div>
   <h3 class="section">How care looks: body language references</h3><div class="scenes">${scenes}</div>
   <p class="small" style="margin-top:16px">Fictional illustrations, AI-assisted and developed under human direction. Not real people. Expressions and portraits are candidate references, not final model sheets; cultural, identity and clinical review with partners pending. Sources: ${esc(D.sources)}</p></div>`;
