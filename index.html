@@ -87,6 +87,24 @@ table.tr .kind.safety{background:var(--coralt);color:var(--coral)}
 table.tr .kind.check{background:#fbf3e1;color:var(--amber)}
 table.tr .changed{color:var(--ok)}
 table.tr td.pr{font-size:13px;color:var(--muted)}
+details.trsec{border:1px solid var(--line);border-radius:12px;margin:12px 0;padding:0 14px 6px;background:#fff}
+details.trsec summary{cursor:pointer;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;padding:12px 0;list-style:none;border-left:5px solid var(--c);padding-left:10px;margin-left:-14px}
+details.trsec summary::-webkit-details-marker{display:none}
+details.trsec summary .ttl{font-weight:700;font-size:16px}
+details.trsec summary .ttl::before{content:"▸ ";color:var(--muted)}details.trsec[open] summary .ttl::before{content:"▾ "}
+details.trsec summary .cnt{font-size:13px;color:var(--muted)}
+.prhow{background:#f7f8fb;border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:14px 0}
+.prhow h4{margin:0 0 4px}.prhow ol{margin:4px 0;padding-left:20px;font-size:14px;text-align:justify;hyphens:none}
+.onlysafe{display:block;margin-top:10px;font-size:14px}
+.tr-card.onlysafe tr.t-general{display:none}
+.prb{display:block;width:100%;margin:0 0 6px;padding:6px 8px;border-radius:8px;border:1px solid var(--line2);background:#fff;font:inherit;font-size:13px;cursor:pointer;text-align:left}
+.prb.ok:hover{border-color:var(--ok);color:var(--ok)}.prb.ch:hover{border-color:var(--amber);color:var(--amber)}
+.prst{display:block;font-weight:650;font-size:13px}.prst.ok{color:var(--ok)}.prst.change{color:var(--amber)}
+.lnk{background:none;border:0;padding:0;color:var(--muted);text-decoration:underline;font:inherit;font-size:12px;cursor:pointer}
+tr.prf td{background:#fffaf0}tr.prf label.f{margin-bottom:8px}tr.prf textarea{min-height:70px;font-size:16px;line-height:1.6}
+table.tr td:not(.id):not(.pr){text-align:justify;hyphens:none;overflow-wrap:normal}
+@media(max-width:820px){table.tr td.en::before,table.tr td.ne::before{display:block;font-size:11px;font-weight:650;letter-spacing:.04em;color:var(--muted);margin-bottom:2px}table.tr td.en::before{content:"ENGLISH"}table.tr td.ne::before{content:"नेपाली · NEPALI"}}
+.prbtns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
 details.shared{margin:0 0 10px}
 details.shared summary{cursor:pointer;font-weight:650;padding:10px 0}
 /* overview */
@@ -161,8 +179,8 @@ dialog.full .dlgbody img{max-height:none;max-width:max(100%,900px);width:auto;cu
 .fbbox h4{margin:0 0 4px;font-size:16px}
 .fbbox p{margin:0 0 10px;font-size:14px;color:var(--muted)}
 .who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:14px}
-.who label,.fbbox label.f{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted);min-width:0}
-.fb input[type=text],.fb input[type=email],.fb textarea,.fb select{font:inherit;font-size:15px;padding:9px 10px;border:1px solid var(--line2);border-radius:7px;background:#fff;color:inherit;width:100%;min-width:0}
+.who label,.fbbox label.f,tr.prf label.f{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted);min-width:0}
+.fb input[type=text],.fb input[type=email],.fb textarea,.fb select,.tr-card input[type=text],.tr-card input[type=email],.tr-card textarea{font:inherit;font-size:15px;padding:9px 10px;border:1px solid var(--line2);border-radius:7px;background:#fff;color:inherit;width:100%;min-width:0}
 .fb textarea{min-height:104px;resize:vertical}
 .whoas{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font-size:14px;margin-bottom:14px;padding:10px 12px;background:var(--okt);border-radius:8px}
 .whoas button{font:inherit;font-size:13px;border:0;background:none;color:var(--blue);text-decoration:underline;cursor:pointer;padding:0}
@@ -328,27 +346,73 @@ function productView(c,tab,opt){
       <div><div class="btns"><span class="btn soon">Final Nepali PDF · after proofreading</span></div>
       <div class="btns"><a class="btn" href="#${c.key}/translation">See the translation</a><button class="btn" type="button" data-tofb>Give feedback</button></div></div></div>${fbBlock(c,tab,list)}</div>`;
 }
-function trTable(sec,colour){
+function trTable(sec,colour,open){
+  const P=LS.get('iec-proof')||{};
+  const safe=sec.rows.filter(r=>r.type==='safety').length, chk=sec.rows.filter(r=>r.type==='check').length, done=sec.rows.filter(r=>P[r.id]).length;
   const rows=sec.rows.map(r=>{
     const kind=r.type==='safety'?'<span class="kind safety">SAFETY</span>':r.type==='check'?'<span class="kind check">CHECK</span>':'';
-    const ne=r.ne?`<td class="ne ${r.changed?'changed':''}">${esc(r.ne)}${r.note?`<span class="sub">${esc(r.note)}</span>`:''}</td>`
+    const ne=r.ne?`<td class="ne ${r.changed?'changed':''}" lang="ne">${esc(r.ne)}${r.note?`<span class="sub">${esc(r.note)}</span>`:''}</td>`
                  :`<td class="ne safety"><b>For the human translator</b><span class="sub">Meaning to keep: ${esc(r.note)}</span></td>`;
-    return `<tr><td class="id">${esc(r.id)}<br>${esc(r.part)}${kind}</td><td class="${r.changed?'changed':''}">${esc(r.en)}</td>${ne}<td class="pr">Pending</td></tr>`;
+    return `<tr class="t-${r.type}" data-row="${esc(r.id)}"><td class="id">${esc(r.id)}<br>${esc(r.part)}${kind}</td><td class="en ${r.changed?'changed':''}">${esc(r.en)}</td>${ne}<td class="pr">${prCell(r.id,P[r.id])}</td></tr>`;
   }).join('');
-  return `<h3 style="margin:18px 0 2px">${esc(sec.title)}</h3><p class="small" style="margin:0">${esc(sec.source)}${sec.shared?` · Shared blocks: ${esc(sec.shared)}`:''}</p>
-   <table class="tr"><colgroup><col style="width:13%"><col style="width:33%"><col style="width:39%"><col style="width:15%"></colgroup>
-   <thead><tr><th style="background:${colour}">ID</th><th style="background:${colour}">English (source)</th><th style="background:${colour}">नेपाली · Nepali (draft)</th><th style="background:${colour}">Proofreading</th></tr></thead><tbody>${rows}</tbody></table>`;
+  return `<details class="trsec" data-sec="${esc(sec.id)}" data-prod="${esc(sec.product||'')}" data-ver="${esc(sec.version||'')}" ${open?'open':''}>
+   <summary style="--c:${colour}"><span class="ttl">${esc(sec.title.split(' · ').slice(-1)[0])}</span><span class="cnt">${sec.rows.length} rows · ${safe} SAFETY${chk?` · ${chk} CHECK`:''} · <b class="done">${done}</b> checked by you</span></summary>
+   <p class="small" style="margin:6px 0 0">${esc(sec.source)}</p>
+   <table class="tr"><colgroup><col style="width:13%"><col style="width:31%"><col style="width:38%"><col style="width:18%"></colgroup>
+   <thead><tr><th style="background:${colour}">ID</th><th style="background:${colour}">English (source)</th><th style="background:${colour}">नेपाली · Nepali (draft)</th><th style="background:${colour}">Your check</th></tr></thead><tbody>${rows}</tbody></table></details>`;
+}
+function prCell(id,st){
+  if(st) return `<span class="prst ${st.v}">${st.v==='ok'?'✓ Correct':'✎ Correction sent'}</span><button class="lnk" type="button" data-pr="redo">Change</button>`;
+  return `<button class="prb ok" type="button" data-pr="ok">✓ Correct</button><button class="prb ch" type="button" data-pr="edit">✎ Suggest change</button>`;
 }
 
 function translation(c){
   const secs=(T&&T.chapters[c.key])||[];
-  const head=`<div class="tr-head"><div><span class="status wait">Nepali drafts · proofreading pending</span><h3 style="font-size:22px;margin:12px 0 4px">Translation & proofreading · Chapter ${c.n}</h3>
-    <p style="margin:0;max-width:900px">One reference text for every approved poster and leaflet: English (source), Nepali (draft) and the proofreading status. ${esc(T?T.status:'')}</p></div>
+  const head=`<div class="tr-head"><div><span class="status wait">Nepali drafts · proofreading open</span><h3 style="font-size:22px;margin:12px 0 4px">Translation & proofreading · Chapter ${c.n}</h3>
+    <p style="margin:0;max-width:900px">Every English and Nepali text of the approved poster, leaflet and Health Talk Guide of this chapter, row by row. ${esc(T?T.status:'')}</p></div>
     <div class="legend"><span style="--c:var(--coralt)">SAFETY row: review first</span><span style="--c:#fbf3e1">Check: clinical or legal wording</span><span style="--c:var(--ok)">Updated text</span></div></div>`;
   if(!secs.length) return `<div class="card">${head}<div class="placeholder" style="margin-top:16px"><h3>No approved product yet</h3><p>The translation appears here once a product of this chapter is approved.</p></div></div>`;
-  return `<div class="card">${head}${secs.map(s=>trTable(s,c.colour[0])).join('')}
-    <p class="small">Proofreaders: please send corrections through the comment box on the product's page, citing the row ID (for example C1L-04). Every Nepali row is a machine draft until a native Nepali and MHPSS reviewer has checked it.</p></div>`;
+  const how=`<div class="prhow"><h4>How to proofread</h4><ol><li>Enter your name, organisation and email once.</li><li>Open a product below. Read the Nepali against the English, SAFETY rows first.</li><li>For each row choose <b>✓ Correct</b>, or <b>✎ Suggest change</b> and type the corrected Nepali (and a note if useful).</li></ol>
+    <p class="small" style="margin:6px 0 0">Your corrections go only to the review team; they are not shown on this page. The page remembers on this device which rows you have checked.</p>
+    <div id="whoslot">${whoHtml()}</div>
+    <label class="onlysafe"><input type="checkbox" id="onlysafe"> Show only SAFETY and CHECK rows</label></div>`;
+  return `<div class="card tr-card" data-ch="${c.key}">${head}${how}${secs.map((s,i)=>trTable(s,c.colour[0],false)).join('')}
+    <p class="small">Every Nepali row is a machine draft until a native Nepali and MHPSS reviewer has checked it. General comments on a product: use the comment box on that product's page.</p></div>`;
 }
+function prFind(id){const c=document.querySelector('.tr-card');for(const s of T.chapters[c.dataset.ch]){const r=s.rows.find(x=>x.id===id);if(r)return{s,r,ch:c.dataset.ch}}return null}
+async function sendProof(tr,verdict){
+  const id=tr.dataset.row, f=prFind(id), cell=tr.querySelector('td.pr'), form=tr.nextElementSibling?.classList.contains('prf')?tr.nextElementSibling:null;
+  const w=readWho(); if(!w){document.getElementById('whoslot').scrollIntoView({behavior:'smooth',block:'center'});(form?form.querySelector('.fbmsg'):cell).insertAdjacentHTML('beforeend','<span class="fbmsg err" style="display:block">Please enter your name, organisation and email at the top first.</span>');return}
+  const d={kind:'proof',chapter:f.ch,product:f.s.product,option:'all',version:f.s.version,row:id,verdict,name:w.name,org:w.org,email:w.email,clientTime:new Date().toISOString()};
+  if(verdict==='change'){const t=form.querySelector('textarea').value.trim(), n=form.querySelector('input').value.trim(), m=form.querySelector('.fbmsg');
+    if(!t||t===f.r.ne){m.textContent='Please type the corrected Nepali (it is the same as the draft).';m.className='fbmsg err';return}
+    d.text=t; if(n) d.note=n;}
+  const fields={}; for(const k in d) fields[k]={stringValue:String(d[k])};
+  tr.querySelectorAll('button').forEach(b=>b.disabled=true);
+  try{
+    const r=await fetch(`https://firestore.googleapis.com/v1/projects/${FB.pid}/databases/(default)/documents/feedback?key=${FB.key}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields})});
+    if(!r.ok) throw new Error(r.status);
+    const P=LS.get('iec-proof')||{}; P[id]={v:verdict,t:d.clientTime}; LS.set('iec-proof',P);
+    if(form) form.remove(); cell.innerHTML=prCell(id,P[id]); prCount(tr);
+  }catch(e){tr.querySelectorAll('button').forEach(b=>b.disabled=false);const m=form?form.querySelector('.fbmsg'):null;const t='Sorry, this could not be sent. Please check your connection and try again.';if(m){m.textContent=t;m.className='fbmsg err'}else cell.insertAdjacentHTML('beforeend',`<span class="fbmsg err" style="display:block">${t}</span>`)}
+}
+function prCount(tr){const det=tr.closest('details'),P=LS.get('iec-proof')||{};det.querySelector('.done').textContent=[...det.querySelectorAll('tr[data-row]')].filter(x=>P[x.dataset.row]).length}
+function prEdit(tr){
+  if(tr.nextElementSibling?.classList.contains('prf')) return;
+  const f=prFind(tr.dataset.row);
+  tr.insertAdjacentHTML('afterend',`<tr class="prf"><td colspan="4"><label class="f">Corrected Nepali for ${esc(tr.dataset.row)}<textarea lang="ne" maxlength="3000">${esc(f.r.ne)}</textarea></label>
+   <label class="f">Note (optional, English or Nepali)<input type="text" maxlength="1000"></label>
+   <div class="prbtns"><button class="btn primary" type="button" data-pr="send">Send correction</button><button class="btn" type="button" data-pr="cancel">Cancel</button></div><div class="fbmsg" role="status"></div></td></tr>`);
+  tr.nextElementSibling.querySelector('textarea').focus();
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-pr]'); if(!b) return;
+  const a=b.dataset.pr; let tr=b.closest('tr'); if(tr.classList.contains('prf')) tr=tr.previousElementSibling;
+  if(a==='ok') sendProof(tr,'ok'); else if(a==='edit') prEdit(tr); else if(a==='send') sendProof(tr,'change');
+  else if(a==='cancel') tr.nextElementSibling.remove();
+  else if(a==='redo'){tr.querySelector('td.pr').innerHTML=prCell(tr.dataset.row,null)}
+});
+document.addEventListener('change',e=>{if(e.target.id==='onlysafe'){document.querySelector('.tr-card').classList.toggle('onlysafe',e.target.checked);if(e.target.checked)document.querySelectorAll('.tr-card details').forEach(d=>d.open=true)}});
 
 const FB={pid:'mhpss-nepal-iec-review',key:'AIzaSyBN-sh64hOZeQClPi8Z8k-fXcVfBs2pxFQ'};
 const LS={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
