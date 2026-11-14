@@ -318,76 +318,91 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 @media(max-width:820px){.story{grid-template-columns:1fr 1fr;gap:10px}.ov-h{font-size:25px}.sc{padding:26px 10px 12px}.sc-title{font-size:14.5px}.face{width:38px;height:38px}.world{grid-template-columns:1fr}.world img{max-width:220px}.swatches{grid-template-columns:1fr 1fr}}
 @media(max-width:430px){.story{grid-template-columns:1fr}.sc-title{min-height:0}}
 
-/* entry screen */
+/* entry screen: one full screen, no scrolling; fitGate() scales it down on short screens */
 html:not(.entered) body>.top,html:not(.entered) body>.shell,html:not(.entered) body>footer{display:none}
+html:not(.entered),html:not(.entered) body{height:100%;overflow:hidden}
 html.entered #gate{display:none}
-#gate{max-width:1240px;margin:auto;padding:28px 24px 120px}
-#gate .eyebrow{font-size:11.5px;letter-spacing:.12em;font-weight:700;color:#6f455f}
-#gate h1{margin:4px 0 6px;font-size:34px;line-height:1.15;color:var(--blue)}
-#gate .lead{font-size:17.5px;margin:0 0 22px;text-align:justify;hyphens:none}
-#gate h2{font-size:19px;margin:0 0 10px;color:var(--ink)}
-.gprods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:22px}
-.gprods figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}
-.gprods img{display:block;width:100%;height:auto;aspect-ratio:22/15;object-fit:cover;border-radius:10px}
-.gprods figcaption{padding:10px 4px 2px}
-.gprods b{display:block;font-size:20px;color:var(--blue)}
-.gprods span{display:block;font-size:14.5px;color:var(--muted);text-align:justify;hyphens:none}
-.gcols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:start}
-.gbox{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px}
-.gbox p,.gbox li{text-align:justify;hyphens:none;overflow-wrap:normal}
+#gate{--gs:1;font-size:calc(16px * var(--gs));height:100vh;height:100dvh;display:flex;flex-direction:column;max-width:1320px;margin:auto;padding:1.1em 1.5em .9em;gap:.8em}
+#gate.scroll{overflow:auto}
+#gate.scroll .gact{position:sticky;bottom:0;background:var(--bg);padding:.5em 0;box-shadow:0 -6px 12px rgba(0,0,0,.05)}
+#gate .ghead .eyebrow{font-size:.72em;letter-spacing:.12em;font-weight:700;color:#6f455f}
+#gate h1{margin:.1em 0 .2em;font-size:1.9em;line-height:1.15;color:var(--blue)}
+#gate .lead{font-size:1.04em;margin:0;text-align:justify;hyphens:none;line-height:1.45}
+#gate h2{font-size:1.05em;margin:0 0 .45em;color:var(--ink);line-height:1.25}
+.gprods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.9em;flex:1 1 auto;min-height:0}
+.gprods figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:.55em;display:flex;flex-direction:column;min-height:0}
+.gprods img{display:block;width:100%;flex:1 1 auto;min-height:0;height:0;object-fit:contain;border-radius:8px}
+.gprods figure:nth-child(1) img{background:#e9ece9}.gprods figure:nth-child(2) img{background:#eef5f7}.gprods figure:nth-child(3) img{background:#f2eef8}
+.gprods figcaption{padding:.45em .2em 0;flex:0 0 auto}
+.gprods b{font-size:1.08em;color:var(--blue)}
+.gprods span{font-size:.86em;color:var(--muted)}
+.gcols{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:.9em;flex:0 0 auto}
+.gbox{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.8em 1em;font-size:.9em;line-height:1.45}
+.gbox p,.gbox li{text-align:justify;hyphens:none;overflow-wrap:normal;margin:0}
+.gbox p+p{margin-top:.45em}
 .gbox.inv{background:#eef6ef;border-color:#cfe3d4}
 .gbox.inv h2{color:var(--ok)}
-.gbox ol{margin:0;padding-left:22px}.gbox li{margin:0 0 8px}
-.gdo{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px;padding:0;list-style:none}
-.gdo li{margin:0;font-size:14px;background:#f1f0ea;border:1px solid var(--line);border-radius:999px;padding:5px 12px;text-align:left}
-.gact{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.96);border-top:1px solid var(--line);box-shadow:0 -6px 18px rgba(0,0,0,.06);z-index:20}
-.gact-in{max-width:1240px;margin:auto;padding:12px 24px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.gact-in .gnote{font-size:13.5px;color:var(--muted);margin-right:auto}
-.gact button{font:inherit;font-weight:700;border-radius:10px;padding:10px 16px;cursor:pointer;border:1px solid var(--line2);background:#fff;color:var(--ink)}
+.gbox ol{margin:0;padding-left:1.3em}.gbox li{margin:0 0 .2em}
+.gact{flex:0 0 auto;display:flex;gap:.6em;align-items:center;flex-wrap:wrap;padding-top:.1em}
+.gact .gnote{font-size:.85em;color:var(--muted);margin-right:auto}
+.gact button{font:inherit;font-size:.95em;font-weight:700;border-radius:10px;padding:.6em 1em;cursor:pointer;border:1px solid var(--line2);background:#fff;color:var(--ink)}
 .gact button.yes{background:var(--blue);border-color:var(--blue);color:#fff}
 .gact button.yes2{background:var(--ok);border-color:var(--ok);color:#fff}
-#gate .bye{display:none;font-size:18px;padding:40px 0;text-align:center}
-#gate.declined .gbody,#gate.declined .gact{display:none}#gate.declined .bye{display:block}
-@media(max-width:900px){.gprods{grid-template-columns:1fr}.gcols{grid-template-columns:1fr}#gate h1{font-size:28px}#gate{padding:20px 16px 170px}.gact-in{padding:8px 12px;gap:6px 8px}.gact-in .gnote{display:none}.gact button{padding:9px 8px;font-size:14.5px}.gact button.yes,.gact button.yes2{flex:1 1 40%}.gact button.no{order:3;flex:1 1 100%;border:0;background:none;text-decoration:underline;padding:2px;font-weight:600;color:var(--muted)}#gate{padding-bottom:130px}}
+#gate .bye{display:none;font-size:1.15em;margin:auto;text-align:center}
+#gate.declined>*:not(.bye){display:none}#gate.declined .bye{display:block}
+@media(max-width:760px){
+ #gate{padding:.8em .9em .7em;gap:.6em}
+ #gate .ghead .eyebrow{display:none}
+ #gate h1{font-size:1.4em}
+ #gate .lead{font-size:.92em;line-height:1.4}
+ .gprods{gap:.45em;flex:0 0 auto}
+ .gprods figure{padding:.3em;border-radius:9px}
+ .gprods img{flex:none;height:auto;aspect-ratio:22/15}
+ .gprods figcaption{padding:.3em .1em 0;line-height:1.2}
+ .gprods b{font-size:.92em}.gprods span{display:none}
+ .gcols{grid-template-columns:1fr;gap:.5em}
+ .gbox{font-size:.84em;padding:.55em .75em;line-height:1.36}
+ .gbox h2{margin-bottom:.3em}
+ .gact{gap:.4em .5em}.gact .gnote{display:none}
+ .gact button{padding:.6em .5em;font-size:.88em}
+ .gact button.yes,.gact button.yes2{flex:1 1 40%}
+ .gact button.no{order:3;flex:1 1 100%;border:0;background:none;text-decoration:underline;padding:.1em;color:var(--muted)}
+}
 </style>
 </head>
 <body>
 <section id="gate" aria-labelledby="gate-h">
- <div class="gbody">
+ <div class="ghead">
   <div class="eyebrow">AFTER THE FLOOD · MHPSS NEPAL IEC SERIES</div>
   <h1 id="gate-h">Welcome to the IEC review space</h1>
-  <p class="lead"><i>After the Flood</i> is a series of six chapters of information materials for communities affected by the floods and for the people who support them. Each chapter has a poster, a leaflet and a Health Talk Guide, in English and Nepali. This page shares them with partners for review before they are finalised.</p>
-  <h2>What you will find inside</h2>
-  <div class="gprods">
-   <figure><img src="assets/overview/entry-posters.jpg" alt="Posters for the six chapters on a wall" width="880" height="600"><figcaption><b>6 posters</b><span>One per chapter, each in three design options (A, B and C). A3, for community walls; Chapter 6 for staff areas.</span></figcaption></figure>
-   <figure><img src="assets/overview/entry-leaflets.jpg" alt="Covers of the six leaflets, fanned" width="880" height="600"><figcaption><b>6 leaflets</b><span>A4 tri-fold leaflets to take home, each in an online version and a print version.</span></figcaption></figure>
-   <figure><img src="assets/overview/entry-guides.jpg" alt="First pages of the six Health Talk Guides, fanned" width="880" height="600"><figcaption><b>6 Health Talk Guides</b><span>Five-page A4 guides for facilitators leading a short group session; Chapter 6 for supervisors and team leaders.</span></figcaption></figure>
+  <p class="lead">Six chapters of information materials for communities affected by the floods and for the people who support them, in English and Nepali, shared with partners for review before they are finalised.</p>
+ </div>
+ <div class="gprods">
+  <figure><img src="assets/overview/entry-posters.jpg" alt="Posters for the six chapters on a wall" width="880" height="600"><figcaption><b>6 posters</b> <span>· three design options each, A3</span></figcaption></figure>
+  <figure><img src="assets/overview/entry-leaflets.jpg" alt="Covers of the six leaflets, fanned" width="880" height="600"><figcaption><b>6 leaflets</b> <span>· A4 tri-fold, to take home</span></figcaption></figure>
+  <figure><img src="assets/overview/entry-guides.jpg" alt="First pages of the six Health Talk Guides, fanned" width="880" height="600"><figcaption><b>6 Health Talk Guides</b> <span>· for short group sessions</span></figcaption></figure>
+ </div>
+ <div class="gcols">
+  <div class="gbox inv">
+   <h2>Help us check the Nepali</h2>
+   <p>The Nepali texts are draft machine translations. Native Nepali speakers are welcome to check them row by row against the English; this is voluntary and unpaid. We plan to acknowledge contributors, by name or by organisation as each chooses, in the printed package of these materials and on the project website.</p>
   </div>
-  <div class="gcols">
-   <div class="gbox inv">
-    <h2>What you can do here</h2>
-    <ul class="gdo"><li>View every product</li><li>Comment and choose a poster option</li><li>Check the Nepali text row by row</li></ul>
-    <h2>Help us check the Nepali</h2>
-    <p>The Nepali texts are draft machine translations. We would welcome native Nepali speakers to check them row by row against the English, on the Translation and proofreading page of each chapter. Proofreading is voluntary and unpaid.</p>
-    <p>If you take part, as an individual or on behalf of your organisation, you can choose how you would like to be acknowledged. We plan to list proofreading contributors in the printed package of these materials and on the project website.</p>
-   </div>
-   <div class="gbox">
-    <h2>Please read before you enter</h2>
-    <ol>
-     <li>These are draft materials shared for review by partners. They are not final and are not approved for use in the field.</li>
-     <li>Please do not print, distribute or post these materials outside the review group, and do not share this link without agreement from the coordination team.</li>
-     <li>The Nepali versions are machine translations awaiting review by native speakers.</li>
-     <li>The illustrations are fictional, AI-assisted and developed under human direction.</li>
-     <li>This is not a WHO website, and the materials are not endorsed WHO products.</li>
-     <li>If you give feedback or proofread, your name, organisation, email, your feedback and your choice of acknowledgement are stored to coordinate the review and to prepare the list of contributors.</li>
-    </ol>
-   </div>
+  <div class="gbox">
+   <h2>Please read before you enter</h2>
+   <ol>
+    <li>Draft materials for partner review: not final and not approved for use in the field.</li>
+    <li>Do not print, distribute or share them, or this link, outside the review group without the coordination team's agreement.</li>
+    <li>The Nepali versions are machine translations awaiting review by native speakers.</li>
+    <li>The illustrations are fictional, AI-assisted and developed under human direction.</li>
+    <li>Not a WHO website; the materials are not endorsed WHO products.</li>
+    <li>Your name, organisation, email, feedback and acknowledgement choice are stored to coordinate the review and credit contributors.</li>
+   </ol>
   </div>
  </div>
- <div class="gact"><div class="gact-in"><span class="gnote">By entering you agree to the points above.</span>
+ <div class="gact"><span class="gnote">By entering you agree to the points above.</span>
   <button type="button" class="no" data-gate="no">I do not agree</button>
   <button type="button" class="yes" data-gate="yes">I understand and agree</button>
-  <button type="button" class="yes2" data-gate="proof">Agree and go to proofreading</button></div></div>
+  <button type="button" class="yes2" data-gate="proof">Agree and go to proofreading</button></div>
  <p class="bye" role="status">Thank you. You can close this page.<br><button type="button" data-gate="back" style="margin-top:14px;font:inherit;border:1px solid var(--line2);background:#fff;border-radius:10px;padding:8px 14px;cursor:pointer">Read the points again</button></p>
 </section>
 <div class="top"><div class="top-in">
@@ -736,9 +751,15 @@ function render(){
   window.scrollTo(0,0);
 }
 
+function fitGate(){const g=document.getElementById('gate');if(!g||document.documentElement.classList.contains('entered'))return;
+  g.classList.remove('scroll');let k=1;g.style.setProperty('--gs',k);
+  const over=()=>g.scrollHeight>g.clientHeight+1||[...g.querySelectorAll('.gprods img')].some(i=>i.clientHeight<(innerWidth>760?90:40));
+  const min=innerWidth>760?0.7:0.82;while(over()&&k>min){k-=0.02;g.style.setProperty('--gs',k.toFixed(2))}
+  if(over())g.classList.add('scroll');}
+addEventListener('resize',fitGate);addEventListener('load',fitGate);fitGate();
 document.addEventListener('click',e=>{const b=e.target.closest('[data-gate]');if(!b)return;const g=document.getElementById('gate'),k=b.dataset.gate;
-  if(k==='no'){g.classList.add('declined');scrollTo(0,0);return}
-  if(k==='back'){g.classList.remove('declined');return}
+  if(k==='no'){g.classList.add('declined');return}
+  if(k==='back'){g.classList.remove('declined');fitGate();return}
   try{localStorage.setItem('iec-entry',JSON.stringify(GATE_V))}catch(e){}
   document.documentElement.classList.add('entered');scrollTo(0,0);
   if(k==='proof'&&!/translation$/.test(location.hash))location.hash='#ch1/translation';});
