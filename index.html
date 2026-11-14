@@ -343,6 +343,21 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .tstrip li.now{border-color:var(--ok);background:#eef6ef;color:var(--ok);font-weight:700}
 .tstrip li.now em{font-style:normal;font-size:11px;font-weight:700;background:var(--ok);color:#fff;border-radius:999px;padding:1px 7px;margin-left:6px}
 .tabout{flex-basis:100%;font-size:13.5px}.tabout summary{cursor:pointer;color:var(--blue);font-weight:600}.tabout ul{margin:6px 0 0;padding-left:18px}.tabout li{margin:0 0 3px}
+.quick h4{font-size:16px;margin:0 0 8px}
+.quick ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;min-width:0}
+.quick li{display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4;text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 12px}
+.quick li>span{min-width:0;flex:1 1 auto}.quick li>b{flex:0 0 22px;height:22px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:12px}
+.quick .mb{font-style:normal;font-size:12px;border-radius:6px;padding:1px 6px;white-space:nowrap;border:1px solid}
+.quick .mb.ok{color:var(--ok);border-color:var(--ok)}.quick .mb.ch{color:var(--amber);border-color:#d9a43a}
+.qkinds{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 2px}
+.qk{font-size:13px;border-radius:8px;padding:5px 10px 5px 8px;background:#fff;border:1px solid var(--line);box-shadow:inset 5px 0 0 #d5dcd8;padding-left:13px}
+.qk i{font-style:normal;font-weight:700;font-size:11.5px;letter-spacing:.04em;margin-right:7px;border-radius:5px;padding:1px 6px;background:#eef1f4;color:var(--muted)}
+.qk.safety{background:#fff4f1;box-shadow:inset 5px 0 0 var(--coral)}.qk.safety i{background:var(--coralt);color:var(--coral)}
+.qk.check{background:#fffaeb;box-shadow:inset 5px 0 0 #d9a43a}.qk.check i{background:#fbf3e1;color:var(--amber)}
+details.fullguide{margin:12px 0 4px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 14px}
+details.fullguide>summary{cursor:pointer;font-weight:700;font-size:14.5px;color:var(--blue)}
+details.fullguide details.words{border:0;padding:0;margin-top:10px}
+@media(max-width:820px){.quick ol{grid-template-columns:minmax(0,1fr);gap:6px}.quick li{padding:7px 10px;min-width:0}.tstrip ol{gap:5px}.tstrip li+li::before{display:none}.tstrip li{font-size:12.5px;padding:2px 9px}}
 .rkinds{margin:6px 0 14px}.rkinds h4{font-size:16px;margin:6px 0 4px}.rk-lead{margin:0 0 10px}
 .rk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 .rk{background:#fff;border:1px solid var(--line);border-left:6px solid #c9d2d6;border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
@@ -592,7 +607,15 @@ function translation(c){
      <li><b>Back-translation.</b> The Nepali turned back into English by machine, shown under the row to check meaning. Posters and leaflets only.</li>
      <li><b>Native-speaker review.</b> Row by row on this page. SAFETY and CHECK rows by two reviewers; other rows by one.</li>
      <li><b>Final checks.</b> Agreed corrections applied, then clinical review and approval before print.</li></ul></details></div>`;
-  const how=`<div class="prhow"><h4>How to proofread · five steps</h4>
+  const how=`<div class="prhow">
+    <div class="quick"><h4>How to proofread</h4><ol>
+     <li><b>1</b><span>Enter your details once, below.</span></li>
+     <li><b>2</b><span>Read each row: does the Nepali say the same as the English, in everyday words?</span></li>
+     <li><b>3</b><span>Click <i class="mb ok">✓ Correct</i> or <i class="mb ch">✎ Suggest change</i>.</span></li></ol>
+     <div class="qkinds"><span class="qk safety"><i>SAFETY</i>check first · 2 reviewers</span><span class="qk check"><i>CHECK</i>clinical wording · 2 reviewers</span><span class="qk gen"><i>no label</i>everyday text · 1 reviewer</span></div>
+    </div>
+    <details class="fullguide"><summary>Full guide: step by step, who checks what, what to check, series word list</summary>
+    <h4 style="margin-top:12px">Five steps</h4>
     <ol class="steps">
      <li><span class="sn">1</span><span class="si"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span><b>Say who you are</b><span>Enter your name, organisation, email and how you wish to be acknowledged, once. This page remembers you.</span><span class="mock"><i class="mi">Your name</i><i class="mi">Organisation</i></span></li>
      <li><span class="sn">2</span><span class="si"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><b>Open one product</b><span>Click Poster, Leaflet or Health Talk Guide below. Start with the SAFETY rows.</span><span class="mock"><i class="mk safety">SAFETY</i><i class="mk">▸ Leaflet</i></span></li>
@@ -602,7 +625,8 @@ function translation(c){
     </ol>
     ${rowKinds(secs)}
     ${checkPanel()}
-    <p class="small tips">You can stop at any time; every click is saved. SAFETY and CHECK rows need two reviewers, other rows one. Your corrections go only to the review team and are not shown on this page.</p>
+    </details>
+    <p class="small tips">You can stop at any time; every click is saved. Your corrections go only to the review team.</p>
     <div id="whoslot">${whoHtml()}</div>
     <div class="filters"><label class="onlysafe"><input type="checkbox" id="onlysafe"> Start with SAFETY and CHECK rows (show these only)</label><label class="onlysafe"><input type="checkbox" id="hidedone" checked> Hide rows the team has already completed</label></div>
     <p class="small" style="margin:6px 0 0"><span id="stamp"></span></p></div>`;
