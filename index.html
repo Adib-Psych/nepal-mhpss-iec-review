@@ -335,8 +335,9 @@ html.entered #gate{display:none}
 .gprods figcaption{padding:.45em .2em 0;flex:0 0 auto}
 .gprods b{font-size:1.08em;color:var(--blue)}
 .gprods span{font-size:.86em;color:var(--muted)}
-.gcols{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:.9em;flex:0 0 auto}
+.gcols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.9em;flex:0 0 auto}
 .gcol{display:flex;flex-direction:column;gap:.55em;min-width:0}.gcol .gbox{flex:1 1 auto}
+.gcol .gact{justify-content:center;text-align:center}
 .gbox{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.8em 1em;font-size:.9em;line-height:1.45}
 .gbox p,.gbox li{text-align:justify;hyphens:none;overflow-wrap:normal;margin:0}
 .gbox p+p{margin-top:.45em}
@@ -391,6 +392,7 @@ html.entered #gate{display:none}
    <div class="gbox inv">
     <h2>Help us check the Nepali</h2>
     <p>The Nepali texts are draft machine translations. Native Nepali speakers are welcome to check them row by row against the English; this is voluntary and unpaid. We plan to acknowledge contributors, by name or by organisation as each chooses, in the printed package of these materials and on the project website.</p>
+    <p class="wide">After you agree, you go straight to the proofreading page of Chapter 1, where five short steps show how it works. You can move to any chapter from there.</p>
    </div>
    <div class="gact"><button type="button" class="yes2" data-gate="proof">I agree and will help with proofreading</button><span class="gnote"><span class="wide">Includes agreeing to the points on the right.</span><span class="narrow">Includes agreeing to the points below.</span></span></div>
   </div>
