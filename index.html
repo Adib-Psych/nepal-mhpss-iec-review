@@ -108,7 +108,7 @@ ol.steps li+li::before{content:"";position:absolute;left:-10px;top:30px;width:10
 ol.steps .sn{position:absolute;top:-10px;left:12px;width:24px;height:24px;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
 ol.steps .si{width:40px;height:40px;border-radius:10px;background:#eaf2f6;display:flex;align-items:center;justify-content:center}
 ol.steps .si svg{width:24px;height:24px;fill:none;stroke:var(--blue);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-ol.steps b{font-size:14.5px;line-height:1.25;text-align:left}ol.steps li>span:not(.sn):not(.si):not(.mock){font-size:13px;color:var(--muted);line-height:1.4;text-align:justify;hyphens:none;text-align-last:left}
+ol.steps b{font-size:14.5px;line-height:1.25;text-align:left}ol.steps li>span:not(.sn):not(.si):not(.mock){font-size:13px;color:var(--muted);line-height:1.4;text-align:left;hyphens:none;text-align-last:left}
 ol.steps .mock{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto;padding-top:4px}
 ol.steps .mock i{font-style:normal;font-size:11.5px;border-radius:6px;padding:3px 7px;white-space:nowrap}
 ol.steps .mi{border:1px solid var(--line2);color:var(--muted);background:#fbfbf8}
@@ -335,17 +335,44 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 @media(max-width:1100px){.tflow li{display:grid;grid-template-columns:24px minmax(0,1fr);column-gap:8px;align-items:center;padding:8px 12px}.tflow li>span:last-child{grid-column:2}}
 @media(max-width:620px){.tflow li>span:last-child{font-size:14px}.tflow b{font-size:15px}}
 @media(max-width:1100px){.tflow ol{grid-template-columns:1fr}.tflow li+li::before{content:"↓";left:22px;top:-6px;transform:translate(-50%,-50%)}}
+.tstrip{margin:14px 0 4px}
+.tstrip .tl{display:block;font-weight:700;font-size:15px;margin-bottom:8px}
+.tstrip ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:22px}
+.tstrip li{position:relative;display:flex;align-items:center;gap:10px;font-size:16px;font-weight:600;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 14px;min-width:0}
+.tstrip li+li::before{content:"→";position:absolute;left:-17px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+.tstrip .n{flex:0 0 26px;height:26px;border-radius:50%;background:#e8eef0;color:var(--ink);display:grid;place-items:center;font-size:13px}
+.tstrip li.now{border-color:var(--ok);background:#eef6ef;color:var(--ok);box-shadow:0 0 0 2px #cfe3d4}
+.tstrip li.now .n{background:var(--ok);color:#fff}
+.tstrip li.now em{position:absolute;top:-10px;right:10px;font-style:normal;font-size:11.5px;font-weight:700;background:var(--ok);color:#fff;border-radius:999px;padding:2px 9px}
+.tstrip details.tabout{margin-top:8px}
+@media(max-width:1200px){.tstrip ol{display:flex;flex-wrap:wrap;gap:6px}.tstrip li+li::before{display:none}.tstrip li{font-size:13px;font-weight:500;padding:3px 10px 3px 4px;border-radius:999px;gap:6px}.tstrip li.now{box-shadow:none;font-weight:700}.tstrip .n{flex-basis:20px;height:20px;font-size:11px}.tstrip li.now em{position:static;font-size:10.5px;padding:1px 6px}}
+.tabout{flex-basis:100%;font-size:13.5px}.tabout summary{cursor:pointer;color:var(--blue);font-weight:600}.tabout ul{margin:6px 0 0;padding-left:18px}.tabout li{margin:0 0 3px}
+.quick h4{font-size:16px;margin:0 0 8px}
+.quick ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;min-width:0}
+.quick li{display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.4;text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 12px}
+.quick li>span{min-width:0;flex:1 1 auto}.quick li>b{flex:0 0 22px;height:22px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:12px}
+.quick .mb{font-style:normal;font-size:12px;border-radius:6px;padding:1px 6px;white-space:nowrap;border:1px solid}
+.quick .mb.ok{color:var(--ok);border-color:var(--ok)}.quick .mb.ch{color:var(--amber);border-color:#d9a43a}
+.qkinds{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 2px}
+.qk{font-size:13px;border-radius:8px;padding:5px 10px 5px 8px;background:#fff;border:1px solid var(--line);box-shadow:inset 5px 0 0 #d5dcd8;padding-left:13px}
+.qk i{font-style:normal;font-weight:700;font-size:11.5px;letter-spacing:.04em;margin-right:7px;border-radius:5px;padding:1px 6px;background:#eef1f4;color:var(--muted)}
+.qk.safety{background:#fff4f1;box-shadow:inset 5px 0 0 var(--coral)}.qk.safety i{background:var(--coralt);color:var(--coral)}
+.qk.check{background:#fffaeb;box-shadow:inset 5px 0 0 #d9a43a}.qk.check i{background:#fbf3e1;color:var(--amber)}
+details.fullguide{margin:12px 0 4px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 14px}
+details.fullguide>summary{cursor:pointer;font-weight:700;font-size:14.5px;color:var(--blue)}
+details.fullguide details.words{border:0;padding:0;margin-top:10px}
+@media(max-width:820px){.quick ol{grid-template-columns:minmax(0,1fr);gap:6px}.quick li{padding:7px 10px;min-width:0}}
 .rkinds{margin:6px 0 14px}.rkinds h4{font-size:16px;margin:6px 0 4px}.rk-lead{margin:0 0 10px}
 .rk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 .rk{background:#fff;border:1px solid var(--line);border-left:6px solid #c9d2d6;border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
 .rk.safety{border-left-color:var(--coral);background:#fffaf8}.rk.check{border-left-color:#d9a43a;background:#fffdf7}
-.rk-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.rk-top b{font-size:15.5px}.rk-n{margin-left:auto;font-size:12.5px;color:var(--muted)}
+.rk-top{display:flex;align-items:center;gap:4px 8px;flex-wrap:wrap}.rk-top b{font-size:15.5px}.rk-n{flex-basis:100%;font-size:12.5px;color:var(--muted)}
 .rk .kind{font-style:normal;font-size:11.5px;font-weight:700;letter-spacing:.04em;border-radius:5px;padding:2px 7px}
 .rk .kind.safety{background:var(--coralt);color:var(--coral)}.rk .kind.check{background:#fbf3e1;color:var(--amber)}.rk .kind.gen{background:#eef1f4;color:var(--muted);font-weight:600;letter-spacing:0}
-.rk p{margin:0;font-size:13.5px;text-align:justify;hyphens:none}
+.rk p{margin:0;font-size:13.5px;text-align:left;hyphens:none}
 .rk-ex{background:#f4f5f2;border-radius:7px;padding:6px 9px;font-size:13px!important;color:var(--ink)}.rk-ex span{display:block;font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
 .rk-who{display:flex;gap:10px;align-items:flex-start;margin-top:auto;border-top:1px dashed var(--line);padding-top:8px}
-.rk-who b{display:block;font-size:13.5px}.rk-who span{display:block;font-size:12.5px;color:var(--muted);text-align:justify;hyphens:none}
+.rk-who b{display:block;font-size:13.5px}.rk-who span{display:block;font-size:12.5px;color:var(--muted);text-align:left;hyphens:none}
 .ppl{display:flex;gap:1px;flex:0 0 auto}.ppl svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8}
 .rk.safety .ppl{color:var(--coral)}.rk.check .ppl{color:var(--amber)}.rk.gen .ppl{color:var(--muted)}
 .wcheck{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-top:10px}.wcheck h4{margin:0 0 6px;font-size:15px}
@@ -547,42 +574,52 @@ function prCell(id,st){
 
 const WORDS=[["distressing experience", "पीडादायी अनुभव", "Use in every row. Not तनावपूर्ण घटना, which reads as 'stressful event'."], ["You are not alone", "तपाईं एक्लो हुनुहुन्न", "Chapter 1 title; repeated in Chapters 2 and 6."], ["Many people (feel this way)", "धेरै मानिसलाई (यस्तै महसुस हुन्छ)", "A shared reaction, not a prediction for the reader."], ["common reaction", "सामान्य प्रतिक्रिया", "Never लक्षण (symptom) on posters and leaflets. For stress 'signs': सङ्केत."], ["someone you trust", "आफूले विश्वास गर्ने मानिस · short label: विश्वासिलो मानिस", ""], ["health worker", "स्वास्थ्यकर्मी", ""], ["responder", "उद्धारकर्मी (proposed)", "To be confirmed in the SAFETY rows."], ["If there is still a risk, check local warnings.", "यदि … भने (condition first) · स्थानीय चेतावनी", "Condition first, so a reader whose risk is over can skip it."], ["routine(s)", "दिनचर्या", ""], ["Small things that can help", "सहयोग गर्न सक्ने साना कुराहरू", "Chapter 1 heading."], ["Breathe slowly", "बिस्तारै सास फेर्नुहोस्", "In leaflets always with 'stop if it makes you feel worse'."], ["grief · to grieve", "शोक · शोक गर्नु", "No stages and no prescribed rites."], ["missing (person)", "बेपत्ता", "Never presume a missing person dead."], ["people with disabilities · older people", "अपाङ्गता भएका व्यक्ति · ज्येष्ठ नागरिक", ""], ["ward office", "वडा कार्यालय", "Its role is still to be verified per district (Chapter 5)."], ["Look after each other · Look out for each other", "एकअर्काको ख्याल राख्नुहोस् · एकअर्काको अवस्थामा ध्यान दिनुहोस्", "Slogan and Chapter 6 label: kept different on purpose."], ["Titles and sentences", "Titles: no full stop · sentences end with the danda (।) · Devanagari digits in footers", "Series style."]];
 function rowKinds(secs){
-  const rows=secs.flatMap(s=>s.rows), n=t=>rows.filter(r=>r.type===t).length, ex=t=>{const r=rows.find(r=>r.type===t);return r?esc(r.en.length>95?r.en.slice(0,92)+'…':r.en):''};
+  const rows=secs.flatMap(s=>s.rows), n=t=>rows.filter(r=>r.type===t).length, ex=t=>{const r=rows.find(r=>r.type===t&&(t!=='general'||(/[a-z]/.test(r.en)&&r.en.split(' ').length>=5)))||rows.find(r=>r.type===t);return r?esc(r.en.length>95?r.en.slice(0,92)+'…':r.en):''};
   const ppl=k=>'<span class="ppl">'+'<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>'.repeat(k)+'</span>';
   const card=(cls,chip,title,cnt,what,example,who,k,done)=>`<div class="rk ${cls}"><div class="rk-top">${chip}<b>${title}</b><span class="rk-n">${cnt} ${cnt===1?'row':'rows'} in this chapter</span></div>
     <p class="rk-what">${what}</p><p class="rk-ex"><span>Example</span>${example}</p>
     <div class="rk-who">${ppl(k)}<div><b>${who}</b><span>${done}</span></div></div></div>`;
-  const words=`<details class="words"><summary>Series word list · ${WORDS.length} agreed terms</summary><p class="small">Use these Nepali terms so the whole series speaks one language. Posters and leaflets use everyday words; technical terms (trauma, PTSD, symptom, disorder, burnout) appear only in the Health Talk Guides, explained in each guide's word key.</p>
-    <div class="wtab"><table><thead><tr><th>English</th><th>Nepali</th><th>Note</th></tr></thead><tbody>${WORDS.map(w=>`<tr><td>${esc(w[0])}</td><td lang="ne" class="ne">${esc(w[1])}</td><td>${esc(w[2])}</td></tr>`).join('')}</tbody></table></div></details>`;
-  return `<div class="rkinds"><h4>Three kinds of rows · every row needs checking</h4><p class="small rk-lead">The label on the left of each row tells you how important it is and how many people must check it. Start with SAFETY rows, then CHECK rows, then the rest.</p>
+  return `<div class="rkinds"><h4>Three kinds of rows · every row needs checking</h4><p class="small rk-lead">The colour and label of each row show how many people must check it. Start with SAFETY, then CHECK, then the rest.</p>
    <div class="rk-grid">
     ${card('safety','<i class="kind safety">SAFETY</i>','Safety messages',n('safety'),'When to seek help, danger, thoughts of self-harm, medicines, harmful ways of coping and missing persons. A wrong word here can put someone at risk.',ex('safety'),'Two native Nepali speakers, ideally with a health or MHPSS background',2,'Done when two reviewers agree. If they differ, the Nepali clinical reviewer decides.')}
     ${card('check','<i class="kind check">CHECK</i>','Clinical or legal wording',n('check'),'Clinical terms and explanations in the Health Talk Guides, and source and licence lines.',ex('check'),'Two reviewers, at least one bilingual MHPSS or clinical reviewer',2,'Done when two reviewers agree. Source and licence lines are checked against the original wording.')}
     ${card('gen','<i class="kind gen">no label</i>','Everyday text',n('general'),'Titles, tips and explanations in plain language.',ex('general'),'One native Nepali speaker: any partner can help',1,'Done when one reviewer marks it correct, or two agree on a correction.')}
    </div>
-   <div class="wcheck"><h4>What to check in every row</h4><ol>
+   </div>`;
+}
+function checkPanel(){
+  const words=`<div class="wtab"><table><thead><tr><th>English</th><th>Nepali</th><th>Note</th></tr></thead><tbody>${WORDS.map(w=>`<tr><td>${esc(w[0])}</td><td lang="ne" class="ne">${esc(w[1])}</td><td>${esc(w[2])}</td></tr>`).join('')}</tbody></table></div>`;
+  return `<details class="words"><summary>What to check in every row, and the series word list (${WORDS.length} terms)</summary><div class="wcheck"><ol>
     <li><b>Same meaning.</b> The Nepali says what the English says, with nothing added or left out.</li>
     <li><b>Natural, everyday Nepali</b> that people in the community would use.</li>
     <li><b>Agreed terms.</b> Use the series word list below.</li>
     <li><b>SAFETY rows:</b> keep the meaning given in the row note exactly, including when to seek help.</li>
     <li><b>Do not change</b> numbers, names or the conditions in a safety message.</li>
     <li><b>If you are unsure,</b> suggest your wording and explain in the note rather than guess.</li></ol></div>
-   ${words}</div>`;
+   <p class="small">Use these Nepali terms so the whole series speaks one language. Technical terms (trauma, PTSD, symptom, disorder, burnout) appear only in the Health Talk Guides, explained in each guide's word key.</p>${words}</details>`;
 }
 function translation(c){
   const secs=(T&&T.chapters[c.key])||[];
   const head=`<div class="tr-head"><div><span class="status wait">Nepali drafts · proofreading open</span><h3 style="font-size:22px;margin:12px 0 4px">Translation & proofreading · Chapter ${c.n}</h3>
-    <p style="margin:0;max-width:900px">Every English and Nepali text of the approved poster, leaflet and Health Talk Guide of this chapter, row by row. ${esc(T?T.status:'')}</p></div>
-    <div class="legend"><span style="--c:var(--coralt)">SAFETY row: review first</span><span style="--c:#fbf3e1">Check: clinical or legal wording</span><span style="--c:var(--ok)">Updated text</span></div></div>`;
+    <p style="margin:0;max-width:900px">Every English and Nepali text of this chapter's approved poster, leaflet and Health Talk Guide, row by row.</p></div></div>`;
   if(!secs.length) return `<div class="card">${head}<div class="placeholder" style="margin-top:16px"><h3>No approved product yet</h3><p>The translation appears here once a product of this chapter is approved.</p></div></div>`;
-  const flow=`<div class="tflow"><h4>How the Nepali was made · five stages</h4><p class="small tf-lead">AI-assisted under human direction, not word for word.</p><ol>
-    <li><span class="tn">1</span><b>English source</b><span>The approved English text. Its meaning decides.</span></li>
-    <li><span class="tn">2</span><b>AI-assisted draft</b><span>Written to a brief: readers, purpose, everyday words, safety meaning, series word list.</span></li>
-    <li><span class="tn">3</span><b>Back-translation</b><span>Nepali turned back into English to check meaning. Posters and leaflets only.</span></li>
-    <li class="now"><span class="tn">4</span><b>Native-speaker review <em>You are here</em></b><span>Row by row. SAFETY and CHECK: two reviewers. Others: one.</span></li>
-    <li><span class="tn">5</span><b>Final checks</b><span>Corrections applied, then clinical review and approval before print.</span></li>
-   </ol></div>`;
-  const how=`<div class="prhow"><h4>How to proofread · five steps</h4>
+  const flow=`<div class="tstrip"><span class="tl">How the Nepali was made</span><ol>
+    <li><b class="n">1</b>English source</li><li><b class="n">2</b>AI-assisted draft</li><li><b class="n">3</b>Back-translation</li><li class="now"><b class="n">4</b>Native-speaker review <em>You are here</em></li><li><b class="n">5</b>Final checks</li></ol>
+    <details class="tabout"><summary>About this translation</summary><ul>
+     <li><b>English source.</b> The approved English text. Its meaning decides.</li>
+     <li><b>AI-assisted draft.</b> Not word for word: written to a brief on readers, purpose, everyday words, safety meaning and the series word list, under human direction.</li>
+     <li><b>Back-translation.</b> The Nepali turned back into English by machine, shown under the row to check meaning. Posters and leaflets only.</li>
+     <li><b>Native-speaker review.</b> Row by row on this page. SAFETY and CHECK rows by two reviewers; other rows by one.</li>
+     <li><b>Final checks.</b> Agreed corrections applied, then clinical review and approval before print.</li></ul></details></div>`;
+  const how=`<div class="prhow">
+    <div class="quick"><h4>How to proofread</h4><ol>
+     <li><b>1</b><span>Enter your details once, below.</span></li>
+     <li><b>2</b><span>Read each row: does the Nepali say the same as the English, in everyday words?</span></li>
+     <li><b>3</b><span>Click <i class="mb ok">✓ Correct</i> or <i class="mb ch">✎ Suggest change</i>.</span></li></ol>
+     <div class="qkinds"><span class="qk safety"><i>SAFETY</i>check first · 2 reviewers</span><span class="qk check"><i>CHECK</i>clinical wording · 2 reviewers</span><span class="qk gen"><i>no label</i>everyday text · 1 reviewer</span></div>
+    </div>
+    <details class="fullguide"><summary>Full guide: step by step, who checks what, what to check, series word list</summary>
+    <h4 style="margin-top:12px">Five steps</h4>
     <ol class="steps">
      <li><span class="sn">1</span><span class="si"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span><b>Say who you are</b><span>Enter your name, organisation, email and how you wish to be acknowledged, once. This page remembers you.</span><span class="mock"><i class="mi">Your name</i><i class="mi">Organisation</i></span></li>
      <li><span class="sn">2</span><span class="si"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><b>Open one product</b><span>Click Poster, Leaflet or Health Talk Guide below. Start with the SAFETY rows.</span><span class="mock"><i class="mk safety">SAFETY</i><i class="mk">▸ Leaflet</i></span></li>
@@ -591,12 +628,14 @@ function translation(c){
      <li><span class="sn">5</span><span class="si"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M2.5 20c0-3 2.5-5 5.5-5s5.5 2 5.5 5M10.5 20c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/></svg></span><b>Work as a team</b><span>If a colleague proposed a correction, click Agree. Finished rows disappear; the bar shows team progress.</span><span class="mock"><i class="mb ag">✓ Agree</i><i class="mbar"><i></i></i></span></li>
     </ol>
     ${rowKinds(secs)}
-    <p class="small tips">You can stop at any time; every click is saved. SAFETY and CHECK rows need two reviewers, other rows one. Your corrections go only to the review team and are not shown on this page.</p>
+    ${checkPanel()}
+    </details>
+    <p class="small tips">You can stop at any time; every click is saved. Your corrections go only to the review team.</p>
     <div id="whoslot">${whoHtml()}</div>
     <div class="filters"><label class="onlysafe"><input type="checkbox" id="onlysafe"> Start with SAFETY and CHECK rows (show these only)</label><label class="onlysafe"><input type="checkbox" id="hidedone" checked> Hide rows the team has already completed</label></div>
     <p class="small" style="margin:6px 0 0"><span id="stamp"></span></p></div>`;
   return `<div class="card tr-card hidedone" data-ch="${c.key}">${head}${flow}${how}${secs.map((s,i)=>trTable(s,c.colour[0],false)).join('')}
-    <p class="small">Every Nepali row is an AI-assisted draft until a native Nepali reviewer has checked it. General comments on a product: use the comment box on that product's page.</p></div>`;
+    <p class="small">General comments on a product: use the comment box on that product's page.</p></div>`;
 }
 function prFind(id){const c=document.querySelector('.tr-card');for(const s of T.chapters[c.dataset.ch]){const r=s.rows.find(x=>x.id===id);if(r)return{s,r,ch:c.dataset.ch}}return null}
 async function sendProof(tr,verdict){
