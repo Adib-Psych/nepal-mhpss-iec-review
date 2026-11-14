@@ -6,6 +6,8 @@
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="referrer" content="no-referrer">
 <title>After the Flood · IEC review space</title>
+<script>/* entry screen: remembered per browser; a new GATE_V asks everyone again */
+const GATE_V='2026-11-14';try{if(JSON.parse(localStorage.getItem('iec-entry'))===GATE_V)document.documentElement.classList.add('entered')}catch(e){}</script>
 <style>
 :root{
   --bg:#f8f7f2; --ink:#243e46; --muted:#55676b; --line:#dde3de; --line2:#b9ccc5;
@@ -227,8 +229,9 @@ dialog.full .dlgbody img{max-height:none;max-width:max(100%,900px);width:auto;cu
 .fbbox h4{margin:0 0 4px;font-size:16px}
 .fbbox p{margin:0 0 10px;font-size:14px;color:var(--muted)}
 .who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.who label:nth-child(4){grid-column:1/-1;max-width:640px}
 .who label,.fbbox label.f,tr.prf label.f{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted);min-width:0}
-.fb input[type=text],.fb input[type=email],.fb textarea,.fb select,.tr-card input[type=text],.tr-card input[type=email],.tr-card textarea{font:inherit;font-size:15px;padding:9px 10px;border:1px solid var(--line2);border-radius:7px;background:#fff;color:inherit;width:100%;min-width:0}
+.fb input[type=text],.fb input[type=email],.fb textarea,.fb select,.tr-card input[type=text],.tr-card input[type=email],.tr-card textarea,.tr-card select{font:inherit;font-size:15px;padding:9px 10px;border:1px solid var(--line2);border-radius:7px;background:#fff;color:inherit;width:100%;min-width:0}
 .fb textarea{min-height:104px;resize:vertical}
 .whoas{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font-size:14px;margin-bottom:14px;padding:10px 12px;background:var(--okt);border-radius:8px}
 .whoas button{font:inherit;font-size:13px;border:0;background:none;color:var(--blue);text-decoration:underline;cursor:pointer;padding:0}
@@ -314,9 +317,79 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 @media(max-width:1100px){.threads{grid-template-columns:1fr}}
 @media(max-width:820px){.story{grid-template-columns:1fr 1fr;gap:10px}.ov-h{font-size:25px}.sc{padding:26px 10px 12px}.sc-title{font-size:14.5px}.face{width:38px;height:38px}.world{grid-template-columns:1fr}.world img{max-width:220px}.swatches{grid-template-columns:1fr 1fr}}
 @media(max-width:430px){.story{grid-template-columns:1fr}.sc-title{min-height:0}}
+
+/* entry screen */
+html:not(.entered) body>.top,html:not(.entered) body>.shell,html:not(.entered) body>footer{display:none}
+html.entered #gate{display:none}
+#gate{max-width:1240px;margin:auto;padding:28px 24px 120px}
+#gate .eyebrow{font-size:11.5px;letter-spacing:.12em;font-weight:700;color:#6f455f}
+#gate h1{margin:4px 0 6px;font-size:34px;line-height:1.15;color:var(--blue)}
+#gate .lead{font-size:17.5px;margin:0 0 22px;text-align:justify;hyphens:none}
+#gate h2{font-size:19px;margin:0 0 10px;color:var(--ink)}
+.gprods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:22px}
+.gprods figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}
+.gprods img{display:block;width:100%;height:auto;aspect-ratio:22/15;object-fit:cover;border-radius:10px}
+.gprods figcaption{padding:10px 4px 2px}
+.gprods b{display:block;font-size:20px;color:var(--blue)}
+.gprods span{display:block;font-size:14.5px;color:var(--muted);text-align:justify;hyphens:none}
+.gcols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:start}
+.gbox{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.gbox p,.gbox li{text-align:justify;hyphens:none;overflow-wrap:normal}
+.gbox.inv{background:#eef6ef;border-color:#cfe3d4}
+.gbox.inv h2{color:var(--ok)}
+.gbox ol{margin:0;padding-left:22px}.gbox li{margin:0 0 8px}
+.gdo{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px;padding:0;list-style:none}
+.gdo li{margin:0;font-size:14px;background:#f1f0ea;border:1px solid var(--line);border-radius:999px;padding:5px 12px;text-align:left}
+.gact{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.96);border-top:1px solid var(--line);box-shadow:0 -6px 18px rgba(0,0,0,.06);z-index:20}
+.gact-in{max-width:1240px;margin:auto;padding:12px 24px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.gact-in .gnote{font-size:13.5px;color:var(--muted);margin-right:auto}
+.gact button{font:inherit;font-weight:700;border-radius:10px;padding:10px 16px;cursor:pointer;border:1px solid var(--line2);background:#fff;color:var(--ink)}
+.gact button.yes{background:var(--blue);border-color:var(--blue);color:#fff}
+.gact button.yes2{background:var(--ok);border-color:var(--ok);color:#fff}
+#gate .bye{display:none;font-size:18px;padding:40px 0;text-align:center}
+#gate.declined .gbody,#gate.declined .gact{display:none}#gate.declined .bye{display:block}
+@media(max-width:900px){.gprods{grid-template-columns:1fr}.gcols{grid-template-columns:1fr}#gate h1{font-size:28px}#gate{padding:20px 16px 170px}.gact-in{padding:8px 12px;gap:6px 8px}.gact-in .gnote{display:none}.gact button{padding:9px 8px;font-size:14.5px}.gact button.yes,.gact button.yes2{flex:1 1 40%}.gact button.no{order:3;flex:1 1 100%;border:0;background:none;text-decoration:underline;padding:2px;font-weight:600;color:var(--muted)}#gate{padding-bottom:130px}}
 </style>
 </head>
 <body>
+<section id="gate" aria-labelledby="gate-h">
+ <div class="gbody">
+  <div class="eyebrow">AFTER THE FLOOD · MHPSS NEPAL IEC SERIES</div>
+  <h1 id="gate-h">Welcome to the IEC review space</h1>
+  <p class="lead"><i>After the Flood</i> is a series of six chapters of information materials for communities affected by the floods and for the people who support them. Each chapter has a poster, a leaflet and a Health Talk Guide, in English and Nepali. This page shares them with partners for review before they are finalised.</p>
+  <h2>What you will find inside</h2>
+  <div class="gprods">
+   <figure><img src="assets/overview/entry-posters.jpg" alt="Posters for the six chapters on a wall" width="880" height="600"><figcaption><b>6 posters</b><span>One per chapter, each in three design options (A, B and C). A3, for community walls; Chapter 6 for staff areas.</span></figcaption></figure>
+   <figure><img src="assets/overview/entry-leaflets.jpg" alt="Covers of the six leaflets, fanned" width="880" height="600"><figcaption><b>6 leaflets</b><span>A4 tri-fold leaflets to take home, each in an online version and a print version.</span></figcaption></figure>
+   <figure><img src="assets/overview/entry-guides.jpg" alt="First pages of the six Health Talk Guides, fanned" width="880" height="600"><figcaption><b>6 Health Talk Guides</b><span>Five-page A4 guides for facilitators leading a short group session; Chapter 6 for supervisors and team leaders.</span></figcaption></figure>
+  </div>
+  <div class="gcols">
+   <div class="gbox inv">
+    <h2>What you can do here</h2>
+    <ul class="gdo"><li>View every product</li><li>Comment and choose a poster option</li><li>Check the Nepali text row by row</li></ul>
+    <h2>Help us check the Nepali</h2>
+    <p>The Nepali texts are draft machine translations. We would welcome native Nepali speakers to check them row by row against the English, on the Translation and proofreading page of each chapter. Proofreading is voluntary and unpaid.</p>
+    <p>If you take part, as an individual or on behalf of your organisation, you can choose how you would like to be acknowledged. We plan to list proofreading contributors in the printed package of these materials and on the project website.</p>
+   </div>
+   <div class="gbox">
+    <h2>Please read before you enter</h2>
+    <ol>
+     <li>These are draft materials shared for review by partners. They are not final and are not approved for use in the field.</li>
+     <li>Please do not print, distribute or post these materials outside the review group, and do not share this link without agreement from the coordination team.</li>
+     <li>The Nepali versions are machine translations awaiting review by native speakers.</li>
+     <li>The illustrations are fictional, AI-assisted and developed under human direction.</li>
+     <li>This is not a WHO website, and the materials are not endorsed WHO products.</li>
+     <li>If you give feedback or proofread, your name, organisation, email, your feedback and your choice of acknowledgement are stored to coordinate the review and to prepare the list of contributors.</li>
+    </ol>
+   </div>
+  </div>
+ </div>
+ <div class="gact"><div class="gact-in"><span class="gnote">By entering you agree to the points above.</span>
+  <button type="button" class="no" data-gate="no">I do not agree</button>
+  <button type="button" class="yes" data-gate="yes">I understand and agree</button>
+  <button type="button" class="yes2" data-gate="proof">Agree and go to proofreading</button></div></div>
+ <p class="bye" role="status">Thank you. You can close this page.<br><button type="button" data-gate="back" style="margin-top:14px;font:inherit;border:1px solid var(--line2);background:#fff;border-radius:10px;padding:8px 14px;cursor:pointer">Read the points again</button></p>
+</section>
 <div class="top"><div class="top-in">
   <div class="brand"><div class="eyebrow">AFTER THE FLOOD · MHPSS NEPAL IEC SERIES</div><h1>IEC review space</h1></div>
   <span class="pill">Review draft · Not for field distribution</span>
@@ -423,7 +496,7 @@ function translation(c){
   if(!secs.length) return `<div class="card">${head}<div class="placeholder" style="margin-top:16px"><h3>No approved product yet</h3><p>The translation appears here once a product of this chapter is approved.</p></div></div>`;
   const how=`<div class="prhow"><h4>How to proofread · five steps</h4>
     <ol class="steps">
-     <li><span class="sn">1</span><span class="si"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span><b>Say who you are</b><span>Enter your name, organisation and email once. This page remembers you.</span><span class="mock"><i class="mi">Your name</i><i class="mi">Organisation</i></span></li>
+     <li><span class="sn">1</span><span class="si"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span><b>Say who you are</b><span>Enter your name, organisation, email and how you wish to be acknowledged, once. This page remembers you.</span><span class="mock"><i class="mi">Your name</i><i class="mi">Organisation</i></span></li>
      <li><span class="sn">2</span><span class="si"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><b>Open one product</b><span>Click Poster, Leaflet or Health Talk Guide below. Start with the SAFETY rows.</span><span class="mock"><i class="mk safety">SAFETY</i><i class="mk">▸ Leaflet</i></span></li>
      <li><span class="sn">3</span><span class="si"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="9" height="14" rx="1.5"/><rect x="13" y="5" width="9" height="14" rx="1.5"/><path d="M4.5 9h4M4.5 12h4M15.5 9h4M15.5 12h4"/></svg></span><b>Read row by row</b><span>English on the left, Nepali on the right. Does the Nepali say the same thing, clearly and naturally?</span><span class="mock"><i class="mk">English</i><i class="mk ne">नेपाली</i></span></li>
      <li><span class="sn">4</span><span class="si"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span><b>Choose one button</b><span>Good as it is: Correct. Needs a change: Suggest change, then type the better Nepali.</span><span class="mock"><i class="mb ok">✓ Correct</i><i class="mb ch">✎ Suggest change</i></span></li>
@@ -439,8 +512,8 @@ function translation(c){
 function prFind(id){const c=document.querySelector('.tr-card');for(const s of T.chapters[c.dataset.ch]){const r=s.rows.find(x=>x.id===id);if(r)return{s,r,ch:c.dataset.ch}}return null}
 async function sendProof(tr,verdict){
   const id=tr.dataset.row, f=prFind(id), cell=tr.querySelector('td.pr'), form=tr.nextElementSibling?.classList.contains('prf')?tr.nextElementSibling:null;
-  const w=readWho(); if(!w){document.getElementById('whoslot').scrollIntoView({behavior:'smooth',block:'center'});(form?form.querySelector('.fbmsg'):cell).insertAdjacentHTML('beforeend','<span class="fbmsg err" style="display:block">Please enter your name, organisation and email at the top first.</span>');return}
-  const d={kind:'proof',chapter:f.ch,product:f.s.product,option:'all',version:f.s.version,row:id,verdict:verdict==='agree'?'change':verdict,name:w.name,org:w.org,email:w.email,clientTime:new Date().toISOString()};
+  const w=readWho(); if(!w){document.getElementById('whoslot').scrollIntoView({behavior:'smooth',block:'center'});(form?form.querySelector('.fbmsg'):cell).insertAdjacentHTML('beforeend','<span class="fbmsg err" style="display:block">Please enter your name, organisation, email and acknowledgement choice at the top first.</span>');return}
+  const d={kind:'proof',chapter:f.ch,product:f.s.product,option:'all',version:f.s.version,row:id,verdict:verdict==='agree'?'change':verdict,name:w.name,org:w.org,email:w.email,credit:w.credit,clientTime:new Date().toISOString()};
   if(verdict==='agree'){const st=ST[f.ch]&&ST[f.ch].rows[id]; if(!st||!st.prop) return; d.text=st.prop; d.note='Agrees with the proposed correction';}
   if(verdict==='change'){const t=form.querySelector('textarea').value.trim(), n=form.querySelector('input').value.trim(), m=form.querySelector('.fbmsg');
     if(!t||t===f.r.ne){m.textContent='Please type the corrected Nepali (it is the same as the draft).';m.className='fbmsg err';return}
@@ -516,11 +589,14 @@ function applyStatus(ch){
 }
 const FB={pid:'mhpss-nepal-iec-review',key:'AIzaSyBN-sh64hOZeQClPi8Z8k-fXcVfBs2pxFQ'};
 const LS={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
-let WHO=LS.get('iec-reviewer');
+let WHO=LS.get('iec-reviewer'), WHODRAFT=null;
+const CREDIT={name:'By my name and organisation',org:'By my organisation only',none:'Do not acknowledge me'};
+if(WHO&&!CREDIT[WHO.credit]){WHODRAFT=WHO;WHO=null}  // saved before the acknowledgement choice existed: ask once more
 const letter=x=>(x.label.match(/Option ([A-C])$/)||[])[1];
 function whoHtml(){
-  return WHO?`<div class="whoas"><span>Reviewing as <b>${esc(WHO.name)}</b> · ${esc(WHO.org)} · ${esc(WHO.email)}</span><button type="button" data-whoedit>Change</button></div>`
-   :`<div class="who"><label>Your name<input type="text" id="w-name" maxlength="120" autocomplete="name" required></label><label>Organisation<input type="text" id="w-org" maxlength="160" autocomplete="organization" required></label><label>Email<input type="email" id="w-email" maxlength="200" autocomplete="email" required></label></div>`;
+  if(WHO) return `<div class="whoas"><span>Reviewing as <b>${esc(WHO.name)}</b> · ${esc(WHO.org)} · ${esc(WHO.email)} · Acknowledgement: ${esc(CREDIT[WHO.credit])}</span><button type="button" data-whoedit>Change</button></div>`;
+  const v=k=>esc((WHODRAFT&&WHODRAFT[k])||'');
+  return `<div class="who"><label>Your name<input type="text" id="w-name" maxlength="120" autocomplete="name" required value="${v('name')}"></label><label>Organisation<input type="text" id="w-org" maxlength="160" autocomplete="organization" required value="${v('org')}"></label><label>Email<input type="email" id="w-email" maxlength="200" autocomplete="email" required value="${v('email')}"></label><label>How should we acknowledge you as a contributor?<select id="w-credit" required><option value="">Choose one</option>${Object.entries(CREDIT).map(([k,t])=>`<option value="${k}" ${WHODRAFT&&WHODRAFT.credit===k?'selected':''}>${t}</option>`).join('')}</select></label></div>`;
 }
 function fbBlock(c,tab,list){
   const name=TABS.find(x=>x[0]===tab)[1], opts=list.filter(letter), poll=tab==='poster'&&opts.length>1;
@@ -541,14 +617,14 @@ function fbBlock(c,tab,list){
 }
 function readWho(){
   if(WHO) return WHO;
-  const g=id=>(document.getElementById(id)?.value||'').trim(), w={name:g('w-name'),org:g('w-org'),email:g('w-email')};
-  if(!w.name||!w.org||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(w.email)) return null;
+  const g=id=>(document.getElementById(id)?.value||'').trim(), w={name:g('w-name'),org:g('w-org'),email:g('w-email'),credit:g('w-credit')};
+  if(!w.name||!w.org||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(w.email)||!CREDIT[w.credit]) return null;
   WHO=w;LS.set('iec-reviewer',w);document.getElementById('whoslot').innerHTML=whoHtml();refreshMine();return w;
 }
 async function sendFb(kind,btn){
   const sec=document.getElementById('fb'),msg=document.getElementById('m-'+kind),say=(t,c)=>{msg.textContent=t;msg.className='fbmsg '+c};
-  const w=readWho(); if(!w) return say('Please enter your name, organisation and a valid email first.','err');
-  const d={kind,chapter:sec.dataset.ch,product:sec.dataset.tab,name:w.name,org:w.org,email:w.email,clientTime:new Date().toISOString()};
+  const w=readWho(); if(!w) return say('Please enter your name, organisation, a valid email and your acknowledgement choice first.','err');
+  const d={kind,chapter:sec.dataset.ch,product:sec.dataset.tab,name:w.name,org:w.org,email:w.email,credit:w.credit,clientTime:new Date().toISOString()};
   if(kind==='vote'){const r=sec.querySelector('input[name=poll]:checked'); if(!r) return say('Please choose one option.','err'); d.option=r.value; d.version=r.dataset.v;}
   else{const t=document.getElementById('c-text').value.trim(); if(!t) return say('Please write your comment first.','err'); d.text=t; d.option=document.getElementById('c-about')?.value||'all'; d.version=sec.dataset.ver;}
   const fields={}; for(const k in d) fields[k]={stringValue:String(d[k])};
@@ -563,7 +639,7 @@ async function sendFb(kind,btn){
 }
 document.addEventListener('click',e=>{
   const s=e.target.closest('[data-send]'); if(s) return sendFb(s.dataset.send,s);
-  if(e.target.closest('[data-whoedit]')){WHO=null;LS.set('iec-reviewer',null);document.getElementById('whoslot').innerHTML=whoHtml();refreshMine();return}
+  if(e.target.closest('[data-whoedit]')){WHODRAFT=WHO;WHO=null;LS.set('iec-reviewer',null);document.getElementById('whoslot').innerHTML=whoHtml();refreshMine();return}
   if(e.target.closest('[data-tofb]')) document.getElementById('fb')?.scrollIntoView({behavior:'smooth',block:'start'});
 });
 
@@ -659,6 +735,13 @@ function render(){
   noDownloads();
   window.scrollTo(0,0);
 }
+
+document.addEventListener('click',e=>{const b=e.target.closest('[data-gate]');if(!b)return;const g=document.getElementById('gate'),k=b.dataset.gate;
+  if(k==='no'){g.classList.add('declined');scrollTo(0,0);return}
+  if(k==='back'){g.classList.remove('declined');return}
+  try{localStorage.setItem('iec-entry',JSON.stringify(GATE_V))}catch(e){}
+  document.documentElement.classList.add('entered');scrollTo(0,0);
+  if(k==='proof'&&!/translation$/.test(location.hash))location.hash='#ch1/translation';});
 Promise.all([fetch('data/series.json').then(r=>r.json()),fetch('data/translation.json').then(r=>r.json()).catch(()=>null),fetch('data/cast.json').then(r=>r.json()).catch(()=>null)])
  .then(([s,t,k])=>{S=s;T=t;CASTDATA=k;addEventListener('hashchange',render);render();})
  .catch(()=>{document.getElementById('main').innerHTML='<div class="placeholder"><h3>The page could not load its content.</h3><p>Please refresh, or open it from the published address.</p></div>'});

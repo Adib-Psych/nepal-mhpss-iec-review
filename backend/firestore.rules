@@ -5,7 +5,7 @@ service cloud.firestore {
     // Nobody can read, change or delete entries from the page.
     match /feedback/{id} {
       allow create: if
-        request.resource.data.keys().hasOnly(['kind','chapter','product','option','version','text','name','org','email','clientTime','row','verdict','note'])
+        request.resource.data.keys().hasOnly(['kind','chapter','product','option','version','text','name','org','email','clientTime','row','verdict','note','credit'])
         && request.resource.data.keys().hasAll(['kind','chapter','product','option','name','org','email'])
         && request.resource.data.kind in ['vote','comment','proof']
         && request.resource.data.chapter in ['ch1','ch2','ch3','ch4','ch5','ch6']
@@ -16,6 +16,8 @@ service cloud.firestore {
         && request.resource.data.email is string && request.resource.data.email.size() <= 200
         && request.resource.data.email.matches('.+@.+[.].+')
         && (!('version' in request.resource.data) || (request.resource.data.version is string && request.resource.data.version.size() <= 120))
+        // How the reviewer wishes to be acknowledged in the list of contributors (optional for older entries).
+        && (!('credit' in request.resource.data) || request.resource.data.credit in ['name','org','none'])
         && (!('clientTime' in request.resource.data) || (request.resource.data.clientTime is string && request.resource.data.clientTime.size() <= 40))
         && (request.resource.data.kind != 'vote' || (request.resource.data.option in ['A','B','C'] && request.resource.data.product == 'poster' && !('text' in request.resource.data)))
         && (request.resource.data.kind != 'comment' || (request.resource.data.text is string && request.resource.data.text.size() > 0 && request.resource.data.text.size() <= 3000))
