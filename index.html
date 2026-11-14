@@ -6,6 +6,8 @@
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="referrer" content="no-referrer">
 <title>After the Flood · IEC review space</title>
+<script>/* entry screen: remembered per browser; a new GATE_V asks everyone again */
+const GATE_V='2026-11-14';try{if(JSON.parse(localStorage.getItem('iec-entry'))===GATE_V)document.documentElement.classList.add('entered')}catch(e){}</script>
 <style>
 :root{
   --bg:#f8f7f2; --ink:#243e46; --muted:#55676b; --line:#dde3de; --line2:#b9ccc5;
@@ -86,6 +88,12 @@ table.tr .kind{display:inline-block;font-size:11px;font-weight:700;letter-spacin
 table.tr .kind.safety{background:var(--coralt);color:var(--coral)}
 table.tr .kind.check{background:#fbf3e1;color:var(--amber)}
 table.tr .changed{color:var(--ok)}
+/* row colours match the three kinds of rows: SAFETY red, CHECK yellow, everyday grey */
+table.tr tr.t-safety>td{background:#fff4f1}table.tr tr.t-safety>td.id{box-shadow:inset 6px 0 0 var(--coral)}
+table.tr tr.t-check>td{background:#fffaeb}table.tr tr.t-check>td.id{box-shadow:inset 6px 0 0 #d9a43a}
+table.tr tr.t-general>td.id{box-shadow:inset 6px 0 0 #d5dcd8}
+table.tr td.id{padding-left:18px}
+table.tr .kind{font-size:11.5px;padding:2px 7px}
 table.tr td.pr{font-size:13px;color:var(--muted)}
 details.trsec{border:1px solid var(--line);border-radius:12px;margin:12px 0;padding:0 14px 6px;background:#fff}
 details.trsec summary{cursor:pointer;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;padding:12px 0;list-style:none;border-left:5px solid var(--c);padding-left:10px;margin-left:-14px}
@@ -144,6 +152,7 @@ details.shared summary{cursor:pointer;font-weight:650;padding:10px 0}
 .flow{display:grid;grid-template-columns:1fr 34px 1fr 34px 1fr}
 .flow .p{border:1px solid var(--line);border-radius:12px;padding:16px;background:#fff}
 .flow .p h4{margin:0 0 4px;color:var(--blue)}
+.flow .p .ill{display:block;width:100%;height:auto;aspect-ratio:22/15;object-fit:cover;border-radius:10px;margin:0 0 12px}
 .flow .arrow{display:grid;place-items:center;color:var(--line2);font-size:24px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .layer{border-radius:12px;padding:16px}
@@ -226,8 +235,9 @@ dialog.full .dlgbody img{max-height:none;max-width:max(100%,900px);width:auto;cu
 .fbbox h4{margin:0 0 4px;font-size:16px}
 .fbbox p{margin:0 0 10px;font-size:14px;color:var(--muted)}
 .who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.who label:nth-child(4){grid-column:1/-1;max-width:640px}
 .who label,.fbbox label.f,tr.prf label.f{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted);min-width:0}
-.fb input[type=text],.fb input[type=email],.fb textarea,.fb select,.tr-card input[type=text],.tr-card input[type=email],.tr-card textarea{font:inherit;font-size:15px;padding:9px 10px;border:1px solid var(--line2);border-radius:7px;background:#fff;color:inherit;width:100%;min-width:0}
+.fb input[type=text],.fb input[type=email],.fb textarea,.fb select,.tr-card input[type=text],.tr-card input[type=email],.tr-card textarea,.tr-card select{font:inherit;font-size:15px;padding:9px 10px;border:1px solid var(--line2);border-radius:7px;background:#fff;color:inherit;width:100%;min-width:0}
 .fb textarea{min-height:104px;resize:vertical}
 .whoas{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font-size:14px;margin-bottom:14px;padding:10px 12px;background:var(--okt);border-radius:8px}
 .whoas button{font:inherit;font-size:13px;border:0;background:none;color:var(--blue);text-decoration:underline;cursor:pointer;padding:0}
@@ -242,7 +252,7 @@ dialog.full .dlgbody img{max-height:none;max-width:max(100%,900px);width:auto;cu
 @media(max-width:430px){.pollopts label{padding:9px 8px;font-size:14px}}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 @media(max-width:1100px){.product,.product.wide{grid-template-columns:1fr}.arc{grid-template-columns:repeat(3,1fr)}.ov-hero{grid-template-columns:1fr}}
-@media(max-width:820px){.shell{grid-template-columns:1fr;padding:14px 16px}.side{position:static;max-height:none;flex-direction:row;flex-wrap:wrap}.side .label,.side .grow{display:none}.nav-item .t small{display:none}.top-in{padding:12px 16px}.pill{margin-left:0}.flow{grid-template-columns:1fr}.flow .arrow{transform:rotate(90deg);height:28px}.two,.pipe{grid-template-columns:1fr}.arc{grid-template-columns:1fr 1fr}.viewer .pair{grid-template-columns:1fr}table.tr,table.tr tbody,table.tr tr,table.tr td{display:block;width:100%}table.tr thead{display:none}table.tr td{border-bottom:0}table.tr tr{border-bottom:1px solid var(--line);padding:6px 0}}
+@media(max-width:820px){.shell{grid-template-columns:1fr;padding:14px 16px}.side{position:static;max-height:none;flex-direction:row;flex-wrap:wrap}.side .label,.side .grow{display:none}.nav-item .t small{display:none}.top-in{padding:12px 16px}.pill{margin-left:0}.flow{grid-template-columns:1fr}.flow .arrow{transform:rotate(90deg);height:28px}.two,.pipe{grid-template-columns:1fr}.arc{grid-template-columns:1fr 1fr}.viewer .pair{grid-template-columns:1fr}table.tr,table.tr tbody,table.tr tr,table.tr td{display:block;width:100%}table.tr thead{display:none}table.tr td{border-bottom:0}table.tr tr{border-bottom:1px solid var(--line);padding:6px 0}table.tr tr.t-safety>td,table.tr tr.t-safety>td.id{box-shadow:inset 6px 0 0 var(--coral)}table.tr tr.t-check>td,table.tr tr.t-check>td.id{box-shadow:inset 6px 0 0 #d9a43a}table.tr tr.t-general>td,table.tr tr.t-general>td.id{box-shadow:inset 6px 0 0 #d5dcd8}table.tr tr>td{padding-left:18px}}
 
 /* mobile chip navigation (hidden on desktop) */
 .mnav{display:none}
@@ -313,9 +323,130 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 @media(max-width:1100px){.threads{grid-template-columns:1fr}}
 @media(max-width:820px){.story{grid-template-columns:1fr 1fr;gap:10px}.ov-h{font-size:25px}.sc{padding:26px 10px 12px}.sc-title{font-size:14.5px}.face{width:38px;height:38px}.world{grid-template-columns:1fr}.world img{max-width:220px}.swatches{grid-template-columns:1fr 1fr}}
 @media(max-width:430px){.story{grid-template-columns:1fr}.sc-title{min-height:0}}
+
+.tflow{margin:14px 0 4px}.tflow h4{font-size:16px;margin:0 0 4px}.tf-lead{margin:0 0 8px}
+.tflow ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.tflow li{position:relative;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px 10px;display:flex;flex-direction:column;gap:3px}
+.tflow li+li::before{content:"→";position:absolute;left:-9px;top:50%;transform:translate(-50%,-50%);color:var(--muted);font-size:14px}
+.tflow .tn{width:22px;height:22px;border-radius:50%;background:#e8eef0;color:var(--ink);display:grid;place-items:center;font-size:12px;font-weight:700}
+.tflow b{font-size:14px;line-height:1.25}.tflow b em{display:inline-block;font-style:normal;font-size:11px;font-weight:700;background:var(--ok);color:#fff;border-radius:999px;padding:1px 7px;margin-left:4px;vertical-align:1px}
+.tflow li>span:last-child{font-size:12.8px;color:var(--muted);line-height:1.4;text-align:left;hyphens:none}
+.tflow li.now{border-color:var(--ok);background:#eef6ef;box-shadow:0 0 0 2px #cfe3d4}.tflow li.now .tn{background:var(--ok);color:#fff}
+@media(max-width:1100px){.tflow li{display:grid;grid-template-columns:24px minmax(0,1fr);column-gap:8px;align-items:center;padding:8px 12px}.tflow li>span:last-child{grid-column:2}}
+@media(max-width:620px){.tflow li>span:last-child{font-size:14px}.tflow b{font-size:15px}}
+@media(max-width:1100px){.tflow ol{grid-template-columns:1fr}.tflow li+li::before{content:"↓";left:22px;top:-6px;transform:translate(-50%,-50%)}}
+.rkinds{margin:6px 0 14px}.rkinds h4{font-size:16px;margin:6px 0 4px}.rk-lead{margin:0 0 10px}
+.rk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.rk{background:#fff;border:1px solid var(--line);border-left:6px solid #c9d2d6;border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.rk.safety{border-left-color:var(--coral);background:#fffaf8}.rk.check{border-left-color:#d9a43a;background:#fffdf7}
+.rk-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.rk-top b{font-size:15.5px}.rk-n{margin-left:auto;font-size:12.5px;color:var(--muted)}
+.rk .kind{font-style:normal;font-size:11.5px;font-weight:700;letter-spacing:.04em;border-radius:5px;padding:2px 7px}
+.rk .kind.safety{background:var(--coralt);color:var(--coral)}.rk .kind.check{background:#fbf3e1;color:var(--amber)}.rk .kind.gen{background:#eef1f4;color:var(--muted);font-weight:600;letter-spacing:0}
+.rk p{margin:0;font-size:13.5px;text-align:justify;hyphens:none}
+.rk-ex{background:#f4f5f2;border-radius:7px;padding:6px 9px;font-size:13px!important;color:var(--ink)}.rk-ex span{display:block;font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.rk-who{display:flex;gap:10px;align-items:flex-start;margin-top:auto;border-top:1px dashed var(--line);padding-top:8px}
+.rk-who b{display:block;font-size:13.5px}.rk-who span{display:block;font-size:12.5px;color:var(--muted);text-align:justify;hyphens:none}
+.ppl{display:flex;gap:1px;flex:0 0 auto}.ppl svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8}
+.rk.safety .ppl{color:var(--coral)}.rk.check .ppl{color:var(--amber)}.rk.gen .ppl{color:var(--muted)}
+.wcheck{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-top:10px}.wcheck h4{margin:0 0 6px;font-size:15px}
+.wcheck ol{margin:0;padding-left:20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px;row-gap:3px}.wcheck li{font-size:13.5px;text-align:justify;hyphens:none}
+details.words{margin-top:10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 14px}details.words summary{cursor:pointer;font-weight:700;font-size:14.5px;color:var(--blue)}
+details.words p{margin:8px 0}.wtab{overflow-x:auto}.wtab table{border-collapse:collapse;width:100%;font-size:13.5px}.wtab th,.wtab td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}.wtab td.ne{font-size:15px}.wtab th{color:var(--muted);font-weight:600}
+@media(max-width:900px){.rk-grid{grid-template-columns:1fr}.wcheck ol{grid-template-columns:1fr}}
+/* entry screen: one full screen, no scrolling; fitGate() scales it down on short screens */
+html:not(.entered) body>.top,html:not(.entered) body>.shell,html:not(.entered) body>footer{display:none}
+html:not(.entered),html:not(.entered) body{height:100%;overflow:hidden}
+html.entered #gate{display:none}
+#gate{--gs:1;font-size:calc(16px * var(--gs));height:100vh;height:100dvh;display:flex;flex-direction:column;max-width:1320px;margin:auto;padding:1.1em 1.5em .9em;gap:.8em}
+#gate.scroll{overflow:auto}
+#gate .ghead .eyebrow{font-size:.72em;letter-spacing:.12em;font-weight:700;color:#6f455f}
+#gate h1{margin:.1em 0 .2em;font-size:1.9em;line-height:1.15;color:var(--blue)}
+#gate .lead{font-size:1.04em;margin:0;text-align:justify;hyphens:none;line-height:1.45}
+#gate h2{font-size:1.05em;margin:0 0 .45em;color:var(--ink);line-height:1.25}
+.gprods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.9em;flex:1 1 auto;min-height:0}
+.gprods figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:.55em;display:flex;flex-direction:column;min-height:0}
+.gprods img{display:block;width:100%;flex:1 1 auto;min-height:0;height:0;object-fit:contain;border-radius:8px}
+.gprods figure:nth-child(1) img{background:#e9ece9}.gprods figure:nth-child(2) img{background:#eef5f7}.gprods figure:nth-child(3) img{background:#f2eef8}
+.gprods figcaption{padding:.45em .2em 0;flex:0 0 auto}
+.gprods b{font-size:1.08em;color:var(--blue)}
+.gprods span{font-size:.86em;color:var(--muted)}
+.gcols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.9em;flex:0 0 auto}
+.gcol{display:flex;flex-direction:column;gap:.55em;min-width:0}.gcol .gbox{flex:1 1 auto}
+.gcol .gact{justify-content:center;text-align:center}
+.gbox{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.8em 1em;font-size:.9em;line-height:1.45}
+.gbox p,.gbox li{text-align:justify;hyphens:none;overflow-wrap:normal;margin:0}
+.gbox p+p{margin-top:.45em}
+.gbox.inv{background:#eef6ef;border-color:#cfe3d4}
+.gbox.inv h2{color:var(--ok)}
+.gbox ol{margin:0;padding-left:1.3em}.gbox li{margin:0 0 .2em}
+.gact{flex:0 0 auto;display:flex;gap:.6em;align-items:center;flex-wrap:wrap;padding-top:.1em}
+.gact .gnote{font-size:.85em;color:var(--muted)}
+#gate .narrow{display:none}
+.gact button{font:inherit;font-size:.95em;font-weight:700;border-radius:10px;padding:.6em 1em;cursor:pointer;border:1px solid var(--line2);background:#fff;color:var(--ink)}
+.gact button.yes{background:var(--blue);border-color:var(--blue);color:#fff}
+.gact button.yes2{background:var(--ok);border-color:var(--ok);color:#fff}
+#gate .bye{display:none;font-size:1.15em;margin:auto;text-align:center}
+#gate.declined>*:not(.bye){display:none}#gate.declined .bye{display:block}
+@media(max-width:760px){
+ #gate{padding:.8em .9em .7em;gap:.6em}
+ #gate .ghead .eyebrow{display:none}
+ #gate h1{font-size:1.4em}
+ #gate .lead{font-size:.92em;line-height:1.4}
+ .gprods{gap:.45em;flex:0 0 auto}
+ .gprods figure{padding:.3em;border-radius:9px}
+ .gprods img{flex:none;height:auto;aspect-ratio:2/1}
+ .gprods figcaption{padding:.3em .1em 0;line-height:1.2}
+ .gprods b{font-size:.92em}.gprods span{display:none}
+ .gcols{grid-template-columns:1fr;gap:.5em}
+ .gbox{font-size:.84em;padding:.55em .75em;line-height:1.36}
+ .gbox h2{margin-bottom:.3em}
+ .gcol{gap:.35em}
+ .gact{gap:.3em .5em}
+ .gact button{padding:.55em .5em;font-size:.88em}
+ .gact button.yes,.gact button.yes2{flex:1 1 55%}
+ .gact .gnote{font-size:.78em}
+ #gate .narrow{display:inline}#gate .wide{display:none}
+ .gact button.no{flex:0 1 auto;border:0;background:none;text-decoration:underline;padding:.1em .3em;color:var(--muted)}
+}
 </style>
 </head>
 <body>
+<section id="gate" aria-labelledby="gate-h">
+ <div class="ghead">
+  <div class="eyebrow">AFTER THE FLOOD · MHPSS NEPAL IEC SERIES</div>
+  <h1 id="gate-h">Welcome to the IEC review space</h1>
+  <p class="lead">Six chapters of information materials for communities affected by the floods and for the people who support them, in English and Nepali, shared with partners for review before they are finalised.</p>
+ </div>
+ <div class="gprods">
+  <figure><img src="assets/overview/entry-posters.jpg" alt="Posters for the six chapters on a wall" width="880" height="600"><figcaption><b>6 posters</b> <span>· three design options each, A3</span></figcaption></figure>
+  <figure><img src="assets/overview/entry-leaflets.jpg" alt="Covers of the six leaflets, fanned" width="880" height="600"><figcaption><b>6 leaflets</b> <span>· A4 tri-fold, to take home</span></figcaption></figure>
+  <figure><img src="assets/overview/entry-guides.jpg" alt="First pages of the six Health Talk Guides, fanned" width="880" height="600"><figcaption><b>6 Health Talk Guides</b> <span>· for short group sessions</span></figcaption></figure>
+ </div>
+ <div class="gcols">
+  <div class="gcol">
+   <div class="gbox inv">
+    <h2>Help us check the Nepali translation</h2>
+    <p>The Nepali texts are AI-assisted drafts, not yet checked by native speakers. Native Nepali speakers are welcome to check them row by row against the English; this is voluntary and unpaid. We plan to acknowledge contributors, by name or by organisation as each chooses, in the printed package of these materials and on the project website.</p>
+    <p class="wide">After you agree, you go straight to the proofreading page of Chapter 1, where five short steps show how it works. You can move to any chapter from there.</p>
+   </div>
+   <div class="gact"><button type="button" class="yes2" data-gate="proof">I agree and will help with proofreading</button><span class="gnote"><span class="wide">Includes agreeing to the points on the right.</span><span class="narrow">Includes agreeing to the points below.</span></span></div>
+  </div>
+  <div class="gcol">
+   <div class="gbox">
+    <h2>Please read before you enter</h2>
+    <ol>
+     <li>Draft materials for partner review: not final and not approved for use in the field.</li>
+     <li>You are welcome to share this link with others who can give feedback; everyone is asked to agree to these points before entering. Please do not print or distribute the materials themselves.</li>
+     <li>The Nepali versions are AI-assisted drafts developed under human direction, awaiting review by native speakers.</li>
+     <li>The illustrations are fictional, AI-assisted and developed under human direction.</li>
+     <li>Your name, organisation, email, feedback and acknowledgement choice are stored to coordinate the review and credit contributors.</li>
+    </ol>
+   </div>
+   <div class="gact"><button type="button" class="yes" data-gate="yes">I agree, view the materials</button><button type="button" class="no" data-gate="no">I do not agree</button></div>
+  </div>
+ </div>
+ <p class="bye" role="status">Thank you. You can close this page.<br><button type="button" data-gate="back" style="margin-top:14px;font:inherit;border:1px solid var(--line2);background:#fff;border-radius:10px;padding:8px 14px;cursor:pointer">Read the points again</button></p>
+</section>
 <div class="top"><div class="top-in">
   <div class="brand"><div class="eyebrow">AFTER THE FLOOD · MHPSS NEPAL IEC SERIES</div><h1>IEC review space</h1></div>
   <span class="pill">Review draft · Not for field distribution</span>
@@ -325,7 +456,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   <nav class="side" id="side" aria-label="Series"></nav>
   <main id="main"><div class="placeholder">Loading…</div></main>
 </div>
-<footer>Shared review space for partners. Only approved products are posted here; working drafts stay in the team's working folders. Fictional illustrations, AI-assisted and developed under human direction. Not a WHO website and not an endorsed WHO product.</footer>
+<footer>Shared review space for partners. Only approved products are posted here; working drafts stay in the team's working folders. Fictional illustrations, AI-assisted and developed under human direction.</footer>
 <dialog id="dlg" aria-label="Preview"><div class="dlgbar"><b id="dlgt"></b><button id="dlgp" aria-label="Previous">‹ Previous</button><button id="dlgn" aria-label="Next">Next ›</button><span class="seg" role="group" aria-label="Preview size"><button id="dlgfit" type="button" aria-pressed="true">Fit to screen</button><button id="dlgfull" type="button" aria-pressed="false">Actual size</button></span><a id="dlgpdf" class="dl" download>English PDF</a><button id="dlgx">Close</button></div><div class="dlgbody"><span class="wmwrap"><img id="dlgimg" alt="" title="Select to enlarge or fit" draggable="false"><svg id="wm" aria-hidden="true"></svg></span></div></dialog>
 <script src="proof-status.js"></script>
 <script>
@@ -414,32 +545,64 @@ function prCell(id,st){
   return `<button class="prb ok" type="button" data-pr="ok">✓ Correct</button><button class="prb ch" type="button" data-pr="edit">✎ Suggest change</button>`;
 }
 
+const WORDS=[["distressing experience", "पीडादायी अनुभव", "Use in every row. Not तनावपूर्ण घटना, which reads as 'stressful event'."], ["You are not alone", "तपाईं एक्लो हुनुहुन्न", "Chapter 1 title; repeated in Chapters 2 and 6."], ["Many people (feel this way)", "धेरै मानिसलाई (यस्तै महसुस हुन्छ)", "A shared reaction, not a prediction for the reader."], ["common reaction", "सामान्य प्रतिक्रिया", "Never लक्षण (symptom) on posters and leaflets. For stress 'signs': सङ्केत."], ["someone you trust", "आफूले विश्वास गर्ने मानिस · short label: विश्वासिलो मानिस", ""], ["health worker", "स्वास्थ्यकर्मी", ""], ["responder", "उद्धारकर्मी (proposed)", "To be confirmed in the SAFETY rows."], ["If there is still a risk, check local warnings.", "यदि … भने (condition first) · स्थानीय चेतावनी", "Condition first, so a reader whose risk is over can skip it."], ["routine(s)", "दिनचर्या", ""], ["Small things that can help", "सहयोग गर्न सक्ने साना कुराहरू", "Chapter 1 heading."], ["Breathe slowly", "बिस्तारै सास फेर्नुहोस्", "In leaflets always with 'stop if it makes you feel worse'."], ["grief · to grieve", "शोक · शोक गर्नु", "No stages and no prescribed rites."], ["missing (person)", "बेपत्ता", "Never presume a missing person dead."], ["people with disabilities · older people", "अपाङ्गता भएका व्यक्ति · ज्येष्ठ नागरिक", ""], ["ward office", "वडा कार्यालय", "Its role is still to be verified per district (Chapter 5)."], ["Look after each other · Look out for each other", "एकअर्काको ख्याल राख्नुहोस् · एकअर्काको अवस्थामा ध्यान दिनुहोस्", "Slogan and Chapter 6 label: kept different on purpose."], ["Titles and sentences", "Titles: no full stop · sentences end with the danda (।) · Devanagari digits in footers", "Series style."]];
+function rowKinds(secs){
+  const rows=secs.flatMap(s=>s.rows), n=t=>rows.filter(r=>r.type===t).length, ex=t=>{const r=rows.find(r=>r.type===t);return r?esc(r.en.length>95?r.en.slice(0,92)+'…':r.en):''};
+  const ppl=k=>'<span class="ppl">'+'<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>'.repeat(k)+'</span>';
+  const card=(cls,chip,title,cnt,what,example,who,k,done)=>`<div class="rk ${cls}"><div class="rk-top">${chip}<b>${title}</b><span class="rk-n">${cnt} ${cnt===1?'row':'rows'} in this chapter</span></div>
+    <p class="rk-what">${what}</p><p class="rk-ex"><span>Example</span>${example}</p>
+    <div class="rk-who">${ppl(k)}<div><b>${who}</b><span>${done}</span></div></div></div>`;
+  const words=`<details class="words"><summary>Series word list · ${WORDS.length} agreed terms</summary><p class="small">Use these Nepali terms so the whole series speaks one language. Posters and leaflets use everyday words; technical terms (trauma, PTSD, symptom, disorder, burnout) appear only in the Health Talk Guides, explained in each guide's word key.</p>
+    <div class="wtab"><table><thead><tr><th>English</th><th>Nepali</th><th>Note</th></tr></thead><tbody>${WORDS.map(w=>`<tr><td>${esc(w[0])}</td><td lang="ne" class="ne">${esc(w[1])}</td><td>${esc(w[2])}</td></tr>`).join('')}</tbody></table></div></details>`;
+  return `<div class="rkinds"><h4>Three kinds of rows · every row needs checking</h4><p class="small rk-lead">The label on the left of each row tells you how important it is and how many people must check it. Start with SAFETY rows, then CHECK rows, then the rest.</p>
+   <div class="rk-grid">
+    ${card('safety','<i class="kind safety">SAFETY</i>','Safety messages',n('safety'),'When to seek help, danger, thoughts of self-harm, medicines, harmful ways of coping and missing persons. A wrong word here can put someone at risk.',ex('safety'),'Two native Nepali speakers, ideally with a health or MHPSS background',2,'Done when two reviewers agree. If they differ, the Nepali clinical reviewer decides.')}
+    ${card('check','<i class="kind check">CHECK</i>','Clinical or legal wording',n('check'),'Clinical terms and explanations in the Health Talk Guides, and source and licence lines.',ex('check'),'Two reviewers, at least one bilingual MHPSS or clinical reviewer',2,'Done when two reviewers agree. Source and licence lines are checked against the original wording.')}
+    ${card('gen','<i class="kind gen">no label</i>','Everyday text',n('general'),'Titles, tips and explanations in plain language.',ex('general'),'One native Nepali speaker: any partner can help',1,'Done when one reviewer marks it correct, or two agree on a correction.')}
+   </div>
+   <div class="wcheck"><h4>What to check in every row</h4><ol>
+    <li><b>Same meaning.</b> The Nepali says what the English says, with nothing added or left out.</li>
+    <li><b>Natural, everyday Nepali</b> that people in the community would use.</li>
+    <li><b>Agreed terms.</b> Use the series word list below.</li>
+    <li><b>SAFETY rows:</b> keep the meaning given in the row note exactly, including when to seek help.</li>
+    <li><b>Do not change</b> numbers, names or the conditions in a safety message.</li>
+    <li><b>If you are unsure,</b> suggest your wording and explain in the note rather than guess.</li></ol></div>
+   ${words}</div>`;
+}
 function translation(c){
   const secs=(T&&T.chapters[c.key])||[];
   const head=`<div class="tr-head"><div><span class="status wait">Nepali drafts · proofreading open</span><h3 style="font-size:22px;margin:12px 0 4px">Translation & proofreading · Chapter ${c.n}</h3>
     <p style="margin:0;max-width:900px">Every English and Nepali text of the approved poster, leaflet and Health Talk Guide of this chapter, row by row. ${esc(T?T.status:'')}</p></div>
     <div class="legend"><span style="--c:var(--coralt)">SAFETY row: review first</span><span style="--c:#fbf3e1">Check: clinical or legal wording</span><span style="--c:var(--ok)">Updated text</span></div></div>`;
   if(!secs.length) return `<div class="card">${head}<div class="placeholder" style="margin-top:16px"><h3>No approved product yet</h3><p>The translation appears here once a product of this chapter is approved.</p></div></div>`;
+  const flow=`<div class="tflow"><h4>How the Nepali was made · five stages</h4><p class="small tf-lead">AI-assisted under human direction, not word for word.</p><ol>
+    <li><span class="tn">1</span><b>English source</b><span>The approved English text. Its meaning decides.</span></li>
+    <li><span class="tn">2</span><b>AI-assisted draft</b><span>Written to a brief: readers, purpose, everyday words, safety meaning, series word list.</span></li>
+    <li><span class="tn">3</span><b>Back-translation</b><span>Nepali turned back into English to check meaning. Posters and leaflets only.</span></li>
+    <li class="now"><span class="tn">4</span><b>Native-speaker review <em>You are here</em></b><span>Row by row. SAFETY and CHECK: two reviewers. Others: one.</span></li>
+    <li><span class="tn">5</span><b>Final checks</b><span>Corrections applied, then clinical review and approval before print.</span></li>
+   </ol></div>`;
   const how=`<div class="prhow"><h4>How to proofread · five steps</h4>
     <ol class="steps">
-     <li><span class="sn">1</span><span class="si"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span><b>Say who you are</b><span>Enter your name, organisation and email once. This page remembers you.</span><span class="mock"><i class="mi">Your name</i><i class="mi">Organisation</i></span></li>
+     <li><span class="sn">1</span><span class="si"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span><b>Say who you are</b><span>Enter your name, organisation, email and how you wish to be acknowledged, once. This page remembers you.</span><span class="mock"><i class="mi">Your name</i><i class="mi">Organisation</i></span></li>
      <li><span class="sn">2</span><span class="si"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><b>Open one product</b><span>Click Poster, Leaflet or Health Talk Guide below. Start with the SAFETY rows.</span><span class="mock"><i class="mk safety">SAFETY</i><i class="mk">▸ Leaflet</i></span></li>
      <li><span class="sn">3</span><span class="si"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="9" height="14" rx="1.5"/><rect x="13" y="5" width="9" height="14" rx="1.5"/><path d="M4.5 9h4M4.5 12h4M15.5 9h4M15.5 12h4"/></svg></span><b>Read row by row</b><span>English on the left, Nepali on the right. Does the Nepali say the same thing, clearly and naturally?</span><span class="mock"><i class="mk">English</i><i class="mk ne">नेपाली</i></span></li>
      <li><span class="sn">4</span><span class="si"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span><b>Choose one button</b><span>Good as it is: Correct. Needs a change: Suggest change, then type the better Nepali.</span><span class="mock"><i class="mb ok">✓ Correct</i><i class="mb ch">✎ Suggest change</i></span></li>
      <li><span class="sn">5</span><span class="si"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M2.5 20c0-3 2.5-5 5.5-5s5.5 2 5.5 5M10.5 20c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/></svg></span><b>Work as a team</b><span>If a colleague proposed a correction, click Agree. Finished rows disappear; the bar shows team progress.</span><span class="mock"><i class="mb ag">✓ Agree</i><i class="mbar"><i></i></i></span></li>
     </ol>
+    ${rowKinds(secs)}
     <p class="small tips">You can stop at any time; every click is saved. SAFETY and CHECK rows need two reviewers, other rows one. Your corrections go only to the review team and are not shown on this page.</p>
     <div id="whoslot">${whoHtml()}</div>
-    <div class="filters"><label class="onlysafe"><input type="checkbox" id="onlysafe"> Show only SAFETY and CHECK rows</label><label class="onlysafe"><input type="checkbox" id="hidedone" checked> Hide rows the team has already completed</label></div>
+    <div class="filters"><label class="onlysafe"><input type="checkbox" id="onlysafe"> Start with SAFETY and CHECK rows (show these only)</label><label class="onlysafe"><input type="checkbox" id="hidedone" checked> Hide rows the team has already completed</label></div>
     <p class="small" style="margin:6px 0 0"><span id="stamp"></span></p></div>`;
-  return `<div class="card tr-card hidedone" data-ch="${c.key}">${head}${how}${secs.map((s,i)=>trTable(s,c.colour[0],false)).join('')}
-    <p class="small">Every Nepali row is a machine draft until a native Nepali and MHPSS reviewer has checked it. General comments on a product: use the comment box on that product's page.</p></div>`;
+  return `<div class="card tr-card hidedone" data-ch="${c.key}">${head}${flow}${how}${secs.map((s,i)=>trTable(s,c.colour[0],false)).join('')}
+    <p class="small">Every Nepali row is an AI-assisted draft until a native Nepali reviewer has checked it. General comments on a product: use the comment box on that product's page.</p></div>`;
 }
 function prFind(id){const c=document.querySelector('.tr-card');for(const s of T.chapters[c.dataset.ch]){const r=s.rows.find(x=>x.id===id);if(r)return{s,r,ch:c.dataset.ch}}return null}
 async function sendProof(tr,verdict){
   const id=tr.dataset.row, f=prFind(id), cell=tr.querySelector('td.pr'), form=tr.nextElementSibling?.classList.contains('prf')?tr.nextElementSibling:null;
-  const w=readWho(); if(!w){document.getElementById('whoslot').scrollIntoView({behavior:'smooth',block:'center'});(form?form.querySelector('.fbmsg'):cell).insertAdjacentHTML('beforeend','<span class="fbmsg err" style="display:block">Please enter your name, organisation and email at the top first.</span>');return}
-  const d={kind:'proof',chapter:f.ch,product:f.s.product,option:'all',version:f.s.version,row:id,verdict:verdict==='agree'?'change':verdict,name:w.name,org:w.org,email:w.email,clientTime:new Date().toISOString()};
+  const w=readWho(); if(!w){document.getElementById('whoslot').scrollIntoView({behavior:'smooth',block:'center'});(form?form.querySelector('.fbmsg'):cell).insertAdjacentHTML('beforeend','<span class="fbmsg err" style="display:block">Please enter your name, organisation, email and acknowledgement choice at the top first.</span>');return}
+  const d={kind:'proof',chapter:f.ch,product:f.s.product,option:'all',version:f.s.version,row:id,verdict:verdict==='agree'?'change':verdict,name:w.name,org:w.org,email:w.email,credit:w.credit,clientTime:new Date().toISOString()};
   if(verdict==='agree'){const st=ST[f.ch]&&ST[f.ch].rows[id]; if(!st||!st.prop) return; d.text=st.prop; d.note='Agrees with the proposed correction';}
   if(verdict==='change'){const t=form.querySelector('textarea').value.trim(), n=form.querySelector('input').value.trim(), m=form.querySelector('.fbmsg');
     if(!t||t===f.r.ne){m.textContent='Please type the corrected Nepali (it is the same as the draft).';m.className='fbmsg err';return}
@@ -515,11 +678,14 @@ function applyStatus(ch){
 }
 const FB={pid:'mhpss-nepal-iec-review',key:'AIzaSyBN-sh64hOZeQClPi8Z8k-fXcVfBs2pxFQ'};
 const LS={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
-let WHO=LS.get('iec-reviewer');
+let WHO=LS.get('iec-reviewer'), WHODRAFT=null;
+const CREDIT={name:'By my name and organisation',org:'By my organisation only',none:'Do not acknowledge me'};
+if(WHO&&!CREDIT[WHO.credit]){WHODRAFT=WHO;WHO=null}  // saved before the acknowledgement choice existed: ask once more
 const letter=x=>(x.label.match(/Option ([A-C])$/)||[])[1];
 function whoHtml(){
-  return WHO?`<div class="whoas"><span>Reviewing as <b>${esc(WHO.name)}</b> · ${esc(WHO.org)} · ${esc(WHO.email)}</span><button type="button" data-whoedit>Change</button></div>`
-   :`<div class="who"><label>Your name<input type="text" id="w-name" maxlength="120" autocomplete="name" required></label><label>Organisation<input type="text" id="w-org" maxlength="160" autocomplete="organization" required></label><label>Email<input type="email" id="w-email" maxlength="200" autocomplete="email" required></label></div>`;
+  if(WHO) return `<div class="whoas"><span>Reviewing as <b>${esc(WHO.name)}</b> · ${esc(WHO.org)} · ${esc(WHO.email)} · Acknowledgement: ${esc(CREDIT[WHO.credit])}</span><button type="button" data-whoedit>Change</button></div>`;
+  const v=k=>esc((WHODRAFT&&WHODRAFT[k])||'');
+  return `<div class="who"><label>Your name<input type="text" id="w-name" maxlength="120" autocomplete="name" required value="${v('name')}"></label><label>Organisation<input type="text" id="w-org" maxlength="160" autocomplete="organization" required value="${v('org')}"></label><label>Email<input type="email" id="w-email" maxlength="200" autocomplete="email" required value="${v('email')}"></label><label>How should we acknowledge you as a contributor?<select id="w-credit" required><option value="">Choose one</option>${Object.entries(CREDIT).map(([k,t])=>`<option value="${k}" ${WHODRAFT&&WHODRAFT.credit===k?'selected':''}>${t}</option>`).join('')}</select></label></div>`;
 }
 function fbBlock(c,tab,list){
   const name=TABS.find(x=>x[0]===tab)[1], opts=list.filter(letter), poll=tab==='poster'&&opts.length>1;
@@ -540,14 +706,14 @@ function fbBlock(c,tab,list){
 }
 function readWho(){
   if(WHO) return WHO;
-  const g=id=>(document.getElementById(id)?.value||'').trim(), w={name:g('w-name'),org:g('w-org'),email:g('w-email')};
-  if(!w.name||!w.org||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(w.email)) return null;
+  const g=id=>(document.getElementById(id)?.value||'').trim(), w={name:g('w-name'),org:g('w-org'),email:g('w-email'),credit:g('w-credit')};
+  if(!w.name||!w.org||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(w.email)||!CREDIT[w.credit]) return null;
   WHO=w;LS.set('iec-reviewer',w);document.getElementById('whoslot').innerHTML=whoHtml();refreshMine();return w;
 }
 async function sendFb(kind,btn){
   const sec=document.getElementById('fb'),msg=document.getElementById('m-'+kind),say=(t,c)=>{msg.textContent=t;msg.className='fbmsg '+c};
-  const w=readWho(); if(!w) return say('Please enter your name, organisation and a valid email first.','err');
-  const d={kind,chapter:sec.dataset.ch,product:sec.dataset.tab,name:w.name,org:w.org,email:w.email,clientTime:new Date().toISOString()};
+  const w=readWho(); if(!w) return say('Please enter your name, organisation, a valid email and your acknowledgement choice first.','err');
+  const d={kind,chapter:sec.dataset.ch,product:sec.dataset.tab,name:w.name,org:w.org,email:w.email,credit:w.credit,clientTime:new Date().toISOString()};
   if(kind==='vote'){const r=sec.querySelector('input[name=poll]:checked'); if(!r) return say('Please choose one option.','err'); d.option=r.value; d.version=r.dataset.v;}
   else{const t=document.getElementById('c-text').value.trim(); if(!t) return say('Please write your comment first.','err'); d.text=t; d.option=document.getElementById('c-about')?.value||'all'; d.version=sec.dataset.ver;}
   const fields={}; for(const k in d) fields[k]={stringValue:String(d[k])};
@@ -562,7 +728,7 @@ async function sendFb(kind,btn){
 }
 document.addEventListener('click',e=>{
   const s=e.target.closest('[data-send]'); if(s) return sendFb(s.dataset.send,s);
-  if(e.target.closest('[data-whoedit]')){WHO=null;LS.set('iec-reviewer',null);document.getElementById('whoslot').innerHTML=whoHtml();refreshMine();return}
+  if(e.target.closest('[data-whoedit]')){WHODRAFT=WHO;WHO=null;LS.set('iec-reviewer',null);document.getElementById('whoslot').innerHTML=whoHtml();refreshMine();return}
   if(e.target.closest('[data-tofb]')) document.getElementById('fb')?.scrollIntoView({behavior:'smooth',block:'start'});
 });
 
@@ -611,9 +777,9 @@ function overview(){
   </div>
 
   <div class="card"><h3 class="ov-s">Three products work together in every chapter</h3><div class="flow">
-    <div class="p"><span class="tag">A3 · WALL</span><h4>Poster</h4>Read in seconds: the title and one painted scene. One message, small things to try, and where to get help.</div><div class="arrow">→</div>
-    <div class="p"><span class="tag">A4 · TAKE HOME</span><h4>Leaflet</h4>Continues the same chapter: what people may notice, how to do each small thing, what can make things worse, and when to seek help.</div><div class="arrow">→</div>
-    <div class="p"><span class="tag">A4 · FACILITATOR</span><h4>Health Talk Guide</h4>A 15-minute session in five steps: welcome, look at the picture together, what helps, when to ask for help, close. Sessions can link through the story: “Do you remember Karuna?”</div></div></div>
+    <div class="p"><img class="ill" src="assets/overview/mock-poster.jpg" alt="Posters for Chapters 1, 2 and 3 on a wall" width="880" height="600" loading="lazy"><span class="tag">A3 · WALL</span><h4>Poster</h4>Read in seconds: the title and one painted scene. One message, small things to try, and where to get help.</div><div class="arrow">→</div>
+    <div class="p"><img class="ill" src="assets/overview/mock-leaflet.jpg" alt="Chapter 1 leaflet, folded in three and standing open, with its cover" width="880" height="600" loading="lazy"><span class="tag">A4 · TAKE HOME</span><h4>Leaflet</h4>Continues the same chapter: what people may notice, how to do each small thing, what can make things worse, and when to seek help.</div><div class="arrow">→</div>
+    <div class="p"><img class="ill" src="assets/overview/mock-guide.jpg" alt="Health Talk Guides for Chapters 1, 2 and 3, fanned on a table" width="880" height="600" loading="lazy"><span class="tag">A4 · FACILITATOR</span><h4>Health Talk Guide</h4>A 15-minute session in five steps: welcome, look at the picture together, what helps, when to ask for help, close. Sessions can link through the story: “Do you remember Karuna?”</div></div><p class="small" style="margin:10px 0 0">Examples: posters and guides for Chapters 1 to 3, and the Chapter 1 leaflet. Each chapter page shows its own products.</p></div>
 
   <div class="two"><div class="card"><h3 class="ov-s">Two layers of language</h3><div class="layer" style="background:#e8f4fa;margin-bottom:10px"><b>Poster and leaflet</b><br>Everyday words: “distressing experience”, “common reactions”, “small things that can help”.</div><div class="layer" style="background:#f2eef8"><b>Health Talk Guide</b><br>The word key for facilitators: what the plain words stand for, with clinical terms and sources.</div></div>
    <div class="card"><h3 class="ov-s">How products reach this page</h3><div class="pipe"><div><span class="tag">1</span><b>Draft</b>Made and checked in the working folders</div><div><span class="tag">2</span><b>Quality check</b>Content, safety and design</div><div><span class="tag">3</span><b>Approval</b>Approved by the coordination team</div><div><span class="tag">4</span><b>Posted here</b>For partner review and feedback</div></div></div></div>
@@ -658,6 +824,19 @@ function render(){
   noDownloads();
   window.scrollTo(0,0);
 }
+
+function fitGate(){const g=document.getElementById('gate');if(!g||document.documentElement.classList.contains('entered'))return;
+  g.classList.remove('scroll');let k=1;g.style.setProperty('--gs',k);
+  const over=()=>g.scrollHeight>g.clientHeight+1||[...g.querySelectorAll('.gprods img')].some(i=>i.clientHeight<(innerWidth>760?90:40));
+  const min=innerWidth>760?0.7:0.82;while(over()&&k>min){k-=0.02;g.style.setProperty('--gs',k.toFixed(2))}
+  if(over())g.classList.add('scroll');}
+addEventListener('resize',fitGate);addEventListener('load',fitGate);fitGate();
+document.addEventListener('click',e=>{const b=e.target.closest('[data-gate]');if(!b)return;const g=document.getElementById('gate'),k=b.dataset.gate;
+  if(k==='no'){g.classList.add('declined');return}
+  if(k==='back'){g.classList.remove('declined');fitGate();return}
+  try{localStorage.setItem('iec-entry',JSON.stringify(GATE_V))}catch(e){}
+  document.documentElement.classList.add('entered');scrollTo(0,0);
+  if(k==='proof'&&!/translation$/.test(location.hash))location.hash='#ch1/translation';});
 Promise.all([fetch('data/series.json').then(r=>r.json()),fetch('data/translation.json').then(r=>r.json()).catch(()=>null),fetch('data/cast.json').then(r=>r.json()).catch(()=>null)])
  .then(([s,t,k])=>{S=s;T=t;CASTDATA=k;addEventListener('hashchange',render);render();})
  .catch(()=>{document.getElementById('main').innerHTML='<div class="placeholder"><h3>The page could not load its content.</h3><p>Please refresh, or open it from the published address.</p></div>'});
