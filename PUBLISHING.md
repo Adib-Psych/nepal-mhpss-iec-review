@@ -1,6 +1,23 @@
 # Publishing rules · After the Flood IEC review space
 
-This site is the shared review space for partners. It shows **only products Adib has approved**. Working drafts, proofs and alternatives that are not approved stay in the working folders (Luna and the cloud workspace) and are never uploaded here.
+This site is the shared review space for partners and language reviewers. It shows two kinds of product, and nothing else:
+
+1. **English products with Adib's design ACC.**
+2. **Nepali drafts of those products with a layout ACC** (recorded by Claude on Adib's delegation after a layout check; not a language approval). Each is shown above its English product and labelled *Nepali · draft translation, language review pending · machine translation*, so native Nepali and MHPSS reviewers can read and comment on it.
+
+Not uploaded: English drafts that wait for review or have a revision request, Nepali drafts without layout ACC, proofs and unselected alternatives. They stay in the working folders on Luna.
+
+## Taking content down or putting it up (rule set 14 Nov 2026)
+
+Why this rule exists: on 14 Nov 2026 at 05:00 NPT the 18 Nepali poster drafts were taken down because "not yet proofread" was read as "not approved". One question had also bundled them with two English leaflet drafts under a single option, "only ACC online". Native reviewers lost access until Adib asked for the drafts back at 11:00 NPT.
+
+1. **Removing anything that is live needs Adib's own words naming that item or group.** A general principle such as "online only what has ACC" does not by itself remove a group that an earlier decision of his put up. Ask first.
+2. **One question per group, never bundled.** English drafts, Nepali drafts, Health Talk Guides and the translation tab are separate questions. Each option says what changes for reviewers, for example "the Nepali reviewers will no longer see the 18 posters".
+3. **"ACC" on this site has two levels.** Design ACC for English; layout ACC for Nepali drafts. A rule about "ACC only" keeps the layout-ACC Nepali drafts unless Adib says otherwise.
+4. **"Not yet proofread" is never a reason to take a Nepali draft down from this site.** This site is where native proofreading happens; a draft allowed only after proofreading could never be proofread. Proofreading and clinical clearance are the gate for the later public website.
+5. **Read before changing.** Before any change, read this file and the newest `mhpss-governance` / `iec` checkpoints. If a new instruction conflicts with a rule here, quote both to Adib and ask which one wins.
+6. **Record every change.** Each publication or takedown gets a checkpoint event with Adib's words (quoted), the time, the list of items and the commit. When a rule changes, this file changes in the same commit.
+7. **The later public website is a different place.** Community downloads there carry only products with design ACC plus language, clinical and distribution clearance.
 
 ## Chapter 1 owner approval and option mapping
 
@@ -18,7 +35,8 @@ On 12 November 2026, after viewing the comparison, Adib approved all three Chapt
 
 1. The approval is recorded in the `mhpss-governance` / `iec` checkpoint (owner approval or lock), and the chapter front on Luna has the `(locked)` copy.
 2. The file you upload is byte-identical to that locked copy (compare SHA-256).
-3. Nothing marked PROOF, draft, unselected or pending is uploaded.
+3. Nothing marked PROOF, unselected or pending is uploaded. The only drafts allowed are Nepali drafts with layout ACC (see the top of this file).
+4. A Nepali draft goes into the `"ne"` object of its English entry: `version`, `pdf` (online), `print`, `image` or `online_image` and `print_image`, optional `note`. The file must be byte-identical to the layout-ACC file on Luna (print) or its light online copy.
 
 ## How to add an approved product
 
@@ -41,7 +59,7 @@ On 12 November 2026, after viewing the comparison, Adib approved all three Chapt
 ## Text on this site
 
 - Partner-facing English only: no internal paths, agent names or working notes.
-- Translation rows come from the single translation file (`02 Key Messages and Translation/Translation and Proofreading/IEC Series Translation EN-NE - Posters and Leaflets`), exported to `data/translation.json` only for approved products. Safety rows stay blank until a human translator fills them.
+- `data/translation.json` holds the current Nepali text of the products on this site: posters from the poster message bank (13 Nov 2026), leaflets from the leaflet message bank (14 Nov 2026), both in `02 Key Messages and Translation/Translation and Proofreading/` on Luna. Every row is a machine draft until a native Nepali and MHPSS reviewer has checked it; SAFETY rows are reviewed first. When a bank changes, the table and the Nepali files change together.
 - Keep the disclosure: fictional illustrations, AI-assisted and developed under human direction; not a WHO website.
 
 ## Reviewer feedback
@@ -50,4 +68,4 @@ On 12 November 2026, after viewing the comparison, Adib approved all three Chapt
 - Entries are stored in the review team's database (collection `feedback`). The page can only add entries; it cannot read, change or delete them, so votes and comments are never shown to other reviewers. The rules in force are kept in `backend/firestore.rules`.
 - The poll and the comment box appear automatically from `data/series.json`; adding an approved product needs no extra step.
 
-The previous consultation page (9 October 2026) is kept at `archive-2026-10-09.html`.
+The pages from the October 2026 consultation were removed on 14 Nov 2026; they remain in the repository history.
