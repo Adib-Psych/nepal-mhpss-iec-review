@@ -52,7 +52,17 @@
      "print": "assets/series/ch1/leaflet-r11-print.pdf",
      "online_image": "assets/series/ch1/leaflet-r11-online.jpg",
      "print_image": "assets/series/ch1/leaflet-r11-print.jpg",
-     "image": "assets/series/ch1/leaflet-r11-online.jpg"
+     "image": "assets/series/ch1/leaflet-r11-online.jpg",
+     "ne": {
+      "version": "r2",
+      "pdf": "assets/series/ch1/leaflet-ne-r2.pdf",
+      "print": "assets/series/ch1/leaflet-ne-r2-print.pdf",
+      "online_image": "assets/series/ch1/leaflet-ne-r2-online.jpg",
+      "print_image": "assets/series/ch1/leaflet-ne-r2-print.jpg",
+      "image": "assets/series/ch1/leaflet-ne-r2-online.jpg",
+      "note": "machine translation",
+      "layout_acc": "2026-11-14"
+     }
     }
    ],
    "guide": [
@@ -123,7 +133,17 @@
      "print": "assets/series/ch2/leaflet-r5-print.pdf",
      "online_image": "assets/series/ch2/leaflet-r5-online.jpg",
      "print_image": "assets/series/ch2/leaflet-r5-print.jpg",
-     "image": "assets/series/ch2/leaflet-r5-online.jpg"
+     "image": "assets/series/ch2/leaflet-r5-online.jpg",
+     "ne": {
+      "version": "r2",
+      "pdf": "assets/series/ch2/leaflet-ne-r2.pdf",
+      "print": "assets/series/ch2/leaflet-ne-r2-print.pdf",
+      "online_image": "assets/series/ch2/leaflet-ne-r2-online.jpg",
+      "print_image": "assets/series/ch2/leaflet-ne-r2-print.jpg",
+      "image": "assets/series/ch2/leaflet-ne-r2-online.jpg",
+      "note": "machine translation",
+      "layout_acc": "2026-11-14"
+     }
     }
    ],
    "guide": [
@@ -194,7 +214,17 @@
      "print": "assets/series/ch3/leaflet-r6-print.pdf",
      "online_image": "assets/series/ch3/leaflet-r6-online.jpg",
      "print_image": "assets/series/ch3/leaflet-r6-print.jpg",
-     "image": "assets/series/ch3/leaflet-r6-online.jpg"
+     "image": "assets/series/ch3/leaflet-r6-online.jpg",
+     "ne": {
+      "version": "r1",
+      "pdf": "assets/series/ch3/leaflet-ne-r1.pdf",
+      "print": "assets/series/ch3/leaflet-ne-r1-print.pdf",
+      "online_image": "assets/series/ch3/leaflet-ne-r1-online.jpg",
+      "print_image": "assets/series/ch3/leaflet-ne-r1-print.jpg",
+      "image": "assets/series/ch3/leaflet-ne-r1-online.jpg",
+      "note": "machine translation",
+      "layout_acc": "2026-11-14"
+     }
     }
    ],
    "guide": [
@@ -265,7 +295,17 @@
      "print": "assets/series/ch4/leaflet-r4-print.pdf",
      "online_image": "assets/series/ch4/leaflet-r4-online.jpg",
      "print_image": "assets/series/ch4/leaflet-r4-print.jpg",
-     "image": "assets/series/ch4/leaflet-r4-online.jpg"
+     "image": "assets/series/ch4/leaflet-r4-online.jpg",
+     "ne": {
+      "version": "r2",
+      "pdf": "assets/series/ch4/leaflet-ne-r2.pdf",
+      "print": "assets/series/ch4/leaflet-ne-r2-print.pdf",
+      "online_image": "assets/series/ch4/leaflet-ne-r2-online.jpg",
+      "print_image": "assets/series/ch4/leaflet-ne-r2-print.jpg",
+      "image": "assets/series/ch4/leaflet-ne-r2-online.jpg",
+      "note": "machine translation",
+      "layout_acc": "2026-11-14"
+     }
     }
    ],
    "guide": [
@@ -337,7 +377,17 @@
      "print": "assets/series/ch5/leaflet-r3-print.pdf",
      "online_image": "assets/series/ch5/leaflet-r3-online.jpg",
      "print_image": "assets/series/ch5/leaflet-r3-print.jpg",
-     "image": "assets/series/ch5/leaflet-r3-online.jpg"
+     "image": "assets/series/ch5/leaflet-r3-online.jpg",
+     "ne": {
+      "version": "r1",
+      "pdf": "assets/series/ch5/leaflet-ne-r1.pdf",
+      "print": "assets/series/ch5/leaflet-ne-r1-print.pdf",
+      "online_image": "assets/series/ch5/leaflet-ne-r1-online.jpg",
+      "print_image": "assets/series/ch5/leaflet-ne-r1-print.jpg",
+      "image": "assets/series/ch5/leaflet-ne-r1-online.jpg",
+      "note": "machine translation",
+      "layout_acc": "2026-11-14"
+     }
     }
    ],
    "guide": [
@@ -411,7 +461,17 @@
      "print": "assets/series/ch6/leaflet-r3-print.pdf",
      "online_image": "assets/series/ch6/leaflet-r3-online.jpg",
      "print_image": "assets/series/ch6/leaflet-r3-print.jpg",
-     "image": "assets/series/ch6/leaflet-r3-online.jpg"
+     "image": "assets/series/ch6/leaflet-r3-online.jpg",
+     "ne": {
+      "version": "r1",
+      "pdf": "assets/series/ch6/leaflet-ne-r1.pdf",
+      "print": "assets/series/ch6/leaflet-ne-r1-print.pdf",
+      "online_image": "assets/series/ch6/leaflet-ne-r1-online.jpg",
+      "print_image": "assets/series/ch6/leaflet-ne-r1-print.jpg",
+      "image": "assets/series/ch6/leaflet-ne-r1-online.jpg",
+      "note": "machine translation",
+      "layout_acc": "2026-11-14"
+     }
     }
    ],
    "guide": [

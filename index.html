@@ -300,6 +300,15 @@ function productView(c,tab,opt){
     const printBtn=p.print?`<a class="btn" href="${p.print}" download title="Higher resolution, for printing">${DL} Print version (${p.print_image?'one PDF, 2 pages':'larger file'})</a>`:'';
     const cap=`<figcaption class="tl"><b>${esc(p.label)}</b><span>${esc(p.version)} · ${p.draft?'draft for review':'approved '+fmtDate(p.approved)}</span></figcaption>`;
     const note=(p.draft?`<span class="netag">Draft · ${esc(p.draft)}</span>`:'')+(p.note?`<div class="note" style="margin:0">${esc(p.note)}</div>`:'');
+    if(p.ne&&p.online_image){const q=p.ne,tn=`Chapter ${c.n} · ${p.label} · Nepali draft ${q.version}`;
+      const nePics=`<div class="tpair lf"><div><span class="vh">Online version · Nepali</span>${th(q.online_image,tn+' · Online version',q.pdf,`${name}, Chapter ${c.n}, Nepali draft, online version`,'ne','Nepali online version (PDF, draft)')}</div><div class="stack"><span class="vh">Print version · Nepali</span>${th(q.print_image,tn+' · Print version · both sides',q.print,`${name}, Chapter ${c.n}, Nepali draft, print version, both sides`,'ne','Nepali print version (PDF, 2 pages, draft)')}</div></div>`;
+      return `<figure class="tcard two">
+      <span class="netag">Nepali · draft translation, language review pending · ${esc(q.version)}${q.note?` · ${esc(q.note)}`:''}</span>
+      ${nePics}
+      <div class="ta mid"><button class="btn primary big" type="button" data-open="ne">Preview Nepali</button><button class="btn primary big" type="button" data-open="en">Preview English</button></div>
+      <span class="entag">English · approved</span>
+      ${pics}${cap}${note}
+      <div class="dlbox"><span class="dlh">Download</span><div class="ta dl"><a class="btn" href="${q.pdf}" download>${DL} Nepali online (PDF, draft)</a><a class="btn" href="${q.print}" download>${DL} Nepali print (PDF, draft)</a><a class="btn" href="${p.pdf}" download>${DL} English online (PDF)</a><a class="btn" href="${p.print}" download>${DL} English print (PDF)</a></div></div></figure>`}
     if(p.ne) return `<figure class="tcard two">
       <span class="netag">Nepali · draft translation, language review pending${p.ne.note?` · ${esc(p.ne.note)}`:''}</span>
       ${th(p.ne.image,t+' · Nepali draft '+p.ne.version,p.ne.pdf,`${name}, Chapter ${c.n}, ${p.label}, Nepali draft`,'ne')}
