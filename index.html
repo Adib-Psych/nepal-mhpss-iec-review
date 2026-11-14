@@ -713,7 +713,7 @@ function applyStatus(ch){
     const rows=[...d.querySelectorAll('tr[data-row]')], done=rows.filter(x=>x.dataset.st==='done').length, pc=rows.length?Math.round(100*done/rows.length):0;
     d.querySelector('.tbar i').style.width=pc+'%'; d.querySelector('.tnum').textContent=S?`Team: ${done} of ${rows.length} done`:'Team progress not available yet';
   });
-  const st=document.getElementById('stamp'); if(st) st.textContent=S&&S.updated?`Team progress updated ${new Date(S.updated).toLocaleString([], {dateStyle:'medium',timeStyle:'short'})}; it refreshes about every 15 minutes.`:'';
+  const st=document.getElementById('stamp'); if(st) st.textContent=S&&S.updated?`Team progress updated ${new Date(S.updated).toLocaleString([], {dateStyle:'medium',timeStyle:'short'})}; it refreshes about every 5 minutes.`:'';
 }
 const FB={pid:'mhpss-nepal-iec-review',key:'AIzaSyBN-sh64hOZeQClPi8Z8k-fXcVfBs2pxFQ'};
 const LS={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
