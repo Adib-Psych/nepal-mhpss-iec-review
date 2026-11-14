@@ -332,6 +332,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .tflow b{font-size:14px;line-height:1.25}.tflow b em{display:inline-block;font-style:normal;font-size:11px;font-weight:700;background:var(--ok);color:#fff;border-radius:999px;padding:1px 7px;margin-left:4px;vertical-align:1px}
 .tflow li>span:last-child{font-size:12.8px;color:var(--muted);line-height:1.4;text-align:left;hyphens:none}
 .tflow li.now{border-color:var(--ok);background:#eef6ef;box-shadow:0 0 0 2px #cfe3d4}.tflow li.now .tn{background:var(--ok);color:#fff}
+@media(max-width:1100px){.tflow li{display:grid;grid-template-columns:24px minmax(0,1fr);column-gap:8px;align-items:center;padding:8px 12px}.tflow li>span:last-child{grid-column:2}}
+@media(max-width:620px){.tflow li>span:last-child{font-size:14px}.tflow b{font-size:15px}}
 @media(max-width:1100px){.tflow ol{grid-template-columns:1fr}.tflow li+li::before{content:"↓";left:22px;top:-6px;transform:translate(-50%,-50%)}}
 .rkinds{margin:6px 0 14px}.rkinds h4{font-size:16px;margin:6px 0 4px}.rk-lead{margin:0 0 10px}
 .rk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
@@ -573,12 +575,12 @@ function translation(c){
     <p style="margin:0;max-width:900px">Every English and Nepali text of the approved poster, leaflet and Health Talk Guide of this chapter, row by row. ${esc(T?T.status:'')}</p></div>
     <div class="legend"><span style="--c:var(--coralt)">SAFETY row: review first</span><span style="--c:#fbf3e1">Check: clinical or legal wording</span><span style="--c:var(--ok)">Updated text</span></div></div>`;
   if(!secs.length) return `<div class="card">${head}<div class="placeholder" style="margin-top:16px"><h3>No approved product yet</h3><p>The translation appears here once a product of this chapter is approved.</p></div></div>`;
-  const flow=`<div class="tflow"><h4>How the Nepali was made · five stages</h4><p class="small tf-lead">AI-assisted and developed under human direction, in the same way as the illustrations: not a word-for-word machine translation.</p><ol>
-    <li><span class="tn">1</span><b>English source</b><span>The approved English text is the control text. Its meaning decides.</span></li>
-    <li><span class="tn">2</span><b>Nepali draft, AI-assisted</b><span>Not word for word. The AI worked from a brief set by the MHPSS team: who will read the text and why, everyday language, what each safety message must keep, and the series word list. Terms were checked against existing Nepali MHPSS materials.</span></li>
-    <li><span class="tn">3</span><b>Back-translation</b><span>The Nepali was machine-translated back into English and shown under the row, as a meaning aid: every SAFETY row and many other rows of the posters and leaflets. Not yet available for the Health Talk Guides.</span></li>
-    <li class="now"><span class="tn">4</span><b>Native-speaker review <em>You are here</em></b><span>Row by row on this page. SAFETY and CHECK rows by two reviewers; other rows by one.</span></li>
-    <li><span class="tn">5</span><b>Final checks</b><span>Agreed corrections go into the texts and layouts. Clinical review and approval follow before anything is printed.</span></li>
+  const flow=`<div class="tflow"><h4>How the Nepali was made · five stages</h4><p class="small tf-lead">AI-assisted under human direction, not word for word.</p><ol>
+    <li><span class="tn">1</span><b>English source</b><span>The approved English text. Its meaning decides.</span></li>
+    <li><span class="tn">2</span><b>AI-assisted draft</b><span>Written to a brief: readers, purpose, everyday words, safety meaning, series word list.</span></li>
+    <li><span class="tn">3</span><b>Back-translation</b><span>Nepali turned back into English to check meaning. Posters and leaflets only.</span></li>
+    <li class="now"><span class="tn">4</span><b>Native-speaker review <em>You are here</em></b><span>Row by row. SAFETY and CHECK: two reviewers. Others: one.</span></li>
+    <li><span class="tn">5</span><b>Final checks</b><span>Corrections applied, then clinical review and approval before print.</span></li>
    </ol></div>`;
   const how=`<div class="prhow"><h4>How to proofread · five steps</h4>
     <ol class="steps">
