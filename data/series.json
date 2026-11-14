@@ -268,7 +268,17 @@
      "image": "assets/series/ch4/leaflet-r4-online.jpg"
     }
    ],
-   "guide": [],
+   "guide": [
+    {
+     "label": "Health Talk Guide",
+     "version": "v1",
+     "approved": "2026-11-14",
+     "image": "assets/series/ch4/guide-v1.jpg",
+     "pdf": "assets/series/ch4/guide-v1.pdf",
+     "print": "assets/series/ch4/guide-v1-print.pdf",
+     "format": "A4 · facilitator guide · 5 pages"
+    }
+   ],
    "short": "Children",
    "stage": "Children",
    "leads": [
@@ -330,7 +340,17 @@
      "image": "assets/series/ch5/leaflet-r3-online.jpg"
     }
    ],
-   "guide": [],
+   "guide": [
+    {
+     "label": "Health Talk Guide",
+     "version": "v1",
+     "approved": "2026-11-14",
+     "image": "assets/series/ch5/guide-v1.jpg",
+     "pdf": "assets/series/ch5/guide-v1.pdf",
+     "print": "assets/series/ch5/guide-v1-print.pdf",
+     "format": "A4 · facilitator guide · 5 pages"
+    }
+   ],
    "short": "Next steps",
    "stage": "Next steps",
    "leads": [
@@ -394,7 +414,17 @@
      "image": "assets/series/ch6/leaflet-r3-online.jpg"
     }
    ],
-   "guide": [],
+   "guide": [
+    {
+     "label": "Health Talk Guide",
+     "version": "v1",
+     "approved": "2026-11-14",
+     "image": "assets/series/ch6/guide-v1.jpg",
+     "pdf": "assets/series/ch6/guide-v1.pdf",
+     "print": "assets/series/ch6/guide-v1-print.pdf",
+     "format": "A4 · guide for supervisors and team leaders · 5 pages"
+    }
+   ],
    "short": "Helpers",
    "stage": "Helpers",
    "leads": [
