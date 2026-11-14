@@ -93,6 +93,23 @@ details.trsec summary::-webkit-details-marker{display:none}
 details.trsec summary .ttl{font-weight:700;font-size:16px}
 details.trsec summary .ttl::before{content:"▸ ";color:var(--muted)}details.trsec[open] summary .ttl::before{content:"▾ "}
 details.trsec summary .cnt{font-size:13px;color:var(--muted)}
+.prhow h4{font-size:16px;margin:0 0 10px}
+ol.steps{list-style:none;margin:0 0 10px;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;counter-reset:none}
+ol.steps li{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 12px 12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+ol.steps li+li::before{content:"";position:absolute;left:-10px;top:30px;width:10px;height:2px;background:var(--line2)}
+ol.steps .sn{position:absolute;top:-10px;left:12px;width:24px;height:24px;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+ol.steps .si{width:40px;height:40px;border-radius:10px;background:#eaf2f6;display:flex;align-items:center;justify-content:center}
+ol.steps .si svg{width:24px;height:24px;fill:none;stroke:var(--blue);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+ol.steps b{font-size:14.5px;line-height:1.25;text-align:left}ol.steps li>span:not(.sn):not(.si):not(.mock){font-size:13px;color:var(--muted);line-height:1.4;text-align:justify;hyphens:none;text-align-last:left}
+ol.steps .mock{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto;padding-top:4px}
+ol.steps .mock i{font-style:normal;font-size:11.5px;border-radius:6px;padding:3px 7px;white-space:nowrap}
+ol.steps .mi{border:1px solid var(--line2);color:var(--muted);background:#fbfbf8}
+ol.steps .mk{background:#eef1f4;color:var(--ink)}ol.steps .mk.safety{background:var(--coralt);color:var(--coral);font-weight:700}ol.steps .mk.ne{font-size:13px}
+ol.steps .mb{border:1px solid var(--line2);background:#fff;color:var(--ink)}ol.steps .mb.ok{border-color:var(--ok);color:var(--ok)}ol.steps .mb.ch,ol.steps .mb.ag{border-color:var(--amber);color:var(--amber)}
+ol.steps .mbar{display:inline-block;width:70px;height:8px;padding:0!important;background:var(--line);border-radius:4px;overflow:hidden;align-self:center}ol.steps .mbar i{display:block;width:60%;height:100%;background:var(--ok);padding:0!important;border-radius:0}
+.prhow .tips{margin:0 0 10px}.prhow .filters{display:flex;flex-wrap:wrap;gap:4px 22px}
+@media(max-width:1100px){ol.steps{grid-template-columns:repeat(3,minmax(0,1fr))}ol.steps li+li::before{display:none}}
+@media(max-width:620px){ol.steps{grid-template-columns:1fr;gap:14px}ol.steps li{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:12px;row-gap:4px;padding:16px 12px 12px}ol.steps .si{grid-row:1/4}ol.steps li>*:not(.si):not(.sn){grid-column:2}}
 .prhow{background:#f7f8fb;border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:14px 0}
 .prhow h4{margin:0 0 4px}.prhow ol{margin:4px 0;padding-left:20px;font-size:14px;text-align:justify;hyphens:none}
 .onlysafe{display:block;margin-top:10px;font-size:14px}
@@ -401,11 +418,18 @@ function translation(c){
     <p style="margin:0;max-width:900px">Every English and Nepali text of the approved poster, leaflet and Health Talk Guide of this chapter, row by row. ${esc(T?T.status:'')}</p></div>
     <div class="legend"><span style="--c:var(--coralt)">SAFETY row: review first</span><span style="--c:#fbf3e1">Check: clinical or legal wording</span><span style="--c:var(--ok)">Updated text</span></div></div>`;
   if(!secs.length) return `<div class="card">${head}<div class="placeholder" style="margin-top:16px"><h3>No approved product yet</h3><p>The translation appears here once a product of this chapter is approved.</p></div></div>`;
-  const how=`<div class="prhow"><h4>How to proofread</h4><ol><li>Enter your name, organisation and email once.</li><li>Open a product below. Read the Nepali against the English, SAFETY rows first.</li><li>For each row choose <b>✓ Correct</b>, or <b>✎ Suggest change</b> and type the corrected Nepali (and a note if useful).</li></ol>
-    <p class="small" style="margin:6px 0 0">Your corrections go only to the review team; they are not shown on this page. The page remembers on this device which rows you have checked.</p>
+  const how=`<div class="prhow"><h4>How to proofread · five steps</h4>
+    <ol class="steps">
+     <li><span class="sn">1</span><span class="si"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span><b>Say who you are</b><span>Enter your name, organisation and email once. This page remembers you.</span><span class="mock"><i class="mi">Your name</i><i class="mi">Organisation</i></span></li>
+     <li><span class="sn">2</span><span class="si"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><b>Open one product</b><span>Click Poster, Leaflet or Health Talk Guide below. Start with the SAFETY rows.</span><span class="mock"><i class="mk safety">SAFETY</i><i class="mk">▸ Leaflet</i></span></li>
+     <li><span class="sn">3</span><span class="si"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="9" height="14" rx="1.5"/><rect x="13" y="5" width="9" height="14" rx="1.5"/><path d="M4.5 9h4M4.5 12h4M15.5 9h4M15.5 12h4"/></svg></span><b>Read row by row</b><span>English on the left, Nepali on the right. Does the Nepali say the same thing, clearly and naturally?</span><span class="mock"><i class="mk">English</i><i class="mk ne">नेपाली</i></span></li>
+     <li><span class="sn">4</span><span class="si"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></span><b>Choose one button</b><span>Good as it is: Correct. Needs a change: Suggest change, then type the better Nepali.</span><span class="mock"><i class="mb ok">✓ Correct</i><i class="mb ch">✎ Suggest change</i></span></li>
+     <li><span class="sn">5</span><span class="si"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M2.5 20c0-3 2.5-5 5.5-5s5.5 2 5.5 5M10.5 20c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/></svg></span><b>Work as a team</b><span>If a colleague proposed a correction, click Agree. Finished rows disappear; the bar shows team progress.</span><span class="mock"><i class="mb ag">✓ Agree</i><i class="mbar"><i></i></i></span></li>
+    </ol>
+    <p class="small tips">You can stop at any time; every click is saved. SAFETY and CHECK rows need two reviewers, other rows one. Your corrections go only to the review team and are not shown on this page.</p>
     <div id="whoslot">${whoHtml()}</div>
-    <label class="onlysafe"><input type="checkbox" id="onlysafe"> Show only SAFETY and CHECK rows</label><label class="onlysafe"><input type="checkbox" id="hidedone" checked> Hide rows the team has already completed</label>
-    <p class="small" style="margin:8px 0 0">A row is complete when one reviewer marks it correct, or two reviewers for SAFETY and CHECK rows. A proposed correction needs a second reviewer to agree. <span id="stamp"></span></p></div>`;
+    <div class="filters"><label class="onlysafe"><input type="checkbox" id="onlysafe"> Show only SAFETY and CHECK rows</label><label class="onlysafe"><input type="checkbox" id="hidedone" checked> Hide rows the team has already completed</label></div>
+    <p class="small" style="margin:6px 0 0"><span id="stamp"></span></p></div>`;
   return `<div class="card tr-card hidedone" data-ch="${c.key}">${head}${how}${secs.map((s,i)=>trTable(s,c.colour[0],false)).join('')}
     <p class="small">Every Nepali row is a machine draft until a native Nepali and MHPSS reviewer has checked it. General comments on a product: use the comment box on that product's page.</p></div>`;
 }
