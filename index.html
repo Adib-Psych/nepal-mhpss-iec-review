@@ -97,6 +97,14 @@ details.trsec summary .cnt{font-size:13px;color:var(--muted)}
 .prhow h4{margin:0 0 4px}.prhow ol{margin:4px 0;padding-left:20px;font-size:14px;text-align:justify;hyphens:none}
 .onlysafe{display:block;margin-top:10px;font-size:14px}
 .tr-card.onlysafe tr.t-general{display:none}
+.tr-card.hidedone tr[data-st=done]{display:none}
+details.trsec summary .team{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);flex:1 1 220px;justify-content:flex-end}
+.tbar{display:inline-block;width:120px;height:8px;border-radius:4px;background:var(--line);overflow:hidden}.tbar i{display:block;height:100%;background:var(--ok)}
+.tst{margin-bottom:6px}.tst .tb{display:inline-block;font-size:11.5px;font-weight:650;padding:2px 7px;border-radius:5px;background:#eef1f4;color:var(--muted)}
+.tst .tb.part{background:#e6f0fa;color:#185fa5}.tst .tb.sugg{background:#fbf3e1;color:var(--amber)}.tst .tb.decide{background:var(--coralt);color:var(--coral)}.tst .tb.done{background:var(--okt);color:var(--ok)}
+.tst .prop{display:block;margin-top:5px;font-size:14px;line-height:1.5;background:#fffaf0;border-left:3px solid var(--amber);padding:4px 7px;color:var(--ink)}
+.prb.ag{margin-top:6px;border-color:var(--amber);color:var(--amber)}
+
 .prb{display:block;width:100%;margin:0 0 6px;padding:6px 8px;border-radius:8px;border:1px solid var(--line2);background:#fff;font:inherit;font-size:13px;cursor:pointer;text-align:left}
 .prb.ok:hover{border-color:var(--ok);color:var(--ok)}.prb.ch:hover{border-color:var(--amber);color:var(--amber)}
 .prst{display:block;font-weight:650;font-size:13px}.prst.ok{color:var(--ok)}.prst.change{color:var(--amber)}
@@ -280,6 +288,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 </div>
 <footer>Shared review space for partners. Only approved products are posted here; working drafts stay in the team's working folders. Fictional illustrations, AI-assisted and developed under human direction. Not a WHO website and not an endorsed WHO product.</footer>
 <dialog id="dlg" aria-label="Preview"><div class="dlgbar"><b id="dlgt"></b><button id="dlgp" aria-label="Previous">‹ Previous</button><button id="dlgn" aria-label="Next">Next ›</button><span class="seg" role="group" aria-label="Preview size"><button id="dlgfit" type="button" aria-pressed="true">Fit to screen</button><button id="dlgfull" type="button" aria-pressed="false">Actual size</button></span><a id="dlgpdf" class="dl" download>English PDF</a><button id="dlgx">Close</button></div><div class="dlgbody"><img id="dlgimg" alt="" title="Select to enlarge or fit"></div></dialog>
+<script src="proof-status.js"></script>
 <script>
 const TABS=[['poster','Poster'],['leaflet','Leaflet'],['guide','Health Talk Guide']];
 const UTIL=[['translation','Translation & proofreading']];
@@ -347,16 +356,16 @@ function productView(c,tab,opt){
       <div class="btns"><a class="btn" href="#${c.key}/translation">See the translation</a><button class="btn" type="button" data-tofb>Give feedback</button></div></div></div>${fbBlock(c,tab,list)}</div>`;
 }
 function trTable(sec,colour,open){
-  const P=LS.get('iec-proof')||{};
+  const P=myChecks();
   const safe=sec.rows.filter(r=>r.type==='safety').length, chk=sec.rows.filter(r=>r.type==='check').length, done=sec.rows.filter(r=>P[r.id]).length;
   const rows=sec.rows.map(r=>{
     const kind=r.type==='safety'?'<span class="kind safety">SAFETY</span>':r.type==='check'?'<span class="kind check">CHECK</span>':'';
     const ne=r.ne?`<td class="ne ${r.changed?'changed':''}" lang="ne">${esc(r.ne)}${r.note?`<span class="sub">${esc(r.note)}</span>`:''}</td>`
                  :`<td class="ne safety"><b>For the human translator</b><span class="sub">Meaning to keep: ${esc(r.note)}</span></td>`;
-    return `<tr class="t-${r.type}" data-row="${esc(r.id)}"><td class="id">${esc(r.id)}<br>${esc(r.part)}${kind}</td><td class="en ${r.changed?'changed':''}">${esc(r.en)}</td>${ne}<td class="pr">${prCell(r.id,P[r.id])}</td></tr>`;
+    return `<tr class="t-${r.type}" data-row="${esc(r.id)}"><td class="id">${esc(r.id)}<br>${esc(r.part)}${kind}</td><td class="en ${r.changed?'changed':''}">${esc(r.en)}</td>${ne}<td class="pr"><div class="tst"></div><div class="mine">${prCell(r.id,P[r.id])}</div></td></tr>`;
   }).join('');
   return `<details class="trsec" data-sec="${esc(sec.id)}" data-prod="${esc(sec.product||'')}" data-ver="${esc(sec.version||'')}" ${open?'open':''}>
-   <summary style="--c:${colour}"><span class="ttl">${esc(sec.title.split(' · ').slice(-1)[0])}</span><span class="cnt">${sec.rows.length} rows · ${safe} SAFETY${chk?` · ${chk} CHECK`:''} · <b class="done">${done}</b> checked by you</span></summary>
+   <summary style="--c:${colour}"><span class="ttl">${esc(sec.title.split(' · ').slice(-1)[0])}</span><span class="cnt">${sec.rows.length} rows · ${safe} SAFETY${chk?` · ${chk} CHECK`:''} · <b class="done">${done}</b> checked by you</span><span class="team"><span class="tbar"><i style="width:0%"></i></span><span class="tnum">Team progress loading…</span></span></summary>
    <p class="small" style="margin:6px 0 0">${esc(sec.source)}</p>
    <table class="tr"><colgroup><col style="width:13%"><col style="width:31%"><col style="width:38%"><col style="width:18%"></colgroup>
    <thead><tr><th style="background:${colour}">ID</th><th style="background:${colour}">English (source)</th><th style="background:${colour}">नेपाली · Nepali (draft)</th><th style="background:${colour}">Your check</th></tr></thead><tbody>${rows}</tbody></table></details>`;
@@ -375,15 +384,17 @@ function translation(c){
   const how=`<div class="prhow"><h4>How to proofread</h4><ol><li>Enter your name, organisation and email once.</li><li>Open a product below. Read the Nepali against the English, SAFETY rows first.</li><li>For each row choose <b>✓ Correct</b>, or <b>✎ Suggest change</b> and type the corrected Nepali (and a note if useful).</li></ol>
     <p class="small" style="margin:6px 0 0">Your corrections go only to the review team; they are not shown on this page. The page remembers on this device which rows you have checked.</p>
     <div id="whoslot">${whoHtml()}</div>
-    <label class="onlysafe"><input type="checkbox" id="onlysafe"> Show only SAFETY and CHECK rows</label></div>`;
-  return `<div class="card tr-card" data-ch="${c.key}">${head}${how}${secs.map((s,i)=>trTable(s,c.colour[0],false)).join('')}
+    <label class="onlysafe"><input type="checkbox" id="onlysafe"> Show only SAFETY and CHECK rows</label><label class="onlysafe"><input type="checkbox" id="hidedone" checked> Hide rows the team has already completed</label>
+    <p class="small" style="margin:8px 0 0">A row is complete when one reviewer marks it correct, or two reviewers for SAFETY and CHECK rows. A proposed correction needs a second reviewer to agree. <span id="stamp"></span></p></div>`;
+  return `<div class="card tr-card hidedone" data-ch="${c.key}">${head}${how}${secs.map((s,i)=>trTable(s,c.colour[0],false)).join('')}
     <p class="small">Every Nepali row is a machine draft until a native Nepali and MHPSS reviewer has checked it. General comments on a product: use the comment box on that product's page.</p></div>`;
 }
 function prFind(id){const c=document.querySelector('.tr-card');for(const s of T.chapters[c.dataset.ch]){const r=s.rows.find(x=>x.id===id);if(r)return{s,r,ch:c.dataset.ch}}return null}
 async function sendProof(tr,verdict){
   const id=tr.dataset.row, f=prFind(id), cell=tr.querySelector('td.pr'), form=tr.nextElementSibling?.classList.contains('prf')?tr.nextElementSibling:null;
   const w=readWho(); if(!w){document.getElementById('whoslot').scrollIntoView({behavior:'smooth',block:'center'});(form?form.querySelector('.fbmsg'):cell).insertAdjacentHTML('beforeend','<span class="fbmsg err" style="display:block">Please enter your name, organisation and email at the top first.</span>');return}
-  const d={kind:'proof',chapter:f.ch,product:f.s.product,option:'all',version:f.s.version,row:id,verdict,name:w.name,org:w.org,email:w.email,clientTime:new Date().toISOString()};
+  const d={kind:'proof',chapter:f.ch,product:f.s.product,option:'all',version:f.s.version,row:id,verdict:verdict==='agree'?'change':verdict,name:w.name,org:w.org,email:w.email,clientTime:new Date().toISOString()};
+  if(verdict==='agree'){const st=ST[f.ch]&&ST[f.ch].rows[id]; if(!st||!st.prop) return; d.text=st.prop; d.note='Agrees with the proposed correction';}
   if(verdict==='change'){const t=form.querySelector('textarea').value.trim(), n=form.querySelector('input').value.trim(), m=form.querySelector('.fbmsg');
     if(!t||t===f.r.ne){m.textContent='Please type the corrected Nepali (it is the same as the draft).';m.className='fbmsg err';return}
     d.text=t; if(n) d.note=n;}
@@ -392,11 +403,11 @@ async function sendProof(tr,verdict){
   try{
     const r=await fetch(`https://firestore.googleapis.com/v1/projects/${FB.pid}/databases/(default)/documents/feedback?key=${FB.key}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields})});
     if(!r.ok) throw new Error(r.status);
-    const P=LS.get('iec-proof')||{}; P[id]={v:verdict,t:d.clientTime}; LS.set('iec-proof',P);
-    if(form) form.remove(); cell.innerHTML=prCell(id,P[id]); prCount(tr);
+    const P=myChecks(); P[id]={v:d.verdict,t:d.clientTime}; LS.set(myKey(),P);
+    if(form) form.remove(); cell.querySelector('.mine').innerHTML=prCell(id,P[id]); prCount(tr); if(window.PREVIEW_STATUS) loadStatus(f.ch);
   }catch(e){tr.querySelectorAll('button').forEach(b=>b.disabled=false);const m=form?form.querySelector('.fbmsg'):null;const t='Sorry, this could not be sent. Please check your connection and try again.';if(m){m.textContent=t;m.className='fbmsg err'}else cell.insertAdjacentHTML('beforeend',`<span class="fbmsg err" style="display:block">${t}</span>`)}
 }
-function prCount(tr){const det=tr.closest('details'),P=LS.get('iec-proof')||{};det.querySelector('.done').textContent=[...det.querySelectorAll('tr[data-row]')].filter(x=>P[x.dataset.row]).length}
+function prCount(tr){const det=tr.closest('details'),P=myChecks();det.querySelector('.done').textContent=[...det.querySelectorAll('tr[data-row]')].filter(x=>P[x.dataset.row]).length}
 function prEdit(tr){
   if(tr.nextElementSibling?.classList.contains('prf')) return;
   const f=prFind(tr.dataset.row);
@@ -410,10 +421,37 @@ document.addEventListener('click',e=>{
   const a=b.dataset.pr; let tr=b.closest('tr'); if(tr.classList.contains('prf')) tr=tr.previousElementSibling;
   if(a==='ok') sendProof(tr,'ok'); else if(a==='edit') prEdit(tr); else if(a==='send') sendProof(tr,'change');
   else if(a==='cancel') tr.nextElementSibling.remove();
-  else if(a==='redo'){tr.querySelector('td.pr').innerHTML=prCell(tr.dataset.row,null)}
+  else if(a==='redo'){tr.querySelector('td.pr .mine').innerHTML=prCell(tr.dataset.row,null)}
+  else if(a==='agree') sendProof(tr,'agree');
 });
-document.addEventListener('change',e=>{if(e.target.id==='onlysafe'){document.querySelector('.tr-card').classList.toggle('onlysafe',e.target.checked);if(e.target.checked)document.querySelectorAll('.tr-card details').forEach(d=>d.open=true)}});
+document.addEventListener('change',e=>{if(e.target.id==='hidedone'){document.querySelector('.tr-card').classList.toggle('hidedone',e.target.checked);return}if(e.target.id==='onlysafe'){document.querySelector('.tr-card').classList.toggle('onlysafe',e.target.checked);if(e.target.checked)document.querySelectorAll('.tr-card details').forEach(d=>d.open=true)}});
 
+function myKey(){return 'iec-proof|'+((WHO&&WHO.email)||'').trim().toLowerCase()}
+function myChecks(){return LS.get(myKey())||{}}
+function refreshMine(){const P=myChecks();document.querySelectorAll('.tr-card tr[data-row]').forEach(tr=>{const m=tr.querySelector('.mine');if(m)m.innerHTML=prCell(tr.dataset.row,P[tr.dataset.row])});document.querySelectorAll('.tr-card details.trsec').forEach(d=>{d.querySelector('.done').textContent=[...d.querySelectorAll('tr[data-row]')].filter(x=>P[x.dataset.row]).length});const c=document.querySelector('.tr-card');if(c)applyStatus(c.dataset.ch)}
+let ST={};
+async function fetchStatus(ch){
+  if(window.PREVIEW_STATUS) return window.PREVIEW_STATUS(ch);
+  try{const r=await fetch(`https://firestore.googleapis.com/v1/projects/${FB.pid}/databases/(default)/documents/status/${ch}?key=${FB.key}`);
+    if(!r.ok) return null; const d=await r.json(); return JSON.parse(d.fields.json.stringValue);}catch(e){return null}
+}
+async function loadStatus(ch){ST[ch]=await fetchStatus(ch); applyStatus(ch);}
+const STL={part:(o)=>`${o.n} of ${o.need} checks`,sugg:()=>'Correction proposed · needs a second reviewer',decide:()=>'Reviewers differ · for the clinical reviewer',done:(o)=>o.prop?'Done · corrected':'Done'};
+function applyStatus(ch){
+  const card=document.querySelector(`.tr-card[data-ch="${ch}"]`); if(!card) return;
+  const S=ST[ch], R=(S&&S.rows)||{}, MY=myChecks();
+  card.querySelectorAll('tr[data-row]').forEach(tr=>{
+    const o=R[tr.dataset.row], box=tr.querySelector('.tst'); tr.dataset.st=o?o.s:'open';
+    if(!o){box.innerHTML=S?'<span class="tb open">Not yet checked</span>':'';return}
+    box.innerHTML=`<span class="tb ${o.s}">${esc(STL[o.s](o))}</span>`+(o.prop?`<span class="prop" lang="ne">${esc(o.prop)}</span>`:'')
+      +(o.s==='sugg'&&!(MY[tr.dataset.row]&&MY[tr.dataset.row].v==='change')?`<button class="prb ag" type="button" data-pr="agree">✓ Agree with this correction</button>`:'');
+  });
+  card.querySelectorAll('details.trsec').forEach(d=>{
+    const rows=[...d.querySelectorAll('tr[data-row]')], done=rows.filter(x=>x.dataset.st==='done').length, pc=rows.length?Math.round(100*done/rows.length):0;
+    d.querySelector('.tbar i').style.width=pc+'%'; d.querySelector('.tnum').textContent=S?`Team: ${done} of ${rows.length} done`:'Team progress not available yet';
+  });
+  const st=document.getElementById('stamp'); if(st) st.textContent=S&&S.updated?`Team progress updated ${new Date(S.updated).toLocaleString([], {dateStyle:'medium',timeStyle:'short'})}; it refreshes about every 15 minutes.`:'';
+}
 const FB={pid:'mhpss-nepal-iec-review',key:'AIzaSyBN-sh64hOZeQClPi8Z8k-fXcVfBs2pxFQ'};
 const LS={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 let WHO=LS.get('iec-reviewer');
@@ -443,7 +481,7 @@ function readWho(){
   if(WHO) return WHO;
   const g=id=>(document.getElementById(id)?.value||'').trim(), w={name:g('w-name'),org:g('w-org'),email:g('w-email')};
   if(!w.name||!w.org||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(w.email)) return null;
-  WHO=w;LS.set('iec-reviewer',w);document.getElementById('whoslot').innerHTML=whoHtml();return w;
+  WHO=w;LS.set('iec-reviewer',w);document.getElementById('whoslot').innerHTML=whoHtml();refreshMine();return w;
 }
 async function sendFb(kind,btn){
   const sec=document.getElementById('fb'),msg=document.getElementById('m-'+kind),say=(t,c)=>{msg.textContent=t;msg.className='fbmsg '+c};
@@ -463,7 +501,7 @@ async function sendFb(kind,btn){
 }
 document.addEventListener('click',e=>{
   const s=e.target.closest('[data-send]'); if(s) return sendFb(s.dataset.send,s);
-  if(e.target.closest('[data-whoedit]')){WHO=null;LS.set('iec-reviewer',null);document.getElementById('whoslot').innerHTML=whoHtml();return}
+  if(e.target.closest('[data-whoedit]')){WHO=null;LS.set('iec-reviewer',null);document.getElementById('whoslot').innerHTML=whoHtml();refreshMine();return}
   if(e.target.closest('[data-tofb]')) document.getElementById('fb')?.scrollIntoView({behavior:'smooth',block:'start'});
 });
 
@@ -535,6 +573,7 @@ function render(){
   side(route);
   const c=S.chapters.find(x=>x.key===a);
   document.getElementById('main').innerHTML=c?chapter(c,b||'poster',o):a==='characters'?characters():overview();
+  if(c&&b==='translation') loadStatus(c.key);
   window.scrollTo(0,0);
 }
 Promise.all([fetch('data/series.json').then(r=>r.json()),fetch('data/translation.json').then(r=>r.json()).catch(()=>null)])

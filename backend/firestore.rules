@@ -30,6 +30,12 @@ service cloud.firestore {
               && (!('note' in request.resource.data) || (request.resource.data.note is string && request.resource.data.note.size() <= 1000))));
       allow read, update, delete: if false;
     }
+    // Team proofreading progress per chapter (counts and proposed Nepali only, no names).
+    // Written by the sync on Luna with the owner's Firebase login; the page may only read it.
+    match /status/{chapter} {
+      allow read: if chapter in ['ch1','ch2','ch3','ch4','ch5','ch6'];
+      allow write: if false;
+    }
     match /{document=**} {
       allow read, write: if false;
     }
