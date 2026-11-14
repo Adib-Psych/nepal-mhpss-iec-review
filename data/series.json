@@ -255,7 +255,19 @@
      "print": "assets/series/ch4/poster-C-r16-print.pdf"
     }
    ],
-   "leaflet": [],
+   "leaflet": [
+    {
+     "label": "Leaflet A",
+     "version": "Tri-fold r4",
+     "approved": "2026-11-14",
+     "pdf": "assets/series/ch4/leaflet-r4.pdf",
+     "format": "A4 tri-fold · take-home leaflet · online and print versions",
+     "print": "assets/series/ch4/leaflet-r4-print.pdf",
+     "online_image": "assets/series/ch4/leaflet-r4-online.jpg",
+     "print_image": "assets/series/ch4/leaflet-r4-print.jpg",
+     "image": "assets/series/ch4/leaflet-r4-online.jpg"
+    }
+   ],
    "guide": [],
    "short": "Children",
    "stage": "Children",
