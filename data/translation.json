@@ -4976,7 +4976,7 @@
      },
      {
       "id": "C3P-07",
-      "part": "Poster options A, B",
+      "part": "Poster options A, C",
       "en": "Crying · Missing them · Feeling empty · Feeling angry · Not sleeping",
       "ne": "रुनु · उहाँको याद आइरहनु · मन खाली-खाली लाग्नु · रिस उठ्नु · निद्रा नलाग्नु",
       "type": "general",
@@ -5036,7 +5036,7 @@
      },
      {
       "id": "C3P-13",
-      "part": "Poster option C",
+      "part": "Poster option B",
       "en": "Crying",
       "ne": "रुनु",
       "type": "general",
@@ -5046,7 +5046,7 @@
      },
      {
       "id": "C3P-14",
-      "part": "Poster option C",
+      "part": "Poster option B",
       "en": "Missing them",
       "ne": "उहाँको याद आइरहनु",
       "type": "general",
@@ -5056,7 +5056,7 @@
      },
      {
       "id": "C3P-15",
-      "part": "Poster option C",
+      "part": "Poster option B",
       "en": "Feeling empty",
       "ne": "मन खाली-खाली लाग्नु",
       "type": "general",
@@ -5066,7 +5066,7 @@
      },
      {
       "id": "C3P-16",
-      "part": "Poster option C",
+      "part": "Poster option B",
       "en": "Feeling angry",
       "ne": "रिस उठ्नु",
       "type": "general",
@@ -5076,7 +5076,7 @@
      },
      {
       "id": "C3P-17",
-      "part": "Poster option C",
+      "part": "Poster option B",
       "en": "Not sleeping",
       "ne": "निद्रा नलाग्नु",
       "type": "general",
