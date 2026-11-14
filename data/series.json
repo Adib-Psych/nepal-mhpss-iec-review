@@ -45,14 +45,14 @@
    "leaflet": [
     {
      "label": "Leaflet A",
-     "version": "Tri-fold r10",
+     "version": "Tri-fold r11",
      "approved": "2026-11-14",
-     "pdf": "assets/series/ch1/leaflet-r10.pdf",
+     "pdf": "assets/series/ch1/leaflet-r11.pdf",
      "format": "A4 tri-fold · take-home leaflet · online and print versions",
-     "print": "assets/series/ch1/leaflet-r10-print.pdf",
-     "online_image": "assets/series/ch1/leaflet-r10-online.jpg",
-     "print_image": "assets/series/ch1/leaflet-r10-print.jpg",
-     "image": "assets/series/ch1/leaflet-r10-online.jpg"
+     "print": "assets/series/ch1/leaflet-r11-print.pdf",
+     "online_image": "assets/series/ch1/leaflet-r11-online.jpg",
+     "print_image": "assets/series/ch1/leaflet-r11-print.jpg",
+     "image": "assets/series/ch1/leaflet-r11-online.jpg"
     }
    ],
    "guide": [
@@ -113,7 +113,19 @@
      "print": "assets/series/ch2/poster-C-r6-print.pdf"
     }
    ],
-   "leaflet": [],
+   "leaflet": [
+    {
+     "label": "Leaflet A",
+     "version": "Tri-fold r5",
+     "approved": "2026-11-14",
+     "pdf": "assets/series/ch2/leaflet-r5.pdf",
+     "format": "A4 tri-fold · take-home leaflet · online and print versions",
+     "print": "assets/series/ch2/leaflet-r5-print.pdf",
+     "online_image": "assets/series/ch2/leaflet-r5-online.jpg",
+     "print_image": "assets/series/ch2/leaflet-r5-print.jpg",
+     "image": "assets/series/ch2/leaflet-r5-online.jpg"
+    }
+   ],
    "guide": [
     {
      "label": "Health Talk Guide",
@@ -172,7 +184,19 @@
      "print": "assets/series/ch3/poster-C-r11-print.pdf"
     }
    ],
-   "leaflet": [],
+   "leaflet": [
+    {
+     "label": "Leaflet A",
+     "version": "Tri-fold r6",
+     "approved": "2026-11-14",
+     "pdf": "assets/series/ch3/leaflet-r6.pdf",
+     "format": "A4 tri-fold · take-home leaflet · online and print versions",
+     "print": "assets/series/ch3/leaflet-r6-print.pdf",
+     "online_image": "assets/series/ch3/leaflet-r6-online.jpg",
+     "print_image": "assets/series/ch3/leaflet-r6-print.jpg",
+     "image": "assets/series/ch3/leaflet-r6-online.jpg"
+    }
+   ],
    "guide": [
     {
      "label": "Health Talk Guide",
