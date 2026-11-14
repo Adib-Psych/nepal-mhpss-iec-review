@@ -324,7 +324,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 @media(max-width:820px){.story{grid-template-columns:1fr 1fr;gap:10px}.ov-h{font-size:25px}.sc{padding:26px 10px 12px}.sc-title{font-size:14.5px}.face{width:38px;height:38px}.world{grid-template-columns:1fr}.world img{max-width:220px}.swatches{grid-template-columns:1fr 1fr}}
 @media(max-width:430px){.story{grid-template-columns:1fr}.sc-title{min-height:0}}
 
-.tflow{margin:14px 0 4px}.tflow h4{font-size:16px;margin:0 0 8px}
+.tflow{margin:14px 0 4px}.tflow h4{font-size:16px;margin:0 0 4px}.tf-lead{margin:0 0 8px}
 .tflow ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
 .tflow li{position:relative;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px 10px;display:flex;flex-direction:column;gap:3px}
 .tflow li+li::before{content:"→";position:absolute;left:-9px;top:50%;transform:translate(-50%,-50%);color:var(--muted);font-size:14px}
@@ -424,7 +424,7 @@ html.entered #gate{display:none}
   <div class="gcol">
    <div class="gbox inv">
     <h2>Help us check the Nepali translation</h2>
-    <p>The Nepali texts are draft machine translations. Native Nepali speakers are welcome to check them row by row against the English; this is voluntary and unpaid. We plan to acknowledge contributors, by name or by organisation as each chooses, in the printed package of these materials and on the project website.</p>
+    <p>The Nepali texts are AI-assisted drafts, not yet checked by native speakers. Native Nepali speakers are welcome to check them row by row against the English; this is voluntary and unpaid. We plan to acknowledge contributors, by name or by organisation as each chooses, in the printed package of these materials and on the project website.</p>
     <p class="wide">After you agree, you go straight to the proofreading page of Chapter 1, where five short steps show how it works. You can move to any chapter from there.</p>
    </div>
    <div class="gact"><button type="button" class="yes2" data-gate="proof">I agree and will help with proofreading</button><span class="gnote"><span class="wide">Includes agreeing to the points on the right.</span><span class="narrow">Includes agreeing to the points below.</span></span></div>
@@ -435,7 +435,7 @@ html.entered #gate{display:none}
     <ol>
      <li>Draft materials for partner review: not final and not approved for use in the field.</li>
      <li>You are welcome to share this link with others who can give feedback; everyone is asked to agree to these points before entering. Please do not print or distribute the materials themselves.</li>
-     <li>The Nepali versions are machine translations awaiting review by native speakers.</li>
+     <li>The Nepali versions are AI-assisted drafts developed under human direction, awaiting review by native speakers.</li>
      <li>The illustrations are fictional, AI-assisted and developed under human direction.</li>
      <li>Your name, organisation, email, feedback and acknowledgement choice are stored to coordinate the review and credit contributors.</li>
     </ol>
@@ -573,9 +573,9 @@ function translation(c){
     <p style="margin:0;max-width:900px">Every English and Nepali text of the approved poster, leaflet and Health Talk Guide of this chapter, row by row. ${esc(T?T.status:'')}</p></div>
     <div class="legend"><span style="--c:var(--coralt)">SAFETY row: review first</span><span style="--c:#fbf3e1">Check: clinical or legal wording</span><span style="--c:var(--ok)">Updated text</span></div></div>`;
   if(!secs.length) return `<div class="card">${head}<div class="placeholder" style="margin-top:16px"><h3>No approved product yet</h3><p>The translation appears here once a product of this chapter is approved.</p></div></div>`;
-  const flow=`<div class="tflow"><h4>How the Nepali was made · five stages</h4><ol>
+  const flow=`<div class="tflow"><h4>How the Nepali was made · five stages</h4><p class="small tf-lead">AI-assisted and developed under human direction, in the same way as the illustrations: not a word-for-word machine translation.</p><ol>
     <li><span class="tn">1</span><b>English source</b><span>The approved English text is the control text. Its meaning decides.</span></li>
-    <li><span class="tn">2</span><b>Nepali draft</b><span>AI-assisted machine translation, using the series word list and terms from existing Nepali MHPSS materials.</span></li>
+    <li><span class="tn">2</span><b>Nepali draft, AI-assisted</b><span>Not word for word. The AI worked from a brief set by the MHPSS team: who will read the text and why, everyday language, what each safety message must keep, and the series word list. Terms were checked against existing Nepali MHPSS materials.</span></li>
     <li><span class="tn">3</span><b>Back-translation</b><span>The Nepali was machine-translated back into English and shown under the row, as a meaning aid: every SAFETY row and many other rows of the posters and leaflets. Not yet available for the Health Talk Guides.</span></li>
     <li class="now"><span class="tn">4</span><b>Native-speaker review <em>You are here</em></b><span>Row by row on this page. SAFETY and CHECK rows by two reviewers; other rows by one.</span></li>
     <li><span class="tn">5</span><b>Final checks</b><span>Agreed corrections go into the texts and layouts. Clinical review and approval follow before anything is printed.</span></li>
@@ -594,7 +594,7 @@ function translation(c){
     <div class="filters"><label class="onlysafe"><input type="checkbox" id="onlysafe"> Start with SAFETY and CHECK rows (show these only)</label><label class="onlysafe"><input type="checkbox" id="hidedone" checked> Hide rows the team has already completed</label></div>
     <p class="small" style="margin:6px 0 0"><span id="stamp"></span></p></div>`;
   return `<div class="card tr-card hidedone" data-ch="${c.key}">${head}${flow}${how}${secs.map((s,i)=>trTable(s,c.colour[0],false)).join('')}
-    <p class="small">Every Nepali row is a machine draft until a native Nepali and MHPSS reviewer has checked it. General comments on a product: use the comment box on that product's page.</p></div>`;
+    <p class="small">Every Nepali row is an AI-assisted draft until a native Nepali reviewer has checked it. General comments on a product: use the comment box on that product's page.</p></div>`;
 }
 function prFind(id){const c=document.querySelector('.tr-card');for(const s of T.chapters[c.dataset.ch]){const r=s.rows.find(x=>x.id===id);if(r)return{s,r,ch:c.dataset.ch}}return null}
 async function sendProof(tr,verdict){
