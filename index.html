@@ -324,7 +324,6 @@ html:not(.entered),html:not(.entered) body{height:100%;overflow:hidden}
 html.entered #gate{display:none}
 #gate{--gs:1;font-size:calc(16px * var(--gs));height:100vh;height:100dvh;display:flex;flex-direction:column;max-width:1320px;margin:auto;padding:1.1em 1.5em .9em;gap:.8em}
 #gate.scroll{overflow:auto}
-#gate.scroll .gact{position:sticky;bottom:0;background:var(--bg);padding:.5em 0;box-shadow:0 -6px 12px rgba(0,0,0,.05)}
 #gate .ghead .eyebrow{font-size:.72em;letter-spacing:.12em;font-weight:700;color:#6f455f}
 #gate h1{margin:.1em 0 .2em;font-size:1.9em;line-height:1.15;color:var(--blue)}
 #gate .lead{font-size:1.04em;margin:0;text-align:justify;hyphens:none;line-height:1.45}
@@ -337,6 +336,7 @@ html.entered #gate{display:none}
 .gprods b{font-size:1.08em;color:var(--blue)}
 .gprods span{font-size:.86em;color:var(--muted)}
 .gcols{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:.9em;flex:0 0 auto}
+.gcol{display:flex;flex-direction:column;gap:.55em;min-width:0}.gcol .gbox{flex:1 1 auto}
 .gbox{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.8em 1em;font-size:.9em;line-height:1.45}
 .gbox p,.gbox li{text-align:justify;hyphens:none;overflow-wrap:normal;margin:0}
 .gbox p+p{margin-top:.45em}
@@ -344,7 +344,8 @@ html.entered #gate{display:none}
 .gbox.inv h2{color:var(--ok)}
 .gbox ol{margin:0;padding-left:1.3em}.gbox li{margin:0 0 .2em}
 .gact{flex:0 0 auto;display:flex;gap:.6em;align-items:center;flex-wrap:wrap;padding-top:.1em}
-.gact .gnote{font-size:.85em;color:var(--muted);margin-right:auto}
+.gact .gnote{font-size:.85em;color:var(--muted)}
+#gate .narrow{display:none}
 .gact button{font:inherit;font-size:.95em;font-weight:700;border-radius:10px;padding:.6em 1em;cursor:pointer;border:1px solid var(--line2);background:#fff;color:var(--ink)}
 .gact button.yes{background:var(--blue);border-color:var(--blue);color:#fff}
 .gact button.yes2{background:var(--ok);border-color:var(--ok);color:#fff}
@@ -357,16 +358,19 @@ html.entered #gate{display:none}
  #gate .lead{font-size:.92em;line-height:1.4}
  .gprods{gap:.45em;flex:0 0 auto}
  .gprods figure{padding:.3em;border-radius:9px}
- .gprods img{flex:none;height:auto;aspect-ratio:22/15}
+ .gprods img{flex:none;height:auto;aspect-ratio:2/1}
  .gprods figcaption{padding:.3em .1em 0;line-height:1.2}
  .gprods b{font-size:.92em}.gprods span{display:none}
  .gcols{grid-template-columns:1fr;gap:.5em}
  .gbox{font-size:.84em;padding:.55em .75em;line-height:1.36}
  .gbox h2{margin-bottom:.3em}
- .gact{gap:.4em .5em}.gact .gnote{display:none}
- .gact button{padding:.6em .5em;font-size:.88em}
- .gact button.yes,.gact button.yes2{flex:1 1 40%}
- .gact button.no{order:3;flex:1 1 100%;border:0;background:none;text-decoration:underline;padding:.1em;color:var(--muted)}
+ .gcol{gap:.35em}
+ .gact{gap:.3em .5em}
+ .gact button{padding:.55em .5em;font-size:.88em}
+ .gact button.yes,.gact button.yes2{flex:1 1 55%}
+ .gact .gnote{font-size:.78em}
+ #gate .narrow{display:inline}#gate .wide{display:none}
+ .gact button.no{flex:0 1 auto;border:0;background:none;text-decoration:underline;padding:.1em .3em;color:var(--muted)}
 }
 </style>
 </head>
@@ -383,26 +387,27 @@ html.entered #gate{display:none}
   <figure><img src="assets/overview/entry-guides.jpg" alt="First pages of the six Health Talk Guides, fanned" width="880" height="600"><figcaption><b>6 Health Talk Guides</b> <span>· for short group sessions</span></figcaption></figure>
  </div>
  <div class="gcols">
-  <div class="gbox inv">
-   <h2>Help us check the Nepali</h2>
-   <p>The Nepali texts are draft machine translations. Native Nepali speakers are welcome to check them row by row against the English; this is voluntary and unpaid. We plan to acknowledge contributors, by name or by organisation as each chooses, in the printed package of these materials and on the project website.</p>
+  <div class="gcol">
+   <div class="gbox inv">
+    <h2>Help us check the Nepali</h2>
+    <p>The Nepali texts are draft machine translations. Native Nepali speakers are welcome to check them row by row against the English; this is voluntary and unpaid. We plan to acknowledge contributors, by name or by organisation as each chooses, in the printed package of these materials and on the project website.</p>
+   </div>
+   <div class="gact"><button type="button" class="yes2" data-gate="proof">I agree and will help with proofreading</button><span class="gnote"><span class="wide">Includes agreeing to the points on the right.</span><span class="narrow">Includes agreeing to the points below.</span></span></div>
   </div>
-  <div class="gbox">
-   <h2>Please read before you enter</h2>
-   <ol>
-    <li>Draft materials for partner review: not final and not approved for use in the field.</li>
-    <li>Do not print, distribute or share them, or this link, outside the review group without the coordination team's agreement.</li>
-    <li>The Nepali versions are machine translations awaiting review by native speakers.</li>
-    <li>The illustrations are fictional, AI-assisted and developed under human direction.</li>
-    <li>Not a WHO website; the materials are not endorsed WHO products.</li>
-    <li>Your name, organisation, email, feedback and acknowledgement choice are stored to coordinate the review and credit contributors.</li>
-   </ol>
+  <div class="gcol">
+   <div class="gbox">
+    <h2>Please read before you enter</h2>
+    <ol>
+     <li>Draft materials for partner review: not final and not approved for use in the field.</li>
+     <li>You are welcome to share this link with others who can give feedback; everyone is asked to agree to these points before entering. Please do not print or distribute the materials themselves.</li>
+     <li>The Nepali versions are machine translations awaiting review by native speakers.</li>
+     <li>The illustrations are fictional, AI-assisted and developed under human direction.</li>
+     <li>Your name, organisation, email, feedback and acknowledgement choice are stored to coordinate the review and credit contributors.</li>
+    </ol>
+   </div>
+   <div class="gact"><button type="button" class="yes" data-gate="yes">I agree, view the materials</button><button type="button" class="no" data-gate="no">I do not agree</button></div>
   </div>
  </div>
- <div class="gact"><span class="gnote">By entering you agree to the points above.</span>
-  <button type="button" class="no" data-gate="no">I do not agree</button>
-  <button type="button" class="yes" data-gate="yes">I understand and agree</button>
-  <button type="button" class="yes2" data-gate="proof">Agree and go to proofreading</button></div>
  <p class="bye" role="status">Thank you. You can close this page.<br><button type="button" data-gate="back" style="margin-top:14px;font:inherit;border:1px solid var(--line2);background:#fff;border-radius:10px;padding:8px 14px;cursor:pointer">Read the points again</button></p>
 </section>
 <div class="top"><div class="top-in">
@@ -414,7 +419,7 @@ html.entered #gate{display:none}
   <nav class="side" id="side" aria-label="Series"></nav>
   <main id="main"><div class="placeholder">Loading…</div></main>
 </div>
-<footer>Shared review space for partners. Only approved products are posted here; working drafts stay in the team's working folders. Fictional illustrations, AI-assisted and developed under human direction. Not a WHO website and not an endorsed WHO product.</footer>
+<footer>Shared review space for partners. Only approved products are posted here; working drafts stay in the team's working folders. Fictional illustrations, AI-assisted and developed under human direction.</footer>
 <dialog id="dlg" aria-label="Preview"><div class="dlgbar"><b id="dlgt"></b><button id="dlgp" aria-label="Previous">‹ Previous</button><button id="dlgn" aria-label="Next">Next ›</button><span class="seg" role="group" aria-label="Preview size"><button id="dlgfit" type="button" aria-pressed="true">Fit to screen</button><button id="dlgfull" type="button" aria-pressed="false">Actual size</button></span><a id="dlgpdf" class="dl" download>English PDF</a><button id="dlgx">Close</button></div><div class="dlgbody"><span class="wmwrap"><img id="dlgimg" alt="" title="Select to enlarge or fit" draggable="false"><svg id="wm" aria-hidden="true"></svg></span></div></dialog>
 <script src="proof-status.js"></script>
 <script>
