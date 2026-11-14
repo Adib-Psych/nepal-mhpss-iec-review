@@ -88,7 +88,15 @@
      "image": "assets/series/ch1/guide-v14.jpg",
      "pdf": "assets/series/ch1/guide-v14.pdf",
      "print": "assets/series/ch1/guide-v14-print.pdf",
-     "format": "A4 · facilitator guide · 5 pages"
+     "format": "A4 · facilitator guide · 5 pages",
+     "ne": {
+      "version": "v14",
+      "pdf": "assets/series/ch1/guide-ne-v14.pdf",
+      "print": "assets/series/ch1/guide-ne-v14-print.pdf",
+      "image": "assets/series/ch1/guide-ne-v14.jpg",
+      "note": "machine translation",
+      "layout_acc": "2026-11-14"
+     }
     }
    ],
    "short": "Not alone",
@@ -184,7 +192,15 @@
      "image": "assets/series/ch2/guide-v7.jpg",
      "pdf": "assets/series/ch2/guide-v7.pdf",
      "print": "assets/series/ch2/guide-v7-print.pdf",
-     "format": "A4 · facilitator guide · 5 pages"
+     "format": "A4 · facilitator guide · 5 pages",
+     "ne": {
+      "version": "v7",
+      "pdf": "assets/series/ch2/guide-ne-v7.pdf",
+      "print": "assets/series/ch2/guide-ne-v7-print.pdf",
+      "image": "assets/series/ch2/guide-ne-v7.jpg",
+      "note": "machine translation",
+      "layout_acc": "2026-11-14"
+     }
     }
    ],
    "short": "Nights",
@@ -280,7 +296,15 @@
      "image": "assets/series/ch3/guide-v7.jpg",
      "pdf": "assets/series/ch3/guide-v7.pdf",
      "print": "assets/series/ch3/guide-v7-print.pdf",
-     "format": "A4 · facilitator guide · 5 pages"
+     "format": "A4 · facilitator guide · 5 pages",
+     "ne": {
+      "version": "v7",
+      "pdf": "assets/series/ch3/guide-ne-v7.pdf",
+      "print": "assets/series/ch3/guide-ne-v7-print.pdf",
+      "image": "assets/series/ch3/guide-ne-v7.jpg",
+      "note": "machine translation",
+      "layout_acc": "2026-11-14"
+     }
     }
    ],
    "short": "Grief",
@@ -377,7 +401,15 @@
      "image": "assets/series/ch4/guide-v1.jpg",
      "pdf": "assets/series/ch4/guide-v1.pdf",
      "print": "assets/series/ch4/guide-v1-print.pdf",
-     "format": "A4 · facilitator guide · 5 pages"
+     "format": "A4 · facilitator guide · 5 pages",
+     "ne": {
+      "version": "v1",
+      "pdf": "assets/series/ch4/guide-ne-v1.pdf",
+      "print": "assets/series/ch4/guide-ne-v1-print.pdf",
+      "image": "assets/series/ch4/guide-ne-v1.jpg",
+      "note": "machine translation",
+      "layout_acc": "2026-11-14"
+     }
     }
    ],
    "short": "Children",
@@ -476,7 +508,15 @@
      "image": "assets/series/ch5/guide-v1.jpg",
      "pdf": "assets/series/ch5/guide-v1.pdf",
      "print": "assets/series/ch5/guide-v1-print.pdf",
-     "format": "A4 · facilitator guide · 5 pages"
+     "format": "A4 · facilitator guide · 5 pages",
+     "ne": {
+      "version": "v1",
+      "pdf": "assets/series/ch5/guide-ne-v1.pdf",
+      "print": "assets/series/ch5/guide-ne-v1-print.pdf",
+      "image": "assets/series/ch5/guide-ne-v1.jpg",
+      "note": "machine translation",
+      "layout_acc": "2026-11-14"
+     }
     }
    ],
    "short": "Next steps",
@@ -575,7 +615,15 @@
      "image": "assets/series/ch6/guide-v1.jpg",
      "pdf": "assets/series/ch6/guide-v1.pdf",
      "print": "assets/series/ch6/guide-v1-print.pdf",
-     "format": "A4 · guide for supervisors and team leaders · 5 pages"
+     "format": "A4 · guide for supervisors and team leaders · 5 pages",
+     "ne": {
+      "version": "v1",
+      "pdf": "assets/series/ch6/guide-ne-v1.pdf",
+      "print": "assets/series/ch6/guide-ne-v1-print.pdf",
+      "image": "assets/series/ch6/guide-ne-v1.jpg",
+      "note": "machine translation",
+      "layout_acc": "2026-11-14"
+     }
     }
    ],
    "short": "Helpers",
