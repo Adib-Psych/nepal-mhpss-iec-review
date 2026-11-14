@@ -305,7 +305,19 @@
      "print": "assets/series/ch5/poster-C-r10-print.pdf"
     }
    ],
-   "leaflet": [],
+   "leaflet": [
+    {
+     "label": "Leaflet A",
+     "version": "Tri-fold r3",
+     "approved": "2026-11-14",
+     "pdf": "assets/series/ch5/leaflet-r3.pdf",
+     "format": "A4 tri-fold · take-home leaflet · online and print versions",
+     "print": "assets/series/ch5/leaflet-r3-print.pdf",
+     "online_image": "assets/series/ch5/leaflet-r3-online.jpg",
+     "print_image": "assets/series/ch5/leaflet-r3-print.jpg",
+     "image": "assets/series/ch5/leaflet-r3-online.jpg"
+    }
+   ],
    "guide": [],
    "short": "Next steps",
    "stage": "Next steps",
@@ -357,7 +369,19 @@
      "print": "assets/series/ch6/poster-C-r7-print.pdf"
     }
    ],
-   "leaflet": [],
+   "leaflet": [
+    {
+     "label": "Leaflet A",
+     "version": "Tri-fold r3",
+     "approved": "2026-11-14",
+     "pdf": "assets/series/ch6/leaflet-r3.pdf",
+     "format": "A4 tri-fold · take-home leaflet · online and print versions",
+     "print": "assets/series/ch6/leaflet-r3-print.pdf",
+     "online_image": "assets/series/ch6/leaflet-r3-online.jpg",
+     "print_image": "assets/series/ch6/leaflet-r3-print.jpg",
+     "image": "assets/series/ch6/leaflet-r3-online.jpg"
+    }
+   ],
    "guide": [],
    "short": "Helpers",
    "stage": "Helpers",
