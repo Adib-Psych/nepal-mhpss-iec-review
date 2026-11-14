@@ -1,0 +1,655 @@
+{
+ "updated": "2026-11-14",
+ "sheet": "assets/cast/cast-sheet-EN.jpg",
+ "community": [
+  {
+   "id": "A",
+   "name": "Tara",
+   "who": "Girl, about 7",
+   "look": "Chin-length bob with fringe, small red hair clip, coral T-shirt",
+   "personality": "Curious, likes drawing and songs, sometimes shy",
+   "meaning": "Star",
+   "value": "Creative expression and small moments of joy",
+   "arc": "Moves from quiet observation to choosing a color or joining a familiar song; no pressure to perform.",
+   "portrait": "assets/character-A.jpg",
+   "expressions": [
+    {
+     "label": "Neutral / attentive",
+     "img": "assets/cast/A-neutral-attentive.jpg"
+    },
+    {
+     "label": "Sad / downcast",
+     "img": "assets/cast/A-sad-downcast.jpg"
+    },
+    {
+     "label": "Worried",
+     "img": "assets/cast/A-worried.jpg"
+    },
+    {
+     "label": "Frustrated",
+     "img": "assets/cast/A-frustrated.jpg"
+    },
+    {
+     "label": "Tired but awake",
+     "img": "assets/cast/A-tired-awake.jpg"
+    },
+    {
+     "label": "Pleased / connected",
+     "img": "assets/cast/A-pleased-connected.jpg"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "name": "Milan",
+   "who": "Boy, about 9",
+   "look": "Tousled black hair, mustard-yellow shirt",
+   "personality": "Inventive, playful; may feel scared at night and miss home; never a child rescuer",
+   "meaning": "Coming together, meeting, union",
+   "value": "Connection through creativity",
+   "arc": "Drawing/building with a friend helps him reconnect while an adult supports safety and routine; he is not a child rescuer.",
+   "portrait": "assets/character-B.jpg",
+   "expressions": [
+    {
+     "label": "Neutral / attentive",
+     "img": "assets/cast/B-neutral.jpg"
+    },
+    {
+     "label": "Sad / downcast",
+     "img": "assets/cast/B-sad.jpg"
+    },
+    {
+     "label": "Worried",
+     "img": "assets/cast/B-worried.jpg"
+    },
+    {
+     "label": "Frustrated",
+     "img": "assets/cast/B-frustrated.jpg"
+    },
+    {
+     "label": "Tired but awake",
+     "img": "assets/cast/B-tired-awake.jpg"
+    },
+    {
+     "label": "Relieved / reassured",
+     "img": "assets/cast/B-relieved.jpg"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "name": "Pasang",
+   "who": "Adolescent girl, about 14",
+   "look": "Long single braid, blue collared shirt",
+   "personality": "Resourceful; includes younger children; can ask for help herself",
+   "meaning": "Friday-associated name in Sherpa naming traditions; not a literal word for courage",
+   "value": "Courage expressed through safe, practical solidarity",
+   "arc": "Helps with a supervised activity while acknowledging uncertainty and taking breaks; never shown undertaking dangerous rescue as proof of bravery.",
+   "portrait": "assets/character-C.jpg",
+   "expressions": [
+    {
+     "label": "Neutral / attentive",
+     "img": "assets/cast/C-neutral-attentive.jpg"
+    },
+    {
+     "label": "Worried",
+     "img": "assets/cast/C-worried.jpg"
+    },
+    {
+     "label": "Thoughtful / uncertain",
+     "img": "assets/cast/C-thoughtful-uncertain.jpg"
+    },
+    {
+     "label": "Encouraging",
+     "img": "assets/cast/C-encouraging.jpg"
+    },
+    {
+     "label": "Relieved / reassured",
+     "img": "assets/cast/C-relieved.jpg"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "name": "Arun",
+   "who": "Adolescent boy, about 16",
+   "look": "Short dark hair, green zip jacket",
+   "personality": "Thoughtful, fixes simple things; withdraws when overwhelmed",
+   "meaning": "Dawn/daybreak association; Sanskrit root also carries reddish/tawny senses",
+   "value": "Agency and practical problem-solving",
+   "arc": "Names a worry, seeks support and chooses a manageable safe task; activity is not portrayed as a cure for distress.",
+   "portrait": "assets/character-D.jpg",
+   "expressions": [
+    {
+     "label": "Neutral / attentive",
+     "img": "assets/cast/D-neutral-attentive.jpg"
+    },
+    {
+     "label": "Worried",
+     "img": "assets/cast/D-worried.jpg"
+    },
+    {
+     "label": "Frustrated",
+     "img": "assets/cast/D-frustrated.jpg"
+    },
+    {
+     "label": "Focused on a small task",
+     "img": "assets/cast/D-focused-small-task.jpg"
+    },
+    {
+     "label": "Relieved / reassured",
+     "img": "assets/cast/D-relieved.jpg"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "name": "Karuna",
+   "who": "Adult woman",
+   "look": "Dark hair in a low bun, teal kurta, burgundy shawl",
+   "personality": "Listens without pressure; sets limits; can be tired and receive support",
+   "meaning": "Compassion",
+   "value": "Dignity, listening and safety",
+   "arc": "Supports others while setting limits and receiving support; no permanent self-sacrificing mother stereotype.",
+   "portrait": "assets/character-E.jpg",
+   "expressions": [
+    {
+     "label": "Neutral / attentive",
+     "img": "assets/cast/E-neutral-attentive.jpg"
+    },
+    {
+     "label": "Sad / downcast",
+     "img": "assets/cast/E-sad-downcast.jpg"
+    },
+    {
+     "label": "Worried",
+     "img": "assets/cast/E-worried.jpg"
+    },
+    {
+     "label": "Listening with empathy",
+     "img": "assets/cast/E-listening-empathy.jpg"
+    },
+    {
+     "label": "Relieved",
+     "img": "assets/cast/E-relieved.jpg"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "name": "Prakash",
+   "who": "Adult man, Milan's father",
+   "look": "Receding dark hair, black moustache, rust vest over grey shirt",
+   "personality": "Steady, practical; can show fear or fatigue; seeks help when needed",
+   "meaning": "Light, brightness",
+   "value": "Care that is practical and accessible",
+   "arc": "Listens, supports everyday needs and seeks qualified help when needed; not assigned clinical credentials from his namesake.",
+   "portrait": "assets/character-F.jpg",
+   "expressions": [
+    {
+     "label": "Neutral / attentive",
+     "img": "assets/cast/F-neutral-attentive.jpg"
+    },
+    {
+     "label": "Worried",
+     "img": "assets/cast/F-worried.jpg"
+    },
+    {
+     "label": "Tired / awake",
+     "img": "assets/cast/F-tired-awake.jpg"
+    },
+    {
+     "label": "Supportive listening",
+     "img": "assets/cast/F-supportive-listening.jpg"
+    },
+    {
+     "label": "Relieved",
+     "img": "assets/cast/F-relieved.jpg"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "name": "Asha",
+   "who": "Older woman",
+   "look": "Silver hair in a low bun, tan shawl, purple blouse",
+   "personality": "Enjoys stories and company; her own losses and sleep difficulties matter",
+   "meaning": "Hope, expectation",
+   "value": "Hope sustained through care and everyday continuity",
+   "arc": "Offers companionship while also accepting care; song can support connection but is not depicted as treatment.",
+   "portrait": "assets/character-G.jpg",
+   "expressions": [
+    {
+     "label": "Neutral / attentive",
+     "img": "assets/cast/G-neutral-attentive.jpg"
+    },
+    {
+     "label": "Sad / grieving",
+     "img": "assets/cast/G-sad-grieving.jpg"
+    },
+    {
+     "label": "Worried",
+     "img": "assets/cast/G-worried.jpg"
+    },
+    {
+     "label": "Warm companionship",
+     "img": "assets/cast/G-warm-companionship.jpg"
+    },
+    {
+     "label": "Relieved",
+     "img": "assets/cast/G-relieved.jpg"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "name": "Satya",
+   "who": "Older man",
+   "look": "Patterned Dhaka topi, grey moustache, brown cardigan",
+   "personality": "Reflective; shares memories; gives and receives support",
+   "meaning": "Truth, reality",
+   "value": "Belonging, cultural continuity and honest acknowledgment",
+   "arc": "Shares memories without dismissing young people’s worries; both gives and receives support.",
+   "portrait": "assets/character-H.jpg",
+   "expressions": [
+    {
+     "label": "Neutral / attentive",
+     "img": "assets/cast/H-neutral-attentive.jpg"
+    },
+    {
+     "label": "Worried",
+     "img": "assets/cast/H-worried.jpg"
+    },
+    {
+     "label": "Thoughtful",
+     "img": "assets/cast/H-thoughtful.jpg"
+    },
+    {
+     "label": "Respectful listening",
+     "img": "assets/cast/H-respectful-listening.jpg"
+    },
+    {
+     "label": "Relieved",
+     "img": "assets/cast/H-relieved.jpg"
+    }
+   ]
+  }
+ ],
+ "pending": {
+  "id": "I",
+  "text": "Adult woman who uses a manual wheelchair; community worker and, in Chapter 6, team leader. Name and portrait pending review with partners."
+ },
+ "professionals": [
+  {
+   "id": "L",
+   "name": "Sneha",
+   "role": "Nurse / staff nurse",
+   "scope": "Offers nursing care, notices distress and communicates respectfully. Clinical mental-health tasks only with relevant training, authorization and local protocols. A nurse is not interchangeable with a doctor.",
+   "detail": "May experience fatigue or difficulty sleeping after a demanding shift and receive support; this portrait does not demonstrate a distress or sleep-difficulty pose.",
+   "portrait": "assets/character-L.jpg",
+   "expressions": [
+    {
+     "label": "Neutral attentive",
+     "img": "assets/cast/L-neutral-attentive.jpg"
+    },
+    {
+     "label": "Empathetic listening",
+     "img": "assets/cast/L-empathetic-listening.jpg"
+    },
+    {
+     "label": "Focused concern",
+     "img": "assets/cast/L-focused-concern.jpg"
+    },
+    {
+     "label": "Explaining reassuring",
+     "img": "assets/cast/L-explaining-reassuring.jpg"
+    }
+   ]
+  },
+  {
+   "id": "O",
+   "name": "Suman",
+   "role": "Nurse · male",
+   "scope": "Nursing care within training and authorization. Mental-health tasks need relevant local protocols. A nurse is not interchangeable with a doctor.",
+   "detail": "Can experience distress, fatigue or uncertainty and seek support; not permanently smiling or invulnerable.",
+   "portrait": "assets/character-O.jpg",
+   "expressions": [
+    {
+     "label": "Neutral attentive",
+     "img": "assets/cast/O-neutral-attentive.jpg"
+    },
+    {
+     "label": "Empathetic listening",
+     "img": "assets/cast/O-empathetic-listening.jpg"
+    },
+    {
+     "label": "Focused concern",
+     "img": "assets/cast/O-focused-concern.jpg"
+    },
+    {
+     "label": "Explaining reassuring",
+     "img": "assets/cast/O-explaining-reassuring.jpg"
+    }
+   ]
+  },
+  {
+   "id": "M",
+   "name": "Vidya",
+   "role": "Primary-care doctor / medical officer",
+   "scope": "Assesses physical and mental-health concerns within competence. mhGAP-related care requires specified training and local protocols. Explains options and referral; no automatic medication or blanket reassurance. A primary-care doctor is not automatically a psychiatrist.",
+   "detail": "Consults others, admits uncertainty and may need support; no perpetual smiling hero premise.",
+   "portrait": "assets/cast/M-neutral-attentive.jpg",
+   "expressions": [
+    {
+     "label": "Neutral attentive",
+     "img": "assets/cast/M-neutral-attentive.jpg"
+    },
+    {
+     "label": "Empathetic listening",
+     "img": "assets/cast/M-empathetic-listening.jpg"
+    },
+    {
+     "label": "Focused concern",
+     "img": "assets/cast/M-focused-concern.jpg"
+    },
+    {
+     "label": "Explaining reassuring",
+     "img": "assets/cast/M-explaining-reassuring.jpg"
+    }
+   ]
+  },
+  {
+   "id": "P",
+   "name": "Name pending",
+   "role": "Primary-care doctor · male",
+   "scope": "Primary care within competence and authorization. Mental-health care needs relevant training/protocols. A primary-care doctor is not automatically a psychiatrist.",
+   "detail": "Can experience distress, fatigue or uncertainty and seek support; not permanently smiling or invulnerable.",
+   "portrait": "assets/cast/P-neutral-attentive.jpg",
+   "expressions": [
+    {
+     "label": "Neutral attentive",
+     "img": "assets/cast/P-neutral-attentive.jpg"
+    },
+    {
+     "label": "Empathetic listening",
+     "img": "assets/cast/P-empathetic-listening.jpg"
+    },
+    {
+     "label": "Focused concern",
+     "img": "assets/cast/P-focused-concern.jpg"
+    },
+    {
+     "label": "Explaining reassuring",
+     "img": "assets/cast/P-explaining-reassuring.jpg"
+    }
+   ]
+  },
+  {
+   "id": "Q",
+   "name": "Smriti",
+   "role": "Psychologist · female",
+   "scope": "Assessment/interventions within qualified competence. Relevant authorization and modality training required. Not automatically a psychiatrist or medication prescriber.",
+   "detail": "Can experience distress, fatigue or uncertainty and seek support; not permanently smiling or invulnerable.",
+   "portrait": "assets/character-Q.jpg",
+   "expressions": [
+    {
+     "label": "Neutral attentive",
+     "img": "assets/cast/Q-neutral-attentive.jpg"
+    },
+    {
+     "label": "Empathetic listening",
+     "img": "assets/cast/Q-empathetic-listening.jpg"
+    },
+    {
+     "label": "Focused concern",
+     "img": "assets/cast/Q-focused-concern.jpg"
+    },
+    {
+     "label": "Explaining reassuring",
+     "img": "assets/cast/Q-explaining-reassuring.jpg"
+    }
+   ]
+  },
+  {
+   "id": "R",
+   "name": "Vivek",
+   "role": "Psychologist · male",
+   "scope": "Assessment/interventions within qualified competence. Relevant authorization and modality training required. Not automatically a psychiatrist or medication prescriber.",
+   "detail": "Can experience distress, fatigue or uncertainty and seek support; not permanently smiling or invulnerable.",
+   "portrait": "assets/character-R.jpg",
+   "expressions": [
+    {
+     "label": "Neutral attentive",
+     "img": "assets/cast/R-neutral-attentive.jpg"
+    },
+    {
+     "label": "Empathetic listening",
+     "img": "assets/cast/R-empathetic-listening.jpg"
+    },
+    {
+     "label": "Focused concern",
+     "img": "assets/cast/R-focused-concern.jpg"
+    },
+    {
+     "label": "Explaining reassuring",
+     "img": "assets/cast/R-explaining-reassuring.jpg"
+    }
+   ]
+  },
+  {
+   "id": "K",
+   "name": "Maitri",
+   "role": "Trained psychosocial counsellor",
+   "scope": "Provides support within training and supervision, explains confidentiality and its limits, and refers when needs exceed scope. Not automatically a psychologist, psychiatrist or prescriber.",
+   "detail": "Uses supervision and acknowledges emotional strain.",
+   "portrait": "assets/character-K.jpg",
+   "expressions": [
+    {
+     "label": "Neutral attentive",
+     "img": "assets/cast/K-neutral-attentive.jpg"
+    },
+    {
+     "label": "Empathetic listening",
+     "img": "assets/cast/K-empathetic-listening.jpg"
+    },
+    {
+     "label": "Focused concern",
+     "img": "assets/cast/K-focused-concern.jpg"
+    },
+    {
+     "label": "Explaining reassuring",
+     "img": "assets/cast/K-explaining-reassuring.jpg"
+    }
+   ]
+  },
+  {
+   "id": "S",
+   "name": "Vinay",
+   "role": "PSS counsellor · male",
+   "scope": "Provides psychosocial support within training and supervision; explains confidentiality and its limits, and refers needs beyond scope. Not automatically a psychologist, psychiatrist or prescriber.",
+   "detail": "Can feel uncertain, tired or emotionally strained and seek appropriate supervision, peer support and rest.",
+   "portrait": "assets/character-S.jpg",
+   "expressions": [
+    {
+     "label": "Neutral attentive",
+     "img": "assets/cast/S-neutral-attentive.jpg"
+    },
+    {
+     "label": "Empathetic listening",
+     "img": "assets/cast/S-empathetic-listening.jpg"
+    },
+    {
+     "label": "Focused concern",
+     "img": "assets/cast/S-focused-concern.jpg"
+    },
+    {
+     "label": "Explaining reassuring",
+     "img": "assets/cast/S-explaining-reassuring.jpg"
+    }
+   ]
+  },
+  {
+   "id": "T",
+   "name": "Name pending",
+   "role": "Trained PFA provider · female",
+   "scope": "Appropriate training and context are required. Offers humane, practical support and listening without pressured disclosure. PFA is not psychotherapy or diagnosis.",
+   "detail": "Can feel uncertain, tired or emotionally strained and seek appropriate supervision, peer support and rest.",
+   "portrait": "assets/cast/T-neutral-attentive.jpg",
+   "expressions": [
+    {
+     "label": "Neutral attentive",
+     "img": "assets/cast/T-neutral-attentive.jpg"
+    },
+    {
+     "label": "Empathetic listening",
+     "img": "assets/cast/T-empathetic-listening.jpg"
+    },
+    {
+     "label": "Focused concern",
+     "img": "assets/cast/T-focused-concern.jpg"
+    },
+    {
+     "label": "Explaining reassuring",
+     "img": "assets/cast/T-explaining-reassuring.jpg"
+    }
+   ]
+  },
+  {
+   "id": "J",
+   "name": "Kiran",
+   "role": "Local NGO community mobilizer / trained PFA provider",
+   "scope": "Listens without pressing for trauma disclosure, identifies practical needs and helps link people to support with consent. Training does not make this character a clinical specialist.",
+   "detail": "Can be tired, uncertain and ask a colleague for support.",
+   "portrait": "assets/cast/J-neutral-attentive.jpg",
+   "expressions": [
+    {
+     "label": "Neutral attentive",
+     "img": "assets/cast/J-neutral-attentive.jpg"
+    },
+    {
+     "label": "Empathetic listening",
+     "img": "assets/cast/J-empathetic-listening.jpg"
+    },
+    {
+     "label": "Focused concern",
+     "img": "assets/cast/J-focused-concern.jpg"
+    },
+    {
+     "label": "Explaining reassuring",
+     "img": "assets/cast/J-explaining-reassuring.jpg"
+    }
+   ]
+  },
+  {
+   "id": "U",
+   "name": "Name pending",
+   "role": "Psychiatrist · female",
+   "scope": "An appropriately qualified and authorized medical specialist evaluates mental health and discusses treatment options within local protocols, including medication when indicated. No automatic pills or promised cure.",
+   "detail": "Can feel uncertain, tired or emotionally strained and seek appropriate supervision, peer support and rest.",
+   "portrait": "assets/cast/U-neutral-attentive.jpg",
+   "expressions": [
+    {
+     "label": "Neutral attentive",
+     "img": "assets/cast/U-neutral-attentive.jpg"
+    },
+    {
+     "label": "Empathetic listening",
+     "img": "assets/cast/U-empathetic-listening.jpg"
+    },
+    {
+     "label": "Focused concern",
+     "img": "assets/cast/U-focused-concern.jpg"
+    },
+    {
+     "label": "Explaining reassuring",
+     "img": "assets/cast/U-explaining-reassuring.jpg"
+    }
+   ]
+  },
+  {
+   "id": "V",
+   "name": "Name pending",
+   "role": "Psychiatrist · male",
+   "scope": "An appropriately qualified and authorized medical specialist evaluates mental health and discusses treatment options within local protocols, including medication when indicated. No automatic pills or promised cure.",
+   "detail": "Can feel uncertain, tired or emotionally strained and seek appropriate supervision, peer support and rest.",
+   "portrait": "assets/cast/V-neutral-attentive.jpg",
+   "expressions": [
+    {
+     "label": "Neutral attentive",
+     "img": "assets/cast/V-neutral-attentive.jpg"
+    },
+    {
+     "label": "Empathetic listening",
+     "img": "assets/cast/V-empathetic-listening.jpg"
+    },
+    {
+     "label": "Focused concern",
+     "img": "assets/cast/V-focused-concern.jpg"
+    },
+    {
+     "label": "Explaining reassuring",
+     "img": "assets/cast/V-explaining-reassuring.jpg"
+    }
+   ]
+  },
+  {
+   "id": "N",
+   "name": "Deepak",
+   "role": "Social worker / protection and referral caseworker",
+   "scope": "Helps people understand options, access appropriate services and navigate protection needs with consent, confidentiality safeguards and local SOPs. No automatic clinical assessment or survivor rescue authority.",
+   "detail": "Shares responsibility with the team and manages boundaries; not a saviour.",
+   "portrait": "assets/cast/N-neutral-attentive.jpg",
+   "expressions": [
+    {
+     "label": "Neutral attentive",
+     "img": "assets/cast/N-neutral-attentive.jpg"
+    },
+    {
+     "label": "Empathetic listening",
+     "img": "assets/cast/N-empathetic-listening.jpg"
+    },
+    {
+     "label": "Focused concern",
+     "img": "assets/cast/N-focused-concern.jpg"
+    },
+    {
+     "label": "Explaining reassuring",
+     "img": "assets/cast/N-explaining-reassuring.jpg"
+    }
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "title": "Quiet seated pause",
+   "note": "Feet supported, shoulders relaxed, hands resting; eyes may stay open. Optional, not a requirement to meditate.",
+   "img": "assets/cast/scenes/01-quiet-seated-pause.jpg"
+  },
+  {
+   "title": "Easy morning jog",
+   "note": "Readable stride and reciprocal arm movement. Only if suitable for the person and the route is safe; walking or seated movement are alternatives.",
+   "img": "assets/cast/scenes/02-easy-morning-jog.jpg"
+  },
+  {
+   "title": "A small shared task",
+   "note": "Hands doing a manageable everyday task together. Participation is a choice, not pressure to be productive.",
+   "img": "assets/cast/scenes/03-a-small-shared-task.jpg"
+  },
+  {
+   "title": "Peer-support conversation",
+   "note": "One person speaks while others listen at the same seated level. Voluntary participation; this is not an assessment FGD.",
+   "img": "assets/cast/scenes/04-peer-support-conversation.jpg"
+  },
+  {
+   "title": "Staying with someone who is crying",
+   "note": "Quiet, receptive listening, comfortable distance, hands on own lap. No forced touch, disclosure, eye contact or demand to stop crying.",
+   "img": "assets/cast/scenes/05-staying-with-someone-who-is-crying.jpg"
+  },
+  {
+   "title": "An invitation to walk together",
+   "note": "Open palm and side-by-side position, without grabbing or pulling. The other person may decline.",
+   "img": "assets/cast/scenes/06-an-invitation-to-walk-together.jpg"
+  }
+ ],
+ "sources": "Series bible section 4 (11 Nov 2026); character profiles v0.3; role-matched expression library v0.1 (candidates, review pending); body-language samples v0.1."
+}

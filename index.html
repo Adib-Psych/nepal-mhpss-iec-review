@@ -134,6 +134,26 @@ details.shared summary{cursor:pointer;font-weight:650;padding:10px 0}
 .pipe div{border:1px solid var(--line);border-radius:12px;padding:14px;background:#fff}
 .pipe div b{display:block;margin-bottom:4px}
 .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:3px 8px;border-radius:6px;background:#eef3f6;color:var(--blue);margin-bottom:6px}
+.muted{color:var(--muted);font-size:13px}
+.basis{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:20px;align-items:start;background:#f7f8fb;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0 6px}
+.basis h3{margin:0 0 6px}.basis ul{margin:0;padding-left:18px}.basis li{margin:4px 0;text-align:justify;hyphens:none}
+.basis .sheet{margin:0}.basis .sheet img{width:100%;border-radius:8px;border:1px solid var(--line);cursor:zoom-in}.basis figcaption{font-size:12px;color:var(--muted);text-align:center}
+.chars{display:grid;gap:14px}.char{display:grid;grid-template-columns:190px minmax(0,1fr);gap:18px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+.char .por{width:100%;height:240px;object-fit:contain;background:#fbfcfa;border-radius:8px;cursor:zoom-in}
+.char .pendpor{display:flex;align-items:center;justify-content:center;font-size:48px;color:var(--muted);border:2px dashed var(--line2)}
+.char h4,.pro h4{margin:0 0 6px;font-size:17px}.char h4 span{font-size:13px;font-weight:500;color:var(--muted);margin-left:6px}
+.char dl{display:grid;grid-template-columns:120px minmax(0,1fr);gap:4px 12px;margin:0 0 8px;font-size:14px}.char dt{color:var(--muted);font-size:13px}.char dd{margin:0;text-align:justify;hyphens:none}
+.char h5{margin:6px 0 6px;font-size:13px;color:var(--muted);font-weight:650}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.chchip{font-size:12.5px;padding:2px 9px;border-radius:999px;background:var(--c);color:#fff;text-decoration:none}
+.exprs{display:flex;flex-wrap:wrap;gap:8px}.exprs figure{margin:0;width:92px}.exprs img{width:92px;height:118px;object-fit:cover;object-position:top;border-radius:8px;border:1px solid var(--line);background:#fff;cursor:zoom-in}
+.exprs figcaption{font-size:11.5px;color:var(--muted);line-height:1.25;margin-top:3px}
+.pros{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}.pro{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+.prohead{display:flex;gap:12px;align-items:center;margin-bottom:8px}.prohead img{width:64px;height:80px;object-fit:cover;object-position:top;border-radius:8px;cursor:zoom-in;border:1px solid var(--line)}.prohead span{font-size:13px;color:var(--muted)}
+.pro .exprs{gap:6px}.pro .exprs figure,.pro .exprs img{width:62px}.pro .exprs img{height:80px}.pro .exprs figcaption{font-size:11px}
+.pro p{font-size:13.5px;margin:4px 0 8px;text-align:justify;hyphens:none}
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}.scene{margin:0;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.scene img{width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff;cursor:zoom-in;display:block;border-bottom:1px solid var(--line)}.scene figcaption{padding:10px 12px;font-size:13px;color:var(--muted);text-align:justify;hyphens:none}.scene figcaption b{display:block;color:var(--ink);font-size:14.5px;margin-bottom:3px}
+@media(max-width:820px){.basis{grid-template-columns:1fr}.char{grid-template-columns:1fr}.char .por{height:220px}.char dl{grid-template-columns:1fr}.char dt{margin-top:4px}.exprs figure,.exprs img{width:76px}.exprs img{height:98px}}
 .cast{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
 .person{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:4px}
 .person img{width:100%;height:190px;object-fit:contain;background:#fbfcfa;border-radius:8px;cursor:zoom-in}
@@ -429,7 +449,7 @@ document.addEventListener('change',e=>{if(e.target.id==='hidedone'){document.que
 function myKey(){return 'iec-proof|'+((WHO&&WHO.email)||'').trim().toLowerCase()}
 function myChecks(){return LS.get(myKey())||{}}
 function refreshMine(){const P=myChecks();document.querySelectorAll('.tr-card tr[data-row]').forEach(tr=>{const m=tr.querySelector('.mine');if(m)m.innerHTML=prCell(tr.dataset.row,P[tr.dataset.row])});document.querySelectorAll('.tr-card details.trsec').forEach(d=>{d.querySelector('.done').textContent=[...d.querySelectorAll('tr[data-row]')].filter(x=>P[x.dataset.row]).length});const c=document.querySelector('.tr-card');if(c)applyStatus(c.dataset.ch)}
-let ST={};
+let ST={}, CASTDATA=null;
 async function fetchStatus(ch){
   if(window.PREVIEW_STATUS) return window.PREVIEW_STATUS(ch);
   try{const r=await fetch(`https://firestore.googleapis.com/v1/projects/${FB.pid}/databases/(default)/documents/status/${ch}?key=${FB.key}`);
@@ -560,11 +580,32 @@ function overview(){
 }
 
 function characters(){
-  const card=([id,n,r])=>`<div class="person"><img src="assets/character-${id}.jpg" alt="Fictional character ${n}" data-zoom loading="lazy"><b>${id} · ${n}</b><span>${r}</span></div>`;
-  return `<div class="card"><span class="tag">THE CAST</span><h2 style="margin:4px 0 6px;color:var(--blue)">Characters</h2><p style="max-width:900px">The same fictional people appear in every chapter, so readers recognise them. Names, faces and clothing stay the same across the series.</p>
-  <h3 class="section">Community</h3><div class="cast">${CAST.map(card).join('')}<div class="person pending"><b>I · name pending</b><span>Adult woman who uses a manual wheelchair; community worker and, in Chapter 6, team leader</span></div></div>
-  <h3 class="section">Professionals</h3><div class="cast">${PROS.map(card).join('')}</div>
-  <p class="small" style="margin-top:16px">Fictional illustrations, AI-assisted and developed under human direction. Not real people. Cultural and identity review with partners pending.</p></div>`;
+  const D=CASTDATA;
+  if(!D){const card=([id,n,r])=>`<div class="person"><img src="assets/character-${id}.jpg" alt="Fictional character ${n}" data-zoom loading="lazy"><b>${id} · ${n}</b><span>${r}</span></div>`;
+    return `<div class="card"><span class="tag">THE CAST</span><h2 style="margin:4px 0 6px;color:var(--blue)">Characters</h2><div class="cast">${CAST.map(card).join('')}</div><h3 class="section">Professionals</h3><div class="cast">${PROS.map(card).join('')}</div></div>`;}
+  const inCh=id=>S.chapters.filter(c=>(c.leads||[]).includes(id));
+  const chips=id=>{const l=inCh(id);return l.length?l.map(c=>`<a class="chchip" href="#${c.key}/poster" style="--c:${c.colour[0]}">${c.n} · ${esc(c.short||c.title)}</a>`).join(''):'<span class="muted">Background or later chapters</span>'};
+  const ex=(n,L)=>`<div class="exprs">${L.map(x=>`<figure><img src="${x.img}" alt="${esc(n)}, ${esc(x.label)}" data-zoom data-title="${esc(n)} · ${esc(x.label)}" loading="lazy"><figcaption>${esc(x.label)}</figcaption></figure>`).join('')}</div>`;
+  const comm=D.community.map(c=>`<article class="char"><img class="por" src="${c.portrait}" alt="Fictional character ${esc(c.name)}" data-zoom data-title="${c.id} · ${esc(c.name)}" loading="lazy">
+    <div class="cinfo"><h4>${c.id} · ${esc(c.name)} <span>${esc(c.who)}</span></h4>
+    <dl><dt>Look</dt><dd>${esc(c.look)}</dd><dt>Personality</dt><dd>${esc(c.personality)}</dd><dt>Name meaning</dt><dd>${esc(c.meaning)}</dd><dt>Value</dt><dd>${esc(c.value)}</dd><dt>Story</dt><dd>${esc(c.arc)}</dd><dt>Appears in</dt><dd class="chips">${chips(c.id)}</dd></dl>
+    <h5>Expressions</h5>${ex(c.name,c.expressions)}</div></article>`).join('');
+  const pend=`<article class="char pend"><div class="por pendpor">I</div><div class="cinfo"><h4>I · name pending</h4><p>${esc(D.pending.text)}</p><dl><dt>Appears in</dt><dd class="chips">${chips('I')}</dd></dl></div></article>`;
+  const pros=D.professionals.map(c=>`<article class="pro"><div class="prohead"><img src="${c.portrait}" alt="Fictional character ${esc(c.name)}" data-zoom data-title="${c.id} · ${esc(c.name)}" loading="lazy"><div><h4>${c.id} · ${esc(c.name)}</h4><span>${esc(c.role)}</span></div></div>
+    <p><b>Role:</b> ${esc(c.scope)}</p><p><b>Also human:</b> ${esc(c.detail)}</p>${ex(c.name,c.expressions)}</article>`).join('');
+  const scenes=D.scenes.map(x=>`<figure class="scene"><img src="${x.img}" alt="${esc(x.title)}" data-zoom data-title="${esc(x.title)}" loading="lazy"><figcaption><b>${esc(x.title)}</b>${esc(x.note)}</figcaption></figure>`).join('');
+  return `<div class="card"><span class="tag">THE CAST</span><h2 style="margin:4px 0 6px;color:var(--blue)">Characters</h2><p style="max-width:900px">The same fictional people appear in every chapter, so readers recognise them. Names, faces and clothing stay the same across the series. This page shows the reference the illustrations are built on, for partners to review.</p>
+  <div class="basis"><div><h3>How the cast was built</h3><ul>
+   <li><b>Recognisable in every chapter.</b> Face, hair and clothing stay the same; clothing may change with the scene, such as a shawl at night, only when face and hair stay identical.</li>
+   <li><b>Everyone is human.</b> Each person can feel worry, sadness or tiredness and can receive help. No one is a cheerful hero all the time, and children are never shown as rescuers.</li>
+   <li><b>Names with a meaning.</b> Each name carries a value the character shows, for example Milan: coming together. Names and dress still need cultural review with partners.</li>
+   <li><b>Helpers within their role.</b> Professionals act within their training: psychological first aid is not therapy, and a counsellor is not a psychologist or psychiatrist by default.</li>
+   <li><b>Expressions for real moments.</b> Worry, tiredness at night, sadness, relief and listening, the moments the materials describe.</li></ul></div>
+   <figure class="sheet"><img src="${D.sheet}" alt="Cast sheet, English" data-zoom data-title="Cast sheet (English)" loading="lazy"><figcaption>Cast sheet (English) · click to enlarge</figcaption></figure></div>
+  <h3 class="section">Community</h3><div class="chars">${comm}${pend}</div>
+  <h3 class="section">Professionals and support roles</h3><div class="pros">${pros}</div>
+  <h3 class="section">How care looks: body language references</h3><div class="scenes">${scenes}</div>
+  <p class="small" style="margin-top:16px">Fictional illustrations, AI-assisted and developed under human direction. Not real people. Expressions and portraits are candidate references, not final model sheets; cultural, identity and clinical review with partners pending. Sources: ${esc(D.sources)}</p></div>`;
 }
 
 function render(){
@@ -576,8 +617,8 @@ function render(){
   if(c&&b==='translation') loadStatus(c.key);
   window.scrollTo(0,0);
 }
-Promise.all([fetch('data/series.json').then(r=>r.json()),fetch('data/translation.json').then(r=>r.json()).catch(()=>null)])
- .then(([s,t])=>{S=s;T=t;addEventListener('hashchange',render);render();})
+Promise.all([fetch('data/series.json').then(r=>r.json()),fetch('data/translation.json').then(r=>r.json()).catch(()=>null),fetch('data/cast.json').then(r=>r.json()).catch(()=>null)])
+ .then(([s,t,k])=>{S=s;T=t;CASTDATA=k;addEventListener('hashchange',render);render();})
  .catch(()=>{document.getElementById('main').innerHTML='<div class="placeholder"><h3>The page could not load its content.</h3><p>Please refresh, or open it from the published address.</p></div>'});
 const dlg=document.getElementById('dlg'),$=id=>document.getElementById(id);
 let G=[],gi=0;
