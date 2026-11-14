@@ -238,12 +238,12 @@
     },
     {
      "label": "Option B",
-     "version": "r9",
+     "version": "r11",
      "approved": "2026-11-13",
-     "image": "assets/series/ch3/poster-B-r9.jpg",
-     "pdf": "assets/series/ch3/poster-B-r9.pdf",
+     "image": "assets/series/ch3/poster-B-r11.jpg",
+     "pdf": "assets/series/ch3/poster-B-r11.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch3/poster-B-r9-print.pdf",
+     "print": "assets/series/ch3/poster-B-r11-print.pdf",
      "ne": {
       "version": "r1",
       "image": "assets/series/ch3/poster-B-ne-r1.jpg",
@@ -252,12 +252,12 @@
     },
     {
      "label": "Option C",
-     "version": "r11",
+     "version": "r9",
      "approved": "2026-11-13",
-     "image": "assets/series/ch3/poster-C-r11.jpg",
-     "pdf": "assets/series/ch3/poster-C-r11.pdf",
+     "image": "assets/series/ch3/poster-C-r9.jpg",
+     "pdf": "assets/series/ch3/poster-C-r9.pdf",
      "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch3/poster-C-r11-print.pdf",
+     "print": "assets/series/ch3/poster-C-r9-print.pdf",
      "ne": {
       "version": "r1",
       "image": "assets/series/ch3/poster-C-ne-r1.jpg",
