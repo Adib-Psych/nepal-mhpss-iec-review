@@ -69,3 +69,11 @@ On 12 November 2026, after viewing the comparison, Adib approved all three Chapt
 - The poll and the comment box appear automatically from `data/series.json`; adding an approved product needs no extra step.
 
 The pages from the October 2026 consultation were removed on 14 Nov 2026; they remain in the repository history.
+
+## Release names (15 November 2026)
+
+- Two zones. The workspace on Luna (Assets and Versions, the Luna output page, Hermes) keeps production names with r and v numbers. Everything partners see uses release names only: the chapter folders, this site, the feedback records and the tracker on Thar Lay, emails to partners, and later the public website.
+- Release name of a file: `Ch<chapter> <no.> <product> <EN|NE> - <release date>`, with no. 1–3 = Poster A/B/C, 4 = Leaflet, 5 = Health Talk Guide. The print file carries this name; the lighter copy adds `online` before the date.
+- The release in use is set once in `data/series.json` (`release`) and in `data/translation.json` (`release`, and `files` per section). No r or v number is shown on the page.
+- Every feedback entry records `release` and `file`; `version` keeps the production number for traceability. The asset register in the chapter folder (`00 Asset Register After the Flood`) links each release name to its production version and checksum.
+- A new release: move the previous release files on Luna to `Assets and Versions/Releases/<release date>/`, place the new files at chapter level, rebuild the asset register, then update `release` and the asset paths here in one pull request.
