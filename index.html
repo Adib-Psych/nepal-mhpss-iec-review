@@ -681,7 +681,14 @@ function myChecks(){return LS.get(myKey())||{}}
 function refreshMine(){const P=myChecks();document.querySelectorAll('.tr-card tr[data-row]').forEach(tr=>{const m=tr.querySelector('.mine');if(m)m.innerHTML=prCell(tr.dataset.row,P[tr.dataset.row])});document.querySelectorAll('.tr-card details.trsec').forEach(d=>{d.querySelector('.done').textContent=[...d.querySelectorAll('tr[data-row]')].filter(x=>P[x.dataset.row]).length});const c=document.querySelector('.tr-card');if(c)applyStatus(c.dataset.ch)}
 const DOWNLOADS=false;   // owner, 14 Nov 2026: downloads off until validation
 const WM='b';            // watermark in full preview only: corner ribbon (owner choice, 14 Nov 2026)
+const RELEASE='15Nov2026';   // release date in file names; matches the files in the chapter folders (owner, 15 Nov 2026)
+function dlName(href){const m=/series\/ch(\d)\/(poster-([ABC])|leaflet|guide)(-ne)?-[rv]\d+(-print)?\.pdf$/.exec(href||'');if(!m)return '';
+  const k=m[3]?{A:1,B:2,C:3}[m[3]]:(m[2]==='leaflet'?4:5), prod=m[3]?'Poster '+m[3]:(m[2]==='leaflet'?'Leaflet':'Health Talk Guide');
+  const master=!!m[5]||(!!m[4]&&!!m[3]);   // print file, or the Nepali poster (single file) = the file in the chapter folder
+  return `Ch${m[1]} ${k} ${prod} ${m[4]?'NE':'EN'}${master?'':' online'} - ${RELEASE}.pdf`}
+function nameDownloads(root){(root||document).querySelectorAll('a[download]').forEach(a=>{const n=dlName(a.getAttribute('href'));if(n)a.setAttribute('download',n)})}
 function noDownloads(){
+  nameDownloads($('main'));
   if(DOWNLOADS) return;
   document.querySelectorAll('#main a[download], #main a[href$=".pdf"]').forEach(a=>{const x=document.createElement('span');x.className=a.className+' off';x.setAttribute('aria-disabled','true');x.innerHTML=a.innerHTML;a.replaceWith(x)});
   document.querySelectorAll('#main .dlbox').forEach(b=>{if(!b.querySelector('.dloff'))b.insertAdjacentHTML('beforeend','<span class="dloff">Downloads open after review and validation.</span>')});
@@ -885,7 +892,7 @@ const dlg=document.getElementById('dlg'),$=id=>document.getElementById(id);
 let G=[],gi=0;
 function show(i){gi=i;const g=G[i];$('dlgimg').src=g.src;$('dlgimg').alt=g.title;$('dlgt').textContent=g.title+(G.length>1?`  (${i+1} of ${G.length})`:'');
   $('dlgp').hidden=$('dlgn').hidden=G.length<2;$('dlgp').disabled=i===0;$('dlgn').disabled=i===G.length-1;
-  $('dlgpdf').hidden=!DOWNLOADS||!g.pdf;if(DOWNLOADS&&g.pdf){$('dlgpdf').href=g.pdf;$('dlgpdf').textContent='\u2B07 Download '+g.pl}size(false);document.querySelector('.dlgbody').scrollTop=0}
+  $('dlgpdf').hidden=!DOWNLOADS||!g.pdf;if(DOWNLOADS&&g.pdf){$('dlgpdf').href=g.pdf;$('dlgpdf').setAttribute('download',dlName(g.pdf)||'');$('dlgpdf').textContent='\u2B07 Download '+g.pl}size(false);document.querySelector('.dlgbody').scrollTop=0}
 document.addEventListener('click',e=>{
   const o=e.target.closest('[data-open]');const z=o?(o.closest('.tcard').querySelector(`[data-zoom][data-lang="${o.dataset.open||'en'}"]`)||o.closest('.tcard').querySelector('[data-zoom]')):e.target.closest('[data-zoom]');if(!z)return;
   const all=[...document.querySelectorAll('#main [data-zoom]')];
