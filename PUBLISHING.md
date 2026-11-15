@@ -77,3 +77,7 @@ The pages from the October 2026 consultation were removed on 14 Nov 2026; they r
 - The release in use is set once in `data/series.json` (`release`) and in `data/translation.json` (`release`, and `files` per section). No r or v number is shown on the page.
 - Every feedback entry records `release` and `file`; `version` keeps the production number for traceability. The asset register in the chapter folder (`00 Asset Register After the Flood`) links each release name to its production version and checksum.
 - A new release: move the previous release files on Luna to `Assets and Versions/Releases/<release date>/`, place the new files at chapter level, rebuild the asset register, then update `release` and the asset paths here in one pull request.
+
+## Layout check before every merge
+
+Running text fills the width of its card; paragraphs carry no fixed `max-width` (fixed 15 Nov 2026: chapter header scene line, overview lead, characters intro, translation intro). Run `python3 tests/layout_width_check.py <preview url>` before merging and again on the live site.

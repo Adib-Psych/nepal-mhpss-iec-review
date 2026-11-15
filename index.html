@@ -292,7 +292,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 
 /* overview story */
 .ov-h{font-size:32px;line-height:1.12;margin:6px 0 8px;color:var(--blue)}
-.ov-lead{max-width:980px;margin:0 0 18px}
+.ov-lead{margin:0 0 18px}
 .ov-s{margin:0 0 12px;font-size:19px}
 .story{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;position:relative}
 .sc{position:relative;display:flex;flex-direction:column;gap:7px;padding:30px 14px 14px;margin-top:16px;border-radius:14px;background:var(--t);text-decoration:none;color:var(--d);border:1px solid #0000000d}
@@ -607,7 +607,7 @@ function checkPanel(){
 function translation(c){
   const secs=(T&&T.chapters[c.key])||[];
   const head=`<div class="tr-head"><div><span class="status wait">Nepali drafts · proofreading open</span><h3 style="font-size:22px;margin:12px 0 4px">Translation & proofreading · Chapter ${c.n}</h3>
-    <p style="margin:0;max-width:900px">Every English and Nepali text of this chapter's approved poster, leaflet and Health Talk Guide, row by row.</p></div></div>`;
+    <p style="margin:0">Every English and Nepali text of this chapter's approved poster, leaflet and Health Talk Guide, row by row.</p></div></div>`;
   if(!secs.length) return `<div class="card">${head}<div class="placeholder" style="margin-top:16px"><h3>No approved product yet</h3><p>The translation appears here once a product of this chapter is approved.</p></div></div>`;
   const flow=`<div class="tstrip"><span class="tl">How the Nepali was made</span><ol>
     <li><b class="n">1</b>English source</li><li><b class="n">2</b>AI-assisted draft</li><li><b class="n">3</b>Back-translation</li><li class="now"><b class="n">4</b>Native-speaker review <em>You are here</em></li><li><b class="n">5</b>Final checks</li></ol>
@@ -856,7 +856,7 @@ function characters(){
   const pros=D.professionals.map(c=>`<article class="pro"><div class="prohead"><img src="${c.portrait}" alt="Fictional character ${esc(c.name)}" data-zoom data-title="${c.id} · ${esc(c.name)}" loading="lazy"><div><h4>${c.id} · ${esc(c.name)}</h4><span>${esc(c.role)}</span></div></div>
     <p><b>Role:</b> ${esc(c.scope)}</p><p><b>Also human:</b> ${esc(c.detail)}</p>${ex(c.name,c.expressions)}</article>`).join('');
   const scenes=D.scenes.map(x=>`<figure class="scene"><img src="${x.img}" alt="${esc(x.title)}" data-zoom data-title="${esc(x.title)}" loading="lazy"><figcaption><b>${esc(x.title)}</b>${esc(x.note)}</figcaption></figure>`).join('');
-  return `<div class="card"><span class="tag">THE CAST</span><h2 style="margin:4px 0 6px;color:var(--blue)">Characters</h2><p style="max-width:900px">The same fictional people appear in every chapter, so readers recognise them. Names, faces and clothing stay the same across the series. This page shows the reference the illustrations are built on, for partners to review.</p>
+  return `<div class="card"><span class="tag">THE CAST</span><h2 style="margin:4px 0 6px;color:var(--blue)">Characters</h2><p>The same fictional people appear in every chapter, so readers recognise them. Names, faces and clothing stay the same across the series. This page shows the reference the illustrations are built on, for partners to review.</p>
   <div class="basis"><div><h3>How the cast was built</h3><ul>
    <li><b>Recognisable in every chapter.</b> Face, hair and clothing stay the same; clothing may change with the scene, such as a shawl at night, only when face and hair stay identical.</li>
    <li><b>Everyone is human.</b> Each person can feel worry, sadness or tiredness and can receive help. No one is a cheerful hero all the time, and children are never shown as rescuers.</li>
