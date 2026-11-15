@@ -1,6 +1,7 @@
 {
  "file": "IEC Text Register EN-NE 14Nov2026 (posters, leaflets, Health Talk Guides)",
  "date": "2026-11-14",
+ "release": "15Nov2026",
  "status": "Nepali AI-assisted drafts, developed under human direction, for language review: posters (13 Nov 2026), leaflets (14 Nov 2026) and Health Talk Guides (14 Nov 2026). No row is reviewed by a native speaker yet; review SAFETY rows first. Back-translations (posters and leaflets only) are machine-made, as a meaning aid only.",
  "chapters": {
   "ch1": [
@@ -242,7 +243,17 @@
      }
     ],
     "product": "poster",
-    "version": "A/B/C"
+    "version": "A/B/C",
+    "files": [
+     "Ch1 1 Poster A NE - 15Nov2026",
+     "Ch1 2 Poster B NE - 15Nov2026",
+     "Ch1 3 Poster C NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch1 1 Poster A EN - 15Nov2026",
+     "Ch1 2 Poster B EN - 15Nov2026",
+     "Ch1 3 Poster C EN - 15Nov2026"
+    ]
    },
    {
     "id": "C1L",
@@ -702,7 +713,13 @@
      }
     ],
     "product": "leaflet",
-    "version": "r11"
+    "version": "r11",
+    "files": [
+     "Ch1 4 Leaflet NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch1 4 Leaflet EN - 15Nov2026"
+    ]
    },
    {
     "id": "C1G",
@@ -2492,7 +2509,13 @@
      }
     ],
     "product": "guide",
-    "version": "v14"
+    "version": "v14",
+    "files": [
+     "Ch1 5 Health Talk Guide NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch1 5 Health Talk Guide EN - 15Nov2026"
+    ]
    }
   ],
   "ch2": [
@@ -2684,7 +2707,17 @@
      }
     ],
     "product": "poster",
-    "version": "A/B/C"
+    "version": "A/B/C",
+    "files": [
+     "Ch2 1 Poster A NE - 15Nov2026",
+     "Ch2 2 Poster B NE - 15Nov2026",
+     "Ch2 3 Poster C NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch2 1 Poster A EN - 15Nov2026",
+     "Ch2 2 Poster B EN - 15Nov2026",
+     "Ch2 3 Poster C EN - 15Nov2026"
+    ]
    },
    {
     "id": "C2L",
@@ -3134,7 +3167,13 @@
      }
     ],
     "product": "leaflet",
-    "version": "r5"
+    "version": "r5",
+    "files": [
+     "Ch2 4 Leaflet NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch2 4 Leaflet EN - 15Nov2026"
+    ]
    },
    {
     "id": "C2G",
@@ -4904,7 +4943,13 @@
      }
     ],
     "product": "guide",
-    "version": "v7"
+    "version": "v7",
+    "files": [
+     "Ch2 5 Health Talk Guide NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch2 5 Health Talk Guide EN - 15Nov2026"
+    ]
    }
   ],
   "ch3": [
@@ -5176,7 +5221,17 @@
      }
     ],
     "product": "poster",
-    "version": "A/B/C"
+    "version": "A/B/C",
+    "files": [
+     "Ch3 1 Poster A NE - 15Nov2026",
+     "Ch3 2 Poster B NE - 15Nov2026",
+     "Ch3 3 Poster C NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch3 1 Poster A EN - 15Nov2026",
+     "Ch3 2 Poster B EN - 15Nov2026",
+     "Ch3 3 Poster C EN - 15Nov2026"
+    ]
    },
    {
     "id": "C3L",
@@ -5586,7 +5641,13 @@
      }
     ],
     "product": "leaflet",
-    "version": "r6"
+    "version": "r6",
+    "files": [
+     "Ch3 4 Leaflet NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch3 4 Leaflet EN - 15Nov2026"
+    ]
    },
    {
     "id": "C3G",
@@ -7546,7 +7607,13 @@
      }
     ],
     "product": "guide",
-    "version": "v7"
+    "version": "v7",
+    "files": [
+     "Ch3 5 Health Talk Guide NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch3 5 Health Talk Guide EN - 15Nov2026"
+    ]
    }
   ],
   "ch4": [
@@ -7798,7 +7865,17 @@
      }
     ],
     "product": "poster",
-    "version": "A/B/C"
+    "version": "A/B/C",
+    "files": [
+     "Ch4 1 Poster A NE - 15Nov2026",
+     "Ch4 2 Poster B NE - 15Nov2026",
+     "Ch4 3 Poster C NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch4 1 Poster A EN - 15Nov2026",
+     "Ch4 2 Poster B EN - 15Nov2026",
+     "Ch4 3 Poster C EN - 15Nov2026"
+    ]
    },
    {
     "id": "C4L",
@@ -8228,7 +8305,13 @@
      }
     ],
     "product": "leaflet",
-    "version": "r4"
+    "version": "r4",
+    "files": [
+     "Ch4 4 Leaflet NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch4 4 Leaflet EN - 15Nov2026"
+    ]
    },
    {
     "id": "C4G",
@@ -10158,7 +10241,13 @@
      }
     ],
     "product": "guide",
-    "version": "v1"
+    "version": "v1",
+    "files": [
+     "Ch4 5 Health Talk Guide NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch4 5 Health Talk Guide EN - 15Nov2026"
+    ]
    }
   ],
   "ch5": [
@@ -10400,7 +10489,17 @@
      }
     ],
     "product": "poster",
-    "version": "A/B/C"
+    "version": "A/B/C",
+    "files": [
+     "Ch5 1 Poster A NE - 15Nov2026",
+     "Ch5 2 Poster B NE - 15Nov2026",
+     "Ch5 3 Poster C NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch5 1 Poster A EN - 15Nov2026",
+     "Ch5 2 Poster B EN - 15Nov2026",
+     "Ch5 3 Poster C EN - 15Nov2026"
+    ]
    },
    {
     "id": "C5L",
@@ -10760,7 +10859,13 @@
      }
     ],
     "product": "leaflet",
-    "version": "r3"
+    "version": "r3",
+    "files": [
+     "Ch5 4 Leaflet NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch5 4 Leaflet EN - 15Nov2026"
+    ]
    },
    {
     "id": "C5G",
@@ -12650,7 +12755,13 @@
      }
     ],
     "product": "guide",
-    "version": "v1"
+    "version": "v1",
+    "files": [
+     "Ch5 5 Health Talk Guide NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch5 5 Health Talk Guide EN - 15Nov2026"
+    ]
    }
   ],
   "ch6": [
@@ -12862,7 +12973,17 @@
      }
     ],
     "product": "poster",
-    "version": "A/B/C"
+    "version": "A/B/C",
+    "files": [
+     "Ch6 1 Poster A NE - 15Nov2026",
+     "Ch6 2 Poster B NE - 15Nov2026",
+     "Ch6 3 Poster C NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch6 1 Poster A EN - 15Nov2026",
+     "Ch6 2 Poster B EN - 15Nov2026",
+     "Ch6 3 Poster C EN - 15Nov2026"
+    ]
    },
    {
     "id": "C6L",
@@ -13252,7 +13373,13 @@
      }
     ],
     "product": "leaflet",
-    "version": "r3"
+    "version": "r3",
+    "files": [
+     "Ch6 4 Leaflet NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch6 4 Leaflet EN - 15Nov2026"
+    ]
    },
    {
     "id": "C6G",
@@ -15112,7 +15239,13 @@
      }
     ],
     "product": "guide",
-    "version": "v1"
+    "version": "v1",
+    "files": [
+     "Ch6 5 Health Talk Guide NE - 15Nov2026"
+    ],
+    "files_en": [
+     "Ch6 5 Health Talk Guide EN - 15Nov2026"
+    ]
    }
   ]
  }

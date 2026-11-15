@@ -1,6 +1,11 @@
 {
  "updated": "2026-11-14",
  "rule": "Only approved products are listed.",
+ "release": {
+  "id": "15Nov2026",
+  "label": "15 November 2026",
+  "note": "Draft package for review by EDCD and partners. File names match the chapter folders and the asset register."
+ },
  "chapters": [
   {
    "n": 1,

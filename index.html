@@ -124,6 +124,7 @@ ol.steps .mbar{display:inline-block;width:70px;height:8px;padding:0!important;ba
 .prhow h4{margin:0 0 4px}.prhow ol{margin:4px 0;padding-left:20px;font-size:14px;text-align:justify;hyphens:none}
 .onlysafe{display:block;margin-top:10px;font-size:14px}
 .tr-card.onlysafe tr.t-general{display:none}
+.tl .fn,.fn{font-size:12.5px;color:var(--muted,#5b6b75);font-variant-numeric:tabular-nums}.fn.ne{display:block;margin:-4px 0 6px}
 .tr-card.hidedone tr[data-st=done]{display:none}
 details.trsec summary .team{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);flex:1 1 220px;justify-content:flex-end}
 .tbar{display:inline-block;width:120px;height:8px;border-radius:4px;background:var(--line);overflow:hidden}.tbar i{display:block;height:100%;background:var(--ok)}
@@ -520,24 +521,24 @@ function productView(c,tab,opt){
   if(!list.length) return `<div class="placeholder"><span class="status wait">Not yet approved</span><h3>${name} · Chapter ${c.n}</h3><p>This product is still in production. It appears here once it is approved.</p></div>`;
   const th=(src,title,pdf,alt,lang='en',pl='')=>`<button class="th" type="button" data-zoom data-lang="${lang}" data-src="${src}" data-title="${esc(title)}" data-pdf="${pdf}" data-pdflabel="${pl||(lang==='ne'?'Nepali PDF (draft)':'English PDF')}" aria-label="Preview: ${esc(title)}"><img src="${src}" alt="${esc(alt)}" loading="lazy"></button>`;
   const cards=list.map(p=>{
-    const t=`Chapter ${c.n} · ${name==='Poster'?'Poster · ':''}${p.label} · ${p.version}`;
+    const t=relFile(p);
     const sheets=(pdf,pl)=>p.images.map((s,j)=>`<div>${th(s,t+' · Print version · '+p.captions[j],pdf,`${name}, Chapter ${c.n}, print version: ${p.captions[j]}`,'en',pl)}<span class="cap">${esc(p.captions[j])}</span></div>`).join('');
     const pics=p.online_image?`<div class="tpair lf"><div><span class="vh">Online version</span><span class="cap">One page, panels in reading order 1 to 6. For phones, screens and sharing.</span>${th(p.online_image,t+' · Online version',p.pdf,`${name}, Chapter ${c.n}, online version`,'en','online version (PDF)')}</div><div class="stack"><span class="vh">Print version</span><span class="cap">One PDF with two pages: the two sides of one A4 sheet, folded in three along the dashed lines.</span>${p.print_image?th(p.print_image,t+' · Print version · both sides',p.print,`${name}, Chapter ${c.n}, print version, both sides`,'en','print version (PDF, 2 pages)')+`<span class="cap">Page 1, outside: panels 5 and 6, and the cover. Page 2, inside: panels 2, 3 and 4.</span>`:sheets(p.print,'print version (PDF)')}</div></div>`:p.images?`<div class="tpair">${sheets(p.pdf,'')}</div>`:th(p.image,t,p.pdf,`${name}, Chapter ${c.n}, ${p.label}`);
     const printBtn=p.print?`<a class="btn" href="${p.print}" download title="Higher resolution, for printing">${DL} Print version (${p.print_image?'one PDF, 2 pages':'larger file'})</a>`:'';
-    const cap=`<figcaption class="tl"><b>${esc(p.label)}</b><span>${esc(p.version)} · ${p.draft?'draft for review':'approved '+fmtDate(p.approved)}</span></figcaption>`;
+    const cap=`<figcaption class="tl"><b>${esc(p.label)}</b><span class="fn">${esc(relFile(p))}${p.draft?' · draft for review':''}</span></figcaption>`;
     const note=(p.draft?`<span class="netag">Draft · ${esc(p.draft)}</span>`:'')+(p.note?`<div class="note" style="margin:0">${esc(p.note)}</div>`:'');
-    if(p.ne&&p.online_image){const q=p.ne,tn=`Chapter ${c.n} · ${p.label} · Nepali draft ${q.version}`;
+    if(p.ne&&p.online_image){const q=p.ne,tn=relFile(p,true);
       const nePics=`<div class="tpair lf"><div><span class="vh">Online version · Nepali</span>${th(q.online_image,tn+' · Online version',q.pdf,`${name}, Chapter ${c.n}, Nepali draft, online version`,'ne','Nepali online version (PDF, draft)')}</div><div class="stack"><span class="vh">Print version · Nepali</span>${th(q.print_image,tn+' · Print version · both sides',q.print,`${name}, Chapter ${c.n}, Nepali draft, print version, both sides`,'ne','Nepali print version (PDF, 2 pages, draft)')}</div></div>`;
       return `<figure class="tcard two">
-      <span class="netag">Nepali · draft translation, language review pending · ${esc(q.version)}${q.note?` · ${esc(q.note)}`:''}</span>
+      <span class="netag">Nepali · draft translation, language review pending${q.note?` · ${esc(q.note)}`:''}</span><span class="fn ne">${esc(relFile(p,true))}</span>
       ${nePics}
       <div class="ta mid"><button class="btn primary big" type="button" data-open="ne">Preview Nepali</button><button class="btn primary big" type="button" data-open="en">Preview English</button></div>
       <span class="entag">English · approved</span>
       ${pics}${cap}${note}
       <div class="dlbox"><span class="dlh">Download</span><div class="ta dl"><a class="btn" href="${q.pdf}" download>${DL} Nepali online (PDF, draft)</a><a class="btn" href="${q.print}" download>${DL} Nepali print (PDF, draft)</a><a class="btn" href="${p.pdf}" download>${DL} English online (PDF)</a><a class="btn" href="${p.print}" download>${DL} English print (PDF)</a></div></div></figure>`}
     if(p.ne) return `<figure class="tcard two">
-      <span class="netag">Nepali · draft translation, language review pending${p.ne.note?` · ${esc(p.ne.note)}`:''}</span>
-      ${th(p.ne.image,t+' · Nepali draft '+p.ne.version,p.ne.pdf,`${name}, Chapter ${c.n}, ${p.label}, Nepali draft`,'ne')}
+      <span class="netag">Nepali · draft translation, language review pending${p.ne.note?` · ${esc(p.ne.note)}`:''}</span><span class="fn ne">${esc(relFile(p,true))}</span>
+      ${th(p.ne.image,relFile(p,true),p.ne.pdf,`${name}, Chapter ${c.n}, ${p.label}, Nepali draft`,'ne')}
       <div class="ta mid"><button class="btn primary big" type="button" data-open="ne">Preview Nepali</button><button class="btn primary big" type="button" data-open="en">Preview English</button></div>
       <span class="entag">English · approved</span>
       ${pics}${cap}${note}
@@ -550,10 +551,13 @@ function productView(c,tab,opt){
     <h3 style="margin:12px 0 4px;font-size:22px">${esc(name)} · Chapter ${c.n}${many?` · ${list.length} approved options`:''}</h3>
     <p class="cap" style="margin:0 0 14px">${many?'The options are shown side by side for comparison. ':''}Select a picture or Preview to see it larger.</p>
     <div class="galrow"><div class="gal n${Math.min(list.length,3)} ${(p0.images||p0.online_image)?'wide':''}">${cards}</div>
-    <div class="galinfo"><dl class="meta"><dt>Format</dt><dd>${esc(p0.format)}</dd><dt>Language</dt><dd>English review copy${list.some(x=>x.ne)?' · Nepali draft translation, language review pending':''}</dd></dl>
+    <div class="galinfo"><dl class="meta"><dt>Release</dt><dd>${RELEASE_TXT} · file names as in the asset register</dd><dt>Format</dt><dd>${esc(p0.format)}</dd><dt>Language</dt><dd>English review copy${list.some(x=>x.ne)?' · Nepali draft translation, language review pending':''}</dd></dl>
       <div><div class="btns"><span class="btn soon">Final Nepali PDF · after proofreading</span></div>
       <div class="btns"><a class="btn" href="#${c.key}/translation">See the translation</a><button class="btn" type="button" data-tofb>Give feedback</button></div></div></div>${fbBlock(c,tab,list)}</div>`;
 }
+function secFiles(chKey,sec,part){const c=S.chapters.find(x=>x.key===chKey);if(!c||!c[sec.product])return [];const m=/options? ([A-C](?:, [A-C])*)/.exec(part||'');return relFiles(c[sec.product],m?m[1].split(', '):null,'ne')}
+function trSource(sec){const ch=TRCH||document.querySelector('.tr-card')?.dataset.ch,f=secFiles(ch,sec);return `Release ${RELEASE_TXT}. English text exactly as in the approved files; Nepali AI-assisted draft developed under human direction, language and MHPSS review pending. Nepali file${f.length>1?'s':''}: ${f.join(', ')}.`}
+let TRCH='';
 function trTable(sec,colour,open){
   const P=myChecks();
   const safe=sec.rows.filter(r=>r.type==='safety').length, chk=sec.rows.filter(r=>r.type==='check').length, done=sec.rows.filter(r=>P[r.id]).length;
@@ -565,7 +569,7 @@ function trTable(sec,colour,open){
   }).join('');
   return `<details class="trsec" data-sec="${esc(sec.id)}" data-prod="${esc(sec.product||'')}" data-ver="${esc(sec.version||'')}" ${open?'open':''}>
    <summary style="--c:${colour}"><span class="ttl">${esc(sec.title.split(' · ').slice(-1)[0])}</span><span class="cnt">${sec.rows.length} rows · ${safe} SAFETY${chk?` · ${chk} CHECK`:''} · <b class="done">${done}</b> checked by you</span><span class="team"><span class="tbar"><i style="width:0%"></i></span><span class="tnum">Team progress loading…</span></span></summary>
-   <p class="small" style="margin:6px 0 0">${esc(sec.source)}</p>
+   <p class="small" style="margin:6px 0 0">${esc(trSource(sec))}</p>
    <table class="tr"><colgroup><col style="width:13%"><col style="width:31%"><col style="width:38%"><col style="width:18%"></colgroup>
    <thead><tr><th style="background:${colour}">ID</th><th style="background:${colour}">English (source)</th><th style="background:${colour}">नेपाली · Nepali (draft)</th><th style="background:${colour}">Your check</th></tr></thead><tbody>${rows}</tbody></table></details>`;
 }
@@ -636,6 +640,7 @@ function translation(c){
     <div id="whoslot">${whoHtml()}</div>
     <div class="filters"><label class="onlysafe"><input type="checkbox" id="onlysafe"> Start with SAFETY and CHECK rows (show these only)</label><label class="onlysafe"><input type="checkbox" id="hidedone" checked> Hide rows the team has already completed</label></div>
     <p class="small" style="margin:6px 0 0"><span id="stamp"></span></p></div>`;
+  TRCH=c.key;
   return `<div class="card tr-card hidedone" data-ch="${c.key}">${head}${flow}${how}${secs.map((s,i)=>trTable(s,c.colour[0],false)).join('')}
     <p class="small">General comments on a product: use the comment box on that product's page.</p></div>`;
 }
@@ -643,7 +648,7 @@ function prFind(id){const c=document.querySelector('.tr-card');for(const s of T.
 async function sendProof(tr,verdict){
   const id=tr.dataset.row, f=prFind(id), cell=tr.querySelector('td.pr'), form=tr.nextElementSibling?.classList.contains('prf')?tr.nextElementSibling:null;
   const w=readWho(); if(!w){document.getElementById('whoslot').scrollIntoView({behavior:'smooth',block:'center'});(form?form.querySelector('.fbmsg'):cell).insertAdjacentHTML('beforeend','<span class="fbmsg err" style="display:block">Please enter your name, organisation, email and acknowledgement choice at the top first.</span>');return}
-  const d={kind:'proof',chapter:f.ch,product:f.s.product,option:'all',version:f.s.version,row:id,verdict:verdict==='agree'?'change':verdict,name:w.name,org:w.org,email:w.email,credit:w.credit,clientTime:new Date().toISOString()};
+  const d={kind:'proof',release:RELEASE,file:secFiles(f.ch,f.s,f.r.part).join('; '),chapter:f.ch,product:f.s.product,option:'all',version:f.s.version,row:id,verdict:verdict==='agree'?'change':verdict,name:w.name,org:w.org,email:w.email,credit:w.credit,clientTime:new Date().toISOString()};
   if(verdict==='agree'){const st=ST[f.ch]&&ST[f.ch].rows[id]; if(!st||!st.prop) return; d.text=st.prop; d.note='Agrees with the proposed correction';}
   if(verdict==='change'){const t=form.querySelector('textarea').value.trim(), n=form.querySelector('input').value.trim(), m=form.querySelector('.fbmsg');
     if(!t||t===f.r.ne){m.textContent='Please type the corrected Nepali (it is the same as the draft).';m.className='fbmsg err';return}
@@ -681,11 +686,14 @@ function myChecks(){return LS.get(myKey())||{}}
 function refreshMine(){const P=myChecks();document.querySelectorAll('.tr-card tr[data-row]').forEach(tr=>{const m=tr.querySelector('.mine');if(m)m.innerHTML=prCell(tr.dataset.row,P[tr.dataset.row])});document.querySelectorAll('.tr-card details.trsec').forEach(d=>{d.querySelector('.done').textContent=[...d.querySelectorAll('tr[data-row]')].filter(x=>P[x.dataset.row]).length});const c=document.querySelector('.tr-card');if(c)applyStatus(c.dataset.ch)}
 const DOWNLOADS=false;   // owner, 14 Nov 2026: downloads off until validation
 const WM='b';            // watermark in full preview only: corner ribbon (owner choice, 14 Nov 2026)
-const RELEASE='15Nov2026';   // release date in file names; matches the files in the chapter folders (owner, 15 Nov 2026)
+let RELEASE='15Nov2026';   // release in use; file names match the files in the chapter folders and the asset register (owner, 15 Nov 2026). Read from data/series.json.
 function dlName(href){const m=/series\/ch(\d)\/(poster-([ABC])|leaflet|guide)(-ne)?-[rv]\d+(-print)?\.pdf$/.exec(href||'');if(!m)return '';
   const k=m[3]?{A:1,B:2,C:3}[m[3]]:(m[2]==='leaflet'?4:5), prod=m[3]?'Poster '+m[3]:(m[2]==='leaflet'?'Leaflet':'Health Talk Guide');
   const master=!!m[5]||(!!m[4]&&!!m[3]);   // print file, or the Nepali poster (single file) = the file in the chapter folder
   return `Ch${m[1]} ${k} ${prod} ${m[4]?'NE':'EN'}${master?'':' online'} - ${RELEASE}.pdf`}
+let RELEASE_TXT='15 November 2026';
+function relFile(p,ne){const h=ne?((p&&p.ne&&(p.ne.print||p.ne.pdf))||''):((p&&(p.print||p.pdf))||'');return (dlName(h)||'').replace(/\.pdf$/,'')}
+function relFiles(list,letters,both){const L=letters&&letters.length?letters:null;const out=[];list.filter(x=>!L||L.includes(letter(x))).forEach(x=>{if(both!=='ne')out.push(relFile(x));if(both!=='en'&&x.ne)out.push(relFile(x,true))});return out.filter(Boolean)}
 function nameDownloads(root){(root||document).querySelectorAll('a[download]').forEach(a=>{const n=dlName(a.getAttribute('href'));if(n)a.setAttribute('download',n)})}
 function noDownloads(){
   nameDownloads($('main'));
@@ -739,10 +747,10 @@ function fbBlock(c,tab,list){
   const name=TABS.find(x=>x[0]===tab)[1], opts=list.filter(letter), poll=tab==='poster'&&opts.length>1;
   const voted=LS.get(`iec-vote-${c.key}-${tab}`);
   const pollBox=poll?`<div class="fbbox"><h4>Which poster option do you prefer?</h4><p>One choice per reviewer. You can change it by voting again.</p>
-     <div class="pollopts" role="radiogroup" aria-label="Preferred option">${opts.map(x=>`<label><input type="radio" name="poll" value="${letter(x)}" data-v="${esc(x.version)}" ${voted===letter(x)?'checked':''}>${esc(x.label)}</label>`).join('')}</div>
+     <div class="pollopts" role="radiogroup" aria-label="Preferred option">${opts.map(x=>`<label><input type="radio" name="poll" value="${letter(x)}" data-v="${esc(x.version)}" data-f="${esc(relFiles([x]).join('; '))}" ${voted===letter(x)?'checked':''}>${esc(x.label)}</label>`).join('')}</div>
      <button class="btn primary" type="button" data-send="vote">Submit my choice</button><div class="fbmsg ${voted?'ok':''}" id="m-vote" role="status">${voted?`Your current choice: Option ${voted}.`:''}</div></div>`:'';
   const about=opts.length>1?`<label class="f" style="margin-bottom:10px">About<select id="c-about"><option value="all">All options / general</option>${opts.map(x=>`<option value="${letter(x)}">${esc(x.label)}</option>`).join('')}</select></label>`:'';
-  return `<section class="fb" id="fb" data-ch="${c.key}" data-tab="${tab}" data-ver="${esc(list.map(x=>x.version).join(' / '))}"><div style="border-top:1px solid var(--line);padding-top:18px">
+  return `<section class="fb" id="fb" data-ch="${c.key}" data-tab="${tab}" data-ver="${esc(list.map(x=>x.version).join(' / '))}" data-files="${esc(relFiles(list).join('; '))}"><div style="border-top:1px solid var(--line);padding-top:18px">
     <h3>Your feedback · ${esc(name)}, Chapter ${c.n}</h3>
     <span class="cap">Your details and feedback go only to the review team. They are not shown on this page.</span>
     <div id="whoslot">${whoHtml()}</div>
@@ -761,9 +769,9 @@ function readWho(){
 async function sendFb(kind,btn){
   const sec=document.getElementById('fb'),msg=document.getElementById('m-'+kind),say=(t,c)=>{msg.textContent=t;msg.className='fbmsg '+c};
   const w=readWho(); if(!w) return say('Please enter your name, organisation, a valid email and your acknowledgement choice first.','err');
-  const d={kind,chapter:sec.dataset.ch,product:sec.dataset.tab,name:w.name,org:w.org,email:w.email,credit:w.credit,clientTime:new Date().toISOString()};
-  if(kind==='vote'){const r=sec.querySelector('input[name=poll]:checked'); if(!r) return say('Please choose one option.','err'); d.option=r.value; d.version=r.dataset.v;}
-  else{const t=document.getElementById('c-text').value.trim(); if(!t) return say('Please write your comment first.','err'); d.text=t; d.option=document.getElementById('c-about')?.value||'all'; d.version=sec.dataset.ver;}
+  const d={kind,release:RELEASE,chapter:sec.dataset.ch,product:sec.dataset.tab,name:w.name,org:w.org,email:w.email,credit:w.credit,clientTime:new Date().toISOString()};
+  if(kind==='vote'){const r=sec.querySelector('input[name=poll]:checked'); if(!r) return say('Please choose one option.','err'); d.option=r.value; d.version=r.dataset.v; d.file=r.dataset.f;}
+  else{const t=document.getElementById('c-text').value.trim(); if(!t) return say('Please write your comment first.','err'); d.text=t; d.option=document.getElementById('c-about')?.value||'all'; d.version=sec.dataset.ver; d.file=d.option==='all'?sec.dataset.files:(sec.querySelector(`input[name=poll][value="${d.option}"]`)?.dataset.f||relFiles(S.chapters.find(x=>x.key===sec.dataset.ch)[sec.dataset.tab],[d.option]).join('; '));}
   const fields={}; for(const k in d) fields[k]={stringValue:String(d[k])};
   btn.disabled=true; say('Sending…','');
   try{
@@ -886,7 +894,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-gate]');if
   document.documentElement.classList.add('entered');scrollTo(0,0);
   if(k==='proof'&&!/translation$/.test(location.hash))location.hash='#ch1/translation';});
 Promise.all([fetch('data/series.json').then(r=>r.json()),fetch('data/translation.json').then(r=>r.json()).catch(()=>null),fetch('data/cast.json').then(r=>r.json()).catch(()=>null)])
- .then(([s,t,k])=>{S=s;T=t;CASTDATA=k;addEventListener('hashchange',render);render();})
+ .then(([s,t,k])=>{S=s;T=t;CASTDATA=k;if(s.release){RELEASE=s.release.id;RELEASE_TXT=s.release.label}addEventListener('hashchange',render);render();})
  .catch(()=>{document.getElementById('main').innerHTML='<div class="placeholder"><h3>The page could not load its content.</h3><p>Please refresh, or open it from the published address.</p></div>'});
 const dlg=document.getElementById('dlg'),$=id=>document.getElementById(id);
 let G=[],gi=0;
