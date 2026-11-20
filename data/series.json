@@ -1,642 +1,840 @@
 {
- "updated": "2026-11-14",
- "rule": "Only approved products are listed.",
- "release": {
-  "id": "15Nov2026",
-  "label": "15 November 2026",
-  "note": "Draft package for review by EDCD and partners. File names match the chapter folders and the asset register."
- },
- "chapters": [
-  {
-   "n": 1,
-   "key": "ch1",
-   "title": "You are not alone",
-   "theme": "Common reactions",
-   "colour": [
-    "#00415e",
-    "#0b6e78",
-    "#e8f4fa"
-   ],
-   "moment": "First days in the shared shelter. Everyone feels something different; Karuna sits with Asha and offers her tea.",
-   "poster": [
-    {
-     "label": "Option A",
-     "version": "r5",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch1/poster-A-r5.jpg",
-     "pdf": "assets/series/ch1/poster-A-r5.pdf",
-     "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch1/poster-A-r5-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch1/poster-A-ne-r1.jpg",
-      "pdf": "assets/series/ch1/poster-A-ne-r1.pdf"
-     }
-    },
-    {
-     "label": "Option B",
-     "version": "r5",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch1/poster-B-r5.jpg",
-     "pdf": "assets/series/ch1/poster-B-r5.pdf",
-     "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch1/poster-B-r5-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch1/poster-B-ne-r1.jpg",
-      "pdf": "assets/series/ch1/poster-B-ne-r1.pdf"
-     }
-    },
-    {
-     "label": "Option C",
-     "version": "r5",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch1/poster-C-r5.jpg",
-     "pdf": "assets/series/ch1/poster-C-r5.pdf",
-     "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch1/poster-C-r5-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch1/poster-C-ne-r1.jpg",
-      "pdf": "assets/series/ch1/poster-C-ne-r1.pdf"
-     }
-    }
-   ],
-   "leaflet": [
-    {
-     "label": "Leaflet A",
-     "version": "Tri-fold r11",
-     "approved": "2026-11-14",
-     "pdf": "assets/series/ch1/leaflet-r11.pdf",
-     "format": "A4 tri-fold · take-home leaflet · online and print versions",
-     "print": "assets/series/ch1/leaflet-r11-print.pdf",
-     "online_image": "assets/series/ch1/leaflet-r11-online.jpg",
-     "print_image": "assets/series/ch1/leaflet-r11-print.jpg",
-     "image": "assets/series/ch1/leaflet-r11-online.jpg",
-     "ne": {
-      "version": "r2",
-      "pdf": "assets/series/ch1/leaflet-ne-r2.pdf",
-      "print": "assets/series/ch1/leaflet-ne-r2-print.pdf",
-      "online_image": "assets/series/ch1/leaflet-ne-r2-online.jpg",
-      "print_image": "assets/series/ch1/leaflet-ne-r2-print.jpg",
-      "image": "assets/series/ch1/leaflet-ne-r2-online.jpg",
-      "note": "machine translation",
-      "layout_acc": "2026-11-14"
-     }
-    }
-   ],
-   "guide": [
-    {
-     "label": "Health Talk Guide",
-     "version": "v14",
-     "approved": "2026-11-14",
-     "image": "assets/series/ch1/guide-v14.jpg",
-     "pdf": "assets/series/ch1/guide-v14.pdf",
-     "print": "assets/series/ch1/guide-v14-print.pdf",
-     "format": "A4 · facilitator guide · 5 pages",
-     "ne": {
-      "version": "v14",
-      "pdf": "assets/series/ch1/guide-ne-v14.pdf",
-      "print": "assets/series/ch1/guide-ne-v14-print.pdf",
-      "image": "assets/series/ch1/guide-ne-v14.jpg",
-      "note": "machine translation",
-      "layout_acc": "2026-11-14"
-     }
-    }
-   ],
-   "short": "Not alone",
-   "stage": "First days",
-   "leads": [
-    "E",
-    "G"
-   ]
+  "updated": "2026-11-20",
+  "rule": "Only approved products are listed.",
+  "release": {
+    "id": "15Nov2026",
+    "label": "15 November 2026",
+    "note": "Draft package for review by EDCD and partners. File names match the chapter folders and the asset register."
   },
-  {
-   "n": 2,
-   "key": "ch2",
-   "title": "Difficult nights",
-   "theme": "Sleep after a distressing experience",
-   "colour": [
-    "#232b57",
-    "#3f4d8f",
-    "#eceef8"
-   ],
-   "moment": "A night in the shared shelter. Milan wakes up afraid; his father Prakash sits up with him and helps him notice where they are.",
-   "poster": [
+  "chapters": [
     {
-     "label": "Option A",
-     "version": "r12",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch2/poster-A-r12.jpg",
-     "pdf": "assets/series/ch2/poster-A-r12.pdf",
-     "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch2/poster-A-r12-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch2/poster-A-ne-r1.jpg",
-      "pdf": "assets/series/ch2/poster-A-ne-r1.pdf"
-     }
+      "n": 1,
+      "key": "ch1",
+      "title": "You are not alone",
+      "theme": "Common reactions",
+      "colour": [
+        "#00415e",
+        "#0b6e78",
+        "#e8f4fa"
+      ],
+      "moment": "First days in the shared shelter. Everyone feels something different; Karuna sits with Asha and offers her tea.",
+      "poster": [
+        {
+          "label": "Option A",
+          "version": "r5",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch1/poster-A-r5.jpg",
+          "pdf": "assets/series/ch1/poster-A-r5.pdf",
+          "format": "A3 portrait · community wall poster",
+          "print": "assets/series/ch1/poster-A-r5-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch1/poster-A-ne-r1.jpg",
+            "pdf": "assets/series/ch1/poster-A-ne-r1.pdf"
+          }
+        },
+        {
+          "label": "Option B",
+          "version": "r5",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch1/poster-B-r5.jpg",
+          "pdf": "assets/series/ch1/poster-B-r5.pdf",
+          "format": "A3 portrait · community wall poster",
+          "print": "assets/series/ch1/poster-B-r5-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch1/poster-B-ne-r1.jpg",
+            "pdf": "assets/series/ch1/poster-B-ne-r1.pdf"
+          }
+        },
+        {
+          "label": "Option C",
+          "version": "r5",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch1/poster-C-r5.jpg",
+          "pdf": "assets/series/ch1/poster-C-r5.pdf",
+          "format": "A3 portrait · community wall poster",
+          "print": "assets/series/ch1/poster-C-r5-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch1/poster-C-ne-r1.jpg",
+            "pdf": "assets/series/ch1/poster-C-ne-r1.pdf"
+          }
+        }
+      ],
+      "leaflet": [
+        {
+          "label": "Leaflet A",
+          "version": "Tri-fold r11",
+          "approved": "2026-11-14",
+          "pdf": "assets/series/ch1/leaflet-r11.pdf",
+          "format": "A4 tri-fold · take-home leaflet · online and print versions",
+          "print": "assets/series/ch1/leaflet-r11-print.pdf",
+          "online_image": "assets/series/ch1/leaflet-r11-online.jpg",
+          "print_image": "assets/series/ch1/leaflet-r11-print.jpg",
+          "image": "assets/series/ch1/leaflet-r11-online.jpg",
+          "ne": {
+            "version": "r2",
+            "pdf": "assets/series/ch1/leaflet-ne-r2.pdf",
+            "print": "assets/series/ch1/leaflet-ne-r2-print.pdf",
+            "online_image": "assets/series/ch1/leaflet-ne-r2-online.jpg",
+            "print_image": "assets/series/ch1/leaflet-ne-r2-print.jpg",
+            "image": "assets/series/ch1/leaflet-ne-r2-online.jpg",
+            "note": "machine translation",
+            "layout_acc": "2026-11-14"
+          }
+        }
+      ],
+      "guide": [
+        {
+          "version": "screen-review-20Nov2026",
+          "pdf": "assets/series/ch1/guide-review-20Nov2026.pdf",
+          "image": "assets/series/ch1/guide-review-20Nov2026-p01.jpg",
+          "pages": [
+            "assets/series/ch1/guide-review-20Nov2026-p01.jpg",
+            "assets/series/ch1/guide-review-20Nov2026-p02.jpg",
+            "assets/series/ch1/guide-review-20Nov2026-p03.jpg",
+            "assets/series/ch1/guide-review-20Nov2026-p04.jpg",
+            "assets/series/ch1/guide-review-20Nov2026-p05.jpg",
+            "assets/series/ch1/guide-review-20Nov2026-p06.jpg",
+            "assets/series/ch1/guide-review-20Nov2026-p07.jpg",
+            "assets/series/ch1/guide-review-20Nov2026-p08.jpg",
+            "assets/series/ch1/guide-review-20Nov2026-p09.jpg",
+            "assets/series/ch1/guide-review-20Nov2026-p10.jpg",
+            "assets/series/ch1/guide-review-20Nov2026-p11.jpg",
+            "assets/series/ch1/guide-review-20Nov2026-p12.jpg",
+            "assets/series/ch1/guide-review-20Nov2026-p13.jpg",
+            "assets/series/ch1/guide-review-20Nov2026-p14.jpg"
+          ],
+          "release_name": "Ch1 5 Health Talk Guide EN online - 20Nov2026",
+          "note": "Updated flip-chart edition. Audience pages alternate with their facilitator notes; shared references follow. Review draft, not for field distribution.",
+          "label": "Health Talk Guide",
+          "draft": "Review copy · not for field distribution",
+          "format": "A5 landscape · 14 screen-review pages · audience page followed by facilitator note",
+          "release_label": "20 November 2026",
+          "ne": {
+            "version": "screen-review-20Nov2026",
+            "pdf": "assets/series/ch1/guide-ne-review-20Nov2026.pdf",
+            "image": "assets/series/ch1/guide-ne-review-20Nov2026-p01.jpg",
+            "pages": [
+              "assets/series/ch1/guide-ne-review-20Nov2026-p01.jpg",
+              "assets/series/ch1/guide-ne-review-20Nov2026-p02.jpg",
+              "assets/series/ch1/guide-ne-review-20Nov2026-p03.jpg",
+              "assets/series/ch1/guide-ne-review-20Nov2026-p04.jpg",
+              "assets/series/ch1/guide-ne-review-20Nov2026-p05.jpg",
+              "assets/series/ch1/guide-ne-review-20Nov2026-p06.jpg",
+              "assets/series/ch1/guide-ne-review-20Nov2026-p07.jpg",
+              "assets/series/ch1/guide-ne-review-20Nov2026-p08.jpg",
+              "assets/series/ch1/guide-ne-review-20Nov2026-p09.jpg",
+              "assets/series/ch1/guide-ne-review-20Nov2026-p10.jpg",
+              "assets/series/ch1/guide-ne-review-20Nov2026-p11.jpg",
+              "assets/series/ch1/guide-ne-review-20Nov2026-p12.jpg",
+              "assets/series/ch1/guide-ne-review-20Nov2026-p13.jpg",
+              "assets/series/ch1/guide-ne-review-20Nov2026-p14.jpg"
+            ],
+            "release_name": "Ch1 5 Health Talk Guide NE online - 20Nov2026",
+            "note": "machine translation"
+          }
+        }
+      ],
+      "short": "Not alone",
+      "stage": "First days",
+      "leads": [
+        "E",
+        "G"
+      ]
     },
     {
-     "label": "Option B",
-     "version": "r6",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch2/poster-B-r6.jpg",
-     "pdf": "assets/series/ch2/poster-B-r6.pdf",
-     "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch2/poster-B-r6-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch2/poster-B-ne-r1.jpg",
-      "pdf": "assets/series/ch2/poster-B-ne-r1.pdf"
-     }
+      "n": 2,
+      "key": "ch2",
+      "title": "Difficult nights",
+      "theme": "Sleep after a distressing experience",
+      "colour": [
+        "#232b57",
+        "#3f4d8f",
+        "#eceef8"
+      ],
+      "moment": "A night in the shared shelter. Milan wakes up afraid; his father Prakash sits up with him and helps him notice where they are.",
+      "poster": [
+        {
+          "label": "Option A",
+          "version": "r12",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch2/poster-A-r12.jpg",
+          "pdf": "assets/series/ch2/poster-A-r12.pdf",
+          "format": "A3 portrait · community wall poster",
+          "print": "assets/series/ch2/poster-A-r12-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch2/poster-A-ne-r1.jpg",
+            "pdf": "assets/series/ch2/poster-A-ne-r1.pdf"
+          }
+        },
+        {
+          "label": "Option B",
+          "version": "r6",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch2/poster-B-r6.jpg",
+          "pdf": "assets/series/ch2/poster-B-r6.pdf",
+          "format": "A3 portrait · community wall poster",
+          "print": "assets/series/ch2/poster-B-r6-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch2/poster-B-ne-r1.jpg",
+            "pdf": "assets/series/ch2/poster-B-ne-r1.pdf"
+          }
+        },
+        {
+          "label": "Option C",
+          "version": "r6",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch2/poster-C-r6.jpg",
+          "pdf": "assets/series/ch2/poster-C-r6.pdf",
+          "format": "A3 portrait · community wall poster",
+          "print": "assets/series/ch2/poster-C-r6-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch2/poster-C-ne-r1.jpg",
+            "pdf": "assets/series/ch2/poster-C-ne-r1.pdf"
+          }
+        }
+      ],
+      "leaflet": [
+        {
+          "label": "Leaflet A",
+          "version": "Tri-fold r5",
+          "approved": "2026-11-14",
+          "pdf": "assets/series/ch2/leaflet-r5.pdf",
+          "format": "A4 tri-fold · take-home leaflet · online and print versions",
+          "print": "assets/series/ch2/leaflet-r5-print.pdf",
+          "online_image": "assets/series/ch2/leaflet-r5-online.jpg",
+          "print_image": "assets/series/ch2/leaflet-r5-print.jpg",
+          "image": "assets/series/ch2/leaflet-r5-online.jpg",
+          "ne": {
+            "version": "r2",
+            "pdf": "assets/series/ch2/leaflet-ne-r2.pdf",
+            "print": "assets/series/ch2/leaflet-ne-r2-print.pdf",
+            "online_image": "assets/series/ch2/leaflet-ne-r2-online.jpg",
+            "print_image": "assets/series/ch2/leaflet-ne-r2-print.jpg",
+            "image": "assets/series/ch2/leaflet-ne-r2-online.jpg",
+            "note": "machine translation",
+            "layout_acc": "2026-11-14"
+          }
+        }
+      ],
+      "guide": [
+        {
+          "version": "screen-review-20Nov2026",
+          "pdf": "assets/series/ch2/guide-review-20Nov2026.pdf",
+          "image": "assets/series/ch2/guide-review-20Nov2026-p01.jpg",
+          "pages": [
+            "assets/series/ch2/guide-review-20Nov2026-p01.jpg",
+            "assets/series/ch2/guide-review-20Nov2026-p02.jpg",
+            "assets/series/ch2/guide-review-20Nov2026-p03.jpg",
+            "assets/series/ch2/guide-review-20Nov2026-p04.jpg",
+            "assets/series/ch2/guide-review-20Nov2026-p05.jpg",
+            "assets/series/ch2/guide-review-20Nov2026-p06.jpg",
+            "assets/series/ch2/guide-review-20Nov2026-p07.jpg",
+            "assets/series/ch2/guide-review-20Nov2026-p08.jpg",
+            "assets/series/ch2/guide-review-20Nov2026-p09.jpg",
+            "assets/series/ch2/guide-review-20Nov2026-p10.jpg",
+            "assets/series/ch2/guide-review-20Nov2026-p11.jpg",
+            "assets/series/ch2/guide-review-20Nov2026-p12.jpg",
+            "assets/series/ch2/guide-review-20Nov2026-p13.jpg",
+            "assets/series/ch2/guide-review-20Nov2026-p14.jpg"
+          ],
+          "release_name": "Ch2 5 Health Talk Guide EN online - 20Nov2026",
+          "note": "Updated flip-chart edition. Audience pages alternate with their facilitator notes; shared references follow. Review draft, not for field distribution.",
+          "label": "Health Talk Guide",
+          "draft": "Review copy · not for field distribution",
+          "format": "A5 landscape · 14 screen-review pages · audience page followed by facilitator note",
+          "release_label": "20 November 2026",
+          "ne": {
+            "version": "screen-review-20Nov2026",
+            "pdf": "assets/series/ch2/guide-ne-review-20Nov2026.pdf",
+            "image": "assets/series/ch2/guide-ne-review-20Nov2026-p01.jpg",
+            "pages": [
+              "assets/series/ch2/guide-ne-review-20Nov2026-p01.jpg",
+              "assets/series/ch2/guide-ne-review-20Nov2026-p02.jpg",
+              "assets/series/ch2/guide-ne-review-20Nov2026-p03.jpg",
+              "assets/series/ch2/guide-ne-review-20Nov2026-p04.jpg",
+              "assets/series/ch2/guide-ne-review-20Nov2026-p05.jpg",
+              "assets/series/ch2/guide-ne-review-20Nov2026-p06.jpg",
+              "assets/series/ch2/guide-ne-review-20Nov2026-p07.jpg",
+              "assets/series/ch2/guide-ne-review-20Nov2026-p08.jpg",
+              "assets/series/ch2/guide-ne-review-20Nov2026-p09.jpg",
+              "assets/series/ch2/guide-ne-review-20Nov2026-p10.jpg",
+              "assets/series/ch2/guide-ne-review-20Nov2026-p11.jpg",
+              "assets/series/ch2/guide-ne-review-20Nov2026-p12.jpg",
+              "assets/series/ch2/guide-ne-review-20Nov2026-p13.jpg",
+              "assets/series/ch2/guide-ne-review-20Nov2026-p14.jpg"
+            ],
+            "release_name": "Ch2 5 Health Talk Guide NE online - 20Nov2026",
+            "note": "machine translation"
+          }
+        }
+      ],
+      "short": "Nights",
+      "stage": "Nights",
+      "leads": [
+        "B",
+        "F"
+      ]
     },
     {
-     "label": "Option C",
-     "version": "r6",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch2/poster-C-r6.jpg",
-     "pdf": "assets/series/ch2/poster-C-r6.pdf",
-     "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch2/poster-C-r6-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch2/poster-C-ne-r1.jpg",
-      "pdf": "assets/series/ch2/poster-C-ne-r1.pdf"
-     }
-    }
-   ],
-   "leaflet": [
-    {
-     "label": "Leaflet A",
-     "version": "Tri-fold r5",
-     "approved": "2026-11-14",
-     "pdf": "assets/series/ch2/leaflet-r5.pdf",
-     "format": "A4 tri-fold · take-home leaflet · online and print versions",
-     "print": "assets/series/ch2/leaflet-r5-print.pdf",
-     "online_image": "assets/series/ch2/leaflet-r5-online.jpg",
-     "print_image": "assets/series/ch2/leaflet-r5-print.jpg",
-     "image": "assets/series/ch2/leaflet-r5-online.jpg",
-     "ne": {
-      "version": "r2",
-      "pdf": "assets/series/ch2/leaflet-ne-r2.pdf",
-      "print": "assets/series/ch2/leaflet-ne-r2-print.pdf",
-      "online_image": "assets/series/ch2/leaflet-ne-r2-online.jpg",
-      "print_image": "assets/series/ch2/leaflet-ne-r2-print.jpg",
-      "image": "assets/series/ch2/leaflet-ne-r2-online.jpg",
-      "note": "machine translation",
-      "layout_acc": "2026-11-14"
-     }
-    }
-   ],
-   "guide": [
-    {
-     "label": "Health Talk Guide",
-     "version": "v7",
-     "approved": "2026-11-14",
-     "image": "assets/series/ch2/guide-v7.jpg",
-     "pdf": "assets/series/ch2/guide-v7.pdf",
-     "print": "assets/series/ch2/guide-v7-print.pdf",
-     "format": "A4 · facilitator guide · 5 pages",
-     "ne": {
-      "version": "v7",
-      "pdf": "assets/series/ch2/guide-ne-v7.pdf",
-      "print": "assets/series/ch2/guide-ne-v7-print.pdf",
-      "image": "assets/series/ch2/guide-ne-v7.jpg",
-      "note": "machine translation",
-      "layout_acc": "2026-11-14"
-     }
-    }
-   ],
-   "short": "Nights",
-   "stage": "Nights",
-   "leads": [
-    "B",
-    "F"
-   ]
-  },
-  {
-   "n": 3,
-   "key": "ch3",
-   "title": "There is no right way to grieve",
-   "theme": "Grief and missing loved ones",
-   "colour": [
-    "#3d2f63",
-    "#6b5a9c",
-    "#f2eef8"
-   ],
-   "moment": "Late afternoon on the shelter veranda. Asha and Satya miss someone; neighbours stay near them in quiet, practical ways.",
-   "poster": [
-    {
-     "label": "Option A",
-     "version": "r12",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch3/poster-A-r12.jpg",
-     "pdf": "assets/series/ch3/poster-A-r12.pdf",
-     "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch3/poster-A-r12-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch3/poster-A-ne-r1.jpg",
-      "pdf": "assets/series/ch3/poster-A-ne-r1.pdf"
-     }
+      "n": 3,
+      "key": "ch3",
+      "title": "There is no right way to grieve",
+      "theme": "Grief and missing loved ones",
+      "colour": [
+        "#3d2f63",
+        "#6b5a9c",
+        "#f2eef8"
+      ],
+      "moment": "Late afternoon on the shelter veranda. Asha and Satya miss someone; neighbours stay near them in quiet, practical ways.",
+      "poster": [
+        {
+          "label": "Option A",
+          "version": "r12",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch3/poster-A-r12.jpg",
+          "pdf": "assets/series/ch3/poster-A-r12.pdf",
+          "format": "A3 portrait · community wall poster",
+          "print": "assets/series/ch3/poster-A-r12-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch3/poster-A-ne-r1.jpg",
+            "pdf": "assets/series/ch3/poster-A-ne-r1.pdf"
+          }
+        },
+        {
+          "label": "Option B",
+          "version": "r11",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch3/poster-B-r11.jpg",
+          "pdf": "assets/series/ch3/poster-B-r11.pdf",
+          "format": "A3 portrait · community wall poster",
+          "print": "assets/series/ch3/poster-B-r11-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch3/poster-B-ne-r1.jpg",
+            "pdf": "assets/series/ch3/poster-B-ne-r1.pdf"
+          }
+        },
+        {
+          "label": "Option C",
+          "version": "r9",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch3/poster-C-r9.jpg",
+          "pdf": "assets/series/ch3/poster-C-r9.pdf",
+          "format": "A3 portrait · community wall poster",
+          "print": "assets/series/ch3/poster-C-r9-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch3/poster-C-ne-r1.jpg",
+            "pdf": "assets/series/ch3/poster-C-ne-r1.pdf"
+          }
+        }
+      ],
+      "leaflet": [
+        {
+          "label": "Leaflet A",
+          "version": "Tri-fold r6",
+          "approved": "2026-11-14",
+          "pdf": "assets/series/ch3/leaflet-r6.pdf",
+          "format": "A4 tri-fold · take-home leaflet · online and print versions",
+          "print": "assets/series/ch3/leaflet-r6-print.pdf",
+          "online_image": "assets/series/ch3/leaflet-r6-online.jpg",
+          "print_image": "assets/series/ch3/leaflet-r6-print.jpg",
+          "image": "assets/series/ch3/leaflet-r6-online.jpg",
+          "ne": {
+            "version": "r1",
+            "pdf": "assets/series/ch3/leaflet-ne-r1.pdf",
+            "print": "assets/series/ch3/leaflet-ne-r1-print.pdf",
+            "online_image": "assets/series/ch3/leaflet-ne-r1-online.jpg",
+            "print_image": "assets/series/ch3/leaflet-ne-r1-print.jpg",
+            "image": "assets/series/ch3/leaflet-ne-r1-online.jpg",
+            "note": "machine translation",
+            "layout_acc": "2026-11-14"
+          }
+        }
+      ],
+      "guide": [
+        {
+          "version": "screen-review-20Nov2026",
+          "pdf": "assets/series/ch3/guide-review-20Nov2026.pdf",
+          "image": "assets/series/ch3/guide-review-20Nov2026-p01.jpg",
+          "pages": [
+            "assets/series/ch3/guide-review-20Nov2026-p01.jpg",
+            "assets/series/ch3/guide-review-20Nov2026-p02.jpg",
+            "assets/series/ch3/guide-review-20Nov2026-p03.jpg",
+            "assets/series/ch3/guide-review-20Nov2026-p04.jpg",
+            "assets/series/ch3/guide-review-20Nov2026-p05.jpg",
+            "assets/series/ch3/guide-review-20Nov2026-p06.jpg",
+            "assets/series/ch3/guide-review-20Nov2026-p07.jpg",
+            "assets/series/ch3/guide-review-20Nov2026-p08.jpg",
+            "assets/series/ch3/guide-review-20Nov2026-p09.jpg",
+            "assets/series/ch3/guide-review-20Nov2026-p10.jpg",
+            "assets/series/ch3/guide-review-20Nov2026-p11.jpg",
+            "assets/series/ch3/guide-review-20Nov2026-p12.jpg",
+            "assets/series/ch3/guide-review-20Nov2026-p13.jpg",
+            "assets/series/ch3/guide-review-20Nov2026-p14.jpg"
+          ],
+          "release_name": "Ch3 5 Health Talk Guide EN online - 20Nov2026",
+          "note": "Updated flip-chart edition. Audience pages alternate with their facilitator notes; shared references follow. Review draft, not for field distribution.",
+          "label": "Health Talk Guide",
+          "draft": "Review copy · not for field distribution",
+          "format": "A5 landscape · 14 screen-review pages · audience page followed by facilitator note",
+          "release_label": "20 November 2026",
+          "ne": {
+            "version": "screen-review-20Nov2026",
+            "pdf": "assets/series/ch3/guide-ne-review-20Nov2026.pdf",
+            "image": "assets/series/ch3/guide-ne-review-20Nov2026-p01.jpg",
+            "pages": [
+              "assets/series/ch3/guide-ne-review-20Nov2026-p01.jpg",
+              "assets/series/ch3/guide-ne-review-20Nov2026-p02.jpg",
+              "assets/series/ch3/guide-ne-review-20Nov2026-p03.jpg",
+              "assets/series/ch3/guide-ne-review-20Nov2026-p04.jpg",
+              "assets/series/ch3/guide-ne-review-20Nov2026-p05.jpg",
+              "assets/series/ch3/guide-ne-review-20Nov2026-p06.jpg",
+              "assets/series/ch3/guide-ne-review-20Nov2026-p07.jpg",
+              "assets/series/ch3/guide-ne-review-20Nov2026-p08.jpg",
+              "assets/series/ch3/guide-ne-review-20Nov2026-p09.jpg",
+              "assets/series/ch3/guide-ne-review-20Nov2026-p10.jpg",
+              "assets/series/ch3/guide-ne-review-20Nov2026-p11.jpg",
+              "assets/series/ch3/guide-ne-review-20Nov2026-p12.jpg",
+              "assets/series/ch3/guide-ne-review-20Nov2026-p13.jpg",
+              "assets/series/ch3/guide-ne-review-20Nov2026-p14.jpg"
+            ],
+            "release_name": "Ch3 5 Health Talk Guide NE online - 20Nov2026",
+            "note": "machine translation"
+          }
+        }
+      ],
+      "short": "Grief",
+      "stage": "Loss",
+      "leads": [
+        "G",
+        "H"
+      ]
     },
     {
-     "label": "Option B",
-     "version": "r11",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch3/poster-B-r11.jpg",
-     "pdf": "assets/series/ch3/poster-B-r11.pdf",
-     "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch3/poster-B-r11-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch3/poster-B-ne-r1.jpg",
-      "pdf": "assets/series/ch3/poster-B-ne-r1.pdf"
-     }
+      "n": 4,
+      "key": "ch4",
+      "title": "Children react too",
+      "theme": "Children and families",
+      "colour": [
+        "#1d4a2a",
+        "#2a7340",
+        "#eaf5ec"
+      ],
+      "moment": "A morning in the shelter courtyard. Karuna keeps the routine going; Pasang leads a game; Milan starts drawing his home.",
+      "poster": [
+        {
+          "label": "Option A",
+          "version": "r8",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch4/poster-A-r8.jpg",
+          "pdf": "assets/series/ch4/poster-A-r8.pdf",
+          "format": "A3 portrait · community wall poster",
+          "print": "assets/series/ch4/poster-A-r8-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch4/poster-A-ne-r1.jpg",
+            "pdf": "assets/series/ch4/poster-A-ne-r1.pdf"
+          }
+        },
+        {
+          "label": "Option B",
+          "version": "r13",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch4/poster-B-r13.jpg",
+          "pdf": "assets/series/ch4/poster-B-r13.pdf",
+          "format": "A3 portrait · community wall poster",
+          "print": "assets/series/ch4/poster-B-r13-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch4/poster-B-ne-r1.jpg",
+            "pdf": "assets/series/ch4/poster-B-ne-r1.pdf"
+          }
+        },
+        {
+          "label": "Option C",
+          "version": "r16",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch4/poster-C-r16.jpg",
+          "pdf": "assets/series/ch4/poster-C-r16.pdf",
+          "format": "A3 portrait · community wall poster",
+          "print": "assets/series/ch4/poster-C-r16-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch4/poster-C-ne-r1.jpg",
+            "pdf": "assets/series/ch4/poster-C-ne-r1.pdf",
+            "note": "Layout fix pending"
+          }
+        }
+      ],
+      "leaflet": [
+        {
+          "label": "Leaflet A",
+          "version": "Tri-fold r4",
+          "approved": "2026-11-14",
+          "pdf": "assets/series/ch4/leaflet-r4.pdf",
+          "format": "A4 tri-fold · take-home leaflet · online and print versions",
+          "print": "assets/series/ch4/leaflet-r4-print.pdf",
+          "online_image": "assets/series/ch4/leaflet-r4-online.jpg",
+          "print_image": "assets/series/ch4/leaflet-r4-print.jpg",
+          "image": "assets/series/ch4/leaflet-r4-online.jpg",
+          "ne": {
+            "version": "r2",
+            "pdf": "assets/series/ch4/leaflet-ne-r2.pdf",
+            "print": "assets/series/ch4/leaflet-ne-r2-print.pdf",
+            "online_image": "assets/series/ch4/leaflet-ne-r2-online.jpg",
+            "print_image": "assets/series/ch4/leaflet-ne-r2-print.jpg",
+            "image": "assets/series/ch4/leaflet-ne-r2-online.jpg",
+            "note": "machine translation",
+            "layout_acc": "2026-11-14"
+          }
+        }
+      ],
+      "guide": [
+        {
+          "version": "screen-review-20Nov2026",
+          "pdf": "assets/series/ch4/guide-review-20Nov2026.pdf",
+          "image": "assets/series/ch4/guide-review-20Nov2026-p01.jpg",
+          "pages": [
+            "assets/series/ch4/guide-review-20Nov2026-p01.jpg",
+            "assets/series/ch4/guide-review-20Nov2026-p02.jpg",
+            "assets/series/ch4/guide-review-20Nov2026-p03.jpg",
+            "assets/series/ch4/guide-review-20Nov2026-p04.jpg",
+            "assets/series/ch4/guide-review-20Nov2026-p05.jpg",
+            "assets/series/ch4/guide-review-20Nov2026-p06.jpg",
+            "assets/series/ch4/guide-review-20Nov2026-p07.jpg",
+            "assets/series/ch4/guide-review-20Nov2026-p08.jpg",
+            "assets/series/ch4/guide-review-20Nov2026-p09.jpg",
+            "assets/series/ch4/guide-review-20Nov2026-p10.jpg",
+            "assets/series/ch4/guide-review-20Nov2026-p11.jpg",
+            "assets/series/ch4/guide-review-20Nov2026-p12.jpg",
+            "assets/series/ch4/guide-review-20Nov2026-p13.jpg",
+            "assets/series/ch4/guide-review-20Nov2026-p14.jpg"
+          ],
+          "release_name": "Ch4 5 Health Talk Guide EN online - 20Nov2026",
+          "note": "Updated flip-chart edition. Audience pages alternate with their facilitator notes; shared references follow. Review draft, not for field distribution.",
+          "label": "Health Talk Guide",
+          "draft": "Review copy · not for field distribution",
+          "format": "A5 landscape · 14 screen-review pages · audience page followed by facilitator note",
+          "release_label": "20 November 2026",
+          "ne": {
+            "version": "screen-review-20Nov2026",
+            "pdf": "assets/series/ch4/guide-ne-review-20Nov2026.pdf",
+            "image": "assets/series/ch4/guide-ne-review-20Nov2026-p01.jpg",
+            "pages": [
+              "assets/series/ch4/guide-ne-review-20Nov2026-p01.jpg",
+              "assets/series/ch4/guide-ne-review-20Nov2026-p02.jpg",
+              "assets/series/ch4/guide-ne-review-20Nov2026-p03.jpg",
+              "assets/series/ch4/guide-ne-review-20Nov2026-p04.jpg",
+              "assets/series/ch4/guide-ne-review-20Nov2026-p05.jpg",
+              "assets/series/ch4/guide-ne-review-20Nov2026-p06.jpg",
+              "assets/series/ch4/guide-ne-review-20Nov2026-p07.jpg",
+              "assets/series/ch4/guide-ne-review-20Nov2026-p08.jpg",
+              "assets/series/ch4/guide-ne-review-20Nov2026-p09.jpg",
+              "assets/series/ch4/guide-ne-review-20Nov2026-p10.jpg",
+              "assets/series/ch4/guide-ne-review-20Nov2026-p11.jpg",
+              "assets/series/ch4/guide-ne-review-20Nov2026-p12.jpg",
+              "assets/series/ch4/guide-ne-review-20Nov2026-p13.jpg",
+              "assets/series/ch4/guide-ne-review-20Nov2026-p14.jpg"
+            ],
+            "release_name": "Ch4 5 Health Talk Guide NE online - 20Nov2026",
+            "note": "machine translation"
+          }
+        }
+      ],
+      "short": "Children",
+      "stage": "Children",
+      "leads": [
+        "E",
+        "B",
+        "C"
+      ]
     },
     {
-     "label": "Option C",
-     "version": "r9",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch3/poster-C-r9.jpg",
-     "pdf": "assets/series/ch3/poster-C-r9.pdf",
-     "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch3/poster-C-r9-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch3/poster-C-ne-r1.jpg",
-      "pdf": "assets/series/ch3/poster-C-ne-r1.pdf"
-     }
-    }
-   ],
-   "leaflet": [
-    {
-     "label": "Leaflet A",
-     "version": "Tri-fold r6",
-     "approved": "2026-11-14",
-     "pdf": "assets/series/ch3/leaflet-r6.pdf",
-     "format": "A4 tri-fold · take-home leaflet · online and print versions",
-     "print": "assets/series/ch3/leaflet-r6-print.pdf",
-     "online_image": "assets/series/ch3/leaflet-r6-online.jpg",
-     "print_image": "assets/series/ch3/leaflet-r6-print.jpg",
-     "image": "assets/series/ch3/leaflet-r6-online.jpg",
-     "ne": {
-      "version": "r1",
-      "pdf": "assets/series/ch3/leaflet-ne-r1.pdf",
-      "print": "assets/series/ch3/leaflet-ne-r1-print.pdf",
-      "online_image": "assets/series/ch3/leaflet-ne-r1-online.jpg",
-      "print_image": "assets/series/ch3/leaflet-ne-r1-print.jpg",
-      "image": "assets/series/ch3/leaflet-ne-r1-online.jpg",
-      "note": "machine translation",
-      "layout_acc": "2026-11-14"
-     }
-    }
-   ],
-   "guide": [
-    {
-     "label": "Health Talk Guide",
-     "version": "v7",
-     "approved": "2026-11-14",
-     "image": "assets/series/ch3/guide-v7.jpg",
-     "pdf": "assets/series/ch3/guide-v7.pdf",
-     "print": "assets/series/ch3/guide-v7-print.pdf",
-     "format": "A4 · facilitator guide · 5 pages",
-     "ne": {
-      "version": "v7",
-      "pdf": "assets/series/ch3/guide-ne-v7.pdf",
-      "print": "assets/series/ch3/guide-ne-v7-print.pdf",
-      "image": "assets/series/ch3/guide-ne-v7.jpg",
-      "note": "machine translation",
-      "layout_acc": "2026-11-14"
-     }
-    }
-   ],
-   "short": "Grief",
-   "stage": "Loss",
-   "leads": [
-    "G",
-    "H"
-   ]
-  },
-  {
-   "n": 4,
-   "key": "ch4",
-   "title": "Children react too",
-   "theme": "Children and families",
-   "colour": [
-    "#1d4a2a",
-    "#2a7340",
-    "#eaf5ec"
-   ],
-   "moment": "A morning in the shelter courtyard. Karuna keeps the routine going; Pasang leads a game; Milan starts drawing his home.",
-   "poster": [
-    {
-     "label": "Option A",
-     "version": "r8",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch4/poster-A-r8.jpg",
-     "pdf": "assets/series/ch4/poster-A-r8.pdf",
-     "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch4/poster-A-r8-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch4/poster-A-ne-r1.jpg",
-      "pdf": "assets/series/ch4/poster-A-ne-r1.pdf"
-     }
+      "n": 5,
+      "key": "ch5",
+      "title": "Every family's next step is different",
+      "theme": "Going home, moving or waiting",
+      "colour": [
+        "#6e2f12",
+        "#a64b22",
+        "#fbefe7"
+      ],
+      "moment": "Weeks later. One family goes home, one moves somewhere new, one is still waiting at the shelter.",
+      "poster": [
+        {
+          "label": "Option A",
+          "version": "r8",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch5/poster-A-r8.jpg",
+          "pdf": "assets/series/ch5/poster-A-r8.pdf",
+          "format": "A3 portrait · community wall poster",
+          "print": "assets/series/ch5/poster-A-r8-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch5/poster-A-ne-r1.jpg",
+            "pdf": "assets/series/ch5/poster-A-ne-r1.pdf",
+            "note": "Layout fix pending"
+          }
+        },
+        {
+          "label": "Option B",
+          "version": "r10",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch5/poster-B-r10.jpg",
+          "pdf": "assets/series/ch5/poster-B-r10.pdf",
+          "format": "A3 portrait · community wall poster",
+          "print": "assets/series/ch5/poster-B-r10-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch5/poster-B-ne-r1.jpg",
+            "pdf": "assets/series/ch5/poster-B-ne-r1.pdf",
+            "note": "Layout fix pending"
+          }
+        },
+        {
+          "label": "Option C",
+          "version": "r10",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch5/poster-C-r10.jpg",
+          "pdf": "assets/series/ch5/poster-C-r10.pdf",
+          "format": "A3 portrait · community wall poster",
+          "print": "assets/series/ch5/poster-C-r10-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch5/poster-C-ne-r1.jpg",
+            "pdf": "assets/series/ch5/poster-C-ne-r1.pdf"
+          }
+        }
+      ],
+      "leaflet": [
+        {
+          "label": "Leaflet A",
+          "version": "Tri-fold r3",
+          "approved": "2026-11-14",
+          "pdf": "assets/series/ch5/leaflet-r3.pdf",
+          "format": "A4 tri-fold · take-home leaflet · online and print versions",
+          "print": "assets/series/ch5/leaflet-r3-print.pdf",
+          "online_image": "assets/series/ch5/leaflet-r3-online.jpg",
+          "print_image": "assets/series/ch5/leaflet-r3-print.jpg",
+          "image": "assets/series/ch5/leaflet-r3-online.jpg",
+          "ne": {
+            "version": "r1",
+            "pdf": "assets/series/ch5/leaflet-ne-r1.pdf",
+            "print": "assets/series/ch5/leaflet-ne-r1-print.pdf",
+            "online_image": "assets/series/ch5/leaflet-ne-r1-online.jpg",
+            "print_image": "assets/series/ch5/leaflet-ne-r1-print.jpg",
+            "image": "assets/series/ch5/leaflet-ne-r1-online.jpg",
+            "note": "machine translation",
+            "layout_acc": "2026-11-14"
+          }
+        }
+      ],
+      "guide": [
+        {
+          "version": "screen-review-20Nov2026",
+          "pdf": "assets/series/ch5/guide-review-20Nov2026.pdf",
+          "image": "assets/series/ch5/guide-review-20Nov2026-p01.jpg",
+          "pages": [
+            "assets/series/ch5/guide-review-20Nov2026-p01.jpg",
+            "assets/series/ch5/guide-review-20Nov2026-p02.jpg",
+            "assets/series/ch5/guide-review-20Nov2026-p03.jpg",
+            "assets/series/ch5/guide-review-20Nov2026-p04.jpg",
+            "assets/series/ch5/guide-review-20Nov2026-p05.jpg",
+            "assets/series/ch5/guide-review-20Nov2026-p06.jpg",
+            "assets/series/ch5/guide-review-20Nov2026-p07.jpg",
+            "assets/series/ch5/guide-review-20Nov2026-p08.jpg",
+            "assets/series/ch5/guide-review-20Nov2026-p09.jpg",
+            "assets/series/ch5/guide-review-20Nov2026-p10.jpg",
+            "assets/series/ch5/guide-review-20Nov2026-p11.jpg",
+            "assets/series/ch5/guide-review-20Nov2026-p12.jpg",
+            "assets/series/ch5/guide-review-20Nov2026-p13.jpg",
+            "assets/series/ch5/guide-review-20Nov2026-p14.jpg"
+          ],
+          "release_name": "Ch5 5 Health Talk Guide EN online - 20Nov2026",
+          "note": "Updated flip-chart edition. Audience pages alternate with their facilitator notes; shared references follow. Review draft, not for field distribution.",
+          "label": "Health Talk Guide",
+          "draft": "Review copy · not for field distribution",
+          "format": "A5 landscape · 14 screen-review pages · audience page followed by facilitator note",
+          "release_label": "20 November 2026",
+          "ne": {
+            "version": "screen-review-20Nov2026",
+            "pdf": "assets/series/ch5/guide-ne-review-20Nov2026.pdf",
+            "image": "assets/series/ch5/guide-ne-review-20Nov2026-p01.jpg",
+            "pages": [
+              "assets/series/ch5/guide-ne-review-20Nov2026-p01.jpg",
+              "assets/series/ch5/guide-ne-review-20Nov2026-p02.jpg",
+              "assets/series/ch5/guide-ne-review-20Nov2026-p03.jpg",
+              "assets/series/ch5/guide-ne-review-20Nov2026-p04.jpg",
+              "assets/series/ch5/guide-ne-review-20Nov2026-p05.jpg",
+              "assets/series/ch5/guide-ne-review-20Nov2026-p06.jpg",
+              "assets/series/ch5/guide-ne-review-20Nov2026-p07.jpg",
+              "assets/series/ch5/guide-ne-review-20Nov2026-p08.jpg",
+              "assets/series/ch5/guide-ne-review-20Nov2026-p09.jpg",
+              "assets/series/ch5/guide-ne-review-20Nov2026-p10.jpg",
+              "assets/series/ch5/guide-ne-review-20Nov2026-p11.jpg",
+              "assets/series/ch5/guide-ne-review-20Nov2026-p12.jpg",
+              "assets/series/ch5/guide-ne-review-20Nov2026-p13.jpg",
+              "assets/series/ch5/guide-ne-review-20Nov2026-p14.jpg"
+            ],
+            "release_name": "Ch5 5 Health Talk Guide NE online - 20Nov2026",
+            "note": "machine translation"
+          }
+        }
+      ],
+      "short": "Going home",
+      "stage": "Weeks later",
+      "leads": [
+        "F",
+        "A"
+      ]
     },
     {
-     "label": "Option B",
-     "version": "r13",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch4/poster-B-r13.jpg",
-     "pdf": "assets/series/ch4/poster-B-r13.pdf",
-     "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch4/poster-B-r13-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch4/poster-B-ne-r1.jpg",
-      "pdf": "assets/series/ch4/poster-B-ne-r1.pdf"
-     }
-    },
-    {
-     "label": "Option C",
-     "version": "r16",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch4/poster-C-r16.jpg",
-     "pdf": "assets/series/ch4/poster-C-r16.pdf",
-     "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch4/poster-C-r16-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch4/poster-C-ne-r1.jpg",
-      "pdf": "assets/series/ch4/poster-C-ne-r1.pdf",
-      "note": "Layout fix pending"
-     }
+      "n": 6,
+      "key": "ch6",
+      "title": "Looking after yourself is part of looking after others",
+      "theme": "Care for helpers",
+      "colour": [
+        "#5a3d08",
+        "#8a5e0f",
+        "#fbf3e1"
+      ],
+      "moment": "After weeks of helping at the shelter, Karuna is tired. Her team leader checks in; the team takes a break together.",
+      "poster": [
+        {
+          "label": "Option A",
+          "version": "r9",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch6/poster-A-r9.jpg",
+          "pdf": "assets/series/ch6/poster-A-r9.pdf",
+          "format": "A3 portrait · staff-area poster",
+          "note": "Owner-approved design for online review. Not for field distribution.",
+          "print": "assets/series/ch6/poster-A-r9-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch6/poster-A-ne-r1.jpg",
+            "pdf": "assets/series/ch6/poster-A-ne-r1.pdf"
+          }
+        },
+        {
+          "label": "Option B",
+          "version": "r4",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch6/poster-B-r4.jpg",
+          "pdf": "assets/series/ch6/poster-B-r4.pdf",
+          "format": "A3 portrait · staff-area poster",
+          "note": "Owner-approved design for online review. Not for field distribution.",
+          "print": "assets/series/ch6/poster-B-r4-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch6/poster-B-ne-r1.jpg",
+            "pdf": "assets/series/ch6/poster-B-ne-r1.pdf"
+          }
+        },
+        {
+          "label": "Option C",
+          "version": "r7",
+          "approved": "2026-11-13",
+          "image": "assets/series/ch6/poster-C-r7.jpg",
+          "pdf": "assets/series/ch6/poster-C-r7.pdf",
+          "format": "A3 portrait · staff-area poster",
+          "note": "Owner-approved design for online review. Not for field distribution.",
+          "print": "assets/series/ch6/poster-C-r7-print.pdf",
+          "ne": {
+            "version": "r1",
+            "image": "assets/series/ch6/poster-C-ne-r1.jpg",
+            "pdf": "assets/series/ch6/poster-C-ne-r1.pdf"
+          }
+        }
+      ],
+      "leaflet": [
+        {
+          "label": "Leaflet A",
+          "version": "Tri-fold r3",
+          "approved": "2026-11-14",
+          "pdf": "assets/series/ch6/leaflet-r3.pdf",
+          "format": "A4 tri-fold · take-home leaflet · online and print versions",
+          "print": "assets/series/ch6/leaflet-r3-print.pdf",
+          "online_image": "assets/series/ch6/leaflet-r3-online.jpg",
+          "print_image": "assets/series/ch6/leaflet-r3-print.jpg",
+          "image": "assets/series/ch6/leaflet-r3-online.jpg",
+          "ne": {
+            "version": "r1",
+            "pdf": "assets/series/ch6/leaflet-ne-r1.pdf",
+            "print": "assets/series/ch6/leaflet-ne-r1-print.pdf",
+            "online_image": "assets/series/ch6/leaflet-ne-r1-online.jpg",
+            "print_image": "assets/series/ch6/leaflet-ne-r1-print.jpg",
+            "image": "assets/series/ch6/leaflet-ne-r1-online.jpg",
+            "note": "machine translation",
+            "layout_acc": "2026-11-14"
+          }
+        }
+      ],
+      "guide": [
+        {
+          "version": "screen-review-20Nov2026",
+          "pdf": "assets/series/ch6/guide-review-20Nov2026.pdf",
+          "image": "assets/series/ch6/guide-review-20Nov2026-p01.jpg",
+          "pages": [
+            "assets/series/ch6/guide-review-20Nov2026-p01.jpg",
+            "assets/series/ch6/guide-review-20Nov2026-p02.jpg",
+            "assets/series/ch6/guide-review-20Nov2026-p03.jpg",
+            "assets/series/ch6/guide-review-20Nov2026-p04.jpg",
+            "assets/series/ch6/guide-review-20Nov2026-p05.jpg",
+            "assets/series/ch6/guide-review-20Nov2026-p06.jpg",
+            "assets/series/ch6/guide-review-20Nov2026-p07.jpg",
+            "assets/series/ch6/guide-review-20Nov2026-p08.jpg",
+            "assets/series/ch6/guide-review-20Nov2026-p09.jpg",
+            "assets/series/ch6/guide-review-20Nov2026-p10.jpg",
+            "assets/series/ch6/guide-review-20Nov2026-p11.jpg",
+            "assets/series/ch6/guide-review-20Nov2026-p12.jpg",
+            "assets/series/ch6/guide-review-20Nov2026-p13.jpg",
+            "assets/series/ch6/guide-review-20Nov2026-p14.jpg"
+          ],
+          "release_name": "Ch6 5 Health Talk Guide EN online - 20Nov2026",
+          "note": "Updated flip-chart edition. Audience pages alternate with their facilitator notes; shared references follow. Review draft, not for field distribution.",
+          "label": "Health Talk Guide",
+          "draft": "Review copy · not for field distribution",
+          "format": "A5 landscape · 14 screen-review pages · audience page followed by facilitator note",
+          "release_label": "20 November 2026",
+          "ne": {
+            "version": "screen-review-20Nov2026",
+            "pdf": "assets/series/ch6/guide-ne-review-20Nov2026.pdf",
+            "image": "assets/series/ch6/guide-ne-review-20Nov2026-p01.jpg",
+            "pages": [
+              "assets/series/ch6/guide-ne-review-20Nov2026-p01.jpg",
+              "assets/series/ch6/guide-ne-review-20Nov2026-p02.jpg",
+              "assets/series/ch6/guide-ne-review-20Nov2026-p03.jpg",
+              "assets/series/ch6/guide-ne-review-20Nov2026-p04.jpg",
+              "assets/series/ch6/guide-ne-review-20Nov2026-p05.jpg",
+              "assets/series/ch6/guide-ne-review-20Nov2026-p06.jpg",
+              "assets/series/ch6/guide-ne-review-20Nov2026-p07.jpg",
+              "assets/series/ch6/guide-ne-review-20Nov2026-p08.jpg",
+              "assets/series/ch6/guide-ne-review-20Nov2026-p09.jpg",
+              "assets/series/ch6/guide-ne-review-20Nov2026-p10.jpg",
+              "assets/series/ch6/guide-ne-review-20Nov2026-p11.jpg",
+              "assets/series/ch6/guide-ne-review-20Nov2026-p12.jpg",
+              "assets/series/ch6/guide-ne-review-20Nov2026-p13.jpg",
+              "assets/series/ch6/guide-ne-review-20Nov2026-p14.jpg"
+            ],
+            "release_name": "Ch6 5 Health Talk Guide NE online - 20Nov2026",
+            "note": "machine translation"
+          }
+        }
+      ],
+      "short": "Helpers",
+      "stage": "Helpers",
+      "leads": [
+        "E",
+        "F"
+      ]
     }
-   ],
-   "leaflet": [
-    {
-     "label": "Leaflet A",
-     "version": "Tri-fold r4",
-     "approved": "2026-11-14",
-     "pdf": "assets/series/ch4/leaflet-r4.pdf",
-     "format": "A4 tri-fold · take-home leaflet · online and print versions",
-     "print": "assets/series/ch4/leaflet-r4-print.pdf",
-     "online_image": "assets/series/ch4/leaflet-r4-online.jpg",
-     "print_image": "assets/series/ch4/leaflet-r4-print.jpg",
-     "image": "assets/series/ch4/leaflet-r4-online.jpg",
-     "ne": {
-      "version": "r2",
-      "pdf": "assets/series/ch4/leaflet-ne-r2.pdf",
-      "print": "assets/series/ch4/leaflet-ne-r2-print.pdf",
-      "online_image": "assets/series/ch4/leaflet-ne-r2-online.jpg",
-      "print_image": "assets/series/ch4/leaflet-ne-r2-print.jpg",
-      "image": "assets/series/ch4/leaflet-ne-r2-online.jpg",
-      "note": "machine translation",
-      "layout_acc": "2026-11-14"
-     }
-    }
-   ],
-   "guide": [
-    {
-     "label": "Health Talk Guide",
-     "version": "v1",
-     "approved": "2026-11-14",
-     "image": "assets/series/ch4/guide-v1.jpg",
-     "pdf": "assets/series/ch4/guide-v1.pdf",
-     "print": "assets/series/ch4/guide-v1-print.pdf",
-     "format": "A4 · facilitator guide · 5 pages",
-     "ne": {
-      "version": "v1",
-      "pdf": "assets/series/ch4/guide-ne-v1.pdf",
-      "print": "assets/series/ch4/guide-ne-v1-print.pdf",
-      "image": "assets/series/ch4/guide-ne-v1.jpg",
-      "note": "machine translation",
-      "layout_acc": "2026-11-14"
-     }
-    }
-   ],
-   "short": "Children",
-   "stage": "Children",
-   "leads": [
-    "E",
-    "B",
-    "C"
-   ]
-  },
-  {
-   "n": 5,
-   "key": "ch5",
-   "title": "Every family's next step is different",
-   "theme": "Going home, moving or waiting",
-   "colour": [
-    "#6e2f12",
-    "#a64b22",
-    "#fbefe7"
-   ],
-   "moment": "Weeks later. One family goes home, one moves somewhere new, one is still waiting at the shelter.",
-   "poster": [
-    {
-     "label": "Option A",
-     "version": "r8",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch5/poster-A-r8.jpg",
-     "pdf": "assets/series/ch5/poster-A-r8.pdf",
-     "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch5/poster-A-r8-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch5/poster-A-ne-r1.jpg",
-      "pdf": "assets/series/ch5/poster-A-ne-r1.pdf",
-      "note": "Layout fix pending"
-     }
-    },
-    {
-     "label": "Option B",
-     "version": "r10",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch5/poster-B-r10.jpg",
-     "pdf": "assets/series/ch5/poster-B-r10.pdf",
-     "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch5/poster-B-r10-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch5/poster-B-ne-r1.jpg",
-      "pdf": "assets/series/ch5/poster-B-ne-r1.pdf",
-      "note": "Layout fix pending"
-     }
-    },
-    {
-     "label": "Option C",
-     "version": "r10",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch5/poster-C-r10.jpg",
-     "pdf": "assets/series/ch5/poster-C-r10.pdf",
-     "format": "A3 portrait · community wall poster",
-     "print": "assets/series/ch5/poster-C-r10-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch5/poster-C-ne-r1.jpg",
-      "pdf": "assets/series/ch5/poster-C-ne-r1.pdf"
-     }
-    }
-   ],
-   "leaflet": [
-    {
-     "label": "Leaflet A",
-     "version": "Tri-fold r3",
-     "approved": "2026-11-14",
-     "pdf": "assets/series/ch5/leaflet-r3.pdf",
-     "format": "A4 tri-fold · take-home leaflet · online and print versions",
-     "print": "assets/series/ch5/leaflet-r3-print.pdf",
-     "online_image": "assets/series/ch5/leaflet-r3-online.jpg",
-     "print_image": "assets/series/ch5/leaflet-r3-print.jpg",
-     "image": "assets/series/ch5/leaflet-r3-online.jpg",
-     "ne": {
-      "version": "r1",
-      "pdf": "assets/series/ch5/leaflet-ne-r1.pdf",
-      "print": "assets/series/ch5/leaflet-ne-r1-print.pdf",
-      "online_image": "assets/series/ch5/leaflet-ne-r1-online.jpg",
-      "print_image": "assets/series/ch5/leaflet-ne-r1-print.jpg",
-      "image": "assets/series/ch5/leaflet-ne-r1-online.jpg",
-      "note": "machine translation",
-      "layout_acc": "2026-11-14"
-     }
-    }
-   ],
-   "guide": [
-    {
-     "label": "Health Talk Guide",
-     "version": "v1",
-     "approved": "2026-11-14",
-     "image": "assets/series/ch5/guide-v1.jpg",
-     "pdf": "assets/series/ch5/guide-v1.pdf",
-     "print": "assets/series/ch5/guide-v1-print.pdf",
-     "format": "A4 · facilitator guide · 5 pages",
-     "ne": {
-      "version": "v1",
-      "pdf": "assets/series/ch5/guide-ne-v1.pdf",
-      "print": "assets/series/ch5/guide-ne-v1-print.pdf",
-      "image": "assets/series/ch5/guide-ne-v1.jpg",
-      "note": "machine translation",
-      "layout_acc": "2026-11-14"
-     }
-    }
-   ],
-   "short": "Going home",
-   "stage": "Weeks later",
-   "leads": [
-    "F",
-    "A"
-   ]
-  },
-  {
-   "n": 6,
-   "key": "ch6",
-   "title": "Looking after yourself is part of looking after others",
-   "theme": "Care for helpers",
-   "colour": [
-    "#5a3d08",
-    "#8a5e0f",
-    "#fbf3e1"
-   ],
-   "moment": "After weeks of helping at the shelter, Karuna is tired. Her team leader checks in; the team takes a break together.",
-   "poster": [
-    {
-     "label": "Option A",
-     "version": "r9",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch6/poster-A-r9.jpg",
-     "pdf": "assets/series/ch6/poster-A-r9.pdf",
-     "format": "A3 portrait · staff-area poster",
-     "note": "Owner-approved design for online review. Not for field distribution.",
-     "print": "assets/series/ch6/poster-A-r9-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch6/poster-A-ne-r1.jpg",
-      "pdf": "assets/series/ch6/poster-A-ne-r1.pdf"
-     }
-    },
-    {
-     "label": "Option B",
-     "version": "r4",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch6/poster-B-r4.jpg",
-     "pdf": "assets/series/ch6/poster-B-r4.pdf",
-     "format": "A3 portrait · staff-area poster",
-     "note": "Owner-approved design for online review. Not for field distribution.",
-     "print": "assets/series/ch6/poster-B-r4-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch6/poster-B-ne-r1.jpg",
-      "pdf": "assets/series/ch6/poster-B-ne-r1.pdf"
-     }
-    },
-    {
-     "label": "Option C",
-     "version": "r7",
-     "approved": "2026-11-13",
-     "image": "assets/series/ch6/poster-C-r7.jpg",
-     "pdf": "assets/series/ch6/poster-C-r7.pdf",
-     "format": "A3 portrait · staff-area poster",
-     "note": "Owner-approved design for online review. Not for field distribution.",
-     "print": "assets/series/ch6/poster-C-r7-print.pdf",
-     "ne": {
-      "version": "r1",
-      "image": "assets/series/ch6/poster-C-ne-r1.jpg",
-      "pdf": "assets/series/ch6/poster-C-ne-r1.pdf"
-     }
-    }
-   ],
-   "leaflet": [
-    {
-     "label": "Leaflet A",
-     "version": "Tri-fold r3",
-     "approved": "2026-11-14",
-     "pdf": "assets/series/ch6/leaflet-r3.pdf",
-     "format": "A4 tri-fold · take-home leaflet · online and print versions",
-     "print": "assets/series/ch6/leaflet-r3-print.pdf",
-     "online_image": "assets/series/ch6/leaflet-r3-online.jpg",
-     "print_image": "assets/series/ch6/leaflet-r3-print.jpg",
-     "image": "assets/series/ch6/leaflet-r3-online.jpg",
-     "ne": {
-      "version": "r1",
-      "pdf": "assets/series/ch6/leaflet-ne-r1.pdf",
-      "print": "assets/series/ch6/leaflet-ne-r1-print.pdf",
-      "online_image": "assets/series/ch6/leaflet-ne-r1-online.jpg",
-      "print_image": "assets/series/ch6/leaflet-ne-r1-print.jpg",
-      "image": "assets/series/ch6/leaflet-ne-r1-online.jpg",
-      "note": "machine translation",
-      "layout_acc": "2026-11-14"
-     }
-    }
-   ],
-   "guide": [
-    {
-     "label": "Health Talk Guide",
-     "version": "v1",
-     "approved": "2026-11-14",
-     "image": "assets/series/ch6/guide-v1.jpg",
-     "pdf": "assets/series/ch6/guide-v1.pdf",
-     "print": "assets/series/ch6/guide-v1-print.pdf",
-     "format": "A4 · guide for supervisors and team leaders · 5 pages",
-     "ne": {
-      "version": "v1",
-      "pdf": "assets/series/ch6/guide-ne-v1.pdf",
-      "print": "assets/series/ch6/guide-ne-v1-print.pdf",
-      "image": "assets/series/ch6/guide-ne-v1.jpg",
-      "note": "machine translation",
-      "layout_acc": "2026-11-14"
-     }
-    }
-   ],
-   "short": "Helpers",
-   "stage": "Helpers",
-   "leads": [
-    "E",
-    "F"
-   ]
-  }
- ]
+  ]
 }

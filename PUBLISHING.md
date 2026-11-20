@@ -81,3 +81,7 @@ The pages from the October 2026 consultation were removed on 14 Nov 2026; they r
 ## Layout check before every merge
 
 Running text fills the width of its card; paragraphs carry no fixed `max-width` (fixed 15 Nov 2026: chapter header scene line, overview lead, characters intro, translation intro). Run `python3 tests/layout_width_check.py <preview url>` before merging and again on the live site.
+
+## Owner-authorized Health Talk Guide review refresh · 20 November 2026
+
+Adib explicitly requested the latest flip-chart Health Talk Guide as chapter-level online review editions, then authorized Hermes to publish while Claude was unavailable: “claude lg kehabisan token, km publikasikan skrg”. This scoped exception permits six English review drafts and their Nepali translation drafts, without granting design, language, clinical or distribution ACC. Each chapter has 14 screen-review pages: audience page, corresponding facilitator note, then shared references. Printing masters remain on Luna unchanged. Existing guide assets and historical feedback remain preserved; posters, leaflets, translation rows and their approvals are unchanged. Downloads remain disabled. This authorization supersedes the Claude-only guide publishing assignment for this refresh only.

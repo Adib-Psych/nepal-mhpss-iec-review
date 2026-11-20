@@ -198,6 +198,8 @@ dialog button{float:right;min-height:40px;padding:6px 14px;border:1px solid var(
 /* thumbnail gallery: approved options side by side, preview on demand */
 .galrow{display:grid;grid-template-columns:auto minmax(260px,1fr);gap:26px;align-items:start}
 .gal{display:grid;grid-template-columns:repeat(3,minmax(0,260px));gap:16px;align-items:start}
+@media(min-width:1101px){.galrow.chapter-reader{grid-template-columns:minmax(0,1.7fr) minmax(260px,1fr)}}
+.galrow.chapter-reader .gal.wide.n1{grid-template-columns:minmax(0,1fr)}
 .gal.n1{grid-template-columns:minmax(0,260px)}
 .gal.n2{grid-template-columns:repeat(2,minmax(0,260px))}
 .gal.wide.n1{grid-template-columns:minmax(0,640px)}
@@ -486,7 +488,7 @@ html.entered #gate{display:none}
   <nav class="side" id="side" aria-label="Series"></nav>
   <main id="main"><div class="placeholder">Loading…</div></main>
 </div>
-<footer>Shared review space for partners. Only approved products are posted here; working drafts stay in the team's working folders. Fictional illustrations, AI-assisted and developed under human direction.</footer>
+<footer>Shared review space for partners. Check each product's review status; draft materials are not for field distribution. Fictional illustrations, AI-assisted and developed under human direction.</footer>
 <dialog id="dlg" aria-label="Preview"><div class="dlgbar"><b id="dlgt"></b><button id="dlgp" aria-label="Previous">‹ Previous</button><button id="dlgn" aria-label="Next">Next ›</button><span class="seg" role="group" aria-label="Preview size"><button id="dlgfit" type="button" aria-pressed="true">Fit to screen</button><button id="dlgfull" type="button" aria-pressed="false">Actual size</button></span><a id="dlgpdf" class="dl" download>English PDF</a><button id="dlgx">Close</button></div><div class="dlgbody"><span class="wmwrap"><img id="dlgimg" alt="" title="Select to enlarge or fit" draggable="false"><svg id="wm" aria-hidden="true"></svg></span></div></dialog>
 <script src="proof-status.js"></script>
 <script>
@@ -536,6 +538,7 @@ function productView(c,tab,opt){
       <span class="entag">English · approved</span>
       ${pics}${cap}${note}
       <div class="dlbox"><span class="dlh">Download</span><div class="ta dl"><a class="btn" href="${q.pdf}" download>${DL} Nepali online (PDF, draft)</a><a class="btn" href="${q.print}" download>${DL} Nepali print (PDF, draft)</a><a class="btn" href="${p.pdf}" download>${DL} English online (PDF)</a><a class="btn" href="${p.print}" download>${DL} English print (PDF)</a></div></div></figure>`}
+    if(p.pages) return `<figure class="tcard two"><span class="netag">Nepali · draft translation, language review pending · machine translation</span><span class="fn ne">${esc(relFile(p,true))}</span>${th(p.ne.image,relFile(p,true),p.ne.pdf,`${name}, Chapter ${c.n}, Nepali review`,'ne')}<div class="ta mid"><button class="btn primary big" type="button" data-open="ne">Read Nepali · 14 pages</button><button class="btn primary big" type="button" data-open="en">Read English · 14 pages</button></div><span class="entag">English · draft for review</span>${pics}${cap}${note}<p class="cap">Use the previous and next arrows to read all 14 pages of the selected language.</p></figure>`;
     if(p.ne) return `<figure class="tcard two">
       <span class="netag">Nepali · draft translation, language review pending${p.ne.note?` · ${esc(p.ne.note)}`:''}</span><span class="fn ne">${esc(relFile(p,true))}</span>
       ${th(p.ne.image,relFile(p,true),p.ne.pdf,`${name}, Chapter ${c.n}, ${p.label}, Nepali draft`,'ne')}
@@ -550,8 +553,8 @@ function productView(c,tab,opt){
   return `<div class="card">${list.some(x=>x.draft)?'<span class="status wait">● Draft for review</span>':'<span class="status ok">● Approved for review</span>'}
     <h3 style="margin:12px 0 4px;font-size:22px">${esc(name)} · Chapter ${c.n}${many?` · ${list.length} approved options`:''}</h3>
     <p class="cap" style="margin:0 0 14px">${many?'The options are shown side by side for comparison. ':''}Select a picture or Preview to see it larger.</p>
-    <div class="galrow"><div class="gal n${Math.min(list.length,3)} ${(p0.images||p0.online_image)?'wide':''}">${cards}</div>
-    <div class="galinfo"><dl class="meta"><dt>Release</dt><dd>${RELEASE_TXT} · file names as in the asset register</dd><dt>Format</dt><dd>${esc(p0.format)}</dd><dt>Language</dt><dd>English review copy${list.some(x=>x.ne)?' · Nepali draft translation, language review pending':''}</dd></dl>
+    <div class="galrow ${p0.pages?'chapter-reader':''}"><div class="gal n${Math.min(list.length,3)} ${(p0.images||p0.online_image||p0.pages)?'wide':''}">${cards}</div>
+    <div class="galinfo"><dl class="meta"><dt>Release</dt><dd>${p0.release_label||RELEASE_TXT}${p0.release_label?' · chapter screen-review edition':' · file names as in the asset register'}</dd><dt>Format</dt><dd>${esc(p0.format)}</dd><dt>Language</dt><dd>English review copy${list.some(x=>x.ne)?' · Nepali draft translation, language review pending':''}</dd></dl>
       <div><div class="btns"><span class="btn soon">Final Nepali PDF · after proofreading</span></div>
       <div class="btns"><a class="btn" href="#${c.key}/translation">See the translation</a><button class="btn" type="button" data-tofb>Give feedback</button></div></div></div>${fbBlock(c,tab,list)}</div>`;
 }
@@ -692,7 +695,7 @@ function dlName(href){const m=/series\/ch(\d)\/(poster-([ABC])|leaflet|guide)(-n
   const master=!!m[5]||(!!m[4]&&!!m[3]);   // print file, or the Nepali poster (single file) = the file in the chapter folder
   return `Ch${m[1]} ${k} ${prod} ${m[4]?'NE':'EN'}${master?'':' online'} - ${RELEASE}.pdf`}
 let RELEASE_TXT='15 November 2026';
-function relFile(p,ne){const h=ne?((p&&p.ne&&(p.ne.print||p.ne.pdf))||''):((p&&(p.print||p.pdf))||'');return (dlName(h)||'').replace(/\.pdf$/,'')}
+function relFile(p,ne){if(p&&p.release_name)return ne?p.ne.release_name:p.release_name;const h=ne?((p&&p.ne&&(p.ne.print||p.ne.pdf))||''):((p&&(p.print||p.pdf))||'');return (dlName(h)||'').replace(/\.pdf$/,'')}
 function relFiles(list,letters,both){const L=letters&&letters.length?letters:null;const out=[];list.filter(x=>!L||L.includes(letter(x))).forEach(x=>{if(both!=='ne')out.push(relFile(x));if(both!=='en'&&x.ne)out.push(relFile(x,true))});return out.filter(Boolean)}
 function nameDownloads(root){(root||document).querySelectorAll('a[download]').forEach(a=>{const n=dlName(a.getAttribute('href'));if(n)a.setAttribute('download',n)})}
 function noDownloads(){
@@ -769,7 +772,7 @@ function readWho(){
 async function sendFb(kind,btn){
   const sec=document.getElementById('fb'),msg=document.getElementById('m-'+kind),say=(t,c)=>{msg.textContent=t;msg.className='fbmsg '+c};
   const w=readWho(); if(!w) return say('Please enter your name, organisation, a valid email and your acknowledgement choice first.','err');
-  const d={kind,release:RELEASE,chapter:sec.dataset.ch,product:sec.dataset.tab,name:w.name,org:w.org,email:w.email,credit:w.credit,clientTime:new Date().toISOString()};
+  const d={kind,release:sec.dataset.tab==='guide'?'20Nov2026':RELEASE,chapter:sec.dataset.ch,product:sec.dataset.tab,name:w.name,org:w.org,email:w.email,credit:w.credit,clientTime:new Date().toISOString()};
   if(kind==='vote'){const r=sec.querySelector('input[name=poll]:checked'); if(!r) return say('Please choose one option.','err'); d.option=r.value; d.version=r.dataset.v; d.file=r.dataset.f;}
   else{const t=document.getElementById('c-text').value.trim(); if(!t) return say('Please write your comment first.','err'); d.text=t; d.option=document.getElementById('c-about')?.value||'all'; d.version=sec.dataset.ver; d.file=d.option==='all'?sec.dataset.files:(sec.querySelector(`input[name=poll][value="${d.option}"]`)?.dataset.f||relFiles(S.chapters.find(x=>x.key===sec.dataset.ch)[sec.dataset.tab],[d.option]).join('; '));}
   const fields={}; for(const k in d) fields[k]={stringValue:String(d[k])};
@@ -903,6 +906,8 @@ function show(i){gi=i;const g=G[i];$('dlgimg').src=g.src;$('dlgimg').alt=g.title
   $('dlgpdf').hidden=!DOWNLOADS||!g.pdf;if(DOWNLOADS&&g.pdf){$('dlgpdf').href=g.pdf;$('dlgpdf').setAttribute('download',dlName(g.pdf)||'');$('dlgpdf').textContent='\u2B07 Download '+g.pl}size(false);document.querySelector('.dlgbody').scrollTop=0}
 document.addEventListener('click',e=>{
   const o=e.target.closest('[data-open]');const z=o?(o.closest('.tcard').querySelector(`[data-zoom][data-lang="${o.dataset.open||'en'}"]`)||o.closest('.tcard').querySelector('[data-zoom]')):e.target.closest('[data-zoom]');if(!z)return;
+  const chapter=S.chapters.find(c=>location.hash.startsWith('#'+c.key+'/guide')),gp=chapter&&chapter.guide.find(p=>p.pages),lang=z.dataset.lang==='ne'?'ne':'en';
+  if(gp){const q=lang==='ne'?gp.ne:gp;G=q.pages.map((src,i)=>({src,title:relFile(gp,lang==='ne')+' · Page '+(i+1)+' of '+q.pages.length,pdf:q.pdf,pl:'PDF'}));show(0);if(!dlg.open)dlg.showModal();return;}
   const all=[...document.querySelectorAll('#main [data-zoom]')];
   G=all.map(x=>({src:x.dataset.src||x.src,title:x.dataset.title||x.alt,pdf:x.dataset.pdf||'',pl:x.dataset.pdflabel||'PDF'}));
   show(Math.max(all.indexOf(z),0));if(!dlg.open)dlg.showModal()});
